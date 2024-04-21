@@ -7,7 +7,7 @@ body {
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   font-size: 14px;
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -60,6 +60,15 @@ h4 {
   text-transform: uppercase;
 }
 
+.heading-divider {
+  height: 3px;
+  width: 70px;
+  background-color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .script-font {
   font-family: 'Shadows Into Light', cursive;
 }
@@ -81,7 +90,7 @@ a a:focus {
 
 p {
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0px;
   font-size: 14px;
 }
@@ -140,7 +149,7 @@ ul li, ol li {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: #252525;
-  font-size: 38px;
+  font-size: 5em;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1;
@@ -151,12 +160,32 @@ ul li, ol li {
 
 .section-title-white {
   color: white;
-  font-size: 38px;
+  font-size: 4em;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1;
   margin-bottom: 48px;
   padding: 0 10px;
+  position: relative;
+}
+
+.section-subtitle-white {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: auto;
+  position: relative;
+}
+
+.section-subtitle {
+  color: #252525;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: auto;
   position: relative;
 }
 
@@ -436,11 +465,14 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 30px;
+  width: 500px;
+  @media (max-width: 991px) {
+    width: 90%;
+   }
 }
 
 .profile-wrapper {
   margin: 5%;
-  padding: 45px 45px 45px 0;
 }
 
 .profile-wrapper .btn {
@@ -464,6 +496,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   display: inline-block;
   margin-bottom: 5px;
   text-transform: uppercase;
+}
+
+.about-text {  
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 .about-profile .admin-sign {
@@ -502,6 +540,150 @@ a.back-to-top:hover, a.back-to-top:focus {
   width: 100%;
   height: 100%;
   padding-bottom: 20px;
+}
+
+.guion-section {
+  background: url(../img/guion/bg-guion.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#guion .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #0c0808;
+  opacity: 0.4;
+}
+
+.guion-wrapper {
+  margin: 5%;
+}
+
+.guion-text {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  line-height: normal;
+ @media (max-width: 991px) {
+  font-size: 1em;
+ }
+}
+
+.img-guion {
+  width: 600px;
+  @media (max-width: 991px) {
+    width: 100%;
+   }
+}
+
+#docencia .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #0c0808;
+  opacity: 0.6;
+}
+
+.docencia-big-subtitle-white {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: auto;
+  position: relative;
+}
+
+.docencia-subtitle {
+  font-size: 15px;
+  font-weight: 200;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fff;
+  line-height: normal;
+}
+
+.docencia-section-1 {
+  background: url(../img/docencia/bg-docencia-judaismocine.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.docencia-section-2 {
+  background: url(../img/docencia/bg-docencia-cineargentino.png);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.docencia-lista {
+  display:block;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.docencia-item-bg {  
+  color: #fff;
+  padding: 30px;
+  background: #0c0808;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.docencia-item-bg:hover {
+  display: block;
+  color:#000;
+  background-color: #fff;
+}
+
+.docencia-item-title {
+  font-size: 30px;
+  font-family: Oswald;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center; 
+  line-height: 150%;
+}
+
+.docencia-item-text {
+  font-size: 20px;
+  font-weight: 200;
+  font-family: Oswald;
+  text-align: center;
+  line-height: 150%;
+}
+
+.lectura {
+  background-color:#fff;
+  opacity: 0.6;
+  padding: 10px;
+  display: flex;
+}
+
+.lectura-link {
+  font-size: 15px;
+  font-weight: 100;
+  color: #000;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.lectura:hover {
+  color: #000;
 }
 
 .counter-section {
@@ -564,18 +746,6 @@ details summary::-webkit-details-marker {
 }
 
 
-.btn-experiencia span {
-  display: none;
-}
-
-.btn-experiencia::after {
-  content: 'Ver mi experiencia anterior';
-}
-
-.btn-experiencia:focus::after, 
-.btn-experiencia:active::after {
-  content: 'Ver mi experiencia última';
-}
 
 .timeline {
   position: relative;
@@ -1047,7 +1217,8 @@ details summary::-webkit-details-marker {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  position: fixed;
+  position: center;  
+  background-attachment: fixed;
 }
 
 #hero-area {
@@ -1116,13 +1287,7 @@ details summary::-webkit-details-marker {
   Portfolio Section
    ========================================================================== */
 
-.collapsable-on-mobile {
-  @media (min-width: 992px) {
-    display: none;
-  }
-}
-
-   #portfolios {
+#portfolios {
   background: #f2f2f2;
 }
 

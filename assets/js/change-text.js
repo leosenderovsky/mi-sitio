@@ -40,7 +40,7 @@ function changeText(el, dText, nText) {
       btn;
   
   /* Default text of the button */
-  defaultText = 'Ver mi experiencia completa';
+  defaultText = 'Ver mi experiencia anterior';
   /* Alternate text for button */
   substituteText = 'Ver mi experiencia última';
   /* Grab our button */
