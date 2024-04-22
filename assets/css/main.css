@@ -7,7 +7,7 @@ body {
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   font-size: 14px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -22,41 +22,41 @@ body {
 h1 {
   font-size: 38px;
   font-weight: 700;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 30px;
   font-weight: 600;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 25px;
   font-weight: 500;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 
 h4 {
   font-size: 20px;
   font-weight: 400;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 .text-title {
   font-size: 38px;
   font-weight: 500;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 
 .text-subtitle {
   font-size: 25px;
   font-weight: 300;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
 
@@ -90,7 +90,7 @@ a a:focus {
 
 p {
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   margin: 0px;
   font-size: 14px;
 }
@@ -146,7 +146,7 @@ ul li, ol li {
 
 .section-title {
   font-weight: 700;
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
   color: #252525;
   font-size: 5em;
@@ -501,7 +501,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .about-text {  
   font-size: 1em;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .about-profile .admin-sign {
@@ -568,7 +568,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .guion-text {
   font-size: 1.2em;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   color: #fff;
   line-height: normal;
  @media (max-width: 991px) {
@@ -595,7 +595,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .docencia-big-subtitle-white {
   color: white;
-  font-size: 30px;
+  font-size: 3em;
   text-align: center;
   letter-spacing: 1px;
   line-height: auto;
@@ -605,7 +605,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 .docencia-subtitle {
   font-size: 15px;
   font-weight: 200;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   color: #fff;
   line-height: normal;
 }
@@ -651,32 +651,34 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-title {
-  font-size: 30px;
-  font-family: Oswald;
-  font-weight: 200;
+  font-size: 2.5em;
+  font-family: Yanone Kaffeesatz;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center; 
   line-height: 150%;
 }
 
 .docencia-item-text {
-  font-size: 20px;
-  font-weight: 200;
-  font-family: Oswald;
+  font-size: 1.8em;
+  font-weight: 300;
+  font-family: Yanone Kaffeesatz;
   text-align: center;
   line-height: 150%;
 }
 
 .lectura {
   background-color:#fff;
-  opacity: 0.6;
+  opacity: 0.3;
   padding: 10px;
   display: flex;
 }
 
 .lectura-link {
-  font-size: 15px;
-  font-weight: 100;
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
   color: #000;
   justify-content: space-between;
   padding: 10px;
@@ -764,7 +766,7 @@ details summary::-webkit-details-marker {
 .timeline-full-subtitle {
   display: flex;
   justify-content: center;
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
@@ -774,7 +776,7 @@ details summary::-webkit-details-marker {
 .timeline-full-subtitle-web {
   display: flex;
   justify-content: center;
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
@@ -785,7 +787,7 @@ details summary::-webkit-details-marker {
 .timeline-full-title {
   display: flex;
   justify-content: center;
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   font-weight: 600;
   font-size: 38px;
   text-transform: uppercase;
@@ -795,7 +797,7 @@ details summary::-webkit-details-marker {
 .timeline-full-title-web {
   display: flex;
   justify-content: center;
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   font-weight: 600;
   font-size: 38px;
   text-transform: uppercase;
@@ -828,8 +830,9 @@ details summary::-webkit-details-marker {
 }
 
 .timeline li .line-title {
-  font-size: 16px;
+  font-size: 26px;
   line-height: 16px;
+  padding: 10px;
 }
 
 .timeline li span {
@@ -1027,9 +1030,10 @@ details summary::-webkit-details-marker {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
+  font-size: 25px;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0 17px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1448,9 +1452,9 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .services-item-title {
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   color: #000b77;
 }
 
