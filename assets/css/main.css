@@ -663,15 +663,19 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.8em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
+  color: #fff;
   text-align: center;
   line-height: 150%;
 }
 
-.lectura {
-  background-color:#fff;
-  opacity: 0.3;
+.lectura-box {
+  background-color:#000;
   padding: 10px;
+}
+
+.lectura {
   display: flex;
+  justify-content: space-around;
 }
 
 .lectura-link {
@@ -679,12 +683,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
-  color: #000;
-  justify-content: space-between;
+  color: #fff;
   padding: 10px;
 }
 
-.lectura:hover {
+.lectura-link:hover {
+  background-color: #fff;
   color: #000;
 }
 
