@@ -55,8 +55,7 @@
     display: block; 
     line-height: 30px;
   }
-  .slicknav_nav li:not(:first-child){
-  }
+  
   .slicknav_nav .slicknav_arrow {
     background: #ededed none repeat scroll 0 0;
     float: right;
@@ -100,7 +99,7 @@
 }
 
 .slicknav_nav {
-  font-family: Oswald;
+  font-family: Yanone Kaffeesatz;
   color: #fff;
   font-size: 0.875em;
   list-style: outside none none;

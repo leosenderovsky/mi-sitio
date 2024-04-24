@@ -190,7 +190,8 @@ ul li, ol li {
 }
 
 .btn {
-  font-size: 14px;
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
   padding: 10px 30px;
   border-radius: 0px;
   cursor: pointer;
@@ -558,7 +559,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   top: 0px;
   left: 0px;
   background: #0c0808;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .guion-wrapper {
@@ -593,6 +594,14 @@ a.back-to-top:hover, a.back-to-top:focus {
   opacity: 0.6;
 }
 
+.bg-opacity {
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.bg-opacity-white {
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
 .docencia-big-subtitle-white {
   color: white;
   font-size: 3em;
@@ -603,7 +612,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-subtitle {
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 200;
   font-family: "Libre Franklin", sans-serif;
   color: #fff;
@@ -628,6 +637,15 @@ a.back-to-top:hover, a.back-to-top:focus {
   position: relative;
 }
 
+.docencia-section-3 {
+  background: url(../img/docencia/bg-docencia-charlas2.JPG);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
 .docencia-lista {
   display:block;  
   margin-left: auto;
@@ -636,18 +654,17 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-bottom: 30px;
 }
 
-.docencia-item-bg {  
+.docencia-item-bg { 
+  background-color: rgb(0, 0, 0, 0.5); 
   color: #fff;
   padding: 30px;
-  background: #0c0808;
-  opacity: 0.6;
   margin-top: 10px;
 }
 
 .docencia-item-bg:hover {
   display: block;
   color:#000;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255, 0.5);
 }
 
 .docencia-item-title {
@@ -659,23 +676,56 @@ a.back-to-top:hover, a.back-to-top:focus {
   line-height: 150%;
 }
 
-.docencia-item-text {
+.docencia-title-subtitle {
+  color: #fff;
   font-size: 1.8em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
-  color: #fff;
   text-align: center;
   line-height: 150%;
 }
 
-.lectura-box {
-  background-color:#000;
+.docencia-item-text {
+  font-size: 1.8em;
+  font-weight: 300;
+  font-family: Yanone Kaffeesatz;
+  text-align: center;
+  line-height: 150%;
+}
+
+.docencia-item-resenia {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 300;
+  font-family: Yanone Kaffeesatz;
+  text-align: center;
+  line-height: 150%;
+}
+
+.docencia-item-resenia2 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 300;
+  font-family: Yanone Kaffeesatz;
+  text-align: center;
+  line-height: 150%;
   padding: 10px;
+}
+
+.docencia-item-resenia2:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: #000;
+}
+
+.lectura-box {
+  background-color:rgb(0, 0, 0, 0.6);
 }
 
 .lectura {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .lectura-link {
@@ -683,13 +733,78 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
-  color: #fff;
+  color: #fff; 
+  align-self: center;
   padding: 10px;
 }
 
 .lectura-link:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255, 0.5);
   color: #000;
+}
+
+.entrevistas-box {
+  padding:10px;
+}
+
+.shot-item .entrevistas-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 180, 217, 0.6);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.shot-item:hover .entrevistas-overlay {
+  opacity: 1;
+}
+
+.entrevistas-overlay {
+  opacity: 0;
+}
+
+.entrevistas-overlay .icons i {
+  height: 42px;
+  width: 42px;
+  line-height: 42px;
+  color: #00b4d9;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -24px;
+  top: 50%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.entrevistas-overlay .preview {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  color: #fff;
+}
+
+.entrevistas-overlay .link {
+  position: absolute;
+  left: 60%;
+  margin-left: 10px;
+  top: 50%;
+  color: #fff;
+}
+
+.shot-item:hover .entrevistas-overlay {
+  opacity: 1;
 }
 
 .counter-section {
@@ -1019,7 +1134,7 @@ details summary::-webkit-details-marker {
   background: transparent;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link i {
+.navbar-expand-md .navbar-nav .nav-link i {
 
   font-size: 28px;
   color: #00b4d9;
@@ -1029,16 +1144,15 @@ details summary::-webkit-details-marker {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link i:hover {
+.navbar-expand-md .navbar-nav .nav-link i:hover {
   color: rgb(14, 0, 93);
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+.navbar-expand-md .navbar-nav .nav-link {
   font-family: Yanone Kaffeesatz;
-  font-size: 25px;
+  font-size: 1.5em;
   color: #333;
   font-weight: 600;
-  padding: 0 17px;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 40px;
@@ -1050,9 +1164,21 @@ details summary::-webkit-details-marker {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-expand-lg .navbar-nav li a:hover,
-.navbar-expand-lg .navbar-nav li .active > a,
-.navbar-expand-lg .navbar-nav li a:focus {
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding: 0 17px;
+  }
+}
+
+.navbar-expand-md .navbar-nav li a:hover,
+.navbar-expand-md .navbar-nav li .active > a,
+.navbar-expand-md .navbar-nav li a:focus {
   color: #8a75ff;
   outline: none;
 }
@@ -1420,6 +1546,14 @@ a:not([href]):not([tabindex]) {
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   color: #fff;
 }
+
+.video-embed {
+  @media (max-width: 991px){
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 /* Services Item */
 .services-audiovisual {
