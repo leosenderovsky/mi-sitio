@@ -34,7 +34,7 @@
 	right: 10%;
 }
 .nivo-lightbox-content {
-	width: 100%;
+	width: auto;
 	height: 100%;
 }
 .nivo-lightbox-title-wrap {
