@@ -189,6 +189,54 @@ ul li, ol li {
   position: relative;
 }
 
+.stick-note {
+  position: relative;
+}
+
+.stick-note-edicion {
+  position: fixed; 
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 10;
+  background-color: #766dff;
+  font-family: Yanone Kaffeesatz;
+  font-size: 2em;
+  text-transform: uppercase;
+  color:#fff;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  @media (max-width: 991px) {
+  display: none;
+}
+}
+
+.stick-note-guion {
+  position: fixed; 
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 0;
+  background-color: #766dff;
+  font-family: Yanone Kaffeesatz;
+  font-size: 1em;
+  text-transform: uppercase;
+  color:#fff;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  @media (max-width: 991px) {
+  display: none;
+}
+}
+
+.icon-white {
+  color: #fff;
+}
+
 .btn {
   font-family: Yanone Kaffeesatz;
   font-size: 1.5em;
@@ -458,6 +506,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 #about .box {
   background-color: white;
+  position: relative;
+  z-index: 11;
 }
 
 #about .img-thumb img {
@@ -511,6 +561,13 @@ a.back-to-top:hover, a.back-to-top:focus {
   bottom: 10px;
 }
 
+.video-about {
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+
 .container-expand {
   width: 100%;
   padding-right: 15px;
@@ -531,7 +588,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .videoWrapper {
   position: relative;
-  padding-bottom: 56.25%;
   /* 16:9 */
   margin: 20px;
 }
@@ -550,6 +606,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: auto;
   overflow: hidden;
   position: relative;
+  z-index: 20;
 }
 
 #guion .overlay {
@@ -575,6 +632,13 @@ a.back-to-top:hover, a.back-to-top:focus {
  @media (max-width: 991px) {
   font-size: 1em;
  }
+}
+
+.link-white {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+
 }
 
 .img-guion {
@@ -604,10 +668,9 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .docencia-big-subtitle-white {
   color: white;
-  font-size: 3em;
+  font-size: 3.5em;
   text-align: center;
   letter-spacing: 1px;
-  line-height: auto;
   position: relative;
 }
 
@@ -728,18 +791,30 @@ a.back-to-top:hover, a.back-to-top:focus {
   padding: 20px;
 }
 
-.lectura-link {
+.lectura-item {
+  width: auto;
+}
+
+.lectura-item {
   font-family: Yanone Kaffeesatz;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
   color: #fff; 
   align-self: center;
-  padding: 10px;
+}
+
+.lectura-link {
+  color: #fff; 
+  align-self: center;
+}
+
+.lectura-item:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: #000;
 }
 
 .lectura-link:hover {
-  background-color: rgb(255, 255, 255, 0.5);
   color: #000;
 }
 
@@ -790,7 +865,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .entrevistas-overlay .preview {
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 50%;
   color: #fff;
 }
@@ -866,10 +941,9 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-
-
 .timeline {
   position: relative;
+  z-index: 10;
 }
 
 .timeline-margin {
@@ -908,7 +982,7 @@ details summary::-webkit-details-marker {
   justify-content: center;
   font-family: Yanone Kaffeesatz;
   font-weight: 600;
-  font-size: 38px;
+  font-size: 4em;
   text-transform: uppercase;
   color: #000b77;
 }
@@ -918,7 +992,7 @@ details summary::-webkit-details-marker {
   justify-content: center;
   font-family: Yanone Kaffeesatz;
   font-weight: 600;
-  font-size: 38px;
+  font-size: 4em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1005,6 +1079,10 @@ details summary::-webkit-details-marker {
   width: 50px;
   height: 50px;
   text-align: center;
+}
+
+.timeline-docencia {
+ z-index: 11;
 }
 
 .logo-thumb {
@@ -1352,7 +1430,8 @@ details summary::-webkit-details-marker {
   -o-background-size: cover;
   background-size: cover;
   position: center;  
-  background-attachment: fixed;
+  background-attachment: fixed;  
+  z-index: 20;
 }
 
 #hero-area {
@@ -1522,7 +1601,7 @@ details summary::-webkit-details-marker {
 
 .overlay .preview {
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 50%;
   color: #fff;
 }
@@ -1556,6 +1635,11 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 
 /* Services Item */
+.services {
+  position: relative;
+  z-index: 20;
+}
+
 .services-audiovisual {
   background: #3844be;
   padding: 30px;
