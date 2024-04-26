@@ -562,7 +562,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .video-about {
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   width: 100%;
   position: relative;
   z-index: 20;
@@ -588,6 +587,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .videoWrapper {
   position: relative;
+  display: flex;
+  align-content: center;
   /* 16:9 */
   margin: 20px;
 }
