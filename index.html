@@ -148,7 +148,7 @@
                   -->
                   <div class="row">
                     <div class="col-md-6 col-lg-6 col-xs-12">
-                      <div class="flip-card">
+                      <div class="flip-card wow fadeInLeft" data-wow-delay="0.4s">
                         <div class="flip-card-inner">
                           <div class="flip-card-front-audiovisual">
                             <i class="fa-solid fa-film text-title"></i><br>
@@ -163,7 +163,7 @@
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xs-12">
-                        <div class="flip-card">
+                        <div class="flip-card wow fadeInRight" data-wow-delay="0.4s">
                           <div class="flip-card-inner">
                             <div class="flip-card-front-web">
                               <i class="fa-solid fa-code text-title"></i><br>
@@ -186,10 +186,10 @@
     <div class="video-about">
     <div class="container-expand">
       <div class="row video-about">
-        <div class="col-lg-3 dibujo-container">
+        <div class="col-lg-3 dibujo-container wow fadeInLeft" data-wow-delay="0.4s">
       <img class="dibujo-writing" src="/assets/img/dibujos/boy-writing-1.png"></div>
       <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 videoWrapper-container">
-    <div class="videoWrapper">
+    <div class="videoWrapper  wow fadeInUp" data-wow-delay="0.4s"> 
       <div class="portfolio-item">
         <div class="shot-item-about">
           <img src="assets/img/video-portada.jpg" alt=""/> 
@@ -205,7 +205,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-3 dibujo-container">
+  <div class="col-lg-3 dibujo-container wow fadeInRight" data-wow-delay="0.4s">
     <img class="dibujo-camera" src="/assets/img/dibujos/camera.png">
   </div>
   </div>
@@ -214,20 +214,22 @@
     <!-- About Section Start -->
     <section id="about">
       <div class="box">
-      <div class="container">  
+      <div class="container-expand">  
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.4s">
               <img class="img-fluid" src="assets/img/about/about-1.jpg" alt="">
             </div>
           </div> 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="profile-wrapper wow fadeInUp" data-wow-delay="0.4s">
               <h1>Un poco de mí...</h1>
               <p class="about-text">Desde 2005, me desempeño en el mundo audiovisual, principalmente como editor de video y coordinador de postproducción, pero también como consultor de guión, crítico y profesor de cine. Doy charlas y encuentros de cine, mis temáticas principales son judaísmo en cine y tv y cine argentino.</p><br>
               <p class="about-text">Desde el inicio de mi trayecto laboral tuve la oportunidad de conjugar lo audiovisual con las herramientas del mundo web. Empecé a conocer la potencialidad de WordPress al postear mis críticas de cine para Cine.com entre 2007 y 2010. En 2008 entré como responsable de video y multimedia en una empresa de desarrollo web, donde aprendí a trabajar con Joomla, WordPress y a conocer las herramientas de SEO, community manager, etc.</p><br>
               <p class="about-text">Años después, mientras avanzaba en distintas experiencias laborales en el campo audiovisual, fui armando sitios en Joomla y WordPress. En 2021 me decidí a iniciar una nueva etapa en mi proceso formativo y profesional, y realicé cursos de desarrollo front end en Coderhouse.</p><br>
               <p class="about-text">Actualmente, brindo servicios audiovisuales y web. Mi meta es profundizar en ambas áreas y adquirir permanentemente nuevas herramientas.</p>
+              </div>
+            </div>
               <!--
               <div class="about-profile">
                 <ul class="admin-profile">
@@ -239,13 +241,16 @@
                 </ul>
               </div>
               -->
+              <div class="d-lg-none col-md-6 col-sm-12 col-xs-12"></div>
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <div class="button-container wow fadeInRight" data-wow-delay="0.4s">
               <div class="btn btn-audiovisual"><i class="icon-paper-clip"></i> Descarga mi CV  <b> AUDIOVISUAL  </b><a href="#" class="fi fi-es"></a> <a href="#" class="fi fi-gb"></a></div><br>
               <div class="btn btn-web"><i class="icon-paper-clip"></i> Descarga mi CV  <b> WEB  </b><a href="#" class="fi fi-gb"></a></div><br>
-              <div class="btn btn-whatsapp"><a class="btn-whatsapp-a" href="https://wa.me/541130452585" target="_blank"><i class="fa-brands fa-whatsapp"></i> Contactame</a></div><br>
+              <div><a class="btn btn-whatsapp" href="https://wa.me/541130452585" target="_blank"><i class="fa-brands fa-whatsapp"></i> Contactame</a></div><br>
             </div>
-          </div>   
-        </div>
+            </div>
       </div>
+    </div>
     </div>
     </section>
     <!-- About Section End -->
@@ -258,13 +263,14 @@
         <div class="row">
           <!-- Services item -->
           <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.3s"><a href="#portfolio">
               <div class="icon">
                 <i class="fa-solid fa-scissors"></i>
               </div>
               <div class="services-content">
-                <p><a href="#" class="services-item-title">EDICIÓN</a></p>
+                <p class="services-item-title">EDICIÓN</p>
               </div>
+            </a>
             </div>
           </div>
           <!-- Services item -->
@@ -308,8 +314,8 @@
       <div class="container">
         <div class="row">
           <!-- Services item -->
-          <div class="col-md-6 col-lg-6 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
+          <div class="col-md-12 col-lg-12 col-xs-12">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.4s">
               <div class="icon">
                 <i class="fa-solid fa-code"></i>
               </div>
@@ -318,7 +324,7 @@
               </div>
             </div>
           </div>
-          <!-- Services item -->
+          <!-- Services item
           <div class="col-md-6 col-lg-6 col-xs-12">
             <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
               <div class="icon">
@@ -329,6 +335,7 @@
               </div>
             </div>
           </div>
+        -->
           </div>
         </div>
       </div>
@@ -341,7 +348,7 @@
         <h3 class="timeline-full-title">Edición y guión</h3>
         <div class="row timeline-margin">
           <div class="col-lg-6 col-md-12 col-sm-12">
-            <div class="education wow fadeInRight" data-wow-delay="0.3s">
+            <div class="education wow fadeInRight" data-wow-delay="0.4s">
               <ul class="timeline">
                 <li>
                   <i class="icon-graduation"></i>
@@ -574,7 +581,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="guion-wrapper">
+            <div class="guion-wrapper wow fadeInLeft" data-wow-delay="0.4s">
             <p class="guion-text">¿Tenés una idea o una historia, pero no sabés cómo desarrollarla o cómo llevarla a un lenguaje cinematográfico o televisivo?</p><br>
             <p class="guion-text">¿Escribiste un guión y necesitás reencauzarlo o corregirlo?</p><br>
             <p class="guion-text">¿Te trabaste en el medio de la escritura y no encontrás la forma de continuar?</p><br>
@@ -585,7 +592,7 @@
           </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="guion-wrapper">
+            <div class="guion-wrapper wow fadeInRight" data-wow-delay="0.4s">
             <img src="/assets/img/guion/consultoria-web.jpg" class="img-guion">
           </div>
           </div>
@@ -614,13 +621,13 @@
           <div class="col-md-12">
             <!-- Portfolio Controller/Buttons -->
             <div class="controls text-center">
-              <a class="filter active btn btn-common" data-filter="all">
+              <a class="filter active btn btn-common wow fadeInUp" data-wow-delay="0.3s" data-filter="all">
                 Todo 
               </a>
-              <a class="filter btn btn-common" data-filter=".edicion">
+              <a class="filter btn btn-common wow fadeInUp" data-wow-delay="0.6s" data-filter=".edicion">
                 Edición 
               </a>
-              <a class="filter btn btn-common" data-filter=".guion">
+              <a class="filter btn btn-common wow fadeInUp" data-wow-delay="0.9s" data-filter=".guion">
                 Guión
               </a>
             </div>
@@ -630,7 +637,7 @@
           <!-- Portfolio Recent Projects -->
           <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/21-docu-democracia-40.jpg" alt="" />  
                   <div class="overlay">
@@ -644,7 +651,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/20-docu-50-anios-masacre-ezeiza.jpg" alt=""/> 
                   <div class="overlay">
@@ -658,7 +665,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/19-docu-caida-isabel-peron.jpg" alt=""/> 
                   <div class="overlay">
@@ -672,7 +679,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg" alt="" /> 
                   <div class="overlay">
@@ -686,7 +693,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg" alt="" /> 
                   <div class="overlay">
@@ -700,7 +707,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/16-docu-ara-san-juan.jpg" alt=""/>
                   <div class="overlay">
@@ -714,7 +721,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/15-docu-malvinas-el-final.jpg" alt="" />  
                   <div class="overlay">
@@ -728,7 +735,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.jpg" alt=""/> 
                   <div class="overlay">
@@ -742,7 +749,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.jpg" alt=""/> 
                   <div class="overlay">
@@ -756,7 +763,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/12-spot-celsur.jpg" alt="" /> 
                   <div class="overlay">
@@ -770,7 +777,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/11-semana-nba-2021.jpg" alt="" /> 
                   <div class="overlay">
@@ -784,7 +791,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/10-semana-nba-19-20.jpg" alt=""/>
                   <div class="overlay">
@@ -798,7 +805,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.jpg" alt="" />  
                   <div class="overlay">
@@ -812,7 +819,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/08-hablemos-de-otra-cosa.jpg" alt=""/> 
                   <div class="overlay">
@@ -826,7 +833,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.jpg" alt=""/> 
                   <div class="overlay">
@@ -840,7 +847,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/06-la-gran-batalla.jpg" alt="" /> 
                   <div class="overlay">
@@ -854,7 +861,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.jpg" alt="" /> 
                   <div class="overlay">
@@ -868,7 +875,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix guion edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg" alt=""/>
                   <div class="overlay">
@@ -882,7 +889,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix guion edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg" alt="" /> 
                   <div class="overlay">
@@ -896,7 +903,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix guion edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg" alt="" /> 
                   <div class="overlay">
@@ -910,7 +917,7 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mix edicion">
-              <div class="portfolio-item">
+              <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="shot-item">
                   <img src="assets/img/gallery/edicion-guion/01-spot-answer.jpg" alt=""/>
                   <div class="overlay">
@@ -933,7 +940,7 @@
       <h1 class="timeline-full-title">Docencia y crítica</h1>
       <div class="row timeline-margin">        
         <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="education wow fadeInRight" data-wow-delay="0.3s">
+        <div class="education wow fadeInRight" data-wow-delay="0.4s">
           <ul class="timeline">
             <li>
               <i class="icon-graduation"></i>
@@ -1014,7 +1021,7 @@
     <div class="container">
       <div class="row">
         <ul class="docencia-lista">
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="0.3s">
             <div class="docencia-item-bg">
             <p class="docencia-item-title">El humor judío en el cine</p>
             <p class="docencia-item-text">Ciclo de cuatro encuentros (o cuatro encuentros individuales)</p>
@@ -1041,7 +1048,7 @@
             </div>
             </div>
           </li>
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="0.6s">
             <div class="docencia-item-bg">
               <p class="docencia-item-title">El humor judío en la TV norteamericana</p>
             <p class="docencia-item-text">Ciclo de cuatro encuentros (o cuatro encuentros individuales)</p>
@@ -1068,7 +1075,7 @@
           </div>
           </div>
           </li>
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="0.9s">
             <div class="docencia-item-bg">
               <p class="docencia-item-title">Cine israelí</p>
             <p class="docencia-item-text">Ciclo de cuatro encuentros (o cuatro encuentros individuales)</p>
@@ -1095,7 +1102,7 @@
           </div>
           </div>
         </li>
-        <li>
+        <li class="wow fadeInUp" data-wow-delay="1.2s">
           <div class="docencia-item-bg">
         <p class="docencia-item-title">Conflicto israelí - palestino: Miradas desde el cine documental</p>
       </div>
@@ -1106,7 +1113,7 @@
       </div>
         </div>
       </li>
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="1.5s">
             <div class="docencia-item-bg">
           <p class="docencia-item-title">La shoá en el cine</p>
         </div>
@@ -1117,7 +1124,7 @@
         </div>
           </div>
         </li>
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="1.8s">
             <div class="docencia-item-bg">
               <p class="docencia-item-title">Judaísmo en el cine argentino</p>
             </div>
@@ -1128,7 +1135,7 @@
             </div>
               </div>
           </li>
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="2.1s">
             <div class="docencia-item-bg">
               <p class="docencia-item-title">La mujer judía en el cine</p>
             </div>
@@ -1149,7 +1156,7 @@
     <div class="container">
       <div class="row">
         <ul id="docencia-lista-2" class="docencia-lista">
-          <li>
+          <li class="wow fadeInUp" data-wow-delay="0.3s">
             <div class="docencia-item-bg">
               <p class="docencia-item-title">El humor en el cine argentino</p>
             </div>
@@ -1160,7 +1167,8 @@
             </div>
               </div>
           </li>
-          <li><div class="docencia-item-bg">
+          <li class="wow fadeInUp" data-wow-delay="0.6s">
+            <div class="docencia-item-bg">
             <p class="docencia-item-title">El cine argentino en dictadura</p>
           </div>
           <div class="lectura-box">
@@ -1170,7 +1178,8 @@
           </div>
             </div>
         </li>
-          <li><div class="docencia-item-bg">
+          <li class="wow fadeInUp" data-wow-delay="0.9s">
+            <div class="docencia-item-bg">
             <p class="docencia-item-title">Cine bajo tijeras: La censura en dictadura</p>
           </div>
           <div class="lectura-box">
@@ -1192,7 +1201,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box">
-        <div class="portfolio-item">
+        <div class="portfolio-item wow fadeInUp" data-wow-delay="0.3s">
           <div class="shot-item">
             <img src="assets/img/docencia/entrevistas/cita-a-media-tarde.jpg" alt=""/> 
             <div class="entrevistas-overlay">
@@ -1206,7 +1215,7 @@
         </div>
     </div>
     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box">
-      <div class="portfolio-item">
+      <div class="portfolio-item wow fadeInUp" data-wow-delay="0.6s">
         <div class="shot-item">
           <img src="assets/img/docencia/entrevistas/la-mujer-judia-en-el-cine-shabuatov.jpg" alt=""/> 
           <div class="entrevistas-overlay">
@@ -1220,7 +1229,7 @@
       </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box"> 
-        <div class="portfolio-item">
+        <div class="portfolio-item wow fadeInUp" data-wow-delay="0.9s">
           <div class="shot-item">
             <img src="assets/img/docencia/entrevistas/cine-en-dictadura-radio-nacional.jpg" alt=""/> 
             <div class="entrevistas-overlay">
@@ -1234,7 +1243,7 @@
         </div>    
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box">
-        <div class="portfolio-item">
+        <div class="portfolio-item wow fadeInUp" data-wow-delay="1.2s">
           <div class="shot-item">
             <img src="assets/img/docencia/entrevistas/cine-en-dictadura-fm-de-la-calle.jpg" alt=""/> 
             <div class="entrevistas-overlay">
@@ -1248,7 +1257,7 @@
         </div>    
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box">
-        <div class="portfolio-item">
+        <div class="portfolio-item wow fadeInUp" data-wow-delay="1.5s">
           <div class="shot-item">
             <img src="assets/img/docencia/entrevistas/racismo-en-hollywood.jpg" alt=""/> 
             <div class="entrevistas-overlay">
@@ -1262,7 +1271,7 @@
         </div>    
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 entrevistas-box">
-        <div class="portfolio-item">
+        <div class="portfolio-item wow fadeInUp" data-wow-delay="1.8s">
           <div class="shot-item">
             <img src="assets/img/docencia/entrevistas/clasicos-de-ciencia-ficcion.jpg" alt=""/> 
             <div class="entrevistas-overlay">
@@ -1286,7 +1295,7 @@
       <h3 class="timeline-full-title-web">Desarrollo web</h3>
         <div class="row">
           <div class="col-lg-6 col-md-12 col-sm-12">
-            <div class="education wow fadeInRight" data-wow-delay="0.3s">
+            <div class="education wow fadeInRight" data-wow-delay="0.4s">
             <ul class="timeline">
               <li>
                 <i class="icon-graduation"></i>
@@ -1334,24 +1343,89 @@
                 <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
                   <h3 class="line-title">La Posada de Luly</h3>
                   <span>2021</span>
-                  <p class="line-text">Co-desarrollo del sitio de La Posada de Luly, emprendimiento de servicios de pastelería. Proyecto asignado por el área de Talento de Coderhouse por haber resultado Top 10 en la cursada de Desarrollo web. Adaptación del logo del emprendimiento, de su versión original para uso gráfico, para su utilización online.<br/>
-                    <b><a href="https://gitlab.com/la-posada/la-posada-de-luly" target="_blank">Repositorio Gitlab</a></b><br/><b><a href="https://laposadadeluly.netlify.app/" target="_blank">Sitio navegable</a></b></p>
+                  <p class="line-text">Co-desarrollo del sitio de La Posada de Luly, emprendimiento de servicios de pastelería. Proyecto asignado por el área de Talento de Coderhouse por haber resultado Top 10 en la cursada de Desarrollo web. Adaptación del logo del emprendimiento, de su versión original para uso gráfico, para su utilización online.<br>
+                    <b><a href="https://gitlab.com/la-posada/la-posada-de-luly" target="_blank">Repositorio Gitlab</a></b>
+                    <br><b><a href="https://laposadadeluly.netlify.app/" target="_blank">Sitio navegable</a></b></p>
                 </div>
               </div>
               </li>
               <li>
-                <div class="content-text">
-                  <h3 class="line-title">UX/UI Designer - Samsung</h3>
-                  <span>Nov 2016 - Dec 2017</span>
-                  <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">Biblioide</h3>
+                  <span>2021</span>
+                  <p class="line-text">Proyecto final del curso de Javascript<br>
+                    <b><a href="https://github.com/leosenderovsky/JS-Biblioide" target="_blank">Repositorio Github</a></b><br>
+                    <b><a href="https://biblioide.vercel.app/" target="_blank">Sitio navegable</a></b>
+                  </p>
                 </div>
+              </div>
               </li>
               <li>
-                <div class="content-text">
-                  <h3 class="line-title">Intern UI Designer - UIdeck</h3>
-                  <span>Mar 2015 - Oct 2016</span>
-                  <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">StoryOffice</h3>
+                  <span>2021</span>
+                  <p class="line-text">Proyecto final del curso de Desarrollo web<br>
+                    <b><a href="https://github.com/leosenderovsky/DW-StoryOffice" target="_blank">Repositorio Github</a></b><br>
+                    <b><a href="https://biblioide.vercel.app/" target="_blank">Sitio navegable</a></b>
+                  </p>
                 </div>
+              </div>
+              </li>
+              <li>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">Consultoría de Guión</h3>
+                  <span>2019/2021</span>
+                  <p class="line-text">Sitio de servicios (Wordpress/Elementor)<br>
+                    <b><a href="http://consultoriadeguion.com.ar/" target="_blank">Ver</a></b>
+                  </p>
+                </div>
+              </div>
+              </li>
+              <li>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">Servicio de Redacción</h3>
+                  <span>2011</span>
+                  <p class="line-text">Sitio de servicios (Joomla)
+                  </p>
+                </div>
+              </div>
+              </li>
+              <li>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">Comunidad Or Israel</h3>
+                  <span>2010</span>
+                  <p class="line-text">Sitio de templo judío en Caballito (Joomla)<br>
+                    <b><a href="http://comunidadorisrael.org.ar/" target="_blank">Ver</a></b>
+                  </p>
+                </div>
+              </div>
+              </li>
+              <li>
+                <div class="content-text row box">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                  <h3 class="line-title">Mi Ópera Prima</h3>
+                  <span>2010/2012</span>
+                  <p class="line-text">Sitio de artículos periodísticos<br>
+                  </p>
+                </div>
+              </div>
               </li>
             </ul>
           </div>
@@ -1365,7 +1439,7 @@
         <div class="row">
           <!-- Counter Item -->
           <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.3s">
+            <div class="counter wow fadeInDown" data-wow-delay="0.4s">
               <div class="icon"><i class="icon-briefcase"></i></div>
               <div class="counterUp">250</div>
               <p>Project Working</p>
@@ -1463,7 +1537,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
+            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.4s">
               <ul class="social-icon">
                 <li>
                   <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
