@@ -254,15 +254,35 @@ ul li, ol li {
   display: inline-block;
 }
 
+.btn2 {
+  font-family: Yanone Kaffeesatz;
+  font-size: 2em;
+  padding: 10px 30px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+
 .btn:focus,
-.btn:active {
+.btn:active, 
+.btn2:focus, 
+.btn2:active {
   box-shadow: none;
   outline: none;
   color: #fff;
 }
 
 .btn-common {
-  background-color: #766dff;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  color: #000b77;
   position: relative;
   z-index: 1;
 }
@@ -277,17 +297,26 @@ ul li, ol li {
 }
 
 .button-container {
-  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
 }
 
-.btn-audiovisual {
-  background-color: #3844be;
+.buttons {
+  align-self: center;
+  margin: 5%;  
+}
+
+.btn-audiovisual, .btn-contact-edicion {
+  color: #000b77;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   position: relative;
   z-index: 1;
   margin: 10px;
 }
 
-.btn-audiovisual:hover {
+.btn-audiovisual:hover, .btn-contact-edicion:hover {
   color: #000;
   background-color: #21cff3;
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
@@ -645,7 +674,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   top: 0px;
   left: 0px;
   background: #0c0808;
-  opacity: 0.2;
+  opacity: 0.8;
 }
 
 .guion-wrapper {
@@ -658,6 +687,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-family: "Libre Franklin", sans-serif;
   color: #fff;
   line-height: normal;
+  text-align: justify;
  @media (max-width: 991px) {
   font-size: 1em;
  }
@@ -670,11 +700,53 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 }
 
-.img-guion {
-  width: 600px;
+.img-guion, .img-edicion {
+  width: 570px;
   @media (max-width: 991px) {
     width: 100%;
    }
+}
+
+.edicion-section {
+  background: url(../img/edicion/bg-edicion.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+
+#edicion .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #0c0808;
+  opacity: 0.8;
+}
+
+.edicion-wrapper {
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+}
+
+.edicion-wrapper-content {
+  margin: 5%;
+}
+
+.edicion-text {
+  font-size: 1.6em;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #fff;
+  line-height: normal;
+  text-align: justify;
+ @media (max-width: 991px) {
+  font-size: 1em;
+ }
 }
 
 #docencia .overlay {
