@@ -189,6 +189,14 @@ ul li, ol li {
   position: relative;
 }
 
+#audiovisual {
+  display: block;
+}
+
+#web {
+  display: block;
+}
+
 .stick-note {
   position: relative;
 }
@@ -281,15 +289,15 @@ ul li, ol li {
 }
 
 .btn-common {
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  color: #000b77;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #142426 100%);
+  color: #fff;
   position: relative;
   z-index: 1;
 }
 
 .btn-common:hover {
   color: #000;
-  background-color: #21cff3;
+  background-image: -webkit-linear-gradient(0deg, #21cff3 0%, #88f3ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -309,8 +317,8 @@ ul li, ol li {
 }
 
 .btn-audiovisual, .btn-contact-edicion {
-  color: #000b77;
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  color: white;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #142426 100%);
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -318,7 +326,7 @@ ul li, ol li {
 
 .btn-audiovisual:hover, .btn-contact-edicion:hover {
   color: #000;
-  background-color: #21cff3;
+  background-image: -webkit-linear-gradient(0deg, #21cff3 0%, #88f3ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -326,7 +334,7 @@ ul li, ol li {
 }
 
 .btn-web {
-  background-color: #000b77;
+  background-image: -webkit-linear-gradient(0deg, #000b77 0%, #142426 100%);
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -334,23 +342,15 @@ ul li, ol li {
 
 .btn-whatsapp {
   color: white;
-  background-color: #25D366;
+  background-image: -webkit-linear-gradient(0deg, #25D366 0%, #142426 100%);
   position: relative;
   z-index: 1;
   margin: 10px;
 }
 
-.btn-whatsapp-a {
-  color: white;
-}
-
-.btn-whatsapp-a:hover {
-  color: black;
-}
-
 .btn-whatsapp:hover {
   color: black;
-  background-color: #7cd39c;
+  background-image: -webkit-linear-gradient(0deg, #7cd39c 0%, #88f3ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -359,7 +359,7 @@ ul li, ol li {
 
 .btn-web:hover {
   color: #000;
-  background-color: #21cff3;
+  background-image: -webkit-linear-gradient(0deg, #0012b5 0%, #88f3ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -658,13 +658,26 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .guion-section {
-  background: url(../img/guion/bg-guion.jpg);
-  background-size: cover;
-  background-attachment: fixed;
   height: auto;
   overflow: hidden;
   position: relative;
   z-index: 20;
+
+  @media (min-width: 992px) {
+    background: url(../img/guion/bg-guion.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    background: url(../img/guion/bg-guion-1x1.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 767px) {
+    background: url(../img/guion/bg-guion-9x16.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 #guion .overlay {
@@ -708,13 +721,15 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .edicion-section {
-  background: url(../img/edicion/bg-edicion.jpg);
-  background-size: cover;
-  background-attachment: fixed;
   height: auto;
   overflow: hidden;
   position: relative;
   z-index: 20;
+
+  
+  background: url(../img/edicion/bg-edicion.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #edicion .overlay {
@@ -784,30 +799,66 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-section-1 {
-  background: url(../img/docencia/bg-docencia-judaismocine.jpg);
-  background-size: cover;
-  background-attachment: fixed;
   height: auto;
   overflow: hidden;
   position: relative;
+  @media (min-width: 992px){
+    background: url(../img/docencia/bg-docencia-judaismocine.jpg);  
+    background-size: cover;
+    background-attachment: fixed;    
+    } 
+  @media (min-width: 768px) and (max-width: 991px) {
+    background: url(../img/docencia/bg-docencia-judaismocine-1x1.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 767px) {
+    background: url(../img/docencia/bg-docencia-judaismocine-9x16.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 .docencia-section-2 {
-  background: url(../img/docencia/bg-docencia-cineargentino.png);
-  background-size: cover;
-  background-attachment: fixed;
   height: auto;
   overflow: hidden;
   position: relative;
+  @media (min-width: 992px) {
+    background: url(../img/docencia/bg-docencia-cineargentino.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    background: url(../img/docencia/bg-docencia-cineargentino-1x1.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 767px) {
+    background: url(../img/docencia/bg-docencia-cineargentino-9x16.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 .docencia-section-3 {
-  background: url(../img/docencia/bg-docencia-charlas2.JPG);
-  background-size: cover;
-  background-attachment: fixed;
   height: auto;
   overflow: hidden;
   position: relative;
+  @media (min-width: 992px) {
+    background: url(../img/docencia/bg-docencia-charlas2.JPG);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    background: url(../img/docencia/bg-docencia-charlas2-1x1.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  @media (max-width: 767px) {
+    background: url(../img/docencia/bg-docencia-charlas2-9x16.jpg);  
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 .docencia-lista {
@@ -981,6 +1032,26 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .shot-item:hover .entrevistas-overlay {
   opacity: 1;
+}
+
+.critica-section {
+  background: url(../img/critica/bg-critica.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+
+#critica .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #0c0808;
+  opacity: 0.8;
 }
 
 .counter-section {
