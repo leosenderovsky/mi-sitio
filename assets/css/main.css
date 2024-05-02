@@ -668,13 +668,8 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-size: cover;
     background-attachment: fixed;
   }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 991px) {
     background: url(../img/guion/bg-guion-1x1.jpg);  
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  @media (max-width: 767px) {
-    background: url(../img/guion/bg-guion-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
@@ -807,16 +802,11 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-size: cover;
     background-attachment: fixed;    
     } 
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 991px) {
     background: url(../img/docencia/bg-docencia-judaismocine-1x1.jpg);  
     background-size: cover;
     background-attachment: fixed;
-  }
-  @media (max-width: 767px) {
-    background: url(../img/docencia/bg-docencia-judaismocine-9x16.jpg);  
-    background-size: cover;
-    background-attachment: fixed;
-  }
+  }  
 }
 
 .docencia-section-2 {
@@ -828,13 +818,8 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-size: cover;
     background-attachment: fixed;
   }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 991px) {
     background: url(../img/docencia/bg-docencia-cineargentino-1x1.jpg);  
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  @media (max-width: 767px) {
-    background: url(../img/docencia/bg-docencia-cineargentino-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
@@ -849,13 +834,8 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-size: cover;
     background-attachment: fixed;
   }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (max-width: 991px) {
     background: url(../img/docencia/bg-docencia-charlas2-1x1.jpg);  
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  @media (max-width: 767px) {
-    background: url(../img/docencia/bg-docencia-charlas2-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
