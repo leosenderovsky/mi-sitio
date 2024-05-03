@@ -50,18 +50,31 @@ h4 {
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
 }
+
 .text-title {
-  font-size: 38px;
+  font-size: 3em;
   font-weight: 500;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 2em;
+  }
+  @media (max-width: 767px) {
+    font-size: 1.5em;
+  }
 }
 
 .text-subtitle {
-  font-size: 25px;
+  font-size: 2em;
   font-weight: 300;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 1.5em;
+  }
+  @media (max-width: 767px) {
+    font-size: 1em;
+  }
 }
 
 .heading-divider {
@@ -428,6 +441,14 @@ button:focus {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 200px;
+    height: 150px;
+  }
+  @media (max-width: 767px) {
+    width: 150px;
+    height: 100px;
+  }
 }
 
 /* This container is needed to position the front and back side */
@@ -862,16 +883,16 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-bg { 
-  background-color: rgb(0, 0, 0, 0.5); 
-  color: #fff;
+  background-color: rgb(255, 255, 255, 0.6); 
+  color: #000;
   padding: 30px;
   margin-top: 10px;
 }
 
 .docencia-item-bg:hover {
   display: block;
-  color:#000;
-  background-color: rgb(255, 255, 255, 0.5);
+  color:#fff;
+  background-color: rgb(0, 0, 0, 0.6);
 }
 
 .docencia-item-title {
@@ -905,7 +926,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-resenia {
-  color: #fff;
+  color: #000;
   font-size: 1.8em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
@@ -914,7 +935,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-resenia2 {
-  color: #fff;
+  color: #000;
   font-size: 1.8em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
@@ -924,12 +945,13 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-resenia2:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: #000;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: #fff;
 }
 
 .lectura-box {
-  background-color:rgb(0, 0, 0, 0.6);
+  background-color:rgb(255, 255, 255, 0.5);
+  color:#000;
 }
 
 .lectura {
@@ -948,12 +970,11 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
-  color: #fff; 
   align-self: center;
 }
 
 .lectura-link {
-  color: #fff; 
+  color: #000; 
   align-self: center;
 }
 
