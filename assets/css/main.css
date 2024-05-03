@@ -3,6 +3,10 @@ html {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth
+}
+
 body {
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   font-size: 14px;
@@ -284,8 +288,10 @@ ul li, ol li {
 .btn2:focus, 
 .btn2:active {
   box-shadow: none;
-  outline: none;
-  color: #fff;
+  outline: #00b4d9;
+  color: #00b4d9;
+  background: transparent;
+  border: #00b4d9;
 }
 
 .btn-common {
@@ -400,6 +406,12 @@ ul li, ol li {
 
 button:focus {
   outline: none !important;
+}
+
+#cv-audiovisual-es, #cv-audiovisual-en, #cv-web-en {
+  display: none;
+  justify-content: center;
+  background-color: white;
 }
 
 .flip-container {
@@ -669,7 +681,7 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-attachment: fixed;
   }
   @media (max-width: 991px) {
-    background: url(../img/guion/bg-guion-1x1.jpg);  
+    background: url(../img/guion/bg-guion-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
@@ -689,7 +701,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin: 5%;
 }
 
-.guion-text {
+.guion-text, .critica-text {
   font-size: 1.2em;
   font-weight: 400;
   font-family: "Libre Franklin", sans-serif;
@@ -803,7 +815,7 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-attachment: fixed;    
     } 
   @media (max-width: 991px) {
-    background: url(../img/docencia/bg-docencia-judaismocine-1x1.jpg);  
+    background: url(../img/docencia/bg-docencia-judaismocine-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }  
@@ -819,7 +831,7 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-attachment: fixed;
   }
   @media (max-width: 991px) {
-    background: url(../img/docencia/bg-docencia-cineargentino-1x1.jpg);  
+    background: url(../img/docencia/bg-docencia-cineargentino-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
@@ -835,7 +847,7 @@ a.back-to-top:hover, a.back-to-top:focus {
     background-attachment: fixed;
   }
   @media (max-width: 991px) {
-    background: url(../img/docencia/bg-docencia-charlas2-1x1.jpg);  
+    background: url(../img/docencia/bg-docencia-charlas2-9x16.jpg);  
     background-size: cover;
     background-attachment: fixed;
   }
@@ -876,8 +888,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.8em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
+  display: flex;
+  justify-content: center;
   text-align: center;
   line-height: 150%;
+  width: 80%;
+  margin: auto;
 }
 
 .docencia-item-text {

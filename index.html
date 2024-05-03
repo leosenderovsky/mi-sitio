@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Yanone+Kaffeesatz:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeMO80pAAAAAAYJuVniVLisqPHeSbM7CXCS-5NF"></script>
   </head>
   <body>
 
@@ -85,18 +86,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">
-                  Servicios
+                <a class="nav-link" href="#audiovisual">
+                  Audiovisual
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#resume">
-                  CV
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolios">
-                  Trabajos
+                <a class="nav-link" href="#web">
+                  Web
                 </a>
               </li>
               <li class="nav-item">
@@ -117,13 +113,10 @@
             <a href="#about">Acerca de mí</a>
           </li>
           <li>
-            <a href="#services">Servicios</a>
+            <a href="#audiovisual">Audiovisual</a>
           </li>
           <li>
-            <a href="#resume">CV</a>
-          </li>
-          <li>
-            <a href="#portfolio">Trabajos</a>
+            <a href="#web">Web</a>
           </li>
           <li>
             <a href="#contact">Contacto</a>
@@ -226,7 +219,7 @@
           </div> 
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="profile-wrapper wow fadeInUp" data-wow-delay="0.4s">
-              <h1>Un poco de mí...</h1>
+              <h1>Acerca de mí</h1>
               <p class="about-text">Desde 2005, me desempeño en el mundo audiovisual, principalmente como editor de video y coordinador de postproducción, pero también como consultor de guión, crítico y profesor de cine. Doy charlas y encuentros de cine, mis temáticas principales son judaísmo en cine y tv y cine argentino.</p><br>
               <p class="about-text">Desde el inicio de mi trayecto laboral tuve la oportunidad de conjugar lo audiovisual con las herramientas del mundo web. Empecé a conocer la potencialidad de WordPress al postear mis críticas de cine para Cine.com entre 2007 y 2010. En 2008 entré como responsable de video y multimedia en una empresa de desarrollo web, donde aprendí a trabajar con Joomla, WordPress y a conocer las herramientas de SEO, community manager, etc.</p><br>
               <p class="about-text">Años después, mientras avanzaba en distintas experiencias laborales en el campo audiovisual, fui armando sitios en Joomla y WordPress. En 2021 me decidí a iniciar una nueva etapa en mi proceso formativo y profesional, y realicé cursos de desarrollo front end en Coderhouse.</p><br>
@@ -247,17 +240,76 @@
               <div class="d-lg-none col-md-6 col-sm-12 col-xs-12"></div>
               <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 button-container">
                 <div class="buttons wow fadeInRight" data-wow-delay="0.4s">
-              <div class="btn btn-audiovisual"><i class="icon-paper-clip"></i> Descargá mi CV  <b> AUDIOVISUAL  </b><a href="#" class="fi fi-es"></a> <a href="#" class="fi fi-gb"></a></div><br>
-              <div class="btn btn-web"><i class="icon-paper-clip"></i> Descargá mi CV  <b> WEB  </b><a href="#" class="fi fi-gb"></a></div><br>
+              <div class="btn btn-audiovisual"><i class="icon-paper-clip"></i> Mi CV  <b> AUDIOVISUAL  </b><div id="mostrar-cv-editor-es" class="fi fi-es"></div> <div id="mostrar-cv-editor-en" class="fi fi-gb"></div></div><br>
+              <div class="btn btn-web"><i class="icon-paper-clip"></i> Mi CV  <b> WEB  </b><div id="mostrar-cv-web-en" class="fi fi-gb"></div></div><br>
               <div><a class="btn btn-whatsapp" href="https://wa.me/541130452585" target="_blank"><i class="fa-brands fa-whatsapp"></i> Contactame</a></div><br>
             </div>
             </div>
       </div>
     </div>
     </div>
-    </section>
     <!-- About Section End -->
-
+    <div id="cv-audiovisual-es">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <a href="assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf" target="_blank"><div class="btn btn-audiovisual"><i class="icon-paper-clip"></i> Descargá mi CV  <b> AUDIOVISUAL  </b><div class="fi fi-es"></div></div></a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div id="adobe-dc-view" style="width: 800px;"></div>
+      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+          var adobeDCView = new AdobeDC.View({clientId: "5432d979663f460f9dee9156b4583721", divId: "adobe-dc-view"});
+          adobeDCView.previewFile({
+            content:{location: {url: "assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf"}},
+            metaData:{fileName: "leo-senderovsky-cv-edicion-guion.pdf"}
+          }, {embedMode: "IN_LINE"});
+        });
+      </script>
+      </div>
+    </div>
+  </div>
+    <div id="cv-audiovisual-en">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <a href="assets/docs/cv/leo-senderovsky-resume-editor.pdf" target="_blank"><div class="btn btn-audiovisual"><i class="icon-paper-clip"></i> Descargá mi CV  <b> AUDIOVISUAL  </b><div class="fi fi-gb"></div></div></a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div id="adobe-dc-view2" style="width: 800px;"></div>
+      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+          var adobeDCView = new AdobeDC.View({clientId: "5432d979663f460f9dee9156b4583721", divId: "adobe-dc-view2"});
+          adobeDCView.previewFile({
+            content:{location: {url: "assets/docs/cv/leo-senderovsky-resume-editor.pdf"}},
+            metaData:{fileName: "leo-senderovsky-resume-editor.pdf"}
+          }, {embedMode: "IN_LINE"});
+        });
+      </script>
+      </div>
+    </div>
+    </div>
+    <div id="cv-web-en">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <a href="assets/docs/cv/leo-senderovsky-resume-web.pdf" target="_blank"><div class="btn btn-web"><i class="icon-paper-clip"></i> Descargá mi CV  <b> WEB  </b><div class="fi fi-gb"></div></div></a>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div id="adobe-dc-view3" style="width: 800px;"></div>
+      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+          var adobeDCView = new AdobeDC.View({clientId: "5432d979663f460f9dee9156b4583721", divId: "adobe-dc-view3"});
+          adobeDCView.previewFile({
+            content:{location: {url: "assets/docs/cv/leo-senderovsky-resume-web.pdf"}},
+            metaData:{fileName: "leo-senderovsky-resume-web.pdf"}
+          }, {embedMode: "IN_LINE"});
+        });
+      </script>
+      </div>
+    </div>
+    </div>
+    </section>
     <!-- Services Section Start -->
     <section id="services" class="services">
       <div class="services-audiovisual">
@@ -302,13 +354,14 @@
           </div>
           <!-- Services item -->
           <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="1.2s">
+            <div class="services-item wow fadeInDown" data-wow-delay="1.2s"><a href="#critica">
               <div class="icon">
                 <i class="fa-solid fa-film"></i>
               </div>
               <div class="services-content">
-                <p><a href="#" class="services-item-title">CRÍTICA</a></p>
+                <p class="services-item-title">CRÍTICA</p>
               </div>
+            </a>
             </div>
           </div>
         </div>
@@ -320,13 +373,14 @@
         <div class="row d-flex justify-content-center">
           <!-- Services item -->
           <div class="col-md-6 col-lg-6 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.4s">
+            <div class="services-item wow fadeInDown" data-wow-delay="0.4s"><a href="#web">
               <div class="icon">
                 <i class="fa-solid fa-code"></i>
               </div>
               <div class="services-content">
-                <p><a href="#" class="services-item-title">FRONT END DEVELOPER</a></p>
+                <p class="services-item-title">FRONT END DEVELOPER</p>
               </div>
+            </a>
             </div>
           </div>
           <!-- Services item
@@ -1334,13 +1388,13 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="edicion-wrapper-content wow fadeInLeft" data-wow-delay="0.4s">  
-            <p class="edicion-text">En los inicios de mi vida profesional, me enfoqué en una de mis pasiones: La crítica y el análisis de cine.</p>
-              <p class="edicion-text">Colaboré como columnista y corresponsal de cine en programas de radio y medios gráficos y, durante tres años y medio, trabajé para Cine.com, un desaparecido sitio online de España.</p>
-              <p class="edicion-text">Actualmente, podés encontrar en mi blog mi archivo de críticas y otros artículos de cine.</p>
-              <p class="edicion-text">Vas a poder leer las críticas que publiqué para Cine.com entre 2007 y 2010, para otros medios y artículos exclusivamente publicados en mi blog.</p><br>
+            <p class="critica-text">En los inicios de mi vida profesional, me enfoqué en una de mis pasiones: La crítica y el análisis de cine.</p><br>
+              <p class="critica-text">Colaboré como columnista y corresponsal de cine en programas de radio y medios gráficos y, durante tres años y medio, trabajé para Cine.com, un desaparecido sitio online de España.</p><br>
+              <p class="critica-text">Actualmente, podés encontrar en mi blog mi archivo de críticas y otros artículos de cine.</p><br>
+              <p class="critica-text">Vas a poder leer las críticas que publiqué para Cine.com entre 2007 y 2010, para otros medios y artículos exclusivamente publicados en mi blog.</p><br>
               <a href="https://leosenderovskyblog.wordpress.com/" target="_blank">
                 <p class="btn2 btn-contact-edicion">Visitá mi blog                   
-                  <i class="fa-solid fa-arrow-right">  </i></p>
+                  <i class="fa-solid fa-arrow-right">  </i></p><br>
               </a>
               <a href="mailto:l.a.senderovsky@gmail.com" target="_blank">
               <p class="btn2 btn-contact-edicion">Contactame                   
@@ -1515,27 +1569,51 @@
           <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="contact-block">
-                <h2>Contact Form</h2><br>
-                <div class="text-center">
-                  <h2>You are using Free Version</h2>
-                  <h4>Please, purchase full version to get all features and pages</h4><br>
-                  <b>Including:</b>
-                  <p>- 2 Homepage Variations</p>
-                  <p>- All Elements and Features</p>
-                  <p>- Amazing Slider</p>
-                  <p>- Documentation File</p>
-                  <p>- Quick Support</p>
-                  <p>- Permission to Use in Commercial Projects</p>
-                  <p>- Footer Credit Removal</p>
-                  <p>- SASS Files</p>
-                  <br>
-                  <a href="http://rebrand.ly/meet-me-ud-purchase" target="_blank" class="btn btn-common btn-lg">Purchase Now</a>
-                </div>
+                <div class="contact-wrap w-100">
+									<h3 class="mb-4">Contactame</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4"></div>
+									<form method="POST" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
+												</div>
+											</div>
+                      <div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="surname" placeholder="Apellido">
+												</div>
+											</div>
+											<div class="col-md-12"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Mensaje"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Enviar" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
               </div>
-            </div>
+            </div>            
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="footer-right-area wow fadeIn">
-                <h2>Contact Address</h2>
+                <h3 class="mb-4">Mis datos de contacto</h3>
                 <div class="footer-right-contact">
                   <div class="single-contact">
                     <div class="contact-icon">
@@ -1608,6 +1686,8 @@
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/jquery-min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.mixitup.js"></script>
@@ -1619,7 +1699,7 @@
     <script src="assets/js/nivo-lightbox.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/ocultar.js"></script>
+    <script src="assets/js/mostrar.js"></script>
       
   </body>
 </html>
