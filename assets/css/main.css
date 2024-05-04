@@ -56,6 +56,7 @@ h4 {
   font-weight: 500;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
+  line-height: 1.5;
   @media (min-width: 768px) and (max-width: 991px) {
     font-size: 2em;
   }
@@ -69,6 +70,7 @@ h4 {
   font-weight: 300;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
+  line-height: 1.8;
   @media (min-width: 768px) and (max-width: 991px) {
     font-size: 1.5em;
   }
@@ -336,8 +338,9 @@ ul li, ol li {
 }
 
 .btn-audiovisual, .btn-contact-edicion {
+  width: 13em;
   color: white;
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #142426 100%);
+  background-color: #766dff;
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -345,7 +348,7 @@ ul li, ol li {
 
 .btn-audiovisual:hover, .btn-contact-edicion:hover {
   color: #000;
-  background-image: -webkit-linear-gradient(0deg, #21cff3 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -353,15 +356,17 @@ ul li, ol li {
 }
 
 .btn-web {
-  background-image: -webkit-linear-gradient(0deg, #000b77 0%, #142426 100%);
+  width: 13em;
+  background-color: #000b77;
   position: relative;
   z-index: 1;
   margin: 10px;
 }
 
 .btn-whatsapp {
+  width: 13em;
   color: white;
-  background-image: -webkit-linear-gradient(0deg, #25D366 0%, #142426 100%);
+  background-color: #25D366;
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -446,7 +451,7 @@ button:focus {
     height: 150px;
   }
   @media (max-width: 767px) {
-    width: 150px;
+    width: 100px;
     height: 100px;
   }
 }
@@ -880,6 +885,10 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.docencia-item {
+  margin: 10px;
 }
 
 .docencia-item-bg { 
