@@ -355,6 +355,15 @@ ul li, ol li {
   -webkit-transition: all .2s ease-in-out;
 }
 
+.btn-audiovisual-descarga {
+  width: 14em;
+  color: white;
+  background-color: #766dff;
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+}
+
 .btn-web {
   width: 13em;
   background-color: #000b77;
@@ -958,24 +967,29 @@ a.back-to-top:hover, a.back-to-top:focus {
   color: #fff;
 }
 
+.icon-resenia {
+  padding: 10px;
+}
+
 .lectura-box {
+  width: auto;
   background-color:rgb(255, 255, 255, 0.5);
   color:#000;
+}
+
+.lectura-titulo {
+  padding: 10px;
 }
 
 .lectura {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-}
-
-.lectura-item {
-  width: auto;
 }
 
 .lectura-item {
   font-family: Yanone Kaffeesatz;
+  color: #000;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
@@ -988,8 +1002,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .lectura-item:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: #000;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: #fff;
 }
 
 .lectura-link:hover {
@@ -1622,7 +1636,7 @@ details summary::-webkit-details-marker {
 3. Hero Area
 ========================================================================== */
 .hero-area-bg {
-  background: url(../img/hero-area.jpg) center center no-repeat;
+  background: url(../img/hero-area-office.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
