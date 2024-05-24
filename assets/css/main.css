@@ -271,7 +271,6 @@ ul li, ol li {
   border-radius: 0px;
   cursor: pointer;
   font-weight: 400;
-  color: #fff;
   border-radius: 4px;
   text-transform: uppercase;
   -webkit-transition: all 0.2s linear;
@@ -318,7 +317,7 @@ ul li, ol li {
 
 .btn-common:hover {
   color: #000;
-  background-image: -webkit-linear-gradient(0deg, #21cff3 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #766dff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -350,11 +349,12 @@ ul li, ol li {
 }
 
 .btn-contact-guion {
+  width: 12em;
+  line-height: normal;
   font-weight: 600;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: auto;
   color: white;
   background-color: #766dff;
   position: relative;
@@ -377,7 +377,7 @@ ul li, ol li {
 
 .btn-audiovisual:hover, .btn-contact-guion:hover, .btn-contact-edicion:hover {
   color: #000;
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #766dff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -394,6 +394,7 @@ ul li, ol li {
 }
 
 .btn-web {
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -410,7 +411,7 @@ ul li, ol li {
   align-items: center;
   width: 12em;
   color: white;
-  background-color: #25D366;
+  background-color: #5a78ff;
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -418,7 +419,7 @@ ul li, ol li {
 
 .btn-mail:hover {
   color: black;
-  background-image: -webkit-linear-gradient(0deg, #7cd39c 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #5a78ff 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -427,7 +428,7 @@ ul li, ol li {
 
 .btn-web:hover {
   color: #000;
-  background-image: -webkit-linear-gradient(0deg, #0012b5 0%, #88f3ff 100%);
+  background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #0012b5 100%);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -1025,9 +1026,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 .lectura-item {  
   width: auto;
   align-self: center;
-}
-
-.lectura-item a {
   font-family: Yanone Kaffeesatz;
   color: #000;
   font-size: 1.5em;
