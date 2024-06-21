@@ -213,8 +213,8 @@ ul li, ol li {
   font-weight: 700;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
-  color: #252525;
-  font-size: 5em;
+  color: #000b77;
+  font-size: 4em;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1;
@@ -245,7 +245,7 @@ ul li, ol li {
 }
 
 .section-subtitle {
-  color: #252525;
+  color: #000b77;
   font-size: 20px;
   font-weight: 300;
   text-align: center;
@@ -810,7 +810,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #0c0808;
+  background: #00052e;
   opacity: 0.8;
 }
 
@@ -862,7 +862,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #0c0808;
+  background: #00052e;
   opacity: 0.8;
 }
 
@@ -894,8 +894,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #0c0808;
-  opacity: 0.6;
+  background: #00052e;
+  opacity: 0.8;
 }
 
 .bg-opacity {
@@ -972,18 +972,22 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .docencia-lista {
   display:block;  
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: auto;
+}
+
+.docencia-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .docencia-item {
-  margin: 10px;
+  margin: 5px;
 }
 
 .docencia-item-bg { 
-  background-color: rgb(255, 255, 255, 0.6); 
+  background-color: rgb(255, 255, 255, 0.8); 
   color: #000;
   padding: 30px;
   margin-top: 10px;
@@ -992,42 +996,41 @@ a.back-to-top:hover, a.back-to-top:focus {
 .docencia-item-bg:hover {
   display: block;
   color:#fff;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.8);
 }
 
 .docencia-item-title {
-  font-size: 2.5em;
+  font-size: 2em;
   font-family: Yanone Kaffeesatz;
-  font-weight: 300;
   text-transform: uppercase;
   text-align: center; 
-  line-height: 150%;
+  line-height: 120%;
 }
 
 .docencia-title-subtitle {
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
   display: flex;
   justify-content: center;
   text-align: center;
-  line-height: 150%;
+  line-height: auto;
   width: 80%;
   margin: auto;
 }
 
 .docencia-item-text {
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
   text-align: center;
-  line-height: 150%;
+  line-height: auto;
 }
 
 .docencia-item-resenia {
   color: #000;
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
   text-align: center;
@@ -1036,7 +1039,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .docencia-item-resenia2 {
   color: #000;
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: 300;
   font-family: Yanone Kaffeesatz;
   text-align: center;
@@ -1045,7 +1048,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-resenia2:hover {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.7);
   color: #fff;
 }
 
@@ -1054,7 +1057,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .lectura-box {
-  background-color:rgb(255, 255, 255, 0.5);
+  background-color:rgb(255, 255, 255, 0.7);
   color:#000;
 }
 
@@ -1178,7 +1181,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #0c0808;
+  background: #00052e;
   opacity: 0.8;
 }
 
@@ -2012,6 +2015,10 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
 }
 
+.form {
+  margin: 5%;
+}
+
 .form-control {
   width: 100%;
   margin-bottom: 20px;
@@ -2044,28 +2051,31 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   text-transform: uppercase;
 }
 
-.footer-right-contact {
+.contact-data {
   padding: 4px;
   border: 1px solid #e1e1e1;
   margin-top: 30px;
 }
 
-.footer-right-contact .single-contact {
-  margin: 10px 22px;
-  padding: 3px 55px;
+.contact-data .single-contact {
+  margin: 10px;
   position: relative;
-  color: #666;
+  color: #666;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-right-contact .single-contact p {
+.contact-data .single-contact p {
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.footer-right-contact .single-contact p a {
+.contact-data .single-contact p a {
   color: #666;
 }
 
-.footer-right-contact .contact-icon {
+.contact-data .contact-icon {
   background: #00b4d9;
   color: #fff;
   border-radius: 50%;
@@ -2113,7 +2123,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 /* Footer Area Start */
 .footer-area {
-  background: #1C1C20;
+  background: #000b77;
 }
 
 .footer-area .footer-text p {
