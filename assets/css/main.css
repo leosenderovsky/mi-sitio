@@ -432,6 +432,7 @@ ul li, ol li {
 
 .btn-audiovisual-descarga {
   width: 14em;
+  height: 3em;
   color: white;
   background-color: #766dff;
   position: relative;
@@ -520,6 +521,13 @@ button:focus {
 #cv-audiovisual-es, #cv-audiovisual-en, #cv-web-en {
   display: none;
   justify-content: center;
+  background-color: white;
+}
+
+#cv-edicion-guion-es, #resume-editor-en, #resume-web-en {
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: white;
 }
 
