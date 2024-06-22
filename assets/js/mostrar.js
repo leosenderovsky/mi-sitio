@@ -1,19 +1,19 @@
 document.getElementById("mostrar-cv-editor-es").onclick = function() {
-    var audiovisual = document.getElementById("cv-edicion-guion-es");
+    var audiovisual = document.getElementById("cv-audiovisual-es");
     if (audiovisual.style.display === "none") {
         audiovisual.style.display = "flex";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("resume-editor-en");
+    var audiovisual = document.getElementById("cv-audiovisual-en");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("resume-web-en");
+    var audiovisual = document.getElementById("cv-web-en");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {
@@ -22,21 +22,21 @@ document.getElementById("mostrar-cv-editor-es").onclick = function() {
 }
 
 document.getElementById("mostrar-cv-editor-en").onclick = function() {
-    var audiovisual = document.getElementById("resume-editor-en");
+    var audiovisual = document.getElementById("cv-audiovisual-en");
     if (audiovisual.style.display === "none") {
         audiovisual.style.display = "flex";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("cv-edicion-guion-es");
+    var audiovisual = document.getElementById("cv-audiovisual-es");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("resume-web-en");
+    var audiovisual = document.getElementById("cv-web-en");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {
@@ -45,21 +45,21 @@ document.getElementById("mostrar-cv-editor-en").onclick = function() {
 }
 
 document.getElementById("mostrar-cv-web-en").onclick = function() {
-    var audiovisual = document.getElementById("resume-web-en");
+    var audiovisual = document.getElementById("cv-web-en");
     if (audiovisual.style.display === "none") {
         audiovisual.style.display = "flex";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("resume-editor-en");
+    var audiovisual = document.getElementById("cv-audiovisual-en");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {
         audiovisual.style.display = "none";
     }
 
-    var audiovisual = document.getElementById("cv-edicion-guion-es");
+    var audiovisual = document.getElementById("cv-audiovisual-es");
     if (audiovisual.style.display === "flex") {
         audiovisual.style.display = "none";
     } else {

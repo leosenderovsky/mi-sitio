@@ -522,13 +522,7 @@ button:focus {
   display: none;
   justify-content: center;
   background-color: white;
-}
-
-#cv-edicion-guion-es, #resume-editor-en, #resume-web-en {
-  display: none;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: white;
+  padding: 30px;
 }
 
 .flip-container {
