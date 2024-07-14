@@ -1210,6 +1210,26 @@ a.back-to-top:hover, a.back-to-top:focus {
   opacity: 0.8;
 }
 
+.web-section {
+  background: url(../img/web/bg-web.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+
+#web .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #00052e;
+  opacity: 0.8;
+}
+
 .counter-section {
   background: url(../img/background/bg-1.jpg);
   overflow: hidden;
