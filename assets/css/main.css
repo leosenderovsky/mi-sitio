@@ -210,7 +210,7 @@ ul li, ol li {
 }
 
 .section-title {
-  font-weight: 700;
+  font-weight: 600;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
   color: #000b77;
@@ -224,6 +224,9 @@ ul li, ol li {
 }
 
 .section-title-white {
+  font-weight: 600;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-transform: uppercase;
   color: white;
   font-size: 4em;
   text-align: center;
@@ -843,11 +846,23 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin: 5%;
 }
 
-.guion-text, .critica-text {
+.guion-text {
   font-size: 1.2em;
   font-weight: 400;
   font-family: "Libre Franklin", sans-serif;
   color: #000b77;
+  line-height: normal;
+  text-align: justify;
+ @media (max-width: 991px) {
+  font-size: 1em;
+ }
+}
+
+.critica-text {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #fff;
   line-height: normal;
   text-align: justify;
  @media (max-width: 991px) {
@@ -932,6 +947,9 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-big-subtitle-white {
+  font-weight: 300;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-transform: uppercase;
   color: white;
   font-size: 3.5em;
   text-align: center;
@@ -1012,16 +1030,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .docencia-item-bg { 
-  background-color: rgb(255, 255, 255, 0.8); 
+  background-color: rgb(255, 255, 255, 0.6); 
   color: #000;
   padding: 30px;
   margin-top: 10px;
-}
-
-.docencia-item-bg:hover {
-  display: block;
-  color:#fff;
-  background-color: rgb(0, 0, 0, 0.8);
 }
 
 .docencia-item-title {
