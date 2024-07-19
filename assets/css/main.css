@@ -847,7 +847,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 1.2em;
   font-weight: 400;
   font-family: "Libre Franklin", sans-serif;
-  color: #fff;
+  color: #000b77;
   line-height: normal;
   text-align: justify;
  @media (max-width: 991px) {
@@ -924,11 +924,11 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .bg-opacity {
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: rgb(0, 0, 0, 0.9);
 }
 
 .bg-opacity-white {
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgb(255, 255, 255, 0.8);
 }
 
 .docencia-big-subtitle-white {
@@ -1136,7 +1136,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0, 180, 217, 0.6);
+  background: rgba(0, 180, 217, 0.8);
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1795,7 +1795,7 @@ details summary::-webkit-details-marker {
   top: 0px;
   left: 0px;
   background: #0c0808;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 #hero-area .contents {
@@ -1924,7 +1924,7 @@ details summary::-webkit-details-marker {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0, 180, 217, 0.6);
+  background: rgba(0, 180, 217, 0.8);
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
