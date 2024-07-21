@@ -2188,7 +2188,8 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 .contact-data {
   padding: 4px;
-  border: 1px solid #e1e1e1;
+  color: #000b77;
+  border: 1px solid #000b77;
   margin-top: 30px;
 }
 
