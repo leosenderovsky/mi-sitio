@@ -313,13 +313,18 @@ ul li, ol li {
   color: #fff;
 }
 
+.inline-icons {
+  display: flex;
+}
+
 .btn {
+  height: 50px;
+  text-align: center;
   font-family: Yanone Kaffeesatz;
   font-size: 1.5em;
   padding: 10px 30px;
-  border-radius: 0px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 4px;
   text-transform: uppercase;
   -webkit-transition: all 0.2s linear;
@@ -331,14 +336,30 @@ ul li, ol li {
 
 .btn2 {
   font-family: Yanone Kaffeesatz;
-  font-size: 2em;
-  padding: 10px 30px;
-  border-radius: 0px;
+  font-size: 1.5em;
+  padding: 10px 40px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   color: #fff;
   border-radius: 4px;
   text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+  height: auto;
+}
+
+.btn3 {
+  font-family: Yanone Kaffeesatz;
+  font-size: 1em;
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 10px 5px;
+  cursor: pointer;
+  border-radius: 4px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -367,7 +388,8 @@ ul li, ol li {
 .btn-common:hover {
   color: #000;
   background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #766dff 100%);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -389,12 +411,39 @@ ul li, ol li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: auto;
-  color: white;
-  background-color: #766dff;
+  width: 12em;
+  color: #000b77;
+  border: 1px solid #000b77;
   position: relative;
   z-index: 1;
   margin: 10px;
+  padding: 5px 20px;
+}
+
+.btn-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  border: 1px solid #666;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  color: #666;
+}
+
+.btn-icon:hover {
+  background-color: #00b4d9;
+  color: #fff;
+  border: 0px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+}
+
+#btn-icon .icon {
+  width: 50px;
+  height: auto;
 }
 
 .btn-contact-guion {
@@ -412,13 +461,13 @@ ul li, ol li {
 }
 
 .btn-contact-edicion {
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 9em;
-  color: white;
-  background-color: #766dff;
+  width: 12em;
+  color: white;  
+  border: 1px solid white;
   position: relative;
   z-index: 1;
   margin: 10px;
@@ -427,7 +476,8 @@ ul li, ol li {
 .btn-audiovisual:hover, .btn-contact-guion:hover, .btn-contact-edicion:hover {
   color: #000;
   background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #766dff 100%);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -444,6 +494,7 @@ ul li, ol li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 5px 10px;
 }
 
 .btn-web {
@@ -452,10 +503,12 @@ ul li, ol li {
   justify-content: space-around;
   align-items: center;
   width: 12em;
-  background-color: #000b77;
+  color: #000b77;
+  border: 1px solid #000b77;
   position: relative;
   z-index: 1;
   margin: 10px;
+  padding: 5px 10px;
 }
 
 .btn-mail {
@@ -463,17 +516,19 @@ ul li, ol li {
   justify-content: space-around;
   align-items: center;
   width: 12em;
-  color: white;
-  background-color: #5a78ff;
+  color: #000b77;
+  border: 1px solid #000b77;
   position: relative;
   z-index: 1;
   margin: 10px;
+  padding: 5px 10px;
 }
 
 .btn-mail:hover {
   color: black;
   background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #5a78ff 100%);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -482,7 +537,8 @@ ul li, ol li {
 .btn-web:hover {
   color: #000;
   background-image: -webkit-linear-gradient(0deg, #88f3ff 0%, #0012b5 100%);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -491,7 +547,7 @@ ul li, ol li {
 .btn-danger:hover {
   background-color: #f55262;
   border-color: #f55262;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -523,6 +579,12 @@ ul li, ol li {
 button:focus {
   outline: none !important;
 }
+
+.hidden-mobile {
+  @media (max-width: 575px) {
+    display: none;
+  }
+} 
 
 #cv-audiovisual-es, #cv-audiovisual-en, #cv-web-en {
   display: none;
@@ -1388,6 +1450,13 @@ details summary::-webkit-details-marker {
   padding-top: 10px;
 }
 
+.timeline li .line-subtitle {
+  font-size: 20px;
+  line-height: 16px;
+  padding-top: 10px;
+}
+
+
 .timeline li span {
   font-size: 12px;
   padding: 9px 0;
@@ -1448,6 +1517,15 @@ details summary::-webkit-details-marker {
 .logo-thumb {
   width: 100px;
   height: auto;
+}
+
+.icon-thumb {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-thumb:hover{
+  color: #fff;
 }
 
 .social-bar{
