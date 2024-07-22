@@ -612,6 +612,7 @@ button:focus {
 }
 
 .embed-cv {
+  padding: 0 20px;
   @media (min-width: 992px) {
     width: 800px;
     height: 600px;
