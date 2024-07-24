@@ -932,8 +932,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .guion-text {
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 500;
   font-family: "Libre Franklin", sans-serif;
   color: #000b77;
   line-height: normal;
@@ -944,8 +944,8 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .critica-text {
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 500;
   font-family: "Libre Franklin", sans-serif;
   color: #fff;
   line-height: normal;
