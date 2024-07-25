@@ -66,3 +66,12 @@ document.getElementById("mostrar-cv-web-en").onclick = function() {
         audiovisual.style.display = "none";
     }
 }
+
+document.getElementById("btn-ver-mas-portfolio").onclick = function() {
+    var portfolioRemain = document.getElementById("portfolio-remain");
+    if (portfolioRemain.style.display === "none") {
+        portfolioRemain.style.display = "block";
+    } else {
+        portfolioRemain.style.display = "none";
+    }
+}

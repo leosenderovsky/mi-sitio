@@ -20,3 +20,12 @@ changeText.addEventListener("click", function() {
     changeText.textContent = "Ver mi experiencia anterior";
   }
 });
+
+const changeTextPortfolio = document.querySelector("#btn-ver-mas-portfolio");
+changeTextPortfolio.addEventListener("click", function() {
+  if (changeTextPortfolio.textContent === "Ver más trabajos") {
+    changeTextPortfolio.textContent = "Ver menos trabajos";
+  } else {
+    changeTextPortfolio.textContent = "Ver más trabajos";
+  }
+});
