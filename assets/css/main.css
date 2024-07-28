@@ -888,6 +888,14 @@ a.back-to-top:focus {
   justify-content: center;
   position: relative;
   z-index: 20;
+  background-color: #3844be;
+  padding-top: 30px;
+}
+
+.video-about-inner {
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .container-expand {
@@ -1164,6 +1172,12 @@ a.back-to-top:focus {
   color: #000;
   padding: 30px;
   margin-top: 10px;
+}
+
+.docencia-item-bg:hover {
+  background-color: rgb(0, 0, 0, 0.6);
+  color: #fff;
+  cursor: pointer;
 }
 
 .docencia-item-title {

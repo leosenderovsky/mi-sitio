@@ -81,7 +81,7 @@ document.getElementById("btn-ver-mas-portfolio").onclick = function () {
 function toggleButtonPortfolioRemain() {
   let showPortfolio = document.querySelector("#portfolio-remain");
   if (showPortfolio.className == "hidden-mobile") {
-    showPortfolio.className = "block";
+    showPortfolio.className = "row";
   } else {
     showPortfolio.className = "hidden-mobile";
   }
