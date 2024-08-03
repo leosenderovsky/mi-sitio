@@ -890,6 +890,9 @@ a.back-to-top:focus {
   z-index: 20;
   background-color: #3844be;
   padding-top: 30px;
+  @media (max-width: 575px) {
+    margin-top: 30px;
+  }
 }
 
 .video-about-inner {
