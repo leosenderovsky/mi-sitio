@@ -1612,9 +1612,20 @@ details summary::-webkit-details-marker {
   position: relative;
   background-color: #000b77;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   max-height: fit-content;
   height: 50px;
+}
+
+.social-title {
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 20px;
+  text-transform: uppercase;
 }
 
 .social-icon li {
@@ -1626,7 +1637,6 @@ details summary::-webkit-details-marker {
   color: #fff;
   width: 25px;
   height: 25px;
-  line-height: 25px;
   display: block;
   text-align: center;
   font-size: 16px;
@@ -1639,43 +1649,36 @@ details summary::-webkit-details-marker {
 
 .social-icon li .facebook:hover {
   background-color: white;
-  border-radius: 100%;
   color: #3b5999;
 }
 
 .social-icon li .twitter:hover {
   background-color: white;
-  border-radius: 100%;
   color: #000;
 }
 
 .social-icon li .instagram:hover {
   background-color: white;
-  border-radius: 100%;
   color: orange;
 }
 
 .social-icon li .linkedin:hover {
   background-color: white;
-  border-radius: 100%;
   color: #1260a2;
 }
 
 .social-icon li .youtube:hover {
   background-color: white;
-  border-radius: 100%;
   color: #ce332a;
 }
 
 .social-icon li .behance:hover {
   background-color: white;
-  border-radius: 100%;
   color: #053eff;
 }
 
 .social-icon li .github:hover {
   background-color: white;
-  border-radius: 100%;
   color: #000;
 }
 
@@ -1685,7 +1688,7 @@ details summary::-webkit-details-marker {
 }
 
 .top-nav-collapse {
-  background: #fff;
+  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
   z-index: 999999;
   top: 0px !important;
   min-height: 58px;
@@ -1696,7 +1699,6 @@ details summary::-webkit-details-marker {
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  background: #fff !important;
 }
 
 .top-nav-collapse .navbar-brand {
@@ -1708,18 +1710,18 @@ details summary::-webkit-details-marker {
 }
 
 .top-nav-collapse .navbar-nav .nav-link {
-  color: #333 !important;
+  color: #000b77 !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
   cursor: pointer;
-  color: #00b4d9 !important;
+  color: #fff !important;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #00b4d9 !important;
+  color: #fff !important;
 }
 
 .indigo {
@@ -1746,7 +1748,7 @@ details summary::-webkit-details-marker {
 .navbar-expand-md .navbar-nav .nav-link {
   font-family: Yanone Kaffeesatz;
   font-size: 1.5em;
-  color: #333;
+  color: #000b77;
   font-weight: 600;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1774,7 +1776,7 @@ details summary::-webkit-details-marker {
 .navbar-expand-md .navbar-nav li a:hover,
 .navbar-expand-md .navbar-nav li .active > a,
 .navbar-expand-md .navbar-nav li a:focus {
-  color: #8a75ff;
+  color: #fff;
   outline: none;
 }
 
@@ -1907,7 +1909,7 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar-header {
     width: 100%;
   }
