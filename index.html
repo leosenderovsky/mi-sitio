@@ -329,30 +329,38 @@
         </div>
       </div>
       <div class="social-bar hidden-mobile">
-        <span class="social-title">Seguime en</span>
-        <ul class="social-icon" data-aos="fade-up" data-aos-duration="800">
-          <li>
-            <a class="linkedin" href="https://www.linkedin.com/in/lsender/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-          </li>
-          <li>
-            <a class="youtube" href="https://www.youtube.com/c/LeoAquibaSenderovsky" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-          </li>
-          <li>
-            <a class="behance" href="https://www.behance.net/leosenderovsky" target="_blank"><i class="fa-brands fa-behance"></i></a>
-          </li>
-          <li>
-            <a class="facebook" href="https://www.facebook.com/Leo.Aquiba.Senderovsky" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a class="twitter" href="https://twitter.com/leosenderovsky" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          </li>
-          <li>
-            <a class="instagram" href="https://www.instagram.com/leo.senderovsky/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li>
-            <a class="github" href="https://github.com/leosenderovsky" target="_blank"><i class="fa-brands fa-github"></i></a>
-          </li>
-        </ul>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <span class="social-title">Seguime en</span>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+              <ul class="social-icon" data-aos="fade-up" data-aos-duration="800">
+                <li>
+                  <a class="linkedin" href="https://www.linkedin.com/in/lsender/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a class="youtube" href="https://www.youtube.com/c/LeoAquibaSenderovsky" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li>
+                  <a class="behance" href="https://www.behance.net/leosenderovsky" target="_blank"><i class="fa-brands fa-behance"></i></a>
+                </li>
+                <li>
+                  <a class="facebook" href="https://www.facebook.com/Leo.Aquiba.Senderovsky" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a class="twitter" href="https://twitter.com/leosenderovsky" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                  <a class="instagram" href="https://www.instagram.com/leo.senderovsky/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a class="github" href="https://github.com/leosenderovsky" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- About Section End -->
@@ -1898,7 +1906,7 @@
 										</div>
 									</form>
                   -->
-                  <form action="https://api.web3forms.com/submit" method="POST">
+                  <form id="form" action="https://api.web3forms.com/submit" method="POST">
                     <div class="form row">
                       <input type="hidden" name="access_key" value="61077c4a-fc0e-4fd9-a67d-88d0fa80e3a6" />
                       <div class="col-sm-12 col-md-6 col-xl-6">
@@ -2178,14 +2186,27 @@
                       <div class="col-12">
                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto *" required />
                         <textarea name="mensaje" class="form-control" id="message" cols="30" rows="7" placeholder="Mensaje *" required></textarea>
-                        <div id="result"></div>
                       </div>
                       <div class="col-12">
                         <!-- hCaptcha Spam Protection -->
                         <div class="h-captcha" data-captcha="true"></div>
+                        <input type="hidden" name="redirect" value="https://leosenderovsky.com.ar/gracias-contacto.html" />
                         <button type="submit" class="btn btn-audiovisual">Enviar</button>
                         <!-- Required for hCaptcha -->
                         <script src="https://web3forms.com/client/script.js" async defer></script>
+                        <script>
+                          const form = document.getElementById("form");
+
+                          form.addEventListener("submit", function (e) {
+                            const hCaptcha = form.querySelector("textarea[name=h-captcha-response]").value;
+
+                            if (!hCaptcha) {
+                              e.preventDefault();
+                              alert("Por favor, complete el captcha.");
+                              return;
+                            }
+                          });
+                        </script>
                       </div>
                     </div>
                   </form>
