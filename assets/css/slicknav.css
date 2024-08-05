@@ -66,11 +66,11 @@
 }
 
 .slicknav_nav .slicknav_arrow {
-  background: #ededed none repeat scroll 0 0;
+  background: transparent;
   float: right;
   text-align: center;
   width: 35px;
-  color: #666;
+  color: #000b77;
 }
 .slicknav_nav .slicknav_item {
   cursor: pointer;
