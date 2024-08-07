@@ -11,6 +11,7 @@ if (changeText.textContent == "Ver mi experiencia última") {
 });
 }*/
 
+/*
 let changeText = document.querySelector("#btn-experiencia");
 changeText.addEventListener("click", function () {
   if (changeText.textContent === "Ver mi experiencia anterior") {
@@ -19,14 +20,24 @@ changeText.addEventListener("click", function () {
     changeText.textContent = "Ver mi experiencia anterior";
   }
 });
+*/
 
-/*
-let changeTextPortfolio = document.querySelector("#btn-ver-mas-portfolio");
-changeTextPortfolio.addEventListener("click", function () {
-  if (changeTextPortfolio.textContent === "Ver más trabajos") {
-    changeTextPortfolio.textContent = "Ver menos trabajos";
+let changeText = document.querySelector("#btn-experiencia");
+const originalText = changeText.textContent; // Store original text
+changeText.addEventListener("click", function () {
+  if (changeText.textContent === originalText) {
+    changeText.textContent = "Ver mi experiencia última";
   } else {
-    changeTextPortfolio.textContent = "Ver más trabajos";
+    changeText.textContent = originalText;
   }
 });
-*/
+
+let changeTextPortfolio = document.querySelector("#btn-ver-mas-portfolio");
+const originalTextPortfolio = changeTextPortfolio.textContent;
+changeTextPortfolio.addEventListener("click", function () {
+  if (changeTextPortfolio.textContent === originalTextPortfolio) {
+    changeTextPortfolio.textContent = "Ver menos trabajos";
+  } else {
+    changeTextPortfolio.textContent = originalTextPortfolio;
+  }
+});
