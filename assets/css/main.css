@@ -1034,8 +1034,10 @@ a.back-to-top:focus {
 }
 
 .img-guion,
-.img-edicion {
+.img-edicion,
+.img-web {
   width: 570px;
+  height: auto;
   @media (max-width: 991px) {
     width: 400px;
   }
