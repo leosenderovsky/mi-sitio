@@ -848,10 +848,11 @@ a.back-to-top:focus {
 
 #about .img-thumb {
   margin: auto;
-  padding: 5px;
+  padding: 30px;
   width: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   @media (max-width: 991px) {
     width: 300px;
   }
