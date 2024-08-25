@@ -1005,10 +1005,22 @@ a.back-to-top:focus {
 }
 
 .guion-text {
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Libre Franklin", sans-serif;
+  color: #000b77;
+  line-height: normal;
+  text-align: justify;
+  @media (max-width: 991px) {
+    font-size: 1em;
+  }
+}
+
+.consultoria-text {
   font-size: 1.1em;
   font-weight: 500;
   font-family: "Libre Franklin", sans-serif;
-  color: #000b77;
+  color: #fff;
   line-height: normal;
   text-align: justify;
   @media (max-width: 991px) {
@@ -1089,7 +1101,7 @@ a.back-to-top:focus {
 }
 
 .edicion-text {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 400;
   font-family: "Libre Franklin", sans-serif;
   color: #fff;
