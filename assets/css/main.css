@@ -988,7 +988,8 @@ a.back-to-top:focus {
   }
 }
 
-#guion .overlay {
+#guion .overlay,
+#consultoria .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1034,19 +1035,26 @@ a.back-to-top:focus {
 }
 
 .img-guion,
-.img-edicion,
-.img-web {
+.img-edicion {
   width: 570px;
   height: auto;
-  @media (max-width: 991px) {
+  @media (max-width: 1920px) {
     width: 400px;
+    height: auto;
   }
 }
 
 .img-critica {
+  height: 450px;
+  width: auto;
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.img-web {
+  height: 400px;
+  width: auto;
 }
 
 .edicion-section {
@@ -1656,7 +1664,7 @@ details summary::-webkit-details-marker {
 
 .social-icon {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -1681,40 +1689,39 @@ details summary::-webkit-details-marker {
   -o-transition: all 0.3s ease-in-out 0s;
 }
 
+.social-icon li :hover {
+  color: #00b4d9;
+}
+
+/*
 .social-icon li .facebook:hover {
-  background-color: white;
   color: #3b5999;
 }
 
 .social-icon li .twitter:hover {
-  background-color: white;
   color: #000;
 }
 
 .social-icon li .instagram:hover {
-  background-color: white;
   color: orange;
 }
 
 .social-icon li .linkedin:hover {
-  background-color: white;
   color: #1260a2;
 }
 
 .social-icon li .youtube:hover {
-  background-color: white;
   color: #ce332a;
 }
 
 .social-icon li .behance:hover {
-  background-color: white;
   color: #053eff;
 }
 
 .social-icon li .github:hover {
-  background-color: white;
   color: #000;
 }
+*/
 
 .navbar-brand {
   position: relative;
@@ -2073,22 +2080,23 @@ details summary::-webkit-details-marker {
   Portfolio Section
    ========================================================================== */
 
-#portfolios {
+#portfolio-guion,
+#portfolio-edicion {
   background: #f2f2f2;
 }
 
-#portfolios .mix {
+#portfolio-guion .mix,
+#portfolio-edicion .mix {
   padding: 10px;
 }
 
-#portfolios .portfolio-item .shot-item {
+#portfolio-guion .portfolio-item .shot-item,
+#portfolio-edicion  .portfolio-item .shot-item {
   margin: 0px;
 }
-
-#portfolio .mix {
+.portfolio .mix {
   display: none;
 }
-
 .controls {
   text-align: center;
   padding: 0px 0px 20px;
