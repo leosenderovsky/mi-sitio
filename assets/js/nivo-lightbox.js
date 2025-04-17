@@ -157,7 +157,12 @@
 
         processContent: function(content, link){
             var $this = this,
-                href = link.attr('href'),
+                href = link.attr('href');
+                // Add this check to prevent the indexOf error:
+                if (typeof href !== 'string') {
+                console.error('href attribute is not a string:', href);
+                return; // Exit the function if href is not a string
+                }
                 video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
 
             content.html('').addClass('nivo-lightbox-loading');
