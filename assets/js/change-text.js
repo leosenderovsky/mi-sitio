@@ -32,6 +32,7 @@ changeText.addEventListener("click", function () {
   }
 });
 
+/*
 let changeTextPortfolio = document.querySelector("#btn-ver-mas-portfolio");
 const originalTextPortfolio = changeTextPortfolio.textContent;
 changeTextPortfolio.addEventListener("click", function () {
@@ -41,3 +42,4 @@ changeTextPortfolio.addEventListener("click", function () {
     changeTextPortfolio.textContent = originalTextPortfolio;
   }
 });
+*/
