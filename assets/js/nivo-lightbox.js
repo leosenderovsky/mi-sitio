@@ -140,15 +140,15 @@
 				return true;
 			}
 			// AJAX
-			else if(link.attr('data-lightbox-type') == 'ajax'){
+			else if(typeof link.attr('data-lightbox-type') == 'string' && link.attr('data-lightbox-type') == 'ajax'){
 				return true;
 			}
 			// Inline HTML
-			else if(href.substring(0, 1) == '#' && link.attr('data-lightbox-type') == 'inline'){
+			else if(href.substring(0, 1) == '#' && typeof link.attr('data-lightbox-type') == 'string' && link.attr('data-lightbox-type') == 'inline'){
 				return true;
 			}
 			// iFrame (default)
-			else if(link.attr('data-lightbox-type') == 'iframe'){
+			else if(typeof link.attr('data-lightbox-type') == 'string' && link.attr('data-lightbox-type') == 'iframe'){
 				return true;
 			}
 
@@ -158,18 +158,29 @@
         processContent: function(content, link){
             var $this = this,
                 href = link.attr('href');
-                // Add this check to prevent the indexOf error:
-                if (typeof href !== 'string') {
+            // Add this check to prevent the indexOf error:
+            if (typeof href !== 'string') {
                 console.error('href attribute is not a string:', href);
                 return; // Exit the function if href is not a string
-                }
-                video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
+            }
+            video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be)\/(watch\?v=([\w-]+)|([\w-]+))/);
+        
+            // Check if the video variable is null or not an array, return to avoid errors
+            if(video != null && !Array.isArray(video)){
+                console.error("video variable is not null or an array", video)
+                return;
+            }
 
             content.html('').addClass('nivo-lightbox-loading');
 
             // Is HiDPI?
             if(this.isHidpi() && link.attr('data-lightbox-hidpi')){
-                href = link.attr('data-lightbox-hidpi');
+                var newHref = link.attr('data-lightbox-hidpi');
+                if (typeof newHref !== 'string') {
+                    console.error('data-lightbox-hidpi attribute is not a string:', newHref);
+                    return; // Exit the function if newHref is not a string
+                }
+                href = newHref;
             }
 
             // Image
@@ -232,7 +243,10 @@
                         scrolling: 'auto'
                     });
                     content.html(iframeVideo);
-                    iframeVideo.load(function(){ content.removeClass('nivo-lightbox-loading'); });
+                    //Delete this line:
+                    //iframeVideo.load(function(){ content.removeClass('nivo-lightbox-loading'); });
+                    //Add this line instead:
+                    iframeVideo.on('load', function(){ content.removeClass('nivo-lightbox-loading'); });
                 }
             }
             // AJAX
