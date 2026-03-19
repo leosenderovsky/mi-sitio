@@ -1070,6 +1070,18 @@ a.back-to-top:focus {
   }
 }
 
+.ia-text-dark {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "Libre Franklin", sans-serif;
+  color: #000b77;
+  line-height: normal;
+  text-align: justify;
+  @media (max-width: 991px) {
+    font-size: 1em;
+  }
+}
+
 .ia-subtitle {
   font-family: Yanone Kaffeesatz;
   font-size: 1.5em;
@@ -1084,6 +1096,29 @@ a.back-to-top:focus {
   transition: all 0.2s linear;
   display: inline-block;
   height: auto;
+}
+
+.ia-subtitle-dark {
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #000b77;
+  border-radius: 4px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+  height: auto;
+}
+
+.ia-services-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 2%;
 }
 
 .ia-caption {
@@ -1483,6 +1518,16 @@ a.back-to-top:focus {
 .shot-item:hover .entrevistas-overlay,
 .shot-item:hover .ia-overlay {
   opacity: 1;
+}
+
+.ia-overlay-white {
+  position: absolute;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .critica-section {
