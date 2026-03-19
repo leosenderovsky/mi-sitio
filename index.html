@@ -114,7 +114,7 @@
                 <a class="nav-link" href="#ia"> IA </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact"> Contacto </a>
+                <a class="nav-link" href="#contacto"> Contacto </a>
               </li>
             </ul>
           </div>
@@ -143,7 +143,7 @@
             <a href="#ia">IA</a>
           </li>
           <li>
-            <a href="#contact">Contacto</a>
+            <a href="#contacto">Contacto</a>
           </li>
         </ul>
         <!-- Mobile Menu End -->
@@ -310,7 +310,7 @@
                   <div id="mostrar-cv-web-en" class="fi fi-gb"></div>
                 </div>
                 <div>
-                  <a class="btn btn-mail" href="#contact">Contactame<i class="fa-solid fa-arrow-down"> </i></a>
+                  <a class="btn btn-mail" href="#contacto">Contactame<i class="fa-solid fa-arrow-down"> </i></a>
                 </div>
               </div>
             </div>
@@ -823,7 +823,7 @@
                     <i class="fa-solid fa-arrow-down"> </i>
                   </p>
                 </a>
-                <a href="#contact">
+                <a href="#contacto">
                   <p class="btn2 btn-audiovisual">
                     Contactame
                     <i class="fa-solid fa-arrow-down"> </i>
@@ -872,7 +872,7 @@
                       <i class="fa-solid fa-arrow-right"> </i>
                     </p>
                   </a>
-                  <a href="#contact">
+                  <a href="#contacto">
                     <p class="btn2 btn-contact-edicion">
                       Contactame
                       <i class="fa-solid fa-arrow-down"> </i>
@@ -1010,7 +1010,7 @@
                     <i class="fa-solid fa-arrow-down"> </i>
                   </p>
                 </a>
-                <a href="#contact">
+                <a href="#contacto">
                   <p class="btn2 btn-contact-edicion">
                     Contactame
                     <i class="fa-solid fa-arrow-down"> </i>
@@ -1827,7 +1827,7 @@
                   <i class="fa-solid fa-arrow-right"> </i>
                 </p>
               </a>
-              <a href="#contact">
+              <a href="#contacto">
                 <p class="btn2 btn-contact-edicion">
                   Contactame
                   <i class="fa-solid fa-arrow-down"> </i>
@@ -2063,7 +2063,7 @@
                   Quiero seguir explorando el mundo del desarrollo web, realizando sitios personalizados para particulares y empresas. ¿Me acompañás?
                 </p>
                 <br />
-                <a href="#contact">
+                <a href="#contacto">
                   <p class="btn2 btn-contact-edicion">
                     Contactame
                     <i class="fa-solid fa-arrow-down"> </i>
@@ -2134,7 +2134,7 @@
                     <i class="fa-solid fa-arrow-down"> </i>
                   </p>
                 </a>
-              <a href="#contact">
+              <a href="#contacto">
                 <p class="btn2 btn-contact-edicion">
                   Contactame
                   <i class="fa-solid fa-arrow-down"> </i>
@@ -2263,7 +2263,7 @@
     </section>
 
     <!-- Contact Section Start -->
-    <section id="contact" class="section-padding">
+    <section id="contacto" class="section-padding">
       <div class="contact-form">
         <div class="container">
           <div class="contact-form-area" data-aos="fade-up" data-aos-duration="800">
@@ -2725,5 +2725,23 @@
     <script>
       AOS.init();
     </script>
+
+    <!-- Clean URL routing: scroll to section based on URL path -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        // Get the path section, e.g. "/audiovisual" -> "audiovisual"
+        var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+        if (path) {
+          var target = document.getElementById(path);
+          if (target) {
+            // Small delay to let the page fully render before scrolling
+            setTimeout(function () {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+          }
+        }
+      });
+    </script>
   </body>
+
 </html>

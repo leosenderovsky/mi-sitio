@@ -56,6 +56,24 @@ Dado que el sitio es completamente estático (HTML/CSS/JS), **no requiere instal
 3. Puedes simplemente hacer doble clic sobre el archivo `index.html` para verlo en tu navegador.
    *(Recomendación: Si utilizas **Visual Studio Code**, la extensión "Live Server" te proporcionará una experiencia de desarrollo mucho más fluida con recarga automática).*
 
+## 🔗 Rutas URL limpias
+
+El sitio soporta **URLs amigables** para acceder directamente a cada sección. Esto se logra mediante una regla en `.htaccess` (Apache) que redirige cualquier ruta no existente a `index.html`, y un script de JavaScript que lee la URL y hace scroll automático a la sección correspondiente.
+
+| URL Limpia | Sección |
+|---|---|
+| `/about` | Acerca de mí |
+| `/audiovisual` | Audiovisual |
+| `/guion` | Guión |
+| `/edicion` | Edición |
+| `/docencia` | Docencia |
+| `/critica` | Crítica |
+| `/web` | Desarrollo Web |
+| `/ia` | Inteligencia Artificial |
+| `/contacto` | Contacto |
+
+> **Nota:** Esta funcionalidad requiere un servidor Apache con `mod_rewrite` habilitado (configuración estándar de la mayoría de hostings compartidos).
+
 ---
 
 *Desarrollado y mantenido por Leo Aquiba Senderovsky.*
