@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Archivos temporales de análisis
+htmlhint_out.txt
+htmlhint_check.txt
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idx/

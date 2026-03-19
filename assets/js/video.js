@@ -1,6 +1,7 @@
-	var vid = document.getElementById("bgvid");
-	var pauseButton = document.querySelector("#polina button");
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
 
+if (vid && pauseButton) {
 	function vidFade() {
 	  vid.classList.add("stopfade");
 	}
@@ -11,6 +12,7 @@
 	// to capture IE10
 	vidFade();
 	}); 
+    
 	pauseButton.addEventListener("click", function() {
 	  vid.classList.toggle("stopfade");
 	  if (vid.paused) {
@@ -20,4 +22,5 @@
 	    vid.pause();
 	    pauseButton.innerHTML = "<i class='icon-control-play'></i>";
 	  }
-	})
+	});
+}

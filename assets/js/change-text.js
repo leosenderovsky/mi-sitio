@@ -23,23 +23,25 @@ changeText.addEventListener("click", function () {
 */
 
 let changeText = document.querySelector("#btn-experiencia");
-const originalText = changeText.textContent; // Store original text
-changeText.addEventListener("click", function () {
-  if (changeText.textContent === originalText) {
-    changeText.textContent = "Ver mi experiencia última";
-  } else {
-    changeText.textContent = originalText;
-  }
-});
+if (changeText) {
+  const originalText = changeText.textContent; // Store original text
+  changeText.addEventListener("click", function () {
+    if (changeText.textContent === originalText) {
+      changeText.textContent = "Ver mi experiencia última";
+    } else {
+      changeText.textContent = originalText;
+    }
+  });
+}
 
-/*
 let changeTextPortfolio = document.querySelector("#btn-ver-mas-portfolio");
-const originalTextPortfolio = changeTextPortfolio.textContent;
-changeTextPortfolio.addEventListener("click", function () {
-  if (changeTextPortfolio.textContent === originalTextPortfolio) {
-    changeTextPortfolio.textContent = "Ver menos trabajos";
-  } else {
-    changeTextPortfolio.textContent = originalTextPortfolio;
-  }
-});
-*/
+if (changeTextPortfolio) {
+  const originalTextPortfolio = changeTextPortfolio.textContent;
+  changeTextPortfolio.addEventListener("click", function () {
+    if (changeTextPortfolio.textContent === originalTextPortfolio) {
+      changeTextPortfolio.textContent = "Ver menos trabajos";
+    } else {
+      changeTextPortfolio.textContent = originalTextPortfolio;
+    }
+  });
+}

@@ -1,3 +1,8 @@
+@import "/node_modules/animate.css/animate.css";
+
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-straight/css/uicons-thin-straight.css');
+
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro:400,700");
 html {
   overflow-x: hidden;
@@ -47,6 +52,8 @@ video,
 svg {
   height: auto;
   max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -161,7 +168,7 @@ a:hover {
   text-decoration: none;
 }
 
-a a:focus {
+a:focus {
   outline: none;
 }
 
@@ -273,13 +280,11 @@ ol li {
   position: relative;
 }
 
-#audiovisual {
+#audiovisual,
+#web,
+#ia {
   display: block;
-}
-
-#web {
-  display: block;
-}
+} 
 
 .stick-note {
   position: relative;
@@ -626,7 +631,7 @@ button:focus {
 }
 
 .show-only-mobile {
-  @media (min-width: 576x) {
+  @media (min-width: 576px) {
     display: none;
   }
 }
@@ -725,6 +730,7 @@ button:focus {
 /* Position the front and back side */
 .flip-card-front-audiovisual,
 .flip-card-front-web,
+.flip-card-front-ia,
 .flip-card-back {
   position: absolute;
   width: 100%;
@@ -755,6 +761,15 @@ button:focus {
   justify-content: center;
 }
 
+.flip-card-front-ia {
+  background-color: #1C289B;
+  color: #fff;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
@@ -772,6 +787,11 @@ button:focus {
 
 .flip-card-back-web {
   background-image: url(../img/web-dev-fondo.jpg);
+  background-size: cover;
+}
+
+.flip-card-back-ia {
+  background-image: url(../img/ia-fondo.jpg);
   background-size: cover;
 }
 
@@ -1038,6 +1058,50 @@ a.back-to-top:focus {
   }
 }
 
+.ia-text {
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "Libre Franklin", sans-serif;
+  color: #fff;
+  line-height: normal;
+  text-align: justify;
+  @media (max-width: 991px) {
+    font-size: 1em;
+  }
+}
+
+.ia-subtitle {
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+  height: auto;
+}
+
+.ia-caption {
+  font-family: Yanone Kaffeesatz;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: inline-block;
+  height: auto;
+  text-align: center;
+}
+
 .link-white {
   color: #fff;
   font-weight: bold;
@@ -1045,7 +1109,8 @@ a.back-to-top:focus {
 }
 
 .img-guion,
-.img-edicion {
+.img-edicion,
+.img-logo-senderia {
   width: 570px;
   height: auto;
   @media (max-width: 1920px) {
@@ -1065,6 +1130,29 @@ a.back-to-top:focus {
 .img-web {
   height: 400px;
   width: auto;
+}
+
+.img-logo-senderia {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.ia-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  object-fit: cover; 
+  align-content: center;
+  align-items: center;
+}
+
+.ia-wrapper-content {
+  margin: 5%;
+}
+
+.ia-wrapper-content-2 {
+  margin: 2%;
 }
 
 .edicion-section {
@@ -1088,7 +1176,8 @@ a.back-to-top:focus {
   opacity: 0.8;
 }
 
-.edicion-wrapper {
+.edicion-wrapper,
+.ia-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1330,7 +1419,8 @@ a.back-to-top:focus {
   padding: 10px;
 }
 
-.shot-item .entrevistas-overlay {
+.shot-item .entrevistas-overlay, 
+.shot-item .ia-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1342,15 +1432,17 @@ a.back-to-top:focus {
   transition: all 0.5s ease-in-out;
 }
 
-.shot-item:hover .entrevistas-overlay {
+.shot-item:hover .entrevistas-overlay, 
+.shot-item:hover .ia-overlay {
   opacity: 1;
 }
 
-.entrevistas-overlay {
+.entrevistas-overlay, .ia-overlay {
   opacity: 0;
 }
 
-.entrevistas-overlay .icons i {
+.entrevistas-overlay .icons i, 
+.ia-overlay .icons i {
   height: 42px;
   width: 42px;
   line-height: 42px;
@@ -1371,14 +1463,16 @@ a.back-to-top:focus {
   border-radius: 4px;
 }
 
-.entrevistas-overlay .preview {
+.entrevistas-overlay .preview, 
+.ia-overlay .preview {
   position: absolute;
   left: 50%;
   top: 50%;
   color: #fff;
 }
 
-.entrevistas-overlay .link {
+.entrevistas-overlay .link, 
+.ia-overlay .link {
   position: absolute;
   left: 60%;
   margin-left: 10px;
@@ -1386,7 +1480,8 @@ a.back-to-top:focus {
   color: #fff;
 }
 
-.shot-item:hover .entrevistas-overlay {
+.shot-item:hover .entrevistas-overlay,
+.shot-item:hover .ia-overlay {
   opacity: 1;
 }
 
@@ -1428,6 +1523,41 @@ a.back-to-top:focus {
   left: 0px;
   background: #00052e;
   opacity: 0.8;
+}
+
+.ia-section {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  background-color: #1C289B;
+}
+
+#ia .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #00052e;
+  opacity: 0.8;
+}
+
+.ia-subsection {
+  background: url(../img/ia/bg-ia.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+
+.ia-trabajos {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
 }
 
 .counter-section {
@@ -2261,6 +2391,12 @@ a:not([href]):not([tabindex]):hover {
   background: #000b77;
   padding: 30px;
 }
+
+.services-ia {
+  background: #1C289B;
+  padding: 30px;
+}
+ 
 
 .services-item {
   background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
