@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <!-- Bootstrap CSS -->
@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons.css" />
     <!-- Slicknav -->
     <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css" />
-    <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" />
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <!-- Animate -->
     <!--<link rel="stylesheet" type="text/css" href="assets/css/animate.css">-->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>-->
@@ -232,7 +232,7 @@
                   <img src="assets/img/video-portada-hover.jpg" alt="Miniatura de video principal" />
                   <div class="overlay">
                     <div class="icons">
-                      <a class="lightbox" href="https://www.youtube.com/watch?v=r3JxSutQdv8">
+                      <a class="glightbox" href="https://www.youtube.com/watch?v=r3JxSutQdv8">
                         <img src="assets/img/hover-16-9.png" alt="Icono reproducir" />
                         <!--<i class="icon-eye"></i>-->
                       </a>
@@ -317,13 +317,18 @@
           </div>
         </div>
         <div class="container">
-          <div class="row">
+          <!--<div class="row">-->
             <div id="cv-audiovisual-es">
-              <div class="cv-container">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 embed-cv">
-                  <iframe src="https://drive.google.com/file/d/11R2LFCcjjRXr9eR-6EZNRkgSQmlOXC-w/preview" class="cv"></iframe>
+              <div class="row cv-container">
+                <div class="col-12 embed-cv">
+                  <iframe src="assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf#toolbar=0&view=fitH" width="100%" height="600px" allowfullscreen></iframe>
+                  <!-- FIX 3: iframe de Google Drive reemplazado por enlace directo (Drive bloquea embedding via CSP) -->
+                  <!--<a href="assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf" target="_blank" rel="noopener" class="btn btn-audiovisual">
+                    Ver mi CV AUDIOVISUAL (PDF)
+                    <div class="fi fi-es"></div>
+                  </a>-->
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 button-container">
+                <div class="col-12 button-container">
                   <a href="assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf" target="_blank"
                     ><button class="btn btn-audiovisual">
                       Descargá mi CV AUDIOVISUAL
@@ -333,11 +338,11 @@
               </div>
             </div>
             <div id="cv-audiovisual-en">
-              <div class="cv-container">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 embed-cv">
-                  <iframe src="https://drive.google.com/file/d/1qBEINg6uN8DoSXGmoUnVkY-xG8-jfpTO/preview" class="cv"></iframe>
+              <div class="row cv-container">
+                <div class="col-12 embed-cv">
+                  <iframe src="assets/docs/cv/leo-senderovsky-resume-editor.pdf#toolbar=0&view=fitH" width="100%" height="600px" allowfullscreen></iframe>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 button-container">
+                <div class="col-12 button-container">
                   <a href="assets/docs/cv/leo-senderovsky-resume-editor.pdf" target="_blank">
                     <div class="btn btn-audiovisual">
                       Descargá mi CV AUDIOVISUAL
@@ -348,11 +353,11 @@
               </div>
             </div>
             <div id="cv-web-en">
-              <div class="cv-container">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 embed-cv">
-                  <iframe src="https://drive.google.com/file/d/1IFMH5M4wFUPW1sBtykdtesGb5hPx_eJ-/preview" class="cv"></iframe>
+              <div class="row cv-container">
+                <div class="col-12 embed-cv">
+                  <iframe src="assets/docs/cv/leo-senderovsky-resume-web.pdf#toolbar=0&view=fitH" width="100%" height="600px" allowfullscreen></iframe>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 button-container">
+                <div class="col-12 button-container">
                   <a href="assets/docs/cv/leo-senderovsky-resume-web.pdf" target="_blank">
                     <div class="btn btn-web">
                       Descargá mi CV WEB
@@ -362,7 +367,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          <!--</div>-->
         </div>
       </div>
       <div class="social-bar hidden-mobile">
@@ -929,7 +934,7 @@
                       <img src="assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=EuxH03plI3I">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=EuxH03plI3I">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -943,7 +948,7 @@
                       <img src="assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=IWgamMyqtME">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=IWgamMyqtME">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -957,7 +962,7 @@
                       <img src="assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=ihncM5w_qno">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=ihncM5w_qno">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -972,7 +977,7 @@
                       <img src="assets/img/gallery/edicion-guion/amor-de-pelicula.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=WpuCysH49gA">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=WpuCysH49gA">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1049,7 +1054,7 @@
                       <img src="assets/img/gallery/edicion-guion/23-docu-cromanion-20-anios.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=TPu7o3a2gq4">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=TPu7o3a2gq4">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1063,7 +1068,7 @@
                       <img src="assets/img/gallery/edicion-guion/21-docu-democracia-40.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=hl7T-TadSIY">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=hl7T-TadSIY">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1077,7 +1082,7 @@
                       <img src="assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=n8e9SexkmHM">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=n8e9SexkmHM">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1091,7 +1096,7 @@
                       <img src="assets/img/gallery/edicion-guion/12-spot-celsur.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=rfPm4TXPJZQ">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=rfPm4TXPJZQ">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1105,7 +1110,7 @@
                       <img src="assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=YxfettXQnCE">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=YxfettXQnCE">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1119,7 +1124,7 @@
                       <img src="assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=hFFZ68W0oZo">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=hFFZ68W0oZo">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1133,7 +1138,7 @@
                       <img src="assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=YZqMXhn0HDQ">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=YZqMXhn0HDQ">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1148,7 +1153,7 @@
                       <img src="assets/img/gallery/edicion-guion/20-docu-50-anios-masacre-ezeiza.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://cdn.jwplayer.com/previews/3za1hq8k-a9NdgpIU">
+                          <a class="glightbox" href="https://cdn.jwplayer.com/previews/3za1hq8k-a9NdgpIU">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1162,7 +1167,7 @@
                       <img src="assets/img/gallery/edicion-guion/19-docu-caida-isabel-peron.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=vgQ8ttOCLe0">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=vgQ8ttOCLe0">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1177,7 +1182,7 @@
                     <img src="assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=0nr7hav0RsY">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=0nr7hav0RsY">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1191,7 +1196,7 @@
                     <img src="assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=5Ere20quXsg">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=5Ere20quXsg">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1206,7 +1211,7 @@
                       <img src="assets/img/gallery/edicion-guion/16-docu-ara-san-juan.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://cdn.jwplayer.com/previews/OFof7hl1-a9NdgpIU">
+                          <a class="glightbox" href="https://cdn.jwplayer.com/previews/OFof7hl1-a9NdgpIU">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1220,7 +1225,7 @@
                       <img src="assets/img/gallery/edicion-guion/15-docu-malvinas-el-final.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=7vM_D0u8y98">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=7vM_D0u8y98">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1235,7 +1240,7 @@
                     <img src="assets/img/gallery/edicion-guion/11-semana-nba-2021.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=D6oBShDUB5s">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=D6oBShDUB5s">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1250,7 +1255,7 @@
                       <img src="assets/img/gallery/edicion-guion/10-semana-nba-19-20.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=da-mu_tL-_c">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=da-mu_tL-_c">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1264,7 +1269,7 @@
                       <img src="assets/img/gallery/edicion-guion/08-hablemos-de-otra-cosa.jpg" alt="" />
                       <div class="overlay">
                         <div class="icons">
-                          <a class="lightbox" href="https://www.youtube.com/watch?v=Hux1ClZilok">
+                          <a class="glightbox" href="https://www.youtube.com/watch?v=Hux1ClZilok">
                             <img src="assets/img/hover-500x324.png" alt="" />
                           </a>
                         </div>
@@ -1279,7 +1284,7 @@
                     <img src="assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=5RVDJKTWefE&list=PLbNNvtK1u2VkQ7doksEugPMrjrSRmQ0fi">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=5RVDJKTWefE&list=PLbNNvtK1u2VkQ7doksEugPMrjrSRmQ0fi">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1293,7 +1298,7 @@
                     <img src="assets/img/gallery/edicion-guion/06-la-gran-batalla.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=BTOxn0oal1U&list=PLbNNvtK1u2VkSRU9EdtYFodkyVVE8Z65P">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=BTOxn0oal1U&list=PLbNNvtK1u2VkSRU9EdtYFodkyVVE8Z65P">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1307,7 +1312,7 @@
                     <img src="assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=EuxH03plI3I">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=EuxH03plI3I">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1321,7 +1326,7 @@
                     <img src="assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=IWgamMyqtME">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=IWgamMyqtME">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1335,7 +1340,7 @@
                     <img src="assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=ihncM5w_qno">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=ihncM5w_qno">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1349,7 +1354,7 @@
                     <img src="assets/img/gallery/edicion-guion/01-spot-answer.jpg" alt="" />
                     <div class="overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=Ju_RJjSX_Wc">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=Ju_RJjSX_Wc">
                           <img src="assets/img/hover-500x324.png" alt="" />
                         </a>
                       </div>
@@ -1720,7 +1725,7 @@
                     <img src="assets/img/docencia/entrevistas/cita-a-media-tarde.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=vKvHoXWIIZo">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=vKvHoXWIIZo">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1734,7 +1739,7 @@
                     <img src="assets/img/docencia/entrevistas/la-mujer-judia-en-el-cine-shabuatov.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=czBz_2_yYWg">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=czBz_2_yYWg">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1748,7 +1753,7 @@
                     <img src="assets/img/docencia/entrevistas/cine-en-dictadura-radio-nacional.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=G20DbKzEe54">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=G20DbKzEe54">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1762,7 +1767,7 @@
                     <img src="assets/img/docencia/entrevistas/cine-en-dictadura-fm-de-la-calle.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=afykA8cMtr8">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=afykA8cMtr8">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1776,7 +1781,7 @@
                     <img src="assets/img/docencia/entrevistas/racismo-en-hollywood.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=12HDUqpAFdw">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=12HDUqpAFdw">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1790,7 +1795,7 @@
                     <img src="assets/img/docencia/entrevistas/clasicos-de-ciencia-ficcion.jpg" alt="" />
                     <div class="entrevistas-overlay">
                       <div class="icons">
-                        <a class="lightbox" href="https://www.youtube.com/watch?v=KQHizJvq98k">
+                        <a class="glightbox" href="https://www.youtube.com/watch?v=KQHizJvq98k">
                           <img src="assets/img/hover-16-9.png" alt="" />
                         </a>
                       </div>
@@ -1986,7 +1991,7 @@
                       <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
                         <h3 class="line-title hidden-mobile">Consultoría de Guión</h3>
                         <span>2019/2021</span>
-                        <p class="line-text">Sitio de servicios (Wordpress/Elementor)<br /></p>
+                        <p class="line-text">Sitio de servicios (Wordpress)<br /></p>
                         <a href="http://consultoriadeguion.com.ar/" target="_blank">
                           <div class="btn3 btn-icon">
                             <i class="fa-solid fa-desktop" title="Sitio navegable"></i>
@@ -2003,7 +2008,12 @@
                       <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
                         <h3 class="line-title hidden-mobile">Servicio de Redacción</h3>
                         <span>2011</span>
-                        <p class="line-text">Sitio de servicios (Joomla)</p>
+                        <p class="line-text">Sitio de servicios (Wordpress)</p>
+                        <a href="http://servicioderedaccion.com/" target="_blank">
+                          <div class="btn3 btn-icon">
+                            <i class="fa-solid fa-desktop" title="Sitio navegable"></i>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </li>
@@ -2160,7 +2170,7 @@
                   <img src="assets/img/ia/spot-golden-ticket.jpg" alt="" />
                   <div class="ia-overlay">
                     <div class="icons">
-                      <a class="lightbox" href="https://www.youtube.com/watch?v=kFCZL7Kq9O8">
+                      <a class="glightbox" href="https://www.youtube.com/watch?v=kFCZL7Kq9O8">
                         <img src="assets/img/hover-16-9.png" alt="" />
                         <!--<i class="icon-eye"></i>-->
                       </a>
@@ -2189,7 +2199,8 @@
                   <img src="assets/img/ia/franco-colapinto-f1-live-tracker.netlify.app.png" alt="" />
                   <div class="ia-overlay">
                     <div class="icons">
-                      <a class="lightbox" href="https://franco-colapinto-f1-live-tracker.netlify.app/" target="_blank">
+                      <!-- REVISAR: ¿Abrir en lightbox o en nueva pestaña externa? -->
+                      <a href="https://franco-colapinto-f1-live-tracker.netlify.app/" target="_blank">
                         <img src="assets/img/hover-web.png" alt="" />
                         <!--<i class="icon-eye"></i>-->
                       </a>
@@ -2218,7 +2229,8 @@
                   <img src="assets/img/ia/social-screenshot-generator.netlify.app.png" alt="" />
                   <div class="ia-overlay">
                     <div class="icons">
-                      <a class="lightbox" href="https://social-screenshot-generator.netlify.app/" target="_blank">
+                      <!-- REVISAR: ¿Abrir en lightbox o en nueva pestaña externa? -->
+                      <a href="https://social-screenshot-generator.netlify.app/" target="_blank">
                         <img src="assets/img/hover-web.png" alt="" />
                         <!--<i class="icon-eye"></i>-->
                       </a>
@@ -2241,7 +2253,8 @@
                   <img src="assets/img/ia/pdf-to-image-generator.netlify.app.jpg" alt="" />
                   <div class="ia-overlay">
                     <div class="icons">
-                      <a class="lightbox" href="https://pdf-to-image-generator.netlify.app/" target="_blank">
+                      <!-- REVISAR: ¿Abrir en lightbox o en nueva pestaña externa? -->
+                      <a href="https://pdf-to-image-generator.netlify.app/" target="_blank">
                         <img src="assets/img/hover-web.png" alt="" />
                         <!--<i class="icon-eye"></i>-->
                       </a>
@@ -2714,11 +2727,13 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.mixitup.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
+    <!-- FIX 2: Waypoints actualizado a v4.0.1 (compatible con jQuery 3) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/jquery.nav.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/nivo-lightbox.js"></script>
+    <!-- FIX 1: GLightbox reemplaza a NivoLightbox (compatible con jQuery 3) -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/mostrar.js"></script>
@@ -2726,6 +2741,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <!-- FIX 1: Inicialización de GLightbox -->
+    <script>
+      const lightbox = GLightbox({ touchNavigation: true, loop: true });
     </script>
 
     <!-- Clean URL routing: scroll to section based on URL path -->
