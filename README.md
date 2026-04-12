@@ -1,53 +1,109 @@
-# React + TypeScript + Vite
+# Leo Senderovsky - Portfolio Personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web personal de Leo Senderovsky, un profesional multidisciplinario especializado en producción audiovisual, desarrollo web e inteligencia artificial.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend**: React 19 con TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animaciones**: Framer Motion
+- **Routing**: React Router DOM
+- **SEO**: React Helmet Async
+- **Icons**: Font Awesome
 
-## React Compiler
+## 📋 Secciones del Sitio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Audiovisual
+- **Edición**: Portfolio de videos editados, experiencia profesional y reels
+- **Guión**: Servicios de escritura y consultoría de guiones
+- **Docencia**: Charlas y ciclos de cine, entrevistas
+- **Crítica**: Colaboraciones en medios y blog personal
 
-## Expanding the ESLint configuration
+### Desarrollo Web
+- Servicios de desarrollo frontend
+- Experiencia profesional
+- Proyectos personales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Inteligencia Artificial (sender.ia)
+- Integración de IA en proyectos audiovisuales y web
+- Portfolio de trabajos con IA
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Sobre Mí
+- CV Audiovisual
+- CV Desarrollo Web
+- Información personal y contacto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Instalación y Desarrollo Local
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerrequisitos
+- Node.js (versión 18 o superior)
+- npm o yarn
+
+### Instalación
+```bash
+# Clonar el repositorio
+git clone https://github.com/leosenderovsky/mi-sitio.git
+cd mi-sitio
+
+# Instalar dependencias
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Desarrollo
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+### Build para Producción
+```bash
+# Crear build optimizado
+npm run build
+
+# Vista previa del build
+npm run preview
+```
+
+### Linting
+```bash
+# Ejecutar ESLint
+npm run lint
+```
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+├── pages/              # Páginas principales
+├── data/               # Datos estáticos
+├── hooks/              # Hooks personalizados
+├── assets/             # Recursos estáticos
+└── types.ts           # Definiciones de tipos TypeScript
+
+public/                 # Archivos públicos
+legacy/                 # Versión anterior del sitio (HTML)
+```
+
+## 🌐 Despliegue
+
+El sitio está configurado para desplegarse en Netlify con las siguientes características:
+- SPA routing con `_redirects`
+- Configuración optimizada en `netlify.toml`
+- Sitemap y robots.txt incluidos
+
+## 📞 Contacto
+
+- **LinkedIn**: [Leo Senderovsky](https://www.linkedin.com/in/lsender/)
+- **YouTube**: [Leo Aquiba Senderovsky](https://www.youtube.com/c/LeoAquibaSenderovsky)
+- **Behance**: [leosenderovsky](https://www.behance.net/leosenderovsky)
+- **GitHub**: [leosenderovsky](https://github.com/leosenderovsky)
+- **Blog**: [blog.leosenderovsky.com.ar](https://blog.leosenderovsky.com.ar)
+
+## 📝 Licencia
+
+Este proyecto es privado y personal.
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
