@@ -1,0 +1,12 @@
+﻿
+   E:\ARCHIVO\WEB\Sitios\LeoSenderovsky.com.ar\mi-sitio-master\mi-sitio-master\index.html
+[37m      L24 |[90m    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons...[39m
+[37m                    ^ [31mThe value of attribute [ rel ] must be in double quotes. (attr-value-double-quotes)[39m
+[37m      L24 |[90m    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons...[39m
+[37m                                     ^ [31mThe value of attribute [ href ] must be in double quotes. (attr-value-double-quotes)[39m
+[37m      L491 |[90m        <div class="container">[39m
+[37m                    ^ [31mTag must be paired, missing: [ </div></div> ], start tag match failed [ <div class="container"> ] on line 491. (tag-pair)[39m
+[37m      L2139 |[90m      <div id="portfolio-ia" class="ia-trabajos section-padding">[39m
+[37m                   ^ [31mTag must be paired, missing: [ </div> ], start tag match failed [ <div id="portfolio-ia" class="ia-trabajos section-padding"> ] on line 2139. (tag-pair)[39m
+
+Scanned 2 files, found 4 errors in 1 files (42 ms)

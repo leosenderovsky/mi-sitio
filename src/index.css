@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Colores de categoría (exactos del legacy) ── */
+  --color-audiovisual: #3844be;
+  --color-web: #000b77;
+  --color-ia: #1c289b;
+
+  /* ── Paleta general ── */
+  --color-site-dark: #142426;
+  --color-site-blue: #000b77;
+  --color-site-teal: #00b4d9;
+  --color-site-text: #666666;
+  --color-site-muted: #e6e6e6;
+  --color-primary: #766dff;
+  --color-secondary: #88f3ff;
+
+  /* ── Tipografía ── */
+  --font-body: "Libre Franklin", sans-serif;
+  --font-heading: "Yanone Kaffeesatz", sans-serif;
+  --font-script: "Shadows Into Light", cursive;
+}
+
+@layer base {
+  html {
+    overflow-x: hidden;
+    @apply scroll-smooth;
+  }
+
+  body {
+    /* 0deg = gradiente de abajo hacia arriba, igual que el legacy */
+    background-image: linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    color: #666;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    overflow-x: hidden;
+  }
+
+  h1 { font-size: 4em; font-weight: 700; font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; }
+  h2 { font-size: 30px; font-weight: 600; font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; }
+  h3 { font-size: 25px; font-weight: 500; font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; }
+  h4 { font-size: 20px; font-weight: 400; font-family: "Yanone Kaffeesatz", sans-serif; text-transform: uppercase; }
+
+  a { text-decoration: none; transition: all 0.2s linear; }
+  p { font-weight: 400; font-family: "Libre Franklin", sans-serif; margin: 0; font-size: 14px; }
+  ul, ol { list-style: none; margin: 0; padding: 0; }
+  img, video, svg { height: auto; max-width: 100%; display: block; }
+}

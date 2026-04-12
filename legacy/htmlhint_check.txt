@@ -1,0 +1,6 @@
+﻿
+   E:\ARCHIVO\WEB\Sitios\LeoSenderovsky.com.ar\mi-sitio-master\mi-sitio-master\index.html
+[37m      L489 |[90m      <div class="services-ia">[39m
+[37m                  ^ [31mTag must be paired, missing: [ </div> ], start tag match failed [ <div class="services-ia"> ] on line 489. (tag-pair)[39m
+
+Scanned 1 files, found 1 errors in 1 files (30 ms)

@@ -1,15 +1,24 @@
-# Node modules
-node_modules/
-
 # Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Archivos temporales de análisis
-htmlhint_out.txt
-htmlhint_check.txt
+node_modules
+dist
+dist-ssr
+*.local
 
-# OS / Editor
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-.vscode/
-.idx/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
