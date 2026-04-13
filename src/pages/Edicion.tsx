@@ -1,6 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { SectionHeader } from '../components/SectionHeader';
 import { TimelineSection } from '../components/TimelineSection';
 import { PortfolioGrid } from '../components/PortfolioGrid';
@@ -31,7 +32,17 @@ export function Edicion() {
 
   return (
     <>
-      <PageSEO title="Edición" description="Portfolio de edición audiovisual de Leo Senderovsky." path="/edicion" />
+      <PageSEO 
+        title="Edición de Video" 
+        description="Portfolio de edición de video de Leo Senderovsky. Editor audiovisual senior con más de 15 años de experiencia en documentales, spots publicitarios y contenido para medios como Infobae, LN+ y NBA. Buenos Aires, Argentina."
+        path="/audiovisual/edicion"
+        keywords="editor de video Buenos Aires, edicion audiovisual, edicion de documentales, postproduccion Argentina, editor freelance"
+      />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Audiovisual', url: 'https://leosenderovsky.com.ar/audiovisual/edicion' },
+        { name: 'Edición de Video', url: 'https://leosenderovsky.com.ar/audiovisual/edicion' },
+      ]} />
 
       <section
         id="edicion"

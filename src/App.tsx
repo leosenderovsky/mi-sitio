@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { SchemaGlobal } from './components/SchemaMarkup';
 
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
 const Edicion = lazy(() => import('./pages/Edicion').then(module => ({ default: module.Edicion })));
@@ -20,6 +21,7 @@ const CVWebEmbed = lazy(() => import('./pages/SobreMi/CVWebEmbed').then(module =
 function App() {
   return (
     <HelmetProvider>
+      <SchemaGlobal />
       <Router>
         <div className="flex flex-col min-h-screen bg-site-dark overflow-x-hidden">
           <Navbar />

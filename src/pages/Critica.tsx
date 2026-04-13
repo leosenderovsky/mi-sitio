@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { TimelineSection } from '../components/TimelineSection';
 import { experienciaDocencia } from '../data/experiencia-docencia';
@@ -13,9 +14,15 @@ export function Critica() {
     <>
       <PageSEO
         title="Crítica de Cine"
-        description="Críticas de cine y colaboraciones en medios gráficos y online por Leo Senderovsky."
-        path="/critica"
+        description="Críticas cinematográficas y colaboraciones en medios por Leo Senderovsky. Análisis de cine argentino, cine mundial. Colaboraciones en radio, medios gráficos y online."
+        path="/audiovisual/critica"
+        keywords="critica de cine, resenas de peliculas, Leo Senderovsky critica, analisis cinematografico Argentina"
       />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Audiovisual', url: 'https://leosenderovsky.com.ar/audiovisual/critica' },
+        { name: 'Crítica de Cine', url: 'https://leosenderovsky.com.ar/audiovisual/critica' },
+      ]} />
 
       {/* ── Intro ── */}
       <section

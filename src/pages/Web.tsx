@@ -1,4 +1,5 @@
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { SectionHeader } from '../components/SectionHeader';
 import { experienciaWeb } from '../data/experiencia-web';
@@ -8,7 +9,17 @@ export function Web() {
 
   return (
     <>
-      <PageSEO title="Desarrollo Web" description="Proyectos de desarrollo web, Frontend y Wordpress de Leo Senderovsky." path="/web" />
+      <PageSEO 
+        title="Desarrollo Web Frontend" 
+        description="Desarrollo de sitios web y aplicaciones a medida por Leo Senderovsky. Frontend developer con React, HTML y CSS. Portfolio de proyectos web para pymes y proyectos personales."
+        path="/web"
+        keywords="desarrollador web Buenos Aires, frontend developer Argentina, desarrollo web React, sitios web a medida"
+      />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Web', url: 'https://leosenderovsky.com.ar/web' },
+        { name: 'Desarrollo Web Frontend', url: 'https://leosenderovsky.com.ar/web' },
+      ]} />
 
       <section
         id="web-top"

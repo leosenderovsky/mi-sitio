@@ -1,5 +1,6 @@
 
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { SectionHeader } from '../components/SectionHeader';
 import { portfolioIA } from '../data/portfolio-ia';
@@ -10,7 +11,17 @@ export function IA() {
 
   return (
     <>
-      <PageSEO title="Inteligencia Artificial" description="Proyectos desarrollados con Inteligencia Artificial por Leo Senderovsky." path="/ia" />
+      <PageSEO 
+        title="sender.ia — IA Aplicada al Audiovisual" 
+        description="sender.ia: proyectos de inteligencia artificial aplicados al audiovisual y web por Leo Senderovsky. Herramientas IA para producción de contenido, automatización y edición de video."
+        path="/ia"
+        keywords="inteligencia artificial audiovisual, IA para video, sender.ia, automatizacion con IA, herramientas IA contenido"
+      />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Tecnología & IA', url: 'https://leosenderovsky.com.ar/ia' },
+        { name: 'sender.ia', url: 'https://leosenderovsky.com.ar/ia' },
+      ]} />
       
       {/* Intro Section */}
       <section id="ia" className="py-16 relative overflow-hidden" style={{ backgroundColor: '#1C289B' }}>

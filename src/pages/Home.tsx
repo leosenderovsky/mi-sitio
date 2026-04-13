@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { PageSEO } from '../components/PageSEO';
+import { SchemaProfessionalServices } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { FlipCard } from '../components/FlipCard';
 import { ServiceCard } from '../components/ServiceCard';
@@ -132,9 +133,11 @@ export function Home() {
     <>
       <PageSEO
         title="Inicio"
-        description="Sitio de Leo A. Senderovsky, editor de video, consultor de guión, profesor de cine, desarrollador web y especialista en IA."
+        description="Leo Aquiba Senderovsky: editor de video senior con 15+ años de experiencia, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina."
         path="/"
+        keywords="editor de video Buenos Aires, editor audiovisual Argentina, consultor de guion, script doctor, docente de cine, critica de cine, desarrollador web Frontend, inteligencia artificial audiovisual, sender.ia"
       />
+      <SchemaProfessionalServices />
 
       {/* ══════════════════════════════════════
           HERO – Flip Cards (igual al legacy)
@@ -198,12 +201,12 @@ export function Home() {
       ══════════════════════════════════════ */}
       <div className="py-10" style={{ backgroundColor: '#3844be' }}>
         <div className="container mx-auto px-4">
-          <h1
+          <h2
             className="text-center text-white mb-6"
             style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '3.5em', fontWeight: 600, letterSpacing: 1 }}
           >
             Mi bio
-          </h1>
+          </h2>
           <div className="flex items-center justify-center gap-6">
 
             {/* Ilustración izquierda */}
@@ -373,12 +376,12 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section id="services" className="py-12" style={{ backgroundColor: '#3844BE' }}>
         <div className="container mx-auto px-4">
-          <h1
+          <h2
             className="text-center text-white mb-8"
             style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
           >
             Audiovisual
-          </h1>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {audiovisualCards.map(card => (
               <ServiceCard key={card.id} {...card} />
@@ -392,12 +395,12 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section className="py-12" style={{ backgroundColor: '#000B77' }}>
         <div className="container mx-auto px-4">
-          <h1
+          <h2
             className="text-center text-white mb-8"
             style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
           >
             Web & IA
-          </h1>
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <ServiceCard {...webCard} />
             <ServiceCard {...iaCard} />
@@ -410,12 +413,12 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section id="contacto" className="py-16" style={{ background: 'rgba(255,255,255,0.93)' }}>
         <div className="container mx-auto px-4">
-          <h1
+          <h2
             className="text-center mb-10"
             style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, color: '#000b77', letterSpacing: 1 }}
           >
             Contactame
-          </h1>
+          </h2>
 
           {submitted ? (
             <div className="text-center py-16">

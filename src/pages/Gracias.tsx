@@ -5,7 +5,12 @@ import { SectionHeader } from '../components/SectionHeader';
 export function Gracias() {
   return (
     <>
-      <PageSEO title="Gracias por tu mensaje" description="He recibido tu mensaje correctamente." path="/gracias" />
+      <PageSEO 
+        title="Gracias por tu mensaje" 
+        description="Tu mensaje fue enviado correctamente. Leo Senderovsky te responderá a la brevedad."
+        path="/gracias"
+        noindex={true}
+      />
       <section className="py-32 bg-site-dark text-white text-center min-h-[70vh] flex flex-col justify-center">
         <div className="container mx-auto px-4">
           <SectionHeader title="¡Gracias!" subtitle="Mensaje Enviado" theme="dark" />

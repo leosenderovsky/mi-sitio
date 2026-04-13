@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { SectionHeader } from '../components/SectionHeader';
 import { TimelineSection } from '../components/TimelineSection';
@@ -24,7 +25,17 @@ export function Docencia() {
 
   return (
     <>
-      <PageSEO title="Docencia y Entrevistas" description="Cursos, disertaciones, ciclos de cine y entrevistas de Leo Senderovsky." path="/docencia" />
+      <PageSEO 
+        title="Docencia de Cine — Charlas y Ciclos" 
+        description="Charlas y ciclos de cine por Leo Senderovsky. Docencia en cine argentino, cine judío, cine en dictadura, humor judío en el cine. Para instituciones y grupos privados en Buenos Aires."
+        path="/audiovisual/docencia"
+        keywords="docente de cine Buenos Aires, charlas de cine, ciclos de cine, cine judio Argentina, cine argentino dictadura, humor judio cine"
+      />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Audiovisual', url: 'https://leosenderovsky.com.ar/audiovisual/docencia' },
+        { name: 'Docencia de Cine', url: 'https://leosenderovsky.com.ar/audiovisual/docencia' },
+      ]} />
 
       <section
         id="docencia-top"

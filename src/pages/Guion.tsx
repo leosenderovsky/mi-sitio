@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PageSEO } from '../components/PageSEO';
+import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
 import { SectionHeader } from '../components/SectionHeader';
 import { PortfolioGrid } from '../components/PortfolioGrid';
@@ -14,7 +15,17 @@ export function Guion() {
 
   return (
     <>
-      <PageSEO title="Guión y Consultoría" description="Servicios de guión y consultoría audiovisual de Leo Senderovsky." path="/guion" />
+      <PageSEO 
+        title="Guión y Consultoría de Guión" 
+        description="Servicios de guión cinematográfico y consultoría narrativa (script doctoring) por Leo Senderovsky. Asesoría de guiones para cine, televisión y publicidad. Freelance, Buenos Aires, Argentina."
+        path="/audiovisual/guion"
+        keywords="guionista freelance Argentina, consultor de guion, script doctor Buenos Aires, asesor de guion, guion cinematografico, script doctoring"
+      />
+      <SchemaBreadcrumb items={[
+        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
+        { name: 'Audiovisual', url: 'https://leosenderovsky.com.ar/audiovisual/guion' },
+        { name: 'Guión y Consultoría', url: 'https://leosenderovsky.com.ar/audiovisual/guion' },
+      ]} />
 
       <section
         id="guion"

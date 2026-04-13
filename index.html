@@ -1,22 +1,55 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sitio de Leo A. Senderovsky, editor de video, consultor de guión, profesor de cine, desarrollador web y especialista en IA. Te invito a conocer mis servicios y mis trabajos realizados." />
-    <meta name="keywords" content="audiovisual, cine, tv, web, consultoria, guion, script doctor, critica, desarrollo, frontend, docencia, encuentros, cine judio, cine argentino, portfolio, inteligencia artificial, IA, artificial intelligence" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- SEO base (react-helmet-async lo sobreescribe por página) -->
+    <title>Leo Aquiba Senderovsky | Editor de Video | Consultor de Guión | Docente de Cine | Desarrollador Web | IA</title>
+    <meta name="description" content="Leo Aquiba Senderovsky: editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina." />
+    <meta name="author" content="Leo Aquiba Senderovsky" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="AR-C" />
+    <meta name="geo.placename" content="Buenos Aires, Argentina" />
+    <meta name="ICBM" content="-34.6037, -58.3816" />
+
+    <!-- OG fallback -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Leo Senderovsky" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter fallback -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@leosenderovsky" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#3844BE" />
+
+    <!-- Preconexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://api.web3forms.com" />
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+
+    <!-- Estilos externos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css" />
     <link rel="stylesheet" href="/assets/css/uicons-thin-straight.css" />
     <link rel="stylesheet" href="/assets/css/uicons-thin-rounded.css" />
     <link rel="stylesheet" href="/assets/fonts/lineicons.css" />
     <link rel="stylesheet" href="/assets/fonts/flag-icons.min.css" />
-
-    <title>Leo Aquiba Senderovsky | Editor de video | Consultor de guión | Docente de cine | Desarrollador web | Especialista en IA</title>
   </head>
   <body>
     <div id="root"></div>
@@ -25,9 +58,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         if (typeof GLightbox !== 'undefined') {
-          const lightbox = GLightbox({
-            selector: '.glightbox'
-          });
+          const lightbox = GLightbox({ selector: '.glightbox' });
         }
       });
     </script>

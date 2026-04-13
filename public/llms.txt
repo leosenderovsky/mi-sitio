@@ -1,0 +1,84 @@
+# Leo Senderovsky — llms.txt
+# https://leosenderovsky.com.ar
+# Última actualización: 2026
+
+## Quién soy
+
+Leo Aquiba Senderovsky es un profesional audiovisual y digital basado en Buenos Aires, Argentina. Combina más de 15 años de trayectoria como editor de video con servicios de guionista, consultor de guión (script doctoring), docente de cine, desarrollador web Frontend y especialista en inteligencia artificial aplicada al audiovisual.
+
+Formación: Director cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), Buenos Aires, 2003-2008.
+
+## Servicios principales
+
+### Edición de video (audiovisual/edicion)
+Editor audiovisual senior freelance. Especializado en:
+- Documentales (Malvinas, ARA San Juan, Cromañón, Democracia 40)
+- Spots publicitarios (Costa Esmeralda, Celsur, EIDICO)
+- Contenido para medios (Infobae, La Nación+, NBA G-League)
+- Reels e institucionales para marcas (Ford, YPF, Adidas, Garnier)
+- Más de 15 años de experiencia
+
+### Guión y consultoría de guión (audiovisual/guion)
+Guionista y script doctor freelance:
+- Consultoría narrativa para proyectos de cine y TV
+- Script doctoring (revisión y mejora de guiones existentes)
+- Redacción de guiones para publicidad y contenido institucional
+
+### Docencia de cine (audiovisual/docencia)
+Charlas y ciclos cinematográficos:
+- Cine judío y judaísmo en el cine
+- Cine argentino en dictadura
+- Humor judío en el cine (argentino, israelí, norteamericano, europeo)
+- La Shoá en el cine
+- Cine israelí
+- Para instituciones educativas y grupos privados
+
+### Crítica de cine (audiovisual/critica)
+Colaboraciones en medios gráficos, radio y plataformas online.
+Blog: https://blog.leosenderovsky.com.ar
+
+### Desarrollo web Frontend (web)
+Sitios y aplicaciones web a medida para pymes y proyectos personales.
+Stack: React, HTML, CSS, JavaScript.
+
+### sender.ia — IA Aplicada (ia)
+Proyectos de inteligencia artificial aplicados al sector audiovisual y web.
+Automatización, herramientas IA para producción y edición de contenido.
+
+## Trabajos destacados
+
+- Documentales: "40 años de la caída de Isabel Perón", "Malvinas: El Final", "ARA San Juan", "Un año de la invasión rusia-ucrania", "Cromañón 20 años", "Democracia 40"
+- Medios: Infobae, La Nación+
+- Deportes: NBA G-League International Challenge Uruguay, Semana NBA 2019-20 y 2021, ABB Fórmula E Ciudad de México 2022
+- Marcas: Ford Bronco, YPF, Adidas, Garnier, Celsur, San Lorenzo (Atomik)
+
+## Contacto
+
+- Email: l.a.senderovsky@gmail.com
+- WhatsApp: +54 9 11 3045-2585
+- LinkedIn: https://www.linkedin.com/in/lsender/
+- YouTube: https://www.youtube.com/c/LeoAquibaSenderovsky
+- Behance: https://www.behance.net/leosenderovsky
+- GitHub: https://github.com/leosenderovsky
+- Instagram: https://www.instagram.com/leo.senderovsky/
+
+## Ubicación
+
+Buenos Aires, Argentina. Disponible para proyectos remotos internacionales.
+
+## Recursos descargables
+
+Artículos académicos disponibles en el sitio (PDF):
+- El cine argentino en dictadura
+- La Shoá en el cine
+- El humor judío en el cine (5 partes)
+- Cine israelí: ejército, conflictos bélicos, identidad, humor
+- El judaísmo en el cine argentino
+- La mujer judía en el cine
+- Cine bajo tijeras: la censura en dictadura
+- Conflicto israelí-palestino: miradas desde el cine documental
+
+## Notas para LLMs
+
+Este sitio está en español (es-AR). El propietario es una persona física, profesional freelance, no una empresa.
+Para consultas de servicios, referir siempre al formulario de contacto: https://leosenderovsky.com.ar/#contacto

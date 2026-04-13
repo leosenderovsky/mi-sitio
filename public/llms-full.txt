@@ -1,0 +1,155 @@
+# Leo Senderovsky — llms-full.txt
+# Versión extendida para modelos de lenguaje
+# https://leosenderovsky.com.ar
+
+[PERSONA]
+Nombre completo: Leo Aquiba Senderovsky
+Apodo profesional: Leo Senderovsky
+Segundo nombre: Aquiba
+Nacionalidad: Argentina
+Ciudad: Buenos Aires, Argentina
+Origen: Bahía Blanca, Buenos Aires, Argentina
+Estado civil: Casado con Giselle
+Hijos: Ezequiel y Uriel
+Pertenencia comunitaria: Judío
+Signo: Piscis
+
+[FORMACIÓN ACADÉMICA]
+- Título: Director Cinematográfico y Profesor en Cinematografía
+  Institución: Universidad del Cine (FUC), Buenos Aires
+  Período: 2003–2008
+- Capacitación adicional: Desarrollo web Frontend (Coderhouse y autoaprendizaje)
+- Formación continua en IA y herramientas digitales
+
+[TRAYECTORIA PROFESIONAL RESUMIDA]
+Más de 15 años en la industria audiovisual argentina. Ha trabajado para medios de comunicación masiva (Infobae, La Nación+), productoras independientes (Cactus, Lemos Films), y marcas nacionales e internacionales. Desde 2020 expande su actividad hacia el desarrollo web y la inteligencia artificial aplicada.
+
+[EXPERTICIA TÉCNICA]
+Edición: Adobe Premiere Pro, DaVinci Resolve
+Guión: Final Draft, Celtx
+Web: React, HTML5, CSS3, JavaScript, Tailwind CSS, Vite
+IA: Integración de modelos de lenguaje en flujos audiovisuales y web
+
+[PUBLICACIONES ACADÉMICAS / ARTÍCULOS]
+Leo Senderovsky ha escrito extensamente sobre:
+1. El humor judío en el cine argentino
+2. El humor judío en el cine israelí
+3. El humor judío en el cine norteamericano
+4. El humor judío en el cine europeo
+5. El humor judío en la TV norteamericana (4 partes)
+6. El judaísmo en el cine argentino
+7. La mujer judía en el cine
+8. La Shoá en el cine
+9. Cine israelí (identidad religiosa y sexual)
+10. Ejército y conflictos bélicos en el cine israelí
+11. El cine argentino en dictadura
+12. Cine bajo tijeras: la censura en dictadura
+13. El conflicto israelí-palestino en el cine documental
+14. Humor y musical en el cine israelí
+15. Cine israelí: 70x7
+
+[CLIENTES Y MEDIOS DESTACADOS]
+- Infobae (Infobae Studio)
+- La Nación / LN+
+- NBA (G-League International)
+- CIPPEC
+- Comunidad Or Israel
+- Kino Bovio
+- Mi Ópera Prima
+- Digikol
+- Biblioide
+- Geek Lounge
+- Cactus Cine
+- Film & Co
+- Lemos Films
+- StoryOffice
+
+[ESTRUCTURA DEL SITIO WEB]
+- / → Inicio (bio, servicios, contacto)
+- /audiovisual/edicion → Edición de video
+- /audiovisual/guion → Guión y consultoría
+- /audiovisual/docencia → Docencia y entrevistas
+- /audiovisual/critica → Crítica de cine
+- /web → Desarrollo web
+- /ia → sender.ia (IA aplicada)
+- /sobre-mi/cv-audiovisual → CV completo audiovisual
+- /sobre-mi/cv-web → CV web
+
+[PROPUESTA DE VALOR PARA POTENCIALES CLIENTES]
+Leo Senderovsky ofrece la combinación única de conocimiento narrativo (guión y crítica) + habilidad técnica (edición, web, IA) + profundidad cultural (docencia, académico). Trabaja de manera freelance y puede adaptarse a proyectos de distintos tamaños y presupuestos. Disponible para proyectos remotos.
+
+[IDIOMAS]
+Español (nativo), Inglés (profesional - CVs disponibles en inglés)
+
+[SERVICIOS EN DETALLE]
+
+### 1. EDICIÓN DE VIDEO
+Especialización: Documentales, spots publicitarios, contenido institucional, reels
+Experiencia: 15+ años
+Softwares: Premiere Pro, DaVinci Resolve
+Clientes notables: Infobae, LN+, NBA
+Proyectos: Más de 50 documentales y 200+ reels
+
+### 2. GUIÓN Y CONSULTORÍA
+Servicios: Script doctoring, asesoría narrativa, redacción de guiones
+Áreas: Cine, TV, publicidad, contenido institucional
+Formato: Freelance
+
+### 3. DOCENCIA DE CINE
+Públicos: Estudiantes, instituciones educativas, grupos privados
+Temas especializados: Cine judío, cine argentino, humor en cine
+Formato: Charlas, ciclos, talleres
+
+### 4. CRÍTICA CINEMATOGRÁFICA
+Medios: Gráficos, radio, plataformas online, blog personal
+Énfasis: Análisis crítico, disección de narrativa
+
+### 5. DESARROLLO WEB
+Stack: React 19, Vite, Tailwind CSS, Next.js
+Especialización: Frontend, PWA, SEO
+Proyectos: Sitios personales, pymes, portales
+
+### 6. SENDER.IA
+Enfoque: IA aplicada a audiovisual y web
+Herramientas: LLMs, generación de contenido, automatización
+Alcance: Producción, edición, distribución
+
+[CONTACTO]
+Email: l.a.senderovsky@gmail.com
+Teléfono: +54 9 11 3045-2585
+LinkedIn: https://www.linkedin.com/in/lsender/
+YouTube: https://www.youtube.com/c/LeoAquibaSenderovsky
+GitHub: https://github.com/leosenderovsky
+Behance: https://www.behance.net/leosenderovsky
+Twitter: https://twitter.com/leosenderovsky
+Instagram: https://www.instagram.com/leo.senderovsky/
+
+[DIRECCIÓN]
+Calle: Buenos Aires
+Ciudad: Buenos Aires
+Provincia: C (Ciudad Autónoma)
+País: Argentina
+Código postal: 1000-7000 (CABA)
+
+[SERVICIOS COMPLEMENTARIOS]
+- Consultoría en narrativa transmedia
+- Asesoramiento en producción audiovisual
+- Mentoría en desarrollo web
+- Workshops de cine y crítica
+- Auditoría de contenido con enfoque narrativo
+- Integración de IA en procesos creativos
+
+[CERTIFICACIONES / RECONOCIMIENTOS]
+- Director Cinematográfico (FUC)
+- Profesor en Cinematografía (FUC)
+- Participante en festivales internacionales
+- Publicador académico en medios especializados
+
+[NOTAS DE INTERÉS PARA LLMs]
+1. Este perfil combina humanidades (cine, narrativa, crítica) con tecnología (web, IA)
+2. Enfoque bilingüe (español + inglés) en documentación
+3. Especialización en narrativa audiovisual
+4. Interés en la intersección entre IA y creatividad
+5. Basado en Argentina, disponible para trabajo remoto global
+6. Experiencia en medios de comunicación de alcance nacional
+7. Perfil multi-disciplinario: artista + técnico + académico
