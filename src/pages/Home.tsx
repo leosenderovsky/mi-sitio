@@ -142,7 +142,7 @@ export function Home() {
       {/* ══════════════════════════════════════
           HERO – Flip Cards (igual al legacy)
       ══════════════════════════════════════ */}
-      <div id="hero-area" className="hidden md:block" style={{ background: 'url(/assets/img/hero-area-office.jpg) center center no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed', position: 'relative', color: '#fff', overflow: 'hidden', padding: '175px 0 120px' }}>
+      <div id="hero-area" className="hidden md:block" style={{ background: 'url(/assets/img/hero-area-office.jpg) center center no-repeat', backgroundSize: 'cover', backgroundAttachment: 'fixed', position: 'relative', color: '#fff', overflow: 'hidden', padding: '80px 0 120px' }}>
         <div className="absolute inset-0 bg-black opacity-80"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-3 gap-4 md:gap-6">
@@ -233,7 +233,7 @@ export function Home() {
                 className="block relative group rounded-xl overflow-hidden shadow-2xl glightbox-home"
               >
                 <img
-                  src="/assets/img/video-portada-hover.jpg"
+                  src="/assets/img/video-portada.jpg"
                   alt="Miniatura de video principal"
                   className="w-full"
                 />
@@ -261,11 +261,11 @@ export function Home() {
       {/* ══════════════════════════════════════
           ACERCA DE MÍ
       ══════════════════════════════════════ */}
-      <section id="about" className="py-16" style={{ background: 'rgba(255,255,255,0.92)' }}>
+      <section id="about" className="py-16" style={{ background: '#000b77' }}>
         <div className="container mx-auto px-4">
           <h1
-            className="text-center mb-8"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, color: '#000b77', letterSpacing: 1 }}
+            className="text-center text-white mb-8"
+            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
           >
             Acerca de mí
           </h1>
@@ -276,7 +276,7 @@ export function Home() {
               <motion.img
                 src="/assets/img/about/about-1.jpg"
                 alt="Foto de Leo Senderovsky"
-                className="w-full rounded shadow-lg"
+                className="w-full rounded shadow-lg border border-white"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -289,7 +289,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="space-y-4 text-[#666] text-sm leading-relaxed"
+                className="space-y-4 text-white text-sm leading-relaxed"
                 style={{ fontFamily: '"Libre Franklin", sans-serif' }}
               >
                 <p>Me llamo Leo Aquiba Senderovsky (Aquiba es mi segundo nombre). Soy argentino (nacido en Bahía Blanca, vivo en Buenos Aires), soy judío, pisciano, estoy casado con Giselle y tenemos dos príncipes llamados Ezequiel y Uriel.</p>
@@ -309,14 +309,14 @@ export function Home() {
                 <div className="flex gap-2">
                   <a
                     href="/audiovisual/cv/#castellano"
-                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-[#000b77] text-[#000b77] hover:bg-[#766dff] hover:border-[#766dff] hover:text-white transition-all rounded"
+                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#766dff] hover:border-[#766dff] hover:text-[#000b77] transition-all rounded"
                     style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.1em', textTransform: 'uppercase', minHeight: '54px' }}
                   >
                     CV Audiovisual <span className="fi fi-es shadow-sm" />
                   </a>
                   <a
                     href="/audiovisual/cv/#ingles"
-                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-[#000b77] text-[#000b77] hover:bg-[#766dff] hover:border-[#766dff] hover:text-white transition-all rounded"
+                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#766dff] hover:border-[#766dff] hover:text-[#000b77] transition-all rounded"
                     style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.1em', textTransform: 'uppercase', minHeight: '54px' }}
                   >
                     CV Audiovisual <span className="fi fi-gb shadow-sm" />
@@ -324,14 +324,14 @@ export function Home() {
                 </div>
                 <a
                   href="/web/cv"
-                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-[#000b77] text-[#000b77] hover:bg-[#766dff] hover:border-[#766dff] hover:text-white transition-all rounded w-full"
+                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#766dff] hover:border-[#766dff] hover:text-[#000b77] transition-all rounded w-full"
                   style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.1em', textTransform: 'uppercase', minHeight: '54px' }}
                 >
                   CV Web <span className="fi fi-gb shadow-sm ml-1" />
                 </a>
                 <a
                   href="#contacto"
-                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-[#000b77] text-[#000b77] hover:bg-[#766dff] hover:border-[#766dff] hover:text-white transition-all rounded w-full"
+                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#766dff] hover:border-[#766dff] hover:text-[#000b77] transition-all rounded w-full"
                   style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.1em', textTransform: 'uppercase', minHeight: '54px' }}
                 >
                   Contactame <i className="fa-solid fa-arrow-down text-sm ml-1" />
@@ -343,11 +343,11 @@ export function Home() {
       </section>
 
       {/* Barra social - Fuera de la sección about */}
-      <section id="follow" className="w-full py-8" style={{ backgroundColor: '#000b77' }}>
+      <section id="follow" className="bg-gradient-to-r from-[#766dff] to-[#88f3ff] shadow-lg w-full py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <span
-              className="text-white whitespace-nowrap"
+              className="text-[#000b77] whitespace-nowrap"
               style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '2em', fontWeight: 600, textTransform: 'uppercase' }}
             >
               Seguime en
@@ -359,7 +359,7 @@ export function Home() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-xl text-white hover:bg-[#766dff] hover:border-[#766dff] transition-all duration-300"
+                    className="w-12 h-12 rounded-full border border-[#000b77] flex items-center justify-center text-xl text-[#000b77] hover:bg-[#000b77] hover:border-[#000b77] hover:text-white transition-all duration-300"
                     title={s.cls}
                   >
                     <i className={`fa-brands ${s.icon}`} />
@@ -374,7 +374,7 @@ export function Home() {
       {/* ══════════════════════════════════════
           SERVICIOS AUDIOVISUAL
       ══════════════════════════════════════ */}
-      <section id="services" className="py-12" style={{ backgroundColor: '#3844BE' }}>
+      <section id="services" className="py-12" style={{ backgroundColor: '#000b77' }}>
         <div className="container mx-auto px-4">
           <h2
             className="text-center text-white mb-8"
@@ -393,7 +393,7 @@ export function Home() {
       {/* ══════════════════════════════════════
           SERVICIOS WEB & IA
       ══════════════════════════════════════ */}
-      <section className="py-12" style={{ backgroundColor: '#000B77' }}>
+      <section className="py-12" style={{ backgroundColor: '#3844BE' }}>
         <div className="container mx-auto px-4">
           <h2
             className="text-center text-white mb-8"
@@ -411,11 +411,11 @@ export function Home() {
       {/* ══════════════════════════════════════
           CONTACTO
       ══════════════════════════════════════ */}
-      <section id="contacto" className="py-16" style={{ background: 'rgba(255,255,255,0.93)' }}>
+      <section id="contacto" className="py-16" style={{ background: '#000b77' }}>
         <div className="container mx-auto px-4">
           <h2
-            className="text-center mb-10"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, color: '#000b77', letterSpacing: 1 }}
+            className="text-center text-white mb-10"
+            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
           >
             Contactame
           </h2>
@@ -440,22 +440,22 @@ export function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {/* Nombre */}
                 <div>
-                  <label htmlFor="nombre" className="block text-sm text-[#666] mb-1">Nombre <span className="text-red-500">*</span></label>
+                  <label htmlFor="nombre" className="block text-sm text-white mb-1">Nombre <span className="text-red-500">*</span></label>
                   <input type="text" id="nombre" name="nombre" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
                 </div>
                 {/* Apellido */}
                 <div>
-                  <label htmlFor="apellido" className="block text-sm text-[#666] mb-1">Apellido <span className="text-red-500">*</span></label>
+                  <label htmlFor="apellido" className="block text-sm text-white mb-1">Apellido <span className="text-red-500">*</span></label>
                   <input type="text" id="apellido" name="apellido" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
                 </div>
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm text-[#666] mb-1">Email <span className="text-red-500">*</span></label>
+                  <label htmlFor="email" className="block text-sm text-white mb-1">Email <span className="text-red-500">*</span></label>
                   <input type="email" id="email" name="email" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
                 </div>
                 {/* País */}
                 <div>
-                  <label htmlFor="pais" className="block text-sm text-[#666] mb-1">País</label>
+                  <label htmlFor="pais" className="block text-sm text-white mb-1">País</label>
                   <input list="pais-list" id="pais" name="pais" className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
                   <datalist id="pais-list">
                     {COUNTRIES.map(c => <option key={c} value={c} />)}
@@ -463,8 +463,8 @@ export function Home() {
                 </div>
                 {/* Servicio */}
                 <div>
-                  <label htmlFor="servicio" className="block text-sm text-[#666] mb-1">¿En qué servicio estás interesado?</label>
-                  <select id="servicio" name="servicio" className="w-full border border-gray-300 rounded px-3 py-2 text-sm bg-white">
+                  <label htmlFor="servicio" className="block text-sm text-white mb-1">¿En qué servicio estás interesado?</label>
+                  <select id="servicio" name="servicio" className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-white bg-[#3844BE]">
                     <option value="edicion">Edición</option>
                     <option value="guion">Guión</option>
                     <option value="docencia">Docencia</option>
@@ -475,11 +475,11 @@ export function Home() {
                 </div>
                 {/* Presupuesto */}
                 <div>
-                  <p className="block text-sm text-[#666] mb-1">¿Querés pedir un presupuesto de trabajo?</p>
-                  <label className="inline-flex items-center gap-1 mr-4 text-sm text-[#666]">
+                  <p className="block text-sm text-white mb-1">¿Querés pedir un presupuesto de trabajo?</p>
+                  <label className="inline-flex items-center gap-1 mr-4 text-sm text-white">
                     <input type="radio" name="presupuesto" value="yes" /> Sí
                   </label>
-                  <label className="inline-flex items-center gap-1 text-sm text-[#666]">
+                  <label className="inline-flex items-center gap-1 text-sm text-white">
                     <input type="radio" name="presupuesto" value="no" /> No
                   </label>
                 </div>
@@ -493,7 +493,7 @@ export function Home() {
                   name="subject"
                   placeholder="Asunto *"
                   required
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-white"
                 />
               </div>
 
@@ -505,14 +505,14 @@ export function Home() {
                   placeholder="Mensaje *"
                   rows={7}
                   required
-                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-white"
                 />
               </div>
 
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-10 py-2 border border-gray-300 rounded bg-gray-50 text-[#495057] hover:bg-[#766dff] hover:text-white hover:border-[#766dff] transition-all cursor-pointer"
+                  className="px-10 py-2 border border-gray-300 rounded bg-[#3844BE] text-white hover:bg-[#766dff] hover:text-[#000b77] hover:border-[#766dff] transition-all cursor-pointer"
                   style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.4em', textTransform: 'uppercase' }}
                 >
                   Enviar
@@ -522,7 +522,7 @@ export function Home() {
           )}
 
           {/* Datos de contacto directo */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
             <div className="flex flex-col items-center gap-2">
               <div className="w-12 h-12 rounded-full bg-[#000b77] flex items-center justify-center">
                 <i className="fa-solid fa-phone text-white text-xl" />
@@ -531,7 +531,7 @@ export function Home() {
                 href="https://wa.me/5491130452585"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[#000b77] hover:text-[#766dff] transition-colors text-sm"
+                className="text-white hover:text-[#766dff] transition-colors text-sm"
               >
                 + (54 9 11) 3045-2585
               </a>
@@ -542,7 +542,7 @@ export function Home() {
               </div>
               <a
                 href="mailto:l.a.senderovsky@gmail.com"
-                className="text-[#000b77] hover:text-[#766dff] transition-colors text-sm"
+                className="text-white hover:text-[#766dff] transition-colors text-sm"
               >
                 l.a.senderovsky@gmail.com
               </a>
@@ -551,7 +551,7 @@ export function Home() {
               <div className="w-12 h-12 rounded-full bg-[#000b77] flex items-center justify-center">
                 <i className="fa-solid fa-location-dot text-white text-xl" />
               </div>
-              <p className="text-[#666] text-sm">Buenos Aires, Argentina</p>
+              <p className="text-white text-sm">Buenos Aires, Argentina</p>
             </div>
           </div>
 

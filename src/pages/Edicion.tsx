@@ -60,10 +60,10 @@ export function Edicion() {
           <div className="max-w-3xl mx-auto mt-8 text-xl text-site-muted font-body leading-relaxed">
             <p className="mb-8">¿Estás buscando un editor para tus proyectos?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#resume" className="bg-site-teal px-8 py-3 rounded-full hover:bg-white hover:text-site-teal transition-colors font-heading text-xl uppercase">
+              <a href="#resume" className="bg-site-teal text-site-blue px-8 py-3 rounded-full hover:bg-site-blue hover:text-white transition-colors font-heading text-xl uppercase">
                 Mi experiencia
               </a>
-              <a href="#portfolio-edicion" className="border border-site-teal text-site-teal px-8 py-3 rounded-full hover:bg-site-teal hover:text-white transition-colors font-heading text-xl uppercase">
+              <a href="#portfolio-edicion" className="bg-site-teal text-site-blue px-8 py-3 rounded-full hover:bg-site-blue hover:text-white transition-colors font-heading text-xl uppercase">
                 Ver portfolio
               </a>
             </div>
@@ -71,29 +71,29 @@ export function Edicion() {
         </div>
       </section>
 
-      <section id="resume" className="py-20" style={{ backgroundColor: '#f2f2f2' }}>
+      <section id="resume" className="py-20" style={{ backgroundColor: '#00b4d9' }}>
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi experiencia" subtitle="Edición" theme="light" />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
               onClick={() => setActiveTab('experience')}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === 'experience' ? 'bg-white text-site-dark' : 'bg-gray-700 text-white hover:bg-white hover:text-site-dark transition-colors'}`}
+              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === 'experience' ? 'bg-site-blue text-white' : 'bg-white text-site-blue hover:bg-site-blue hover:text-white transition-colors'}`}
             >
               Experiencia
             </button>
             <button
               type="button"
               onClick={() => setActiveTab('education')}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === 'education' ? 'bg-white text-site-dark' : 'bg-gray-700 text-white hover:bg-white hover:text-site-dark transition-colors'}`}
+              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === 'education' ? 'bg-site-blue text-white' : 'bg-white text-site-blue hover:bg-site-blue hover:text-white transition-colors'}`}
             >
               Educación
             </button>
           </div>
           {activeTab === 'experience' ? (
-            <TimelineSection id="resume" title="Experiencia" subtitle="Audiovisual" experiences={experienciaAudiovisual} educations={[]} theme="light" />
+            <TimelineSection id="resume" title="Experiencia" subtitle="Audiovisual" experiences={experienciaAudiovisual} educations={[]} theme="dark" />
           ) : (
-            <TimelineSection id="resume" title="Educación" subtitle="Formación" experiences={[]} educations={educacionAudiovisual} theme="light" />
+            <TimelineSection id="resume" title="Educación" subtitle="Formación" experiences={[]} educations={educacionAudiovisual} theme="dark" />
           )}
         </div>
       </section>

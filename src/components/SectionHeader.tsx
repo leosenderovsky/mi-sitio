@@ -16,7 +16,7 @@ export function SectionHeader({ title, subtitle, theme = 'light' }: SectionHeade
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className={`text-[1.3em] md:text-[1.4em] tracking-[3px] uppercase mb-2 ${isDark ? 'text-site-muted' : 'text-site-text'}`}
+        className={`text-[1.3em] md:text-[1.4em] tracking-[3px] uppercase mb-2 ${isDark ? 'text-site-muted' : 'text-site-blue'}`}
       >
         {subtitle}
       </motion.h3>
@@ -25,7 +25,7 @@ export function SectionHeader({ title, subtitle, theme = 'light' }: SectionHeade
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className={`text-[3.5em] md:text-[4em] font-heading uppercase leading-none ${isDark ? 'text-white' : 'text-site-dark'}`}
+        className={`text-[3.5em] md:text-[4em] font-heading uppercase leading-none ${isDark ? 'text-white' : 'text-site-blue'}`}
       >
         {title}
       </motion.h1>

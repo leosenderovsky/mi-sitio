@@ -93,6 +93,14 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
 - Configuración optimizada en `netlify.toml`
 - Sitemap y robots.txt incluidos
 
+## 🆕 Actualizaciones Recientes
+
+### Refactorización de la sección Docencia (Abril 2026)
+- **UI/UX Refactor**: Se actualizaron las `DocenciaCard` para alinearlas con la estética premium de `ServiceCard`.
+- **Nuevas Animaciones**: Implementación de Framer Motion para entradas suaves (`fade-in` + `slide-up`) y animaciones de acordeón para el despliegue de contenido.
+- **Sistema de Color**: Transición de fondos semitransparentes a colores sólidos (`#3844BE` y `#000b77`) para mejorar el contraste y la legibilidad.
+- **Micro-interacciones**: Rotación de iconos chevron y estilos de botones CTA para links a documentos técnicos.
+
 ## 📞 Contacto
 
 - **LinkedIn**: [Leo Senderovsky](https://www.linkedin.com/in/lsender/)
@@ -104,26 +112,3 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
 ## 📝 Licencia
 
 Este proyecto es privado y personal.
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

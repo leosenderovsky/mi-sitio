@@ -72,7 +72,7 @@ export function Docencia() {
 
           {/* Grid de 7 cards — Judaísmo */}
           {/* Fila 1: ciclos 1-3 (con múltiples documentos) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
             {ciclosJudaismo.slice(0, 3).map(ciclo => (
               <DocenciaCard
                 key={ciclo.id}
@@ -84,7 +84,7 @@ export function Docencia() {
           </div>
 
           {/* Fila 2: ciclos 4-7 (con un solo documento) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {ciclosJudaismo.slice(3).map(ciclo => (
               <DocenciaCard
                 key={ciclo.id}
@@ -118,7 +118,7 @@ export function Docencia() {
           </h3>
 
           {/* Grid de 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {ciclosCineArg.map(ciclo => (
               <DocenciaCard
                 key={ciclo.id}

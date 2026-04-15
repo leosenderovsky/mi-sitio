@@ -84,7 +84,7 @@ export function ServiceCard({ title, description, image, icon, icons, bgColor, c
             const isExternal = cta.external === true || cta.href.startsWith('http');
             const btnClass = `inline-flex items-center gap-1 font-heading text-lg uppercase transition-all ${
               isDark
-                ? 'text-white border border-white/50 rounded px-3 py-1 hover:bg-white hover:text-site-dark'
+                ? 'text-white border border-white/50 rounded px-3 py-1 hover:bg-white hover:text-[#000b77]'
                 : 'text-[#000b77] border border-[#000b77] rounded px-3 py-1 hover:bg-[#000b77] hover:text-white'
             }`;
             return isExternal ? (

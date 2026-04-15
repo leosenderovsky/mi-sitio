@@ -25,7 +25,7 @@ function App() {
       <Router>
         <div className="flex flex-col min-h-screen bg-site-dark overflow-x-hidden">
           <Navbar />
-          <main className="flex-grow">
+          <main className="flex-grow pt-24">
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-site-dark text-white">Cargando...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />

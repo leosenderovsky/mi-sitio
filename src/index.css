@@ -24,6 +24,7 @@
 @layer base {
   html {
     overflow-x: hidden;
+    scroll-padding-top: 96px;
     @apply scroll-smooth;
   }
 
