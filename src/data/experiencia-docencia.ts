@@ -28,12 +28,5 @@ export const experienciaDocencia: ExperienceItem[] = [
     title: "Escuelas Técnicas Raggio D.E. 10",
     period: "Junio 2012 - Febrero 2016",
     description: "Docente suplente de la materia \"Cinematografía\", para alumnos de 6to año, dentro de la Tecnicatura en Comunicaciones Publicitarias."
-  },
-  {
-    id: "doc-5",
-    logo: "",
-    title: "Cine.com",
-    period: "Mayo 2007 - Octubre 2010",
-    description: "Redacción de cuatro críticas semanales, un total de 684 críticas publicadas en tres años y medio de trabajo para el sitio."
   }
 ];

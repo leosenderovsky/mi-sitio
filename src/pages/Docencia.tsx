@@ -51,14 +51,7 @@ export function Docencia() {
         <div className="relative z-10 container mx-auto px-4">
 
           {/* Encabezado */}
-          <p className="text-center text-white"
-             style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '20px', fontWeight: 300, letterSpacing: 1 }}>
-            Docencia
-          </p>
-          <h1 className="text-center text-white"
-              style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1, lineHeight: 1, marginBottom: '10px' }}>
-            Encuentros de cine
-          </h1>
+          <SectionHeader title="Encuentros de cine" subtitle="Docencia" theme="dark" />
           <h3 className="text-center text-white mb-4"
               style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '3.5em', fontWeight: 300, letterSpacing: 1 }}>
             JUDAÍSMO EN CINE Y TV
@@ -134,19 +127,7 @@ export function Docencia() {
 
       <section id="resume2" className="py-20" style={{ backgroundColor: '#f2f2f2' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center mb-12"
-            style={{
-              fontFamily: '"Yanone Kaffeesatz", sans-serif',
-              fontSize: '4em',
-              fontWeight: 600,
-              color: '#000b77',
-              textTransform: 'uppercase',
-              letterSpacing: 1,
-            }}
-          >
-            Docencia y crítica
-          </h2>
+          <SectionHeader title="Docencia y crítica" subtitle="Experiencia" theme="light" />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
@@ -173,18 +154,12 @@ export function Docencia() {
           </div>
           {activeTab === 'experience' ? (
             <TimelineSection
-              id="resume2"
-              title="Experiencia"
-              subtitle="Docencia y crítica"
               experiences={experienciaDocencia}
               educations={[]}
               theme="light"
             />
           ) : (
             <TimelineSection
-              id="resume2"
-              title="Educación"
-              subtitle="Docencia y crítica"
               experiences={[]}
               educations={educacionFUC}
               theme="light"

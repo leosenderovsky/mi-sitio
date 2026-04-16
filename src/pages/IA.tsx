@@ -24,11 +24,10 @@ export function IA() {
       ]} />
       
       {/* Intro Section */}
-      <section id="ia" className="py-16 relative overflow-hidden" style={{ backgroundColor: '#1C289B' }}>
-        <div className="container mx-auto px-4">
-          <h1 className="text-center text-white mb-8" style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}>
-            IA
-          </h1>
+      <section id="ia" className="py-20 text-white relative overflow-hidden"  style={{backgroundImage: "url('/assets/img/ia/bg-ia.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed',}}>
+        <div className="absolute inset-0 bg-[#1c289b] opacity-90" />
+        <div className="relative z-10 container mx-auto px-4">
+          <SectionHeader title="sender.ia" subtitle="IA" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Texto + subsecciones */}
             <div className="lg:w-1/2 text-white space-y-5" style={{ fontFamily: '"Libre Franklin",sans-serif', fontSize: '14px', lineHeight: '25px' }}>
@@ -61,10 +60,10 @@ export function IA() {
               <p><strong>sender.ia</strong> condensa todo lo que hice hasta acá: el ojo audiovisual, la solidez en el desarrollo web y la capacidad de incorporar lo nuevo sin perder lo mejor de lo anterior. Si tenés un proyecto que necesite comunicar con fuerza, ya sea en video, en la web o en una app, hablemos.</p>
 
               <div className="flex flex-wrap gap-3 pt-2">
-                <a href="#portfolio-ia" className="inline-flex items-center gap-2 px-5 py-2 border border-white text-white hover:bg-white hover:text-[#1c289b] transition-all rounded" style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}>
+                <a href="#portfolio-ia" className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1c289b] transition-all rounded-full font-heading text-xl uppercase" style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}>
                   Mirá mis trabajos <i className="fa-solid fa-arrow-down text-sm" />
                 </a>
-                <a href="/#contacto" className="inline-flex items-center gap-2 px-5 py-2 border border-white text-white hover:bg-white hover:text-[#1c289b] transition-all rounded" style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}>
+                <a href="/#contacto" className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1c289b] transition-all rounded-full font-heading text-xl uppercase" style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}>
                   Contactame <i className="fa-solid fa-arrow-down text-sm" />
                 </a>
               </div>
@@ -72,7 +71,7 @@ export function IA() {
 
             {/* Logo sender.ia */}
             <div className="lg:w-1/2 flex justify-center items-start">
-              <img src="/assets/img/ia/logo-senderia-negativo-web.png" alt="sender.ia" className="max-w-xs w-full" />
+              <img src="/assets/img/ia/logo-senderia-negativo-web.png" alt="sender.ia" className="max-w-sm lg:max-w-md w-full" />
             </div>
           </div>
         </div>
@@ -103,7 +102,7 @@ export function IA() {
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex flex-col justify-end">
                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                          <div className="text-site-teal text-sm font-bold uppercase tracking-widest mb-2">{item.category}</div>
+                          <div className="font-heading text-white text-sm font-bold uppercase tracking-widest mb-2">{item.category}</div>
                           <h3 className="font-heading text-2xl text-white mb-2">{item.title}</h3>
                           <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.description}</p>
                           <span className="inline-block bg-white text-site-dark px-6 py-2 rounded-full font-heading uppercase text-sm hover:bg-site-teal hover:text-white transition-colors">

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { PageSEO } from '../../components/PageSEO';
 import { SectionHeader } from '../../components/SectionHeader';
 import { TimelineSection } from '../../components/TimelineSection';
-import { experienciaAudiovisual } from '../../data/experiencia-audiovisual';
+import { experienciaAudiovisual } from '../../data/experiencia-guion';
 import { educacionAudiovisual } from '../../data/educacion';
 
 export default function CVAudiovisual() {

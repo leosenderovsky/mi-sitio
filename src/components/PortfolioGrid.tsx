@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+﻿import { useMemo, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { PortfolioItem } from '../types';
 
@@ -35,9 +35,10 @@ export function VideoThumb({ item }: VideoThumbProps) {
           <img src={hoverImage} alt="Play" className="w-24 h-24 object-contain" />
         </div>
       </div>
-      <div className="p-5 bg-white">
-        <div className="text-lg font-heading text-site-dark mb-1">{item.title}</div>
-        <div className="text-site-muted uppercase tracking-[2px] text-sm">{item.category}</div>
+      <div className="p-5 bg-site-blue">
+        <div className="text-lg font-heading uppercase text-white mb-1">{item.title}</div>
+        <div className="text-lg font-heading uppercase text-white mb-1">{item.subtitle}</div>
+        <div className="text-white font-heading uppercase tracking-[2px] text-sm">{item.category}</div>
       </div>
     </motion.a>
   );

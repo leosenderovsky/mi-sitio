@@ -1,26 +1,152 @@
-import type { PortfolioItem } from '../types';
+import type { PortfolioItem } from "../types";
 
 export const portfolioEdicion: PortfolioItem[] = [
-  { id: "ed-1", category: "edicion", image: "/assets/img/gallery/edicion-guion/bhd-ser-manager-desde-las-gradas.jpg", link: "https://www.youtube.com/watch?v=24GZ7JGqpVk" },
-  { id: "ed-2", category: "edicion", image: "/assets/img/gallery/edicion-guion/bhd-leer-bien-la-senia.jpg", link: "https://www.youtube.com/watch?v=l3BHpk6XfZQ" },
-  { id: "ed-3", category: "edicion", image: "/assets/img/gallery/edicion-guion/bhd-aprovechar-el-momento-justo.jpg", link: "https://www.youtube.com/watch?v=oO7KgSxw2-U" },
-  { id: "ed-4", category: "edicion", image: "/assets/img/gallery/edicion-guion/23-docu-cromanion-20-anios.jpg", link: "https://www.youtube.com/watch?v=TPu7o3a2gq4" },
-  { id: "ed-5", category: "edicion", image: "/assets/img/gallery/edicion-guion/21-docu-democracia-40.jpg", link: "https://www.youtube.com/watch?v=hl7T-TadSIY" },
-  { id: "ed-6", category: "edicion", image: "/assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.jpg", link: "https://www.youtube.com/watch?v=n8e9SexkmHM" },
-  { id: "ed-7", category: "edicion", image: "/assets/img/gallery/edicion-guion/12-spot-celsur.jpg", link: "https://www.youtube.com/watch?v=rfPm4TXPJZQ" },
-  { id: "ed-8", category: "edicion", image: "/assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.jpg", link: "https://www.youtube.com/watch?v=YxfettXQnCE" },
-  { id: "ed-9", category: "edicion", image: "/assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.jpg", link: "https://www.youtube.com/watch?v=hFFZ68W0oZo" },
-  { id: "ed-10", category: "edicion", image: "/assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.jpg", link: "https://www.youtube.com/watch?v=YZqMXhn0HDQ" },
-  { id: "ed-11", category: "edicion", image: "/assets/img/gallery/edicion-guion/inhouse-ypf-litio.jpg", link: "https://cdn.jwplayer.com/videos/aRBjquht-iJRzP7q2.mp4" },
-  { id: "ed-12", category: "edicion", image: "/assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg", link: "https://www.youtube.com/watch?v=0nr7hav0RsY" },
-  { id: "ed-13", category: "edicion", image: "/assets/img/gallery/edicion-guion/inhouse-ford-bronco.jpg", link: "https://cdn.jwplayer.com/videos/dxRCY88L-iJRzP7q2.mp4" },
-  { id: "ed-14", category: "edicion", image: "/assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg", link: "https://www.youtube.com/watch?v=5Ere20quXsg" },
-  { id: "ed-15", category: "edicion", image: "/assets/img/gallery/edicion-guion/inhouse-atomik-san-lorenzo.jpg", link: "https://cdn.jwplayer.com/videos/mDDhWtiX-iJRzP7q2.mp4" },
-  { id: "ed-16", category: "edicion", image: "/assets/img/gallery/edicion-guion/11-semana-nba-2021.jpg", link: "https://www.youtube.com/watch?v=D6oBShDUB5s" },
-  { id: "ed-17", category: "edicion", image: "/assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.jpg", link: "https://www.youtube.com/watch?v=5RVDJKTWefE&list=PLbNNvtK1u2VkQ7doksEugPMrjrSRmQ0fi" },
-  { id: "ed-18", category: "edicion", image: "/assets/img/gallery/edicion-guion/06-la-gran-batalla.jpg", link: "https://www.youtube.com/watch?v=BTOxn0oal1U&list=PLbNNvtK1u2VkSRU9EdtYFodkyVVE8Z65P" },
-  { id: "ed-19", category: "edicion", image: "/assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg", link: "https://www.youtube.com/watch?v=EuxH03plI3I" },
-  { id: "ed-20", category: "edicion", image: "/assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg", link: "https://www.youtube.com/watch?v=IWgamMyqtME" },
-  { id: "ed-21", category: "edicion", image: "/assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg", link: "https://www.youtube.com/watch?v=ihncM5w_qno" },
-  { id: "ed-22", category: "edicion", image: "/assets/img/gallery/edicion-guion/01-spot-answer.jpg", link: "https://www.youtube.com/watch?v=Ju_RJjSX_Wc" }
+  {
+    id: "ed-1",
+    category: "edicion",
+    title: "Spot BHD - 'Ser manager desde las gradas'",
+    subtitle: "Up Films Band / Kuarzo Content, 2026",
+    image:
+      "/assets/img/gallery/edicion-guion/bhd-ser-manager-desde-las-gradas.jpg",
+    link: "https://www.youtube.com/watch?v=24GZ7JGqpVk",
+  },
+  {
+    id: "ed-2",
+    category: "edicion",
+    title: "Spot BHD - 'Leer bien la seña'",
+    subtitle: "Up Films Band / Kuarzo Content, 2026",
+    image: "/assets/img/gallery/edicion-guion/bhd-leer-bien-la-senia.jpg",
+    link: "https://www.youtube.com/watch?v=l3BHpk6XfZQ",
+  },
+  {
+    id: "ed-3",
+    category: "edicion",
+    title: "Spot BHD - 'Aprovechar el momento justo'",
+    subtitle: "Up Films Band / Kuarzo Content, 2026",
+    image:
+      "/assets/img/gallery/edicion-guion/bhd-aprovechar-el-momento-justo.jpg",
+    link: "https://www.youtube.com/watch?v=oO7KgSxw2-U",
+  },
+  {
+    id: "ed-4",
+    category: "edicion",
+    title: "Documental 'Cromañón, la noche que Argentina no durmió",
+    subtitle: "Infobae, 2024",
+    image: "/assets/img/gallery/edicion-guion/23-docu-cromanion-20-anios.jpg",
+    link: "https://www.youtube.com/watch?v=TPu7o3a2gq4",
+  },
+  {
+    id: "ed-5",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/21-docu-democracia-40.jpg",
+    link: "https://www.youtube.com/watch?v=hl7T-TadSIY",
+  },
+  {
+    id: "ed-6",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.jpg",
+    link: "https://www.youtube.com/watch?v=n8e9SexkmHM",
+  },
+  {
+    id: "ed-7",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/12-spot-celsur.jpg",
+    link: "https://www.youtube.com/watch?v=rfPm4TXPJZQ",
+  },
+  {
+    id: "ed-8",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.jpg",
+    link: "https://www.youtube.com/watch?v=YxfettXQnCE",
+  },
+  {
+    id: "ed-9",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.jpg",
+    link: "https://www.youtube.com/watch?v=hFFZ68W0oZo",
+  },
+  {
+    id: "ed-10",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.jpg",
+    link: "https://www.youtube.com/watch?v=YZqMXhn0HDQ",
+  },
+  {
+    id: "ed-11",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/inhouse-ypf-litio.jpg",
+    link: "https://cdn.jwplayer.com/videos/aRBjquht-iJRzP7q2.mp4",
+  },
+  {
+    id: "ed-12",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg",
+    link: "https://www.youtube.com/watch?v=0nr7hav0RsY",
+  },
+  {
+    id: "ed-13",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/inhouse-ford-bronco.jpg",
+    link: "https://cdn.jwplayer.com/videos/dxRCY88L-iJRzP7q2.mp4",
+  },
+  {
+    id: "ed-14",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg",
+    link: "https://www.youtube.com/watch?v=5Ere20quXsg",
+  },
+  {
+    id: "ed-15",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/inhouse-atomik-san-lorenzo.jpg",
+    link: "https://cdn.jwplayer.com/videos/mDDhWtiX-iJRzP7q2.mp4",
+  },
+  {
+    id: "ed-16",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/11-semana-nba-2021.jpg",
+    link: "https://www.youtube.com/watch?v=D6oBShDUB5s",
+  },
+  {
+    id: "ed-17",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.jpg",
+    link: "https://www.youtube.com/watch?v=5RVDJKTWefE&list=PLbNNvtK1u2VkQ7doksEugPMrjrSRmQ0fi",
+  },
+  {
+    id: "ed-18",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/06-la-gran-batalla.jpg",
+    link: "https://www.youtube.com/watch?v=BTOxn0oal1U&list=PLbNNvtK1u2VkSRU9EdtYFodkyVVE8Z65P",
+  },
+  {
+    id: "ed-19",
+    category: "edicion",
+    image:
+      "/assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg",
+    link: "https://www.youtube.com/watch?v=EuxH03plI3I",
+  },
+  {
+    id: "ed-20",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg",
+    link: "https://www.youtube.com/watch?v=IWgamMyqtME",
+  },
+  {
+    id: "ed-21",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg",
+    link: "https://www.youtube.com/watch?v=ihncM5w_qno",
+  },
+  {
+    id: "ed-22",
+    category: "edicion",
+    image: "/assets/img/gallery/edicion-guion/01-spot-answer.jpg",
+    link: "https://www.youtube.com/watch?v=Ju_RJjSX_Wc",
+  },
 ];

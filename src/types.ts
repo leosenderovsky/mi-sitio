@@ -1,6 +1,7 @@
 export interface PortfolioItem {
   id: string;
   title?: string;
+  subtitle?: string;
   category: string;
   image: string;
   link: string;

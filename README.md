@@ -101,6 +101,14 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
 - **Sistema de Color**: Transición de fondos semitransparentes a colores sólidos (`#3844BE` y `#000b77`) para mejorar el contraste y la legibilidad.
 - **Micro-interacciones**: Rotación de iconos chevron y estilos de botones CTA para links a documentos técnicos.
 
+### Reorganización de Contenidos y Navegación (Abril 2026)
+- **Modularización de Datos**: División de la data de experiencia en archivos específicos (`edicion`, `guion`, `critica`) para facilitar el mantenimiento.
+- **Navegación Multinivel**: Actualización del `Navbar` con submenús más profundos para diferenciar claramente entre secciones de "Experiencia" y "Portfolio".
+- **Mejoras en Componentes Core**:
+    - `TimelineSection`: Ajustes de diseño y legibilidad para el historial profesional.
+    - `PortfolioGrid`: Optimización de la visualización de proyectos audiovisuales y web.
+- **Fixes de Layout**: Corrección global del solapamiento del Navbar mediante ajustes en scroll-padding y márgenes de sección.
+
 ## 📞 Contacto
 
 - **LinkedIn**: [Leo Senderovsky](https://www.linkedin.com/in/lsender/)

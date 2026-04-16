@@ -1,20 +1,12 @@
 import type { ExperienceItem } from '../types';
 
-export const experienciaAudiovisual: ExperienceItem[] = [
+export const experienciaEdicion: ExperienceItem[] = [
   {
     id: "exp-1",
     logo: "/assets/img/logos/experiencia/infobae.png",
     title: "INFOBAE",
     period: "Febrero 2022 – Actualmente",
     description: "Editor de video senior, a cargo de piezas documentales, videos de In.house para clientes y formatos web para el sitio de noticias Infobae y sus redes sociales."
-  },
-  {
-    id: "exp-2",
-    logo: "/assets/img/logos/experiencia/consultoria-de-guion.png",
-    title: "CONSULTORÍA DE GUIÓN",
-    period: "2010 – Actualmente",
-    description: "Servicios freelance de consultoría de guión.",
-    link: "http://www.consultoriadeguion.com.ar"
   },
   {
     id: "exp-3",
@@ -29,13 +21,6 @@ export const experienciaAudiovisual: ExperienceItem[] = [
     title: "LN+ / FRAME",
     period: "Septiembre 2016 – Febrero 2022",
     description: "Editor en el canal de TV LN+ (La Nación Más), como parte del staff técnico de FRAME. Desde junio de 2019, coordinador operativo de postproducción y editor en LN+ para FRAME."
-  },
-  {
-    id: "exp-5",
-    logo: "/assets/img/logos/experiencia/cippec.png",
-    title: "CIPPEC",
-    period: "2021",
-    description: "Redacción de guión del discurso de presentación del programa Democracia 40, en colaboración con el equipo directivo de CIPPEC."
   },
   {
     id: "exp-6",

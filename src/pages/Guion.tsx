@@ -1,52 +1,74 @@
-import { useState } from 'react';
-import { PageSEO } from '../components/PageSEO';
-import { SchemaBreadcrumb } from '../components/SchemaMarkup';
-import { useSectionScroll } from '../hooks/useSectionScroll';
-import { SectionHeader } from '../components/SectionHeader';
-import { PortfolioGrid } from '../components/PortfolioGrid';
-import { TimelineSection } from '../components/TimelineSection';
-import { portfolioGuion } from '../data/portfolio-guion';
-import { educacionAudiovisual } from '../data/educacion';
-import { experienciaAudiovisual } from '../data/experiencia-audiovisual';
+import { useState } from "react";
+import { PageSEO } from "../components/PageSEO";
+import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { useSectionScroll } from "../hooks/useSectionScroll";
+import { SectionHeader } from "../components/SectionHeader";
+import { PortfolioGrid } from "../components/PortfolioGrid";
+import { TimelineSection } from "../components/TimelineSection";
+import { portfolioGuion } from "../data/portfolio-guion";
+import { educacionAudiovisual } from "../data/educacion";
+import { experienciaGuion } from "../data/experiencia-guion";
 
 export function Guion() {
-  const [activeTab, setActiveTab] = useState<'experience' | 'education'>('experience');
-  useSectionScroll({ experiencia: 'resume', portfolio: 'portfolio-guion', consultoria: 'consultoria' });
+  const [activeTab, setActiveTab] = useState<"experience" | "education">(
+    "experience",
+  );
+  useSectionScroll({
+    experiencia: "resume",
+    portfolio: "portfolio-guion",
+    consultoria: "consultoria",
+  });
 
   return (
     <>
-      <PageSEO 
-        title="Guión y Consultoría de Guión" 
+      <PageSEO
+        title="Guión y Consultoría de Guión"
         description="Servicios de guión cinematográfico y consultoría narrativa (script doctoring) por Leo Senderovsky. Asesoría de guiones para cine, televisión y publicidad. Freelance, Buenos Aires, Argentina."
         path="/audiovisual/guion"
         keywords="guionista freelance Argentina, consultor de guion, script doctor Buenos Aires, asesor de guion, guion cinematografico, script doctoring"
       />
-      <SchemaBreadcrumb items={[
-        { name: 'Inicio', url: 'https://leosenderovsky.com.ar/' },
-        { name: 'Audiovisual', url: 'https://leosenderovsky.com.ar/audiovisual/guion' },
-        { name: 'Guión y Consultoría', url: 'https://leosenderovsky.com.ar/audiovisual/guion' },
-      ]} />
+      <SchemaBreadcrumb
+        items={[
+          { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
+          {
+            name: "Audiovisual",
+            url: "https://leosenderovsky.com.ar/audiovisual/guion",
+          },
+          {
+            name: "Guión y Consultoría",
+            url: "https://leosenderovsky.com.ar/audiovisual/guion",
+          },
+        ]}
+      />
 
       <section
         id="guion"
-        className="py-20 text-[#3844BE] text-center relative overflow-hidden"
+        className="py-20 text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/guion/bg-guion.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="absolute inset-0 bg-[#00052e] opacity-70" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="GUIÓN" subtitle="AUDIOVISUAL" theme="dark" />
-          <div className="max-w-3xl mx-auto mt-8 text-xl text-[#3844BE] font-body leading-relaxed">
-            <p className="mb-8">¿Estás buscando un guionista para tus proyectos?</p>
+          <div className="max-w-3xl mx-auto mt-8 text-xl text-white font-body leading-relaxed">
+            <p className="mb-8">
+              ¿Estás buscando un guionista para tus proyectos?
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#portfolio-guion" className="bg-white text-[#3844BE] px-8 py-3 rounded-full hover:bg-[#3844BE] hover:text-white transition-colors font-heading text-xl uppercase">
+              <a
+                href="#portfolio-guion"
+                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+              >
                 Mirá mis trabajos
               </a>
-              <a href="/#contacto" className="border border-[#3844BE] text-[#3844BE] px-8 py-3 rounded-full hover:bg-[#3844BE] hover:text-white transition-colors font-heading text-xl uppercase">
+              <a
+                href="/#contacto"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+              >
                 Contactame
               </a>
             </div>
@@ -59,76 +81,104 @@ export function Guion() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/guion/bg-guion.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#f2f2f2] opacity-80" />
+        <div className="absolute inset-0 bg-[#3844BE]" />
         <div className="relative z-10 container mx-auto px-4">
-          <SectionHeader title="Consultoría de guión" subtitle="Audiovisual" theme="light" />
+          <SectionHeader
+            title="Consultoría de guión"
+            subtitle="Audiovisual"
+            theme="dark"
+          />
           <div className="flex flex-wrap items-center mt-12 gap-y-8">
-            <div className="w-full lg:w-1/2 p-4 text-[#000B77] text-lg space-y-4">
-              <p>¿Tenés una idea o una historia, pero no sabés cómo desarrollarla o cómo llevarla a un lenguaje cinematográfico o televisivo?</p>
+            <div className="w-full lg:w-1/2 p-4 text-white text-lg space-y-4">
+              <p>
+                ¿Tenés una idea o una historia, pero no sabés cómo desarrollarla
+                o cómo llevarla a un lenguaje cinematográfico o televisivo?
+              </p>
               <p>¿Escribiste un guión y necesitás reencauzarlo o corregirlo?</p>
-              <p>¿Te trabaste en el medio de la escritura y no encontrás la forma de continuar?</p>
-              <p>¿Necesitás un profesional para que te acompañe en el proceso de escritura?</p>
-              <p>¿Precisás un guión para un video institucional o publicitario?</p>
-              <p>Te presento mis servicios de script doctoring, asesoría en guión y redacción de guiones, adaptados a cada necesidad.</p>
+              <p>
+                ¿Te trabaste en el medio de la escritura y no encontrás la forma
+                de continuar?
+              </p>
+              <p>
+                ¿Necesitás un profesional para que te acompañe en el proceso de
+                escritura?
+              </p>
+              <p>
+                ¿Precisás un guión para un video institucional o publicitario?
+              </p>
+              <p>
+                Te presento mis servicios de script doctoring, asesoría en guión
+                y redacción de guiones, adaptados a cada necesidad.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-4">
-                <a href="http://www.consultoriadeguion.com.ar/" target="_blank" rel="noreferrer" className="bg-white text-[#3844BE] px-8 py-3 rounded-full hover:bg-[#3844BE] hover:text-white transition-colors font-heading text-xl uppercase text-center">
+                <a
+                  href="http://www.consultoriadeguion.com.ar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase text-center"
+                >
                   Visitá mi sitio web de consultoría
                 </a>
               </div>
             </div>
             <div className="w-full lg:w-1/2 p-4">
-              <img src="/assets/img/guion/consultoria-web.jpg" alt="Consultoría" className="rounded-3xl shadow-xl w-full" />
+              <img
+                src="/assets/img/guion/consultoria-web.jpg"
+                alt="Consultoría"
+                className="rounded-3xl shadow-xl w-full"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="resume" className="py-20" style={{ backgroundColor: '#f2f2f2' }}>
+      <section
+        id="resume"
+        className="py-20 bg-gradient-to-r from-[#766dff] to-[#88f3ff]"
+      >
         <div className="container mx-auto px-4">
-          <SectionHeader title="Mi experiencia" subtitle="Guión" theme="light" />
+          <SectionHeader
+            title="Mi experiencia"
+            subtitle="Guión"
+            theme="light"
+          />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
-              onClick={() => setActiveTab('experience')}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${
-                activeTab === 'experience'
-                  ? 'bg-white text-[#3844BE]'
-                  : 'bg-gray-700 text-white hover:bg-white hover:text-site-dark transition-colors'
+              onClick={() => setActiveTab("experience")}
+              className={`rounded-full px-8 py-3 text-xl uppercase text-center uppercase font-heading tracking-[2px] ${
+                activeTab === "experience"
+                  ? "bg-white text-site-blue"
+                  : "border border-site-blue text-site-blue hover:bg-white hover:text-site-blue transition-colors"
               }`}
             >
               Experiencia
             </button>
             <button
               type="button"
-              onClick={() => setActiveTab('education')}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${
-                activeTab === 'education'
-                  ? 'bg-white text-site-dark'
-                  : 'bg-gray-700 text-white hover:bg-white hover:text-site-dark transition-colors'
+              onClick={() => setActiveTab("education")}
+              className={`rounded-full px-8 py-3 text-xl uppercase text-center uppercase font-heading tracking-[2px] ${
+                activeTab === "education"
+                  ? "bg-white text-site-blue"
+                  : "border border-site-blue text-site-blue hover:bg-white hover:text-site-blue transition-colors"
               }`}
             >
               Educación
             </button>
           </div>
-          {activeTab === 'experience' ? (
+          {activeTab === "experience" ? (
             <TimelineSection
-              id="resume"
-              title="Experiencia"
-              subtitle="Audiovisual"
-              experiences={experienciaAudiovisual}
+              experiences={experienciaGuion}
               educations={[]}
               theme="light"
             />
           ) : (
             <TimelineSection
-              id="resume"
-              title="Educación"
-              subtitle="Formación"
               experiences={[]}
               educations={educacionAudiovisual}
               theme="light"
@@ -137,9 +187,12 @@ export function Guion() {
         </div>
       </section>
 
-      <section id="portfolio-guion" className="py-20 text-site-dark bg-[#f2f2f2]">
+      <section
+        id="portfolio-guion"
+        className="py-20 text-site-dark bg-[#3844BE]"
+      >
         <div className="container mx-auto px-4">
-          <SectionHeader title="Mi portfolio" subtitle="Guión" theme="light" />
+          <SectionHeader title="Mi portfolio" subtitle="Guión" theme="dark" />
           <div className="mt-12">
             <PortfolioGrid items={portfolioGuion} initialVisible={9} />
           </div>

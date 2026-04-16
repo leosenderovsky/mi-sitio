@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { PageSEO } from '../components/PageSEO';
 import { SchemaBreadcrumb } from '../components/SchemaMarkup';
 import { useSectionScroll } from '../hooks/useSectionScroll';
+import { SectionHeader } from '../components/SectionHeader';
 import { TimelineSection } from '../components/TimelineSection';
-import { experienciaDocencia } from '../data/experiencia-docencia';
+import { experienciaCritica } from '../data/experiencia-critica';
 import { educacionFUC } from '../data/educacion';
 
 export function Critica() {
@@ -27,7 +28,7 @@ export function Critica() {
       {/* ── Intro ── */}
       <section
         id="critica-top"
-        className="py-16 relative overflow-hidden"
+        className="py-20 relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/critica/bg-critica.jpg')",
           backgroundSize: 'cover',
@@ -37,18 +38,7 @@ export function Critica() {
       >
         <div className="absolute inset-0 bg-[#00052e] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
-          <h3
-            className="text-center"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.6em', fontWeight: 300, color: 'white', letterSpacing: 1 }}
-          >
-            Audiovisual
-          </h3>
-          <h1
-            className="text-center mb-10"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, color: 'white', letterSpacing: 1 }}
-          >
-            Crítica
-          </h1>
+          <SectionHeader title="Crítica" subtitle="Audiovisual" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-center">
 
             {/* Texto literal del legacy */}
@@ -62,15 +52,13 @@ export function Critica() {
                   href="https://blog.leosenderovsky.com.ar/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2 border border-white text-white hover:bg-white hover:text-[#3844be] transition-all rounded"
-                  style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}
+                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#3844be] transition-all rounded-full font-heading text-xl uppercase"
                 >
                   Visitá mi blog <i className="fa-solid fa-arrow-right text-sm" />
                 </a>
                 <a
                   href="/#contacto"
-                  className="inline-flex items-center gap-2 px-5 py-2 border border-white text-white hover:bg-white hover:text-[#3844be] transition-all rounded"
-                  style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '1.3em', textTransform: 'uppercase' }}
+                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#3844be] transition-all rounded-full font-heading text-xl uppercase"
                 >
                   Contactame <i className="fa-solid fa-arrow-down text-sm" />
                 </a>
@@ -92,19 +80,7 @@ export function Critica() {
       {/* ── Experiencia (resume2 — datos reales de Cine.com) ── */}
       <section id="resume2" className="py-20" style={{ backgroundColor: '#f2f2f2' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center mb-12"
-            style={{
-              fontFamily: '"Yanone Kaffeesatz",sans-serif',
-              fontSize: '4em',
-              fontWeight: 600,
-              color: '#000b77',
-              textTransform: 'uppercase',
-              letterSpacing: 1,
-            }}
-          >
-            Docencia y crítica
-          </h2>
+          <SectionHeader title="Experiencia" subtitle="Crítica" theme="light" />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
@@ -131,18 +107,12 @@ export function Critica() {
           </div>
           {activeTab === 'experience' ? (
             <TimelineSection
-              id="resume2"
-              title="Experiencia"
-              subtitle="Docencia y crítica"
-              experiences={experienciaDocencia}
+              experiences={experienciaCritica}
               educations={[]}
               theme="light"
             />
           ) : (
             <TimelineSection
-              id="resume2"
-              title="Educación"
-              subtitle="Docencia y crítica"
               experiences={[]}
               educations={educacionFUC}
               theme="light"

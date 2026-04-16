@@ -201,10 +201,7 @@ export function Home() {
       ══════════════════════════════════════ */}
       <div className="py-10" style={{ backgroundColor: '#3844be' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center text-white mb-6"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '3.5em', fontWeight: 600, letterSpacing: 1 }}
-          >
+          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
             Mi bio
           </h2>
           <div className="flex items-center justify-center gap-6">
@@ -261,14 +258,11 @@ export function Home() {
       {/* ══════════════════════════════════════
           ACERCA DE MÍ
       ══════════════════════════════════════ */}
-      <section id="about" className="py-16" style={{ background: '#000b77' }}>
+      <section id="about" className="py-16" style={{ background: '#1C289B' }}>
         <div className="container mx-auto px-4">
-          <h1
-            className="text-center text-white mb-8"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
-          >
+          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
             Acerca de mí
-          </h1>
+          </h2>
           <div className="flex flex-col lg:flex-row gap-10">
 
             {/* Foto */}
@@ -362,7 +356,7 @@ export function Home() {
                     className="w-12 h-12 rounded-full border border-[#000b77] flex items-center justify-center text-xl text-[#000b77] hover:bg-[#000b77] hover:border-[#000b77] hover:text-white transition-all duration-300"
                     title={s.cls}
                   >
-                    <i className={`fa-brands ${s.icon}`} />
+                    <i className={s.icon} />
                   </a>
                 </li>
               ))}
@@ -376,10 +370,7 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section id="services" className="py-12" style={{ backgroundColor: '#000b77' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center text-white mb-8"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
-          >
+          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
             Audiovisual
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -393,12 +384,9 @@ export function Home() {
       {/* ══════════════════════════════════════
           SERVICIOS WEB & IA
       ══════════════════════════════════════ */}
-      <section className="py-12" style={{ backgroundColor: '#3844BE' }}>
+      <section className="py-12" style={{ backgroundColor: '#3844be' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center text-white mb-8"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
-          >
+          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
             Web & IA
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -413,10 +401,7 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section id="contacto" className="py-16" style={{ background: '#000b77' }}>
         <div className="container mx-auto px-4">
-          <h2
-            className="text-center text-white mb-10"
-            style={{ fontFamily: '"Yanone Kaffeesatz",sans-serif', fontSize: '4em', fontWeight: 600, letterSpacing: 1 }}
-          >
+          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
             Contactame
           </h2>
 
@@ -441,22 +426,22 @@ export function Home() {
                 {/* Nombre */}
                 <div>
                   <label htmlFor="nombre" className="block text-sm text-white mb-1">Nombre <span className="text-red-500">*</span></label>
-                  <input type="text" id="nombre" name="nombre" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+                  <input type="text" id="nombre" name="nombre" required className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50" />
                 </div>
                 {/* Apellido */}
                 <div>
                   <label htmlFor="apellido" className="block text-sm text-white mb-1">Apellido <span className="text-red-500">*</span></label>
-                  <input type="text" id="apellido" name="apellido" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+                  <input type="text" id="apellido" name="apellido" required className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50" />
                 </div>
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-sm text-white mb-1">Email <span className="text-red-500">*</span></label>
-                  <input type="email" id="email" name="email" required className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+                  <input type="email" id="email" name="email" required className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50" />
                 </div>
                 {/* País */}
                 <div>
                   <label htmlFor="pais" className="block text-sm text-white mb-1">País</label>
-                  <input list="pais-list" id="pais" name="pais" className="w-full border border-gray-300 rounded px-3 py-2 text-sm" />
+                  <input list="pais-list" id="pais" name="pais" className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50" />
                   <datalist id="pais-list">
                     {COUNTRIES.map(c => <option key={c} value={c} />)}
                   </datalist>
@@ -464,7 +449,7 @@ export function Home() {
                 {/* Servicio */}
                 <div>
                   <label htmlFor="servicio" className="block text-sm text-white mb-1">¿En qué servicio estás interesado?</label>
-                  <select id="servicio" name="servicio" className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-white bg-[#3844BE]">
+                  <select id="servicio" name="servicio" className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-[#000b77] text-white focus:outline-none focus:ring-1 focus:ring-white/50">
                     <option value="edicion">Edición</option>
                     <option value="guion">Guión</option>
                     <option value="docencia">Docencia</option>
@@ -524,7 +509,7 @@ export function Home() {
           {/* Datos de contacto directo */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
             <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 rounded-full bg-[#000b77] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
                 <i className="fa-solid fa-phone text-white text-xl" />
               </div>
               <a
@@ -537,7 +522,7 @@ export function Home() {
               </a>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 rounded-full bg-[#000b77] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
                 <i className="fa-solid fa-envelope text-white text-xl" />
               </div>
               <a
@@ -548,7 +533,7 @@ export function Home() {
               </a>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <div className="w-12 h-12 rounded-full bg-[#000b77] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
                 <i className="fa-solid fa-location-dot text-white text-xl" />
               </div>
               <p className="text-white text-sm">Buenos Aires, Argentina</p>

@@ -39,7 +39,7 @@ export function Web() {
             <p className="mb-4">Allí empecé a conocer algunas herramientas de desarrollo y de seo que me permitieron encarar, los años siguientes, varios proyectos web en plataformas como Joomla y Wordpress y, más recientemente, hice cursos de desarrollo frontend para poder llevar estos conocimientos a otro nivel.</p>
             <p className="mb-8">Quiero seguir explorando el mundo del desarrollo web, realizando sitios personalizados para particulares y empresas. ¿Me acompañás?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#timeline-web" className="bg-site-dark px-8 py-3 rounded-full hover:bg-white hover:text-site-dark transition-colors font-heading text-xl uppercase">
+              <a href="#timeline-web" className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#000b77] transition-colors font-heading text-xl uppercase">
                 Mirá mis proyectos
               </a>
               <a href="/#contacto" className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-site-teal transition-colors font-heading text-xl uppercase">
@@ -55,12 +55,12 @@ export function Web() {
           <SectionHeader title="Mis proyectos" subtitle="Web" theme="dark" />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {experienciaWeb.map(item => (
-              <div key={item.id} className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow group">
+              <div key={item.id} className="bg-[#3844be] rounded-3xl shadow-lg overflow-hidden border border-transparent hover:shadow-2xl transition-shadow group">
                 <div className="h-48 bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100 relative overflow-hidden">
                   {item.logo ? (
                     <img src={item.logo} alt={item.title} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500" />
                   ) : (
-                    <div className="font-heading text-2xl text-site-dark">{item.title}</div>
+                    <div className="font-heading text-2xl text-white">{item.title}</div>
                   )}
                   {item.link && (
                     <div className="absolute inset-0 bg-site-teal/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -71,9 +71,9 @@ export function Web() {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-2xl text-site-dark mb-2">{item.title}</h3>
-                  <div className="text-site-teal font-bold text-sm mb-3">{item.period}</div>
-                  <p className="text-site-text">{item.description}</p>
+                  <h3 className="font-heading text-2xl text-white mb-2">{item.title}</h3>
+                  <div className="font-heading uppercase text-white font-bold text-sm mb-3">{item.period}</div>
+                  <p className="text-white">{item.description}</p>
                 </div>
               </div>
             ))}
