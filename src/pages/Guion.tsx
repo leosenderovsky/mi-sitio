@@ -8,16 +8,19 @@ import { TimelineSection } from "../components/TimelineSection";
 import { portfolioGuion } from "../data/portfolio-guion";
 import { educacionAudiovisual } from "../data/educacion";
 import { experienciaGuion } from "../data/experiencia-guion";
+import { ContactSection } from "../components/ContactSection";
+
+const SECTION_MAP = {
+  experiencia: "resume",
+  portfolio: "portfolio-guion",
+  consultoria: "consultoria",
+};
 
 export function Guion() {
   const [activeTab, setActiveTab] = useState<"experience" | "education">(
     "experience",
   );
-  useSectionScroll({
-    experiencia: "resume",
-    portfolio: "portfolio-guion",
-    consultoria: "consultoria",
-  });
+  useSectionScroll(SECTION_MAP);
 
   return (
     <>
@@ -51,7 +54,7 @@ export function Guion() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#00052e] opacity-70" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-70" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="GUIÓN" subtitle="AUDIOVISUAL" theme="dark" />
           <div className="max-w-3xl mx-auto mt-8 text-xl text-white font-body leading-relaxed">
@@ -61,13 +64,13 @@ export function Guion() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#portfolio-guion"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Mirá mis trabajos
               </a>
               <a
-                href="/#contacto"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+                href="#contacto"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Contactame
               </a>
@@ -86,11 +89,11 @@ export function Guion() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#3844BE]" />
+        <div className="absolute inset-0 bg-[#1B1440]" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader
             title="Consultoría de guión"
-            subtitle="Audiovisual"
+            subtitle="Guión"
             theme="dark"
           />
           <div className="flex flex-wrap items-center mt-12 gap-y-8">
@@ -120,7 +123,7 @@ export function Guion() {
                   href="http://www.consultoriadeguion.com.ar/"
                   target="_blank"
                   rel="noreferrer"
-                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase text-center"
+                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
                 >
                   Visitá mi sitio web de consultoría
                 </a>
@@ -139,7 +142,7 @@ export function Guion() {
 
       <section
         id="resume"
-        className="py-20 bg-gradient-to-r from-[#766dff] to-[#88f3ff]"
+        className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader
@@ -151,24 +154,18 @@ export function Guion() {
             <button
               type="button"
               onClick={() => setActiveTab("experience")}
-              className={`rounded-full px-8 py-3 text-xl uppercase text-center uppercase font-heading tracking-[2px] ${
-                activeTab === "experience"
-                  ? "bg-white text-site-blue"
-                  : "border border-site-blue text-site-blue hover:bg-white hover:text-site-blue transition-colors"
-              }`}
+              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] 
+                ${activeTab === "experience" ? "bg-[#1B1440] text-white" : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"}`}
             >
-              Experiencia
+              Experiencia laboral
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("education")}
-              className={`rounded-full px-8 py-3 text-xl uppercase text-center uppercase font-heading tracking-[2px] ${
-                activeTab === "education"
-                  ? "bg-white text-site-blue"
-                  : "border border-site-blue text-site-blue hover:bg-white hover:text-site-blue transition-colors"
-              }`}
+              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] 
+                ${activeTab === "education" ? "bg-[#1B1440] text-white" : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"}`}
             >
-              Educación
+              Formación académica
             </button>
           </div>
           {activeTab === "experience" ? (
@@ -187,10 +184,7 @@ export function Guion() {
         </div>
       </section>
 
-      <section
-        id="portfolio-guion"
-        className="py-20 text-site-dark bg-[#3844BE]"
-      >
+      <section id="portfolio-guion" className="py-20 text-white bg-[#1B1440]">
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Guión" theme="dark" />
           <div className="mt-12">
@@ -198,6 +192,7 @@ export function Guion() {
           </div>
         </div>
       </section>
+      <ContactSection />
     </>
   );
 }

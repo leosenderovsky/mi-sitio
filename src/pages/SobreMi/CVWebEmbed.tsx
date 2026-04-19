@@ -12,7 +12,7 @@ export default function CVWebEmbed() {
       <main className="bg-white py-8">
         <div className="container mx-auto px-4">
           <section className="space-y-6">
-            <h1 className="text-3xl font-heading uppercase text-[#000b77]">CV Desarrollo Web</h1>
+            <h1 className="text-3xl font-heading uppercase text-[#0D0B2E]">CV Desarrollo Web</h1>
             <div className="w-full bg-gray-100">
               <iframe
                 src="/assets/docs/cv/leo-senderovsky-resume-web.pdf"

@@ -12,12 +12,12 @@ export function TimelineSection({
   theme,
 }: TimelineSectionProps) {
   const isDark = theme === "dark";
-  const bgColor = isDark ? "bg-site-teal" : "bg-white";
+  const bgColor = isDark ? "bg-site-teal" : "bg-[#19d3ff]";
   const textColor = isDark ? "text-white" : "text-site-dark";
   const cardBg = isDark
     ? "bg-white border border-gray-700"
     : "bg-[#f2f2f2] border border-site-blue";
-  const lineColor = isDark ? "border-site-blue" : "border-site-blue";
+  const lineColor = isDark ? "border-site-blue" : "border-[#1B1440]";
 
   return (
     <div className={`${textColor} ${bgColor} p-4 shadow-lg`}>
@@ -26,7 +26,7 @@ export function TimelineSection({
         {experiences.length > 0 && (
           <div className="mt-16">
             <h3
-              className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-site-blue"}`}
+              className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
             >
               <i className="fa-solid fa-briefcase mr-4"></i> Experiencia Laboral
             </h3>
@@ -35,7 +35,7 @@ export function TimelineSection({
             >
               {experiences.map((exp) => (
                 <div key={exp.id} className="relative">
-                  <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-site-teal border-4 border-site-blue shadow"></div>
+                  <div className="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-site-teal border-4 border-[#1B1440] shadow"></div>
                   <div
                     className={`${cardBg} p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow`}
                   >

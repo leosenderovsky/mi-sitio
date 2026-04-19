@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
@@ -9,6 +9,7 @@ import { portfolioEdicion } from "../data/portfolio-edicion";
 import { portfolioReels } from "../data/portfolio-reels";
 import { experienciaEdicion } from "../data/experiencia-edicion";
 import { educacionAudiovisual } from "../data/educacion";
+import { ContactSection } from "../components/ContactSection";
 
 export function Edicion() {
   const [activeTab, setActiveTab] = useState<"experience" | "education">(
@@ -67,7 +68,7 @@ export function Edicion() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#00052e] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="EDICIÓN" subtitle="AUDIOVISUAL" theme="dark" />
           <div className="max-w-3xl mx-auto mt-8 text-xl text-site-muted font-body leading-relaxed">
@@ -77,13 +78,13 @@ export function Edicion() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#resume"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Mi experiencia
               </a>
               <a
                 href="#portfolio-edicion"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#3844be] transition-colors font-heading text-xl uppercase"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Ver portfolio
               </a>
@@ -94,28 +95,29 @@ export function Edicion() {
 
       <section
         id="resume"
-        className="py-20 bg-gradient-to-r from-[#766dff] to-[#88f3ff]"
+        className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
       >
         <div className="container mx-auto px-4">
-          <SectionHeader
-            title="Mi experiencia"
-            subtitle="Edición"
-            theme="light"
-          />
+          <SectionHeader title="Experiencia" subtitle="Edición" theme="light" />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
               onClick={() => setActiveTab("experience")}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === "experience" ? "bg-[#3844be] text-white" : "border border-[#3844be] text-[#3844be] hover:bg-[#3844be] hover:text-white transition-colors"}`}
+              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] 
+                ${
+                  activeTab === "experience"
+                    ? "bg-[#1B1440] text-white"
+                    : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"
+                }`}
             >
               Experiencia laboral
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("education")}
-              className={`rounded-full px-8 py-3 uppercase font-heading tracking-[2px] ${activeTab === "education" ? "bg-[#3844be] text-white" : "border border-[#3844be] text-[#3844be] hover:bg-[#3844be] hover:text-white transition-colors"}`}
+              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${activeTab === "education" ? "bg-[#1B1440] text-white" : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"}`}
             >
-              Formación
+              Formación académica
             </button>
           </div>
           {activeTab === "experience" ? (
@@ -134,10 +136,7 @@ export function Edicion() {
         </div>
       </section>
 
-      <section
-        id="portfolio-edicion"
-        className="py-20 text-site-dark bg-[#3844BE]"
-      >
+      <section id="portfolio-edicion" className="py-20 text-white bg-[#0d0b2e]">
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Edición" theme="dark" />
           <div className="mt-12">
@@ -149,7 +148,7 @@ export function Edicion() {
       <section
         id="portfolio-edicion-reels"
         className="py-20 text-white"
-        style={{ backgroundColor: "#3844BE" }}
+        style={{ backgroundColor: "#1B1440" }}
       >
         <div className="container mx-auto px-4">
           <SectionHeader
@@ -162,6 +161,7 @@ export function Edicion() {
           </div>
         </div>
       </section>
+      <ContactSection />
     </>
   );
 }

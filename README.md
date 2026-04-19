@@ -109,6 +109,15 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
     - `PortfolioGrid`: Optimización de la visualización de proyectos audiovisuales y web.
 - **Fixes de Layout**: Corrección global del solapamiento del Navbar mediante ajustes en scroll-padding y márgenes de sección.
 
+### Modularización de la Sección de Contacto (Abril 2026)
+- **Componentización**: Extracción de la sección de contacto (`ContactSection`) en un componente independiente reutilizable en todas las páginas del sitio.
+- **Navegación Local Inteligente**: Mejora en la lógica del `Navbar` para detectar y desplazarse suavemente (`smooth scroll`) hacia la sección de contacto en la página actual, evitando redirecciones innecesarias a la Home.
+- **Centralización de Datos**: Migración de la lista global de países a un archivo de datos dedicado (`countries.ts`).
+- **Refinamiento de UI/UX**:
+    - Unificación de etiquetas de navegación (ej. "Formación académica", "Experiencia laboral") para mayor profesionalismo.
+    - Ajustes en el tamaño y estilo de los iconos de reproducción de video en los grids de portfolio.
+    - Consistencia visual en los campos del formulario de contacto con un diseño más moderno y traslúcido.
+
 ## 📞 Contacto
 
 - **LinkedIn**: [Leo Senderovsky](https://www.linkedin.com/in/lsender/)

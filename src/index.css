@@ -1,19 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Colores de categoría (exactos del legacy) ── */
-  --color-audiovisual: #3844be;
-  --color-web: #000b77;
-  --color-ia: #1c289b;
+  /* ── Colores de categoría — Nueva paleta Brand Fusion ── */
+  --color-audiovisual: #0D0B2E;   
+  --color-web: #1A74C0;           
+  --color-ia: #1B1440;            
 
   /* ── Paleta general ── */
-  --color-site-dark: #142426;
-  --color-site-blue: #000b77;
-  --color-site-teal: #00b4d9;
+  --color-site-dark: #0D0B2E;
+  --color-site-blue: #0D0B2E;     
+  --color-site-teal: #19D3FF;     /* Cian Eléctrico */
   --color-site-text: #666666;
   --color-site-muted: #e6e6e6;
-  --color-primary: #766dff;
-  --color-secondary: #88f3ff;
+  --color-primary: #1A74C0;       /* Violeta de Fusión */
+  --color-secondary: #19D3FF;     /* Cian Eléctrico */
+
+  /* ── Nuevos tokens de paleta ── */
+  --color-bg-dark: #0D0B2E;
+  --color-audiovisual-brand: #1B1440;
+  --color-web-brand: #19D3FF;
+  --color-ai-brand: #1A74C0;
 
   /* ── Tipografía ── */
   --font-body: "Libre Franklin", sans-serif;
@@ -29,8 +35,8 @@
   }
 
   body {
-    /* 0deg = gradiente de abajo hacia arriba, igual que el legacy */
-    background-image: linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    /* Brand Fusion Flow — 0deg = abajo hacia arriba */
+    background-image: linear-gradient(0deg, #1A74C0 0%, #19D3FF 100%);
     color: #666;
     font-family: "Libre Franklin", sans-serif;
     font-size: 14px;

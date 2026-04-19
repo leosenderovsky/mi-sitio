@@ -12,7 +12,7 @@ export default function CVAudiovisualEmbed() {
       <main className="bg-white py-8">
         <div className="container mx-auto px-4 space-y-10">
           <section id="castellano" className="space-y-6">
-            <h1 className="text-3xl font-heading uppercase text-[#000b77]">CV Audiovisual — Español</h1>
+            <h1 className="text-3xl font-heading uppercase text-[#0D0B2E]">CV Audiovisual — Español</h1>
             <div className="w-full bg-gray-100">
               <iframe
                 src="/assets/docs/cv/leo-senderovsky-cv-edicion-guion.pdf"
@@ -23,7 +23,7 @@ export default function CVAudiovisualEmbed() {
           </section>
 
           <section id="ingles" className="space-y-6">
-            <h1 className="text-3xl font-heading uppercase text-[#000b77]">CV Audiovisual — English</h1>
+            <h1 className="text-3xl font-heading uppercase text-[#0D0B2E]">CV Audiovisual — English</h1>
             <div className="w-full bg-gray-100">
               <iframe
                 src="/assets/docs/cv/leo-senderovsky-resume-editor.pdf"

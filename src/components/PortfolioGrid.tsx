@@ -1,19 +1,20 @@
-﻿import { useMemo, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import type { PortfolioItem } from '../types';
+﻿import { useMemo, useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import type { PortfolioItem } from "../types";
 
 interface VideoThumbProps {
   item: PortfolioItem;
 }
 
 const HOVER_IMAGES: Record<string, string> = {
-  '16:9': '/assets/img/hover.png',
-  '1:1': '/assets/img/hover.png',
-  web: '/assets/img/hover.png'
+  "16:9": "/assets/img/hover.png",
+  "1:1": "/assets/img/hover.png",
+  web: "/assets/img/hover.png",
 };
 
 export function VideoThumb({ item }: VideoThumbProps) {
-  const hoverImage = HOVER_IMAGES[item.format ?? '16:9'] || HOVER_IMAGES['16:9'];
+  const hoverImage =
+    HOVER_IMAGES[item.format ?? "16:9"] || HOVER_IMAGES["16:9"];
 
   return (
     <motion.a
@@ -32,13 +33,23 @@ export function VideoThumb({ item }: VideoThumbProps) {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <img src={hoverImage} alt="Play" className="w-24 h-24 object-contain" />
+          <img
+            src={hoverImage}
+            alt="Play"
+            className="w-20 h-20 object-contain"
+          />
         </div>
       </div>
-      <div className="p-5 bg-site-blue">
-        <div className="text-lg font-heading uppercase text-white mb-1">{item.title}</div>
-        <div className="text-lg font-heading uppercase text-white mb-1">{item.subtitle}</div>
-        <div className="text-white font-heading uppercase tracking-[2px] text-sm">{item.category}</div>
+      <div className="p-5 bg-[#19d3ff]">
+        <div className="text-lg font-heading uppercase text-[#1B1440] mb-1">
+          {item.title}
+        </div>
+        <div className="text-lg font-heading uppercase text-[#1B1440] mb-1">
+          {item.subtitle}
+        </div>
+        <div className="text-[#1B1440] font-heading uppercase tracking-[2px] text-sm">
+          {item.category}
+        </div>
       </div>
     </motion.a>
   );
@@ -49,16 +60,22 @@ interface PortfolioGridProps {
   initialVisible?: number;
 }
 
-export function PortfolioGrid({ items, initialVisible = 9 }: PortfolioGridProps) {
+export function PortfolioGrid({
+  items,
+  initialVisible = 9,
+}: PortfolioGridProps) {
   const [showAll, setShowAll] = useState(false);
-  const visibleItems = useMemo(() => (showAll ? items : items.slice(0, initialVisible)), [items, initialVisible, showAll]);
+  const visibleItems = useMemo(
+    () => (showAll ? items : items.slice(0, initialVisible)),
+    [items, initialVisible, showAll],
+  );
 
   useEffect(() => {
     // Re-initialize GLightbox to catch new elements
-    if (typeof window !== 'undefined' && 'GLightbox' in window) {
+    if (typeof window !== "undefined" && "GLightbox" in window) {
       // @ts-expect-error GLightbox is not in window types
       const lightbox = window.GLightbox({
-        selector: '.glightbox'
+        selector: ".glightbox",
       });
       return () => lightbox.destroy();
     }
@@ -67,7 +84,7 @@ export function PortfolioGrid({ items, initialVisible = 9 }: PortfolioGridProps)
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visibleItems.map(item => (
+        {visibleItems.map((item) => (
           <VideoThumb key={item.id} item={item} />
         ))}
       </div>
@@ -76,7 +93,7 @@ export function PortfolioGrid({ items, initialVisible = 9 }: PortfolioGridProps)
           <button
             type="button"
             onClick={() => setShowAll(true)}
-            className="bg-site-teal text-white uppercase font-heading tracking-[2px] px-8 py-4 rounded-full hover:bg-site-blue transition-colors"
+            className="bg-[#19d3ff] text-[#1B1440] uppercase font-heading tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1B1440] hover:text-white transition-colors"
           >
             Ver más
           </button>
@@ -85,4 +102,3 @@ export function PortfolioGrid({ items, initialVisible = 9 }: PortfolioGridProps)
     </>
   );
 }
-

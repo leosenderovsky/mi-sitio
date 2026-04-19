@@ -17,14 +17,14 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
       className="overflow-hidden rounded-2xl border border-white/20 shadow-lg hover:shadow-2xl transition-shadow"
-      style={{ backgroundColor: '#3844BE' }}
+      style={{ backgroundColor: '#1B1440' }}
     >
       {/* ── Header clickeable ── */}
       <div
         onClick={onToggle}
         className="p-6 cursor-pointer transition-colors duration-300"
         style={{
-          backgroundColor: isOpen ? '#000b77' : undefined,
+          backgroundColor: isOpen ? '#0D0B2E' : undefined,
         }}
       >
         <p
@@ -73,7 +73,7 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            style={{ backgroundColor: '#000b77', overflow: 'hidden' }}
+            style={{ backgroundColor: '#0D0B2E', overflow: 'hidden' }}
           >
             {hasMultipleDocs && (
               <p
@@ -100,7 +100,7 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
                   rel="noreferrer"
                   className={`inline-flex items-center gap-2 font-heading text-base uppercase transition-all
                     text-white border border-white/50 rounded px-3 py-2
-                    hover:bg-white hover:text-[#000b77]`}
+                    hover:bg-white hover:text-[#0D0B2E]`}
                   style={{
                     fontFamily: '"Yanone Kaffeesatz", sans-serif',
                     fontSize: '1.1em',

@@ -1,6 +1,6 @@
 import { useState, useEffect, type MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface MenuItem {
   label: string;
@@ -15,7 +15,6 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
-  const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,13 +28,12 @@ export function Navbar() {
   const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
     setIsOpen(false);
-    if (location.pathname !== "/") {
-      navigate({ pathname: "/", hash });
+
+    const targetElement = document.querySelector(hash);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
     } else {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      navigate({ pathname: "/", hash });
     }
   };
 
@@ -101,7 +99,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-[#766dff] to-[#88f3ff] ${isScrolled ? "shadow-lg py-2" : "py-4"}`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-[#19D3FF] to-[#1B1440] ${isScrolled ? "shadow-lg py-2" : "py-4"}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="z-50" onClick={() => window.scrollTo(0, 0)}>
@@ -120,7 +118,7 @@ export function Navbar() {
                 <button
                   onClick={() => toggleSubmenu(item.label)}
                   className="font-heading uppercase text-lg tracking-wider hover:text-white transition-colors"
-                  style={{ color: "#000b77" }}
+                  style={{ color: "#FFFFFF" }}
                 >
                   {item.label} <i className="fa-solid fa-chevron-down ml-1"></i>
                 </button>
@@ -172,7 +170,7 @@ export function Navbar() {
                 key={idx}
                 to={item.path}
                 className="font-heading uppercase text-lg tracking-wider hover:text-white transition-colors"
-                style={{ color: "#000b77" }}
+                style={{ color: "#FFFFFF" }}
               >
                 {item.label}
               </Link>
@@ -183,7 +181,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 className="font-heading uppercase text-lg tracking-wider hover:text-white transition-colors"
-                style={{ color: "#000b77" }}
+                style={{ color: "#FFFFFF" }}
               >
                 {item.label}
               </a>
@@ -193,7 +191,7 @@ export function Navbar() {
                 href={item.hash}
                 onClick={(e) => handleNavClick(e, item.hash!)}
                 className="font-heading uppercase text-lg tracking-wider hover:text-white transition-colors"
-                style={{ color: "#000b77" }}
+                style={{ color: "#FFFFFF" }}
               >
                 {item.label}
               </a>
@@ -203,7 +201,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden text-site-blue text-3xl z-50"
+          className="lg:hidden text-white text-3xl z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           <i className={`fa-solid ${isOpen ? "fa-times" : "fa-bars"}`}></i>
@@ -282,7 +280,7 @@ export function Navbar() {
                     to={item.path}
                     onClick={() => setIsOpen(false)}
                     className="font-heading text-xl uppercase tracking-wider"
-                    style={{ color: "#000b77" }}
+                    style={{ color: "#FFFFFF" }}
                   >
                     {item.label}
                   </Link>
@@ -294,7 +292,7 @@ export function Navbar() {
                     rel="noreferrer"
                     onClick={() => setIsOpen(false)}
                     className="font-heading text-xl uppercase tracking-wider"
-                    style={{ color: "#000b77" }}
+                    style={{ color: "#FFFFFF" }}
                   >
                     {item.label}
                   </a>
@@ -304,7 +302,7 @@ export function Navbar() {
                     href={item.hash}
                     onClick={(e) => handleNavClick(e, item.hash!)}
                     className="font-heading text-xl uppercase tracking-wider"
-                    style={{ color: "#000b77" }}
+                    style={{ color: "#FFFFFF" }}
                   >
                     {item.label}
                   </a>
