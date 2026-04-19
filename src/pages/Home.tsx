@@ -255,7 +255,7 @@ export function Home() {
       ══════════════════════════════════════ */}
       <div className="py-10 bg-gradient-to-r from-[#1B1440] to-[#19D3FF]">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
+          <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Mi bio
           </h2>
           <div className="flex items-center justify-center gap-6">
@@ -324,10 +324,10 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section id="about" className="py-16" style={{ background: "#0D0B2E" }}>
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
+          <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Acerca de mí
           </h2>
-          <div className="flex flex-col lg:flex-row gap-10">
+          <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Foto */}
             <div className="lg:w-1/4">
               <motion.img
@@ -380,7 +380,7 @@ export function Home() {
               </motion.div>
             </div>
 
-            <div className="lg:w-1/4 flex flex-col items-center gap-3">
+            <div className="lg:w-1/4 flex flex-col items-center lg:items-end gap-3">
               <div className="flex flex-col gap-3 max-w-[280px] w-full mx-auto lg:mx-0">
                 <div className="flex gap-2">
                   <a
@@ -485,7 +485,7 @@ export function Home() {
         style={{ backgroundColor: "#1B1440" }}
       >
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
+          <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Audiovisual
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -501,10 +501,10 @@ export function Home() {
       ══════════════════════════════════════ */}
       <section className="py-12" style={{ backgroundColor: "#0D0B2E" }}>
         <div className="container mx-auto px-4">
-          <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
+          <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Web & IA
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <ServiceCard {...webCard} />
             <ServiceCard {...iaCard} />
           </div>
