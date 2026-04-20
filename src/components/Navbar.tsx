@@ -46,7 +46,8 @@ export function Navbar() {
           path: "/audiovisual/edicion",
           submenu: [
             { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia" },
-            { label: "PORTFOLIO", path: "/audiovisual/edicion/portfolio" },
+            { label: "PORTFOLIO",   path: "/audiovisual/edicion/portfolio" },
+            { label: "PORTFOLIO REELS",    path: "/audiovisual/edicion/portfolio/reels" },
           ],
         },
         {

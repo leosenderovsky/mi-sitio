@@ -35,7 +35,7 @@ export function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
-      className="overflow-hidden rounded-2xl border border-white/20 shadow-lg hover:shadow-2xl transition-shadow"
+      className="overflow-hidden rounded-2xl border border-white/20 shadow-lg hover:shadow-2xl transition-shadow flex flex-col"
       style={
         isDark ? { backgroundColor: bgColor } : { backgroundColor: "white" }
       }
@@ -68,7 +68,7 @@ export function ServiceCard({
         </div>
       )}
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3
           className="mb-3"
           style={{
@@ -91,7 +91,7 @@ export function ServiceCard({
         >
           {description}
         </p>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 mt-auto">
           {ctas.map((cta, index) => {
             const isExternal =
               cta.external === true || cta.href.startsWith("http");

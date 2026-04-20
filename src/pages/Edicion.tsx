@@ -21,7 +21,7 @@ export function Edicion() {
     const path = location.pathname;
     let targetId: string | null = null;
     if (path.endsWith("/experiencia")) targetId = "resume";
-    else if (path.endsWith("/portfolio/videos")) targetId = "portfolio-edicion";
+    else if (path.endsWith("/portfolio/videos") || path.endsWith("/portfolio")) targetId = "portfolio-edicion";
     else if (path.endsWith("/portfolio/reels"))
       targetId = "portfolio-edicion-reels";
 
@@ -161,7 +161,7 @@ export function Edicion() {
             theme="dark"
           />
           <div className="mt-12">
-            <PortfolioGrid items={portfolioReels} initialVisible={9} />
+            <PortfolioGrid items={portfolioReels} initialVisible={9} square />
           </div>
         </div>
       </section>

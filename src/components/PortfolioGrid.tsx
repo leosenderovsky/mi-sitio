@@ -4,6 +4,7 @@ import type { PortfolioItem } from "../types";
 
 interface VideoThumbProps {
   item: PortfolioItem;
+  square?: boolean;
 }
 
 const HOVER_IMAGES: Record<string, string> = {
@@ -12,7 +13,7 @@ const HOVER_IMAGES: Record<string, string> = {
   web: "/assets/img/hover.png",
 };
 
-export function VideoThumb({ item }: VideoThumbProps) {
+export function VideoThumb({ item, square }: VideoThumbProps) {
   const hoverImage =
     HOVER_IMAGES[item.format ?? "16:9"] || HOVER_IMAGES["16:9"];
 
@@ -25,7 +26,7 @@ export function VideoThumb({ item }: VideoThumbProps) {
       transition={{ duration: 0.4 }}
       className="group block overflow-hidden rounded-3xl shadow-xl bg-white glightbox"
     >
-      <div className="relative overflow-hidden aspect-video bg-black">
+      <div className={`relative overflow-hidden ${square ? "aspect-square" : "aspect-video"} bg-black`}>
         <img
           src={item.image}
           alt={item.title}
@@ -58,11 +59,12 @@ export function VideoThumb({ item }: VideoThumbProps) {
 interface PortfolioGridProps {
   items: PortfolioItem[];
   initialVisible?: number;
+  square?: boolean;
 }
 
 export function PortfolioGrid({
   items,
-  initialVisible = 9,
+  initialVisible = 9, square
 }: PortfolioGridProps) {
   const [showAll, setShowAll] = useState(false);
   const visibleItems = useMemo(
@@ -85,7 +87,7 @@ export function PortfolioGrid({
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visibleItems.map((item) => (
-          <VideoThumb key={item.id} item={item} />
+          <VideoThumb key={item.id} item={item} square={square} />
         ))}
       </div>
       {items.length > initialVisible && !showAll && (
