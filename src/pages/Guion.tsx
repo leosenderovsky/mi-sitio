@@ -66,7 +66,7 @@ export function Guion() {
                 href="#portfolio-guion"
                 className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
-                Mirá mis trabajos
+                Mis trabajos
               </a>
               <a
                 href="#contacto"
@@ -184,7 +184,7 @@ export function Guion() {
         </div>
       </section>
 
-      <section id="portfolio-guion" className="py-20 text-white bg-[#1B1440]">
+      <section id="portfolio-guion" className="py-20 text-white bg-[#0d0b2e]">
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Guión" theme="dark" />
           <div className="mt-12">

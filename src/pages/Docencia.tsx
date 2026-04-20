@@ -70,7 +70,7 @@ export function Docencia() {
         <div className="relative z-10 container mx-auto px-4">
           {/* Encabezado */}
           <SectionHeader
-            title="Encuentros de cine"
+            title="Mis encuentros de cine"
             subtitle="Docencia"
             theme="dark"
           />
@@ -175,7 +175,7 @@ export function Docencia() {
       >
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="Experiencia"
+            title="Mi experiencia"
             subtitle="Docencia"
             theme="light"
           />
@@ -232,11 +232,7 @@ export function Docencia() {
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
-          <SectionHeader
-            title="Entrevistas"
-            subtitle="Medios y charlas"
-            theme="dark"
-          />
+          <SectionHeader title="Entrevistas" subtitle="Docencia" theme="dark" />
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {entrevistas.map((item) => {
               const videoId = item.link.includes("youtube.com/watch?v=")

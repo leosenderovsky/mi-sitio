@@ -86,7 +86,7 @@ export function Edicion() {
                 href="#portfolio-edicion"
                 className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
-                Ver portfolio
+                Mi portfolio
               </a>
             </div>
           </div>
@@ -98,7 +98,11 @@ export function Edicion() {
         className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
       >
         <div className="container mx-auto px-4">
-          <SectionHeader title="Experiencia" subtitle="Edición" theme="light" />
+          <SectionHeader
+            title="Mi experiencia"
+            subtitle="Edición"
+            theme="light"
+          />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
@@ -136,7 +140,7 @@ export function Edicion() {
         </div>
       </section>
 
-      <section id="portfolio-edicion" className="py-20 text-white bg-[#0d0b2e]">
+      <section id="portfolio-edicion" className="py-20 text-white bg-[#1B1440]">
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Edición" theme="dark" />
           <div className="mt-12">
@@ -148,7 +152,7 @@ export function Edicion() {
       <section
         id="portfolio-edicion-reels"
         className="py-20 text-white"
-        style={{ backgroundColor: "#1B1440" }}
+        style={{ backgroundColor: "#0d0b2e" }}
       >
         <div className="container mx-auto px-4">
           <SectionHeader

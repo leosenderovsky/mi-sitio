@@ -117,7 +117,11 @@ export function Critica() {
         className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
       >
         <div className="container mx-auto px-4">
-          <SectionHeader title="Experiencia" subtitle="Crítica" theme="light" />
+          <SectionHeader
+            title="Mi experiencia"
+            subtitle="Crítica"
+            theme="light"
+          />
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
               type="button"
