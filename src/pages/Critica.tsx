@@ -29,7 +29,7 @@ export function Critica() {
           { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
           {
             name: "Audiovisual",
-            url: "https://leosenderovsky.com.ar/audiovisual/critica",
+            url: "https://leosenderovsky.com.ar/#audiovisual",
           },
           {
             name: "Crítica de Cine",

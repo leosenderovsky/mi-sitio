@@ -50,7 +50,7 @@ export function Edicion() {
           { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
           {
             name: "Audiovisual",
-            url: "https://leosenderovsky.com.ar/audiovisual/edicion",
+            url: "https://leosenderovsky.com.ar/#audiovisual",
           },
           {
             name: "Edición de Video",

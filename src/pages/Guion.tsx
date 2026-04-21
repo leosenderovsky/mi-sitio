@@ -35,7 +35,7 @@ export function Guion() {
           { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
           {
             name: "Audiovisual",
-            url: "https://leosenderovsky.com.ar/audiovisual/guion",
+            url: "https://leosenderovsky.com.ar/#audiovisual",
           },
           {
             name: "Guión y Consultoría",

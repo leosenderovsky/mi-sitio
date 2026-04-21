@@ -10,6 +10,13 @@ import { entrevistas } from "../data/entrevistas";
 import { experienciaDocencia } from "../data/experiencia-docencia";
 import { educacionFUC } from "../data/educacion";
 import { ContactSection } from "../components/ContactSection";
+import { SchemaCourse } from "../components/SchemaMarkup";
+// ...
+<SchemaCourse
+  name="Judaísmo en el cine"
+  description="Ciclos de charlas sobre la representación del judaísmo y la cultura judía en el cine argentino, israelí y mundial."
+  url="https://leosenderovsky.com.ar/audiovisual/docencia"
+/>;
 
 const SECTION_MAP = {
   experiencia: "resume2",
@@ -46,7 +53,7 @@ export function Docencia() {
           { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
           {
             name: "Audiovisual",
-            url: "https://leosenderovsky.com.ar/audiovisual/docencia",
+            url: "https://leosenderovsky.com.ar/#audiovisual",
           },
           {
             name: "Docencia de Cine",
