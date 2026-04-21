@@ -8,7 +8,7 @@ import { PortfolioGrid } from "../components/PortfolioGrid";
 import { portfolioEdicion } from "../data/portfolio-edicion";
 import { portfolioReels } from "../data/portfolio-reels";
 import { experienciaEdicion } from "../data/experiencia-edicion";
-import { educacionAudiovisual } from "../data/educacion";
+import { educacionEdicion } from "../data/educacion";
 import { ContactSection } from "../components/ContactSection";
 
 export function Edicion() {
@@ -21,7 +21,8 @@ export function Edicion() {
     const path = location.pathname;
     let targetId: string | null = null;
     if (path.endsWith("/experiencia")) targetId = "resume";
-    else if (path.endsWith("/portfolio/videos") || path.endsWith("/portfolio")) targetId = "portfolio-edicion";
+    else if (path.endsWith("/portfolio/videos") || path.endsWith("/portfolio"))
+      targetId = "portfolio-edicion";
     else if (path.endsWith("/portfolio/reels"))
       targetId = "portfolio-edicion-reels";
 
@@ -133,7 +134,7 @@ export function Edicion() {
           ) : (
             <TimelineSection
               experiences={[]}
-              educations={educacionAudiovisual}
+              educations={educacionEdicion}
               theme="light"
             />
           )}

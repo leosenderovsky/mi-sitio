@@ -56,7 +56,7 @@ export function Docencia() {
       />
 
       <section
-        id="docencia-top"
+        id="encuentros-de-cine"
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage:

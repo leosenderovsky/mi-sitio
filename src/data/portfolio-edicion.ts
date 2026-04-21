@@ -89,7 +89,7 @@ export const portfolioEdicion: PortfolioItem[] = [
   {
     id: "ed-11",
     category: "edicion",
-    title: "Content YPF - Litio",
+    title: "Content YPF - Litio en la Argentina: producción de energía para el mundo",
     subtitle: "Infobae Inhouse, 2024",
     image: "/assets/img/gallery/edicion-guion/inhouse-ypf-litio.jpg",
     link: "https://cdn.jwplayer.com/videos/aRBjquht-iJRzP7q2.mp4",
@@ -97,7 +97,7 @@ export const portfolioEdicion: PortfolioItem[] = [
   {
     id: "ed-12",
     category: "edicion",
-    title: "10 años del Papa Francisco",
+    title: "Documental '10 años del Papa Francisco'",
     subtitle: "Infobae, 2023",
     image:
       "/assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg",
@@ -106,13 +106,15 @@ export const portfolioEdicion: PortfolioItem[] = [
   {
     id: "ed-13",
     category: "edicion",
+    title: "Content Ford Bronco Wake Day Pinamar",
+    subtitle: "Infobae Inhouse, 2025",
     image: "/assets/img/gallery/edicion-guion/inhouse-ford-bronco.jpg",
     link: "https://cdn.jwplayer.com/videos/dxRCY88L-iJRzP7q2.mp4",
   },
   {
     id: "ed-14",
     category: "edicion",
-    title: "Un año de la invasión rusa en Ucrania",
+    title: "Documental 'Un año de la invasión rusa en Ucrania'",
     subtitle: "Infobae, 2023",
     image:
       "/assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg",

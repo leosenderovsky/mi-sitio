@@ -6,7 +6,7 @@ import { SectionHeader } from "../components/SectionHeader";
 import { PortfolioGrid } from "../components/PortfolioGrid";
 import { TimelineSection } from "../components/TimelineSection";
 import { portfolioGuion } from "../data/portfolio-guion";
-import { educacionAudiovisual } from "../data/educacion";
+import { educacionGuion } from "../data/educacion";
 import { experienciaGuion } from "../data/experiencia-guion";
 import { ContactSection } from "../components/ContactSection";
 
@@ -177,7 +177,7 @@ export function Guion() {
           ) : (
             <TimelineSection
               experiences={[]}
-              educations={educacionAudiovisual}
+              educations={educacionGuion}
               theme="light"
             />
           )}

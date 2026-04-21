@@ -42,7 +42,7 @@ export function IA() {
           }}
         />
         <div className="relative z-10 container mx-auto px-4">
-          <SectionHeader title="sender.ia" subtitle="IA" theme="dark" />
+          <SectionHeader title="IA" subtitle="Audiovisual + Web" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Texto + subsecciones */}
             <div
@@ -192,8 +192,8 @@ export function IA() {
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader
-            title="Portfolio IA"
-            subtitle="Experimentos y desarrollos"
+            title="Portfolio"
+            subtitle="IA"
             theme="dark"
           />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -46,8 +46,11 @@ export function Navbar() {
           path: "/audiovisual/edicion",
           submenu: [
             { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia" },
-            { label: "PORTFOLIO",   path: "/audiovisual/edicion/portfolio" },
-            { label: "PORTFOLIO REELS",    path: "/audiovisual/edicion/portfolio/reels" },
+            { label: "PORTFOLIO", path: "/audiovisual/edicion/portfolio" },
+            {
+              label: "PORTFOLIO REELS",
+              path: "/audiovisual/edicion/portfolio/reels",
+            },
           ],
         },
         {
@@ -63,6 +66,10 @@ export function Navbar() {
           label: "DOCENCIA",
           path: "/audiovisual/docencia",
           submenu: [
+            {
+              label: "ENCUENTROS DE CINE",
+              path: "/audiovisual/docencia/encuentros-de-cine",
+            },
             { label: "EXPERIENCIA", path: "/audiovisual/docencia/experiencia" },
             { label: "ENTREVISTAS", path: "/audiovisual/docencia/entrevistas" },
           ],
