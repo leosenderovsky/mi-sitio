@@ -28,7 +28,7 @@ export function Web() {
       />
 
       <section
-        id="web-top"
+        id="servicios"
         className="py-20 text-white text-center relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/web/bg-web.jpg')",

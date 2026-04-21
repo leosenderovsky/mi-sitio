@@ -42,12 +42,11 @@ export function ServiceCard({
     >
       {/* Imagen de la tarjeta */}
       {image && (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden aspect-video">
           <img
             src={image}
             alt={title}
-            className="w-full object-cover"
-            style={{ maxHeight: "180px", objectPosition: "center top" }}
+            className="w-full h-full object-contain"
           />
         </div>
       )}

@@ -26,7 +26,7 @@ export function IA() {
 
       {/* Intro Section */}
       <section
-        id="ia"
+        id="servicios"
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/ia/bg-ia.jpg')",
@@ -191,11 +191,7 @@ export function IA() {
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
-          <SectionHeader
-            title="Portfolio"
-            subtitle="IA"
-            theme="dark"
-          />
+          <SectionHeader title="Portfolio" subtitle="IA" theme="dark" />
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioIA.map((item) => (
               <a

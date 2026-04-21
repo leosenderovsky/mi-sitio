@@ -78,6 +78,7 @@ export function Navbar() {
           label: "CRÍTICA",
           path: "/audiovisual/critica",
           submenu: [
+            { label: "SERVICIOS", path: "/audiovisual/critica/servicios" },
             { label: "EXPERIENCIA", path: "/audiovisual/critica/experiencia" },
           ],
         },
@@ -86,12 +87,18 @@ export function Navbar() {
     {
       label: "WEB",
       path: "/web",
-      submenu: [{ label: "EXPERIENCIA", path: "/web/experiencia" }],
+      submenu: [
+        { label: "SERVICIOS", path: "/web/servicios" },
+        { label: "EXPERIENCIA", path: "/web/experiencia" },
+      ],
     },
     {
       label: "IA",
       path: "/ia",
-      submenu: [{ label: "PORTFOLIO", path: "/ia/portfolio" }],
+      submenu: [
+        { label: "SENDER.IA", path: "/ia/servicios" },
+        { label: "PORTFOLIO", path: "/ia/portfolio" },
+      ],
     },
     {
       label: "BLOG",

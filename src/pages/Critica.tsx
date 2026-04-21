@@ -40,7 +40,7 @@ export function Critica() {
 
       {/* ── Intro ── */}
       <section
-        id="critica-top"
+        id="servicios"
         className="py-20 relative overflow-hidden"
         style={{
           backgroundImage: "url('/assets/img/critica/bg-critica.jpg')",

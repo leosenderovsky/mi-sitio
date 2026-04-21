@@ -15,6 +15,7 @@ const audiovisualCards = [
   {
     id: "edicion",
     title: "Edición",
+    image: "/assets/img/dibujos/edicion.png",
     icon: "fa-solid fa-scissors",
     bgColor: "#19D3FF",
     description:
@@ -34,6 +35,7 @@ const audiovisualCards = [
   {
     id: "guion",
     title: "Guión",
+    image: "/assets/img/dibujos/guion.png",
     icon: "fa-solid fa-pencil",
     bgColor: "#19D3FF",
     description:
@@ -50,6 +52,7 @@ const audiovisualCards = [
   {
     id: "docencia",
     title: "Docencia",
+    image: "/assets/img/dibujos/docencia-1.png",
     icon: "fa-solid fa-chalkboard-user",
     bgColor: "#19D3FF",
     description:
@@ -66,6 +69,7 @@ const audiovisualCards = [
   {
     id: "critica",
     title: "Crítica",
+    image: "/assets/img/dibujos/critica.jpg",
     icon: "fa-solid fa-film",
     bgColor: "#19D3FF",
     description:
@@ -85,6 +89,7 @@ const audiovisualCards = [
 const webCard = {
   id: "web",
   title: "Desarrollo Web",
+  image: "/assets/img/dibujos/web.png",
   icon: "fa-solid fa-code",
   bgColor: "#19D3FF",
   description:
@@ -98,6 +103,7 @@ const webCard = {
 const iaCard = {
   id: "ia",
   title: "sender.ia",
+  image: "/assets/img/dibujos/ia.png",
   icons: ["fa-solid fa-clapperboard", "fa-solid fa-laptop-code"],
   bgColor: "#19D3FF",
   description:
@@ -270,7 +276,7 @@ export function Home() {
               <img
                 src="/assets/img/dibujos/leo-chico-escribiendo.png"
                 alt="Ilustración chico escribiendo"
-                className="w-full"
+                className="w-full rounded-2xl"
               />
             </motion.div>
 
@@ -303,7 +309,7 @@ export function Home() {
 
             {/* Ilustración derecha */}
             <motion.div
-              className="hidden lg:block w-1/4"
+              className="hidden lg:block w-1/4 "
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -312,7 +318,7 @@ export function Home() {
               <img
                 src="/assets/img/dibujos/leo-grande-editando.png"
                 alt="Ilustración hombre editando"
-                className="w-full"
+                className="w-full rounded-2xl"
               />
             </motion.div>
           </div>
