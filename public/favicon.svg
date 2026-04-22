@@ -1,12 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <style>
-      @font-face {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: 700;
-        src: url('data:font/woff2;base64,d09GMgABAAAAAAK8ABAAAAAABVQAAAJhAAIAxQAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbfhwwBmA/U1RBVCoAPBEICoFcgUEBNgIkAwwLCAAEIAWCGgcgDAcbGQSgrgpsOr5QwyORIPWmdGM1K+nIw66EnH8rjlDJefj/tf/tMzNfpbki5k0lWdX2qCbN20uolPg7eEgQWRee/19j3fdncLco4kkiTaxBSGIWEpFD276ukztQ0NZOgSUFHGix1dPDMOC4SKMowrK0FuKvFzzE7AJqSy/lJAnIg7Yk++9/HM7Cgzd938bjzgePPOHoXOsDF0fDwBIMOIw8kATyBAKSdJvMQ8Vrl2pFQTV4XSagHiAIRQiBWpHSqQ2F5fVYnm2dGMKZDhLiOCDOdI4NYYxG0CmrMKa4P49B4RQNAAhKgEQQXq6Ei6TN7U/G2ACeT/B7AiMKP1FfqEB2Re0D29OeOEJshCMPJYnkm7Jjh7rsa0pKERROECD+Zl+gl0YIYwLtBDqpC909EwIyAqJSXQMZ5NBOI9BOFwyVdEIpV5eAv5nepucCIEiiCciBSihgLewCKICMkEI3j9gNDYZtFlXmZgYLm+/rCjPm79XuXrqo7Y7butmLy7vTe3/UZ918KD1o/6ntc6WnY3Oe0uxsvvKt8uG5kSfwfKL3vxfbRn3ZxErN+n/Ydf9XD/k/QMRyXvKwPGqvby6/Qfa/zrkHbEHD0KOZwRIuz2ZNAhCQeSlVb/5ZuOJfda79gO+PTwX40xAn0pSKx+wLhhQQ+IM8fi0yVhsCX5LHLxWhPKMZKwK5CAoIrCtVWhQmiGSUmmIsWdPlylYNZVr0CNS7jwy3fz0tWg0ZNqSTtzKtunTp1GlcqwlzvBWYMWFMq3K9uvWYkGvYgI7jq94mhVxpxNCkc1hpGJRunumHSHtRXAcAAA==') format('woff2');
-      }
-    </style>
     <clipPath id="triClip">
       <polygon points="6,6 6,58 60,32"/>
     </clipPath>
@@ -18,16 +11,10 @@
   <!-- Triángulo blanco -->
   <polygon points="6,6 6,58 60,32" fill="#FFFFFF"/>
 
-  <!-- LS en Electric Blue, clipeado al triángulo -->
-  <text
-    clip-path="url(#triClip)"
-    x="5"
-    y="45"
-    font-family="'Yanone Kaffeesatz', 'Bebas Neue', Impact, sans-serif"
-    font-weight="700"
-    font-size="37"
-    fill="#0128E2"
-    letter-spacing="1"
-  >LS</text>
+  <!-- LS como paths vectoriales (sin fuentes), clipeados al triángulo -->
+  <g clip-path="url(#triClip)" fill="#0128E2">
+    <path transform="translate(8.000,47.000) scale(0.04444,-0.04444)" d="M30 0V672Q30 686 35.0 692.0Q40 698 63.5 699.0Q87 700 142 700V105H283V20Q283 8 277.5 4.0Q272 0 263 0Z"/>
+    <path transform="translate(22.744,47.000) scale(0.04444,-0.04444)" d="M147 -10Q80 -10 48.0 10.5Q16 31 16 57Q16 74 22.0 96.5Q28 119 41 138Q57 124 82.0 114.5Q107 105 134 105Q175 105 191.0 126.0Q207 147 207 182Q207 208 197.5 231.0Q188 254 162 288L71 410Q37 456 26.0 490.0Q15 524 15 557Q15 625 60.0 667.5Q105 710 193 710Q269 710 299.0 695.0Q329 680 329 654Q329 640 323.0 623.5Q317 607 303 591Q295 597 270.0 604.0Q245 611 216 611Q179 611 158.0 598.5Q137 586 137 560Q137 537 145.5 517.5Q154 498 173 471L269 348Q305 302 317.0 265.0Q329 228 329 185Q329 135 313.5 90.5Q298 46 259.0 18.0Q220 -10 147 -10Z"/>
+  </g>
 
 </svg>
