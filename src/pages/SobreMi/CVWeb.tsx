@@ -29,9 +29,6 @@ export default function CVWeb() {
           </div>
           <div className="mt-16">
             <TimelineSection
-              id="cv-web"
-              title="Web"
-              subtitle="Educación y proyectos"
               experiences={experienciaWeb}
               educations={educacionWeb}
               theme="light"

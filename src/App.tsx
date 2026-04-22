@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -15,8 +15,10 @@ const IA = lazy(() => import('./pages/IA').then(module => ({ default: module.IA 
 const Gracias = lazy(() => import('./pages/Gracias').then(module => ({ default: module.Gracias })));
 const CVAudiovisual = lazy(() => import('./pages/SobreMi/CVAudiovisual').then(module => ({ default: module.default })));
 const CVWeb = lazy(() => import('./pages/SobreMi/CVWeb').then(module => ({ default: module.default })));
-const CVAudiovisualEmbed = lazy(() => import('./pages/SobreMi/CVAudiovisualEmbed').then(module => ({ default: module.default })));
+import CVCastellano from './pages/audiovisual/CVCastellano'
+import CVIngles from './pages/audiovisual/CVIngles'
 const CVWebEmbed = lazy(() => import('./pages/SobreMi/CVWebEmbed').then(module => ({ default: module.default })));
+const DocenciaDocEmbed = lazy(() => import('./pages/audiovisual/DocenciaDocEmbed').then(module => ({ default: module.default })));
 
 function App() {
   return (
@@ -32,7 +34,9 @@ function App() {
                 <Route path="/gracias" element={<Gracias />} />
                 <Route path="/sobre-mi/cv-audiovisual" element={<CVAudiovisual />} />
                 <Route path="/sobre-mi/cv-web" element={<CVWeb />} />
-                <Route path="/audiovisual/cv" element={<CVAudiovisualEmbed />} />
+                <Route path="/audiovisual/cv/castellano" element={<CVCastellano />} />
+                <Route path="/audiovisual/cv/ingles" element={<CVIngles />} />
+                <Route path="/audiovisual/cv" element={<Navigate to="/audiovisual/cv/castellano" replace />} />
                 <Route path="/web/cv" element={<CVWebEmbed />} />
                 <Route path="/audiovisual/edicion" element={<Edicion />} />
                 <Route path="/audiovisual/edicion/portfolio/videos" element={<Edicion />} />
@@ -41,6 +45,7 @@ function App() {
                 <Route path="/audiovisual/guion" element={<Guion />} />
                 <Route path="/audiovisual/guion/:section" element={<Guion />} />
                 <Route path="/audiovisual/docencia" element={<Docencia />} />
+                <Route path="/audiovisual/docencia/leer/:filename" element={<DocenciaDocEmbed />} />
                 <Route path="/audiovisual/docencia/:section" element={<Docencia />} />
                 <Route path="/audiovisual/critica" element={<Critica />} />
                 <Route path="/audiovisual/critica/:section" element={<Critica />} />

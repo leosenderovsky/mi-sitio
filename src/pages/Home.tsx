@@ -297,7 +297,7 @@ export function Home() {
                   alt="Miniatura de video principal"
                   className="w-full"
                 />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <img
                     src="/assets/img/hover.png"
                     alt="Reproducir video"
@@ -390,7 +390,7 @@ export function Home() {
               <div className="flex flex-col gap-3 max-w-[280px] w-full mx-auto lg:mx-0">
                 <div className="flex gap-2">
                   <a
-                    href="/audiovisual/cv/#castellano"
+                    href="/audiovisual/cv/castellano"
                     className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',
@@ -402,7 +402,7 @@ export function Home() {
                     CV Audiovisual <span className="fi fi-es shadow-sm" />
                   </a>
                   <a
-                    href="/audiovisual/cv/#ingles"
+                    href="/audiovisual/cv/ingles"
                     className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',

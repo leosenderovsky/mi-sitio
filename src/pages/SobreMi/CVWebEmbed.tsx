@@ -1,4 +1,5 @@
-import { PageSEO } from '../../components/PageSEO';
+import { PageSEO } from "../../components/PageSEO";
+import PdfViewer from "../../components/PdfViewer";
 
 export default function CVWebEmbed() {
   return (
@@ -9,18 +10,19 @@ export default function CVWebEmbed() {
         path="/web/cv"
       />
 
-      <main className="bg-white py-8">
-        <div className="container mx-auto px-4">
-          <section className="space-y-6">
-            <h1 className="text-3xl font-heading uppercase text-[#0D0B2E]">CV Desarrollo Web</h1>
-            <div className="w-full bg-gray-100">
-              <iframe
-                src="/assets/docs/cv/leo-senderovsky-resume-web.pdf"
-                className="min-h-[85vh] w-full border-0"
-                title="CV Desarrollo Web"
-              />
-            </div>
-          </section>
+      <main className="min-h-screen bg-[#00052e] pt-24 pb-20 flex flex-col items-center">
+        <div className="w-full max-w-4xl px-4">
+          <div className="h-8 mb-10" />
+          <h1 className="text-4xl font-['Yanone_Kaffeesatz'] text-white mb-1 tracking-wide">
+            Resume
+          </h1>
+          <p className="text-white/40 mb-10 text-sm tracking-widest uppercase">
+            Frontend Developer
+          </p>
+          <PdfViewer
+            url="/assets/docs/cv/leo-senderovsky-resume-web.pdf"
+            filename="Leo-Senderovsky-CV-Web.pdf"
+          />
         </div>
       </main>
     </>

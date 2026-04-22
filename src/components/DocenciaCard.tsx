@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { DocenciaCiclo } from '../data/docencia-ciclos';
 
@@ -93,11 +94,10 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
 
             <div className="flex flex-col gap-2 p-6 pt-3">
               {ciclo.documents.map((doc, idx) => (
-                <a
+                <Link
                   key={idx}
-                  href={doc.link}
-                  target="_blank"
-                  rel="noreferrer"
+                  to={`/audiovisual/docencia/leer/${doc.link.split('/').pop()}`}
+                  state={{ title: doc.title, category: ciclo.title }}
                   className={`inline-flex items-center gap-2 font-heading text-base uppercase transition-all
                     text-white border border-white/50 rounded px-3 py-2
                     hover:bg-white hover:text-[#0D0B2E]`}
@@ -110,7 +110,7 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
                   <i className="fa-regular fa-file-lines text-sm" />
                   {doc.title}
                   <i className="fa-solid fa-arrow-right text-xs ml-auto" />
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
