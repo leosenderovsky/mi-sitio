@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { COUNTRIES } from "../data/countries";
 
 export function ContactSection() {
@@ -7,6 +8,7 @@ export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -16,6 +18,10 @@ export function ContactSection() {
 
     try {
       const formData = new FormData(event.currentTarget);
+
+      // Si hCaptcha está habilitado, el token se envía automáticamente si el componente está dentro del form
+      // Pero para mayor seguridad y control en React, podemos asegurarnos de que el token esté presente.
+      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
@@ -27,6 +33,8 @@ export function ContactSection() {
       const data = (await response.json()) as { success?: boolean; message?: string };
 
       if (!response.ok || data.success !== true) {
+        // Si el error es sobre captcha, resetearlo
+        captchaRef.current?.resetCaptcha();
         throw new Error(
           data.message ?? "No se pudo enviar el mensaje. Intentá de nuevo.",
         );
@@ -34,6 +42,7 @@ export function ContactSection() {
 
       setSubmitted(true);
       event.currentTarget.reset();
+      captchaRef.current?.resetCaptcha();
 
       // Tracking GA4: Formulario de contacto exitoso
       if (window.gtag) {
@@ -86,6 +95,13 @@ export function ContactSection() {
               type="hidden"
               name="redirect"
               value="https://leosenderovsky.com.ar/gracias"
+            />
+            {/* Honeypot Spam Protection */}
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
             />
 
             {submitError && (
@@ -216,6 +232,16 @@ export function ContactSection() {
                 rows={7}
                 required
                 className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50"
+              />
+            </div>
+            {/* hCaptcha Integration */}
+            <div className="mb-6 flex justify-center">
+              <HCaptcha
+                sitekey={import.meta.env.VITE_HCAPTCHA_SITEKEY || "50b27034-2733-42de-9964-074472d82992"}
+                onVerify={() => {
+                  console.log("Captcha verified");
+                }}
+                ref={captchaRef}
               />
             </div>
 

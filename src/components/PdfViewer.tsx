@@ -15,11 +15,10 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
 
   // Dynamically load the PDF worker only when this component is mounted
   useEffect(() => {
-    import('pdfjs-dist/build/pdf.worker.min.mjs?url')
-      .then((module) => {
-        pdfjs.GlobalWorkerOptions.workerSrc = module.default;
-      })
-      .catch((err) => console.error('Failed to load PDF worker:', err));
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+      "pdfjs-dist/build/pdf.worker.min.mjs",
+      import.meta.url
+    ).toString();
   }, []);
 
   const onDocumentLoadSuccess = useCallback(

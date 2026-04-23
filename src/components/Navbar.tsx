@@ -15,6 +15,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openMobileSubSubmenu, setOpenMobileSubSubmenu] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -291,11 +292,15 @@ export function Navbar() {
                 item.submenu ? (
                   <div key={idx} className="w-full text-center">
                     <button
-                      onClick={() => toggleSubmenu(item.label)}
-                      className="font-heading text-white text-xl uppercase tracking-wider"
+                      onClick={() => {
+                        setOpenSubmenu(openSubmenu === item.label ? null : item.label);
+                        setOpenMobileSubSubmenu(null);
+                      }}
+                      aria-expanded={openSubmenu === item.label}
+                      className="font-heading text-white text-xl uppercase tracking-wider flex items-center justify-center w-full"
                     >
                       {item.label}{" "}
-                      <i className="fa-solid fa-chevron-down ml-1"></i>
+                      <i className={`fa-solid fa-chevron-down ml-2 transition-transform duration-300 ${openSubmenu === item.label ? "rotate-180" : ""}`}></i>
                     </button>
                     <AnimatePresence>
                       {openSubmenu === item.label && (
@@ -303,59 +308,79 @@ export function Navbar() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}
-                          className="mt-2 space-y-2"
+                          className="mt-2 space-y-2 overflow-hidden"
                         >
                           {item.submenu.map((subitem, subidx) =>
                             subitem.submenu ? (
-                              <div key={subidx}>
-                                <Link
-                                  to={subitem.path!}
-                                  onClick={() => setIsOpen(false)}
-                                  className="block font-heading text-white text-lg uppercase tracking-wider"
+                              <div key={subidx} className="w-full">
+                                <button
+                                  onClick={() => setOpenMobileSubSubmenu(openMobileSubSubmenu === subitem.label ? null : subitem.label)}
+                                  aria-expanded={openMobileSubSubmenu === subitem.label}
+                                  className="font-heading text-white text-lg uppercase tracking-wider flex items-center justify-center w-full py-1"
                                 >
                                   {subitem.label}
-                                </Link>
-                                <div className="ml-4 space-y-1">
-                                  {subitem.submenu.map(
-                                    (subsubitem, subsubidx) => (
-                                      subsubitem.hash ? (
-                                        <a
-                                          key={subsubidx}
-                                          href={subsubitem.hash}
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            setIsOpen(false);
-                                            const target = document.querySelector(subsubitem.hash!);
-                                            if (target) {
-                                              target.scrollIntoView({ behavior: 'smooth' });
-                                            } else {
-                                              navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
-                                            }
-                                          }}
-                                          className="block font-heading text-white text-base uppercase tracking-wider"
-                                        >
-                                          {subsubitem.label}
-                                        </a>
-                                      ) : (
-                                        <Link
-                                          key={subsubidx}
-                                          to={subsubitem.path!}
-                                          onClick={() => setIsOpen(false)}
-                                          className="block font-heading text-white text-base uppercase tracking-wider"
-                                        >
-                                          {subsubitem.label}
-                                        </Link>
-                                      )
-                                    ),
+                                  <i className={`fa-solid fa-chevron-down ml-2 text-sm transition-transform duration-300 ${openMobileSubSubmenu === subitem.label ? "rotate-180" : ""}`}></i>
+                                </button>
+                                <AnimatePresence>
+                                  {openMobileSubSubmenu === subitem.label && (
+                                    <motion.div
+                                      initial={{ opacity: 0, height: 0 }}
+                                      animate={{ opacity: 1, height: "auto" }}
+                                      exit={{ opacity: 0, height: 0 }}
+                                      className="ml-0 space-y-1 bg-white/5 py-2 overflow-hidden"
+                                    >
+                                      {subitem.submenu.map(
+                                        (subsubitem, subsubidx) => (
+                                          subsubitem.hash ? (
+                                            <a
+                                              key={subsubidx}
+                                              href={subsubitem.hash}
+                                              onClick={(e) => {
+                                                e.preventDefault();
+                                                setIsOpen(false);
+                                                setOpenSubmenu(null);
+                                                setOpenMobileSubSubmenu(null);
+                                                const target = document.querySelector(subsubitem.hash!);
+                                                if (target) {
+                                                  target.scrollIntoView({ behavior: 'smooth' });
+                                                } else {
+                                                  navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
+                                                }
+                                              }}
+                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white"
+                                            >
+                                              {subsubitem.label}
+                                            </a>
+                                          ) : (
+                                            <Link
+                                              key={subsubidx}
+                                              to={subsubitem.path!}
+                                              onClick={() => {
+                                                setIsOpen(false);
+                                                setOpenSubmenu(null);
+                                                setOpenMobileSubSubmenu(null);
+                                              }}
+                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white"
+                                            >
+                                              {subsubitem.label}
+                                            </Link>
+                                          )
+                                        ),
+                                      )}
+                                    </motion.div>
                                   )}
-                                </div>
+                                </AnimatePresence>
                               </div>
                             ) : (
                               <Link
                                 key={subidx}
                                 to={subitem.path!}
-                                onClick={() => setIsOpen(false)}
-                                className="block font-heading text-white text-lg uppercase tracking-wider"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setOpenSubmenu(null);
+                                  setOpenMobileSubSubmenu(null);
+                                }}
+                                className="block font-heading text-white text-lg uppercase tracking-wider py-1"
                               >
                                 {subitem.label}
                               </Link>
@@ -369,7 +394,11 @@ export function Navbar() {
                   <Link
                     key={idx}
                     to={item.path}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setOpenSubmenu(null);
+                      setOpenMobileSubSubmenu(null);
+                    }}
                     className="font-heading text-xl uppercase tracking-wider"
                     style={{ color: "#FFFFFF" }}
                   >
@@ -381,7 +410,11 @@ export function Navbar() {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setOpenSubmenu(null);
+                      setOpenMobileSubSubmenu(null);
+                    }}
                     className="font-heading text-xl uppercase tracking-wider"
                     style={{ color: "#FFFFFF" }}
                   >
@@ -391,7 +424,11 @@ export function Navbar() {
                   <a
                     key={idx}
                     href={item.hash}
-                    onClick={(e) => handleNavClick(e, item.hash!)}
+                    onClick={(e) => {
+                      handleNavClick(e, item.hash!);
+                      setOpenSubmenu(null);
+                      setOpenMobileSubSubmenu(null);
+                    }}
                     className="font-heading text-xl uppercase tracking-wider"
                     style={{ color: "#FFFFFF" }}
                   >

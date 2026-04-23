@@ -1,8 +1,9 @@
-﻿Options -MultiViews
+Options -MultiViews
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-Header always set Content-Security-Policy "upgrade-insecure-requests;"
+Header always unset X-Frame-Options
+Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:; frame-src 'self' blob: data:; upgrade-insecure-requests;"
 
 # Rutas limpias: redirige /seccion -> index.html, el JS se encarga del scroll
 RewriteCond %{REQUEST_FILENAME} !-f

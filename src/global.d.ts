@@ -5,6 +5,6 @@ declare global {
     GLightbox?: (options?: Record<string, unknown>) => {
       destroy: () => void;
     };
-    gtag?: (command: string, ...args: any[]) => void;
+    gtag?: (command: string, ...args: unknown[]) => void;
   }
 }
