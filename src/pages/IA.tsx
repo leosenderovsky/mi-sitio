@@ -5,7 +5,6 @@ import { SectionHeader } from "../components/SectionHeader";
 import { portfolioIA } from "../data/portfolio-ia";
 import { VideoThumb } from "../components/PortfolioGrid";
 import { ContactSection } from "../components/ContactSection";
-import { SchemaCourse } from "../components/SchemaMarkup";
 
 export function IA() {
   useSectionScroll({ portfolio: "portfolio-ia" });

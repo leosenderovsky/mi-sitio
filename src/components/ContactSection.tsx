@@ -1,8 +1,50 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { COUNTRIES } from "../data/countries";
 
 export function ContactSection() {
+  const navigate = useNavigate();
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const data = (await response.json()) as { success?: boolean; message?: string };
+
+      if (!response.ok || data.success !== true) {
+        throw new Error(
+          data.message ?? "No se pudo enviar el mensaje. Intentá de nuevo.",
+        );
+      }
+
+      setSubmitted(true);
+      event.currentTarget.reset();
+      navigate("/gracias");
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "No se pudo enviar el mensaje. Intentá de nuevo.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contacto" className="py-16" style={{ background: "#1B1440" }}>
@@ -23,10 +65,8 @@ export function ContactSection() {
         ) : (
           <form
             id="form"
-            action="https://api.web3forms.com/submit"
-            method="POST"
             className="max-w-3xl mx-auto"
-            onSubmit={() => setSubmitted(true)}
+            onSubmit={handleSubmit}
           >
             <input
               type="hidden"
@@ -38,6 +78,12 @@ export function ContactSection() {
               name="redirect"
               value="https://leosenderovsky.com.ar/gracias"
             />
+
+            {submitError && (
+              <div className="mb-4 rounded border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm text-red-100">
+                {submitError}
+              </div>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               {/* Nombre */}
@@ -167,6 +213,7 @@ export function ContactSection() {
             <div className="text-center">
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="px-10 py-2 border border-white/40 rounded bg-[#1B1440] text-white hover:bg-[#1A74A0] hover:text-white hover:border-[#1A74A0] transition-all cursor-pointer"
                 style={{
                   fontFamily: '"Yanone Kaffeesatz",sans-serif',
@@ -174,7 +221,7 @@ export function ContactSection() {
                   textTransform: "uppercase",
                 }}
               >
-                Enviar Mensaje
+                {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
               </button>
             </div>
           </form>

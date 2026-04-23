@@ -249,6 +249,10 @@ export function Docencia() {
                 ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
                 : item.image;
 
+              if (!thumbUrl) {
+                return null;
+              }
+
               return (
                 <VideoThumb
                   key={item.id}
