@@ -34,6 +34,15 @@ export function ContactSection() {
 
       setSubmitted(true);
       event.currentTarget.reset();
+
+      // Tracking GA4: Formulario de contacto exitoso
+      if (window.gtag) {
+        window.gtag("event", "generate_lead", {
+          event_category: "Contact",
+          event_label: "Contact Form Success",
+        });
+      }
+
       navigate("/gracias");
     } catch (error) {
       setSubmitError(
@@ -237,6 +246,14 @@ export function ContactSection() {
               href="https://wa.me/5491130452585"
               target="_blank"
               rel="noreferrer"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "click_whatsapp", {
+                    event_category: "Contact",
+                    event_label: "WhatsApp Click",
+                  });
+                }
+              }}
               className="text-white hover:text-[#19D3FF] transition-colors text-sm"
             >
               + (54 9 11) 3045-2585
@@ -248,6 +265,14 @@ export function ContactSection() {
             </div>
             <a
               href="mailto:l.a.senderovsky@gmail.com"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "click_email", {
+                    event_category: "Contact",
+                    event_label: "Email Click",
+                  });
+                }
+              }}
               className="text-white hover:text-[#19D3FF] transition-colors text-sm"
             >
               l.a.senderovsky@gmail.com

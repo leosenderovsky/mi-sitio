@@ -1,5 +1,5 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -14,6 +14,7 @@ const Critica = lazy(() => import('./pages/Critica').then(module => ({ default: 
 const Web = lazy(() => import('./pages/Web').then(module => ({ default: module.Web })));
 const IA = lazy(() => import('./pages/IA').then(module => ({ default: module.IA })));
 const Gracias = lazy(() => import('./pages/Gracias').then(module => ({ default: module.Gracias })));
+const NotFound = lazy(() => import('./pages/NotFound').then(module => ({ default: module.NotFound })));
 const CVAudiovisual = lazy(() => import('./pages/SobreMi/CVAudiovisual').then(module => ({ default: module.default })));
 const CVWeb = lazy(() => import('./pages/SobreMi/CVWeb').then(module => ({ default: module.default })));
 const CVCastellano = lazy(() => import('./pages/audiovisual/CVCastellano').then(module => ({ default: module.default })));
@@ -21,12 +22,28 @@ const CVIngles = lazy(() => import('./pages/audiovisual/CVIngles').then(module =
 const CVWebEmbed = lazy(() => import('./pages/SobreMi/CVWebEmbed').then(module => ({ default: module.default })));
 const DocenciaDocEmbed = lazy(() => import('./pages/audiovisual/DocenciaDocEmbed').then(module => ({ default: module.default })));
 
+// Componente para trackear cambios de ruta en GA4
+function Analytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-5R825ZYTN5', {
+        page_path: location.pathname + location.search
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <SchemaGlobal />
         <Router>
+          <Analytics />
           <div className="flex flex-col min-h-screen bg-site-dark overflow-x-hidden">
             <Navbar />
             <main className="flex-grow pt-24">
@@ -55,6 +72,7 @@ function App() {
                   <Route path="/web/:section" element={<Web />} />
                   <Route path="/ia" element={<IA />} />
                   <Route path="/ia/:section" element={<IA />} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
             </main>
