@@ -26,7 +26,9 @@ export function VideoThumb({ item, square }: VideoThumbProps) {
       transition={{ duration: 0.4 }}
       className="group block overflow-hidden rounded-3xl shadow-xl bg-white glightbox"
     >
-      <div className={`relative overflow-hidden ${square ? "aspect-square" : "aspect-video"} bg-black`}>
+      <div
+        className={`relative overflow-hidden ${square ? "aspect-square" : "aspect-video"} bg-black`}
+      >
         <img
           src={item.image}
           alt={item.title}
@@ -41,14 +43,14 @@ export function VideoThumb({ item, square }: VideoThumbProps) {
           />
         </div>
       </div>
-      <div className="p-5 bg-[#19d3ff]">
-        <div className="text-lg font-heading uppercase text-[#1B1440] mb-1">
+      <div className="p-5 bg-[#1a74a0]">
+        <div className="text-lg font-heading uppercase text-white mb-1">
           {item.title}
         </div>
-        <div className="text-lg font-heading uppercase text-[#1B1440] mb-1">
+        <div className="text-lg font-heading uppercase text-white mb-1">
           {item.subtitle}
         </div>
-        <div className="text-[#1B1440] font-heading uppercase tracking-[2px] text-sm">
+        <div className="text-white font-heading uppercase tracking-[2px] text-sm">
           {item.category}
         </div>
       </div>
@@ -64,7 +66,8 @@ interface PortfolioGridProps {
 
 export function PortfolioGrid({
   items,
-  initialVisible = 9, square
+  initialVisible = 9,
+  square,
 }: PortfolioGridProps) {
   const [showAll, setShowAll] = useState(false);
   const visibleItems = useMemo(

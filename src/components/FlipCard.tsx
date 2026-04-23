@@ -50,27 +50,37 @@ export function FlipCard({ frontTitle, frontIcon, frontColor, backSubtitles, bac
 
         {/* ── Cara TRASERA ── */}
         <div
-          className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-lg border-2 border-white flex flex-col items-center justify-center text-white gap-1"
+          className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-lg border-2 border-white flex flex-col items-center justify-center text-white gap-1 overflow-hidden"
           style={
             backImage
               ? { backgroundImage: `url(${backImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }
               : { backgroundColor: frontColor }
           }
         >
-          {backSubtitles.map((sub, i) => (
-            <div
-              key={i}
-              className="text-white text-center uppercase"
-              style={{
-                fontFamily: '"Yanone Kaffeesatz", sans-serif',
-                fontSize: '2em',
-                fontWeight: 300,
-                lineHeight: 1.8,
-              }}
-            >
-              {sub}
-            </div>
-          ))}
+          {/* Capa de color con opacidad para mejorar legibilidad sobre la imagen de fondo */}
+          {backImage && (
+            <div 
+              className="absolute inset-0" 
+              style={{ backgroundColor: 'rgba(13, 11, 46, 0.75)' }} 
+            />
+          )}
+
+          <div className="relative z-10 flex flex-col items-center justify-center gap-1">
+            {backSubtitles.map((sub, i) => (
+              <div
+                key={i}
+                className="text-white text-center uppercase"
+                style={{
+                  fontFamily: '"Yanone Kaffeesatz", sans-serif',
+                  fontSize: '2em',
+                  fontWeight: 300,
+                  lineHeight: 1.8,
+                }}
+              >
+                {sub}
+              </div>
+            ))}
+          </div>
         </div>
       </motion.div>
     </div>

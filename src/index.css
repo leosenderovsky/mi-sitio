@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Colores de categoría — Nueva paleta Brand Fusion ── */
-  --color-audiovisual: #0D0B2E;   
-  --color-web: #1A74C0;           
-  --color-ia: #1B1440;            
+  /* ── Colores de categoría — Paleta Brand Fusion ── */
+  --color-audiovisual: #19D3FF;   /* Cian Eléctrico — Audiovisual */
+  --color-web: #1A74A0;           /* Violeta Web     */
+  --color-ia: #1B1440;            /* IA Deep / Azul Oscuro */
 
   /* ── Paleta general ── */
   --color-site-dark: #0D0B2E;
-  --color-site-blue: #0D0B2E;     
-  --color-site-teal: #19D3FF;     /* Cian Eléctrico */
+  --color-site-blue: #1A74A0;     /* Violeta Web — color primario de acción */
+  --color-site-teal: #19D3FF;     /* Cian Eléctrico  */
   --color-site-text: #666666;
   --color-site-muted: #e6e6e6;
-  --color-primary: #1A74C0;       /* Violeta de Fusión */
-  --color-secondary: #19D3FF;     /* Cian Eléctrico */
+  --color-primary: #1A74A0;       /* Violeta Web     */
+  --color-secondary: #19D3FF;     /* Cian Eléctrico  */
+  --color-mocha: #A47551;          /* Mocha Mousse — acento cálido */
+  --color-text-light: #F5F5F5;    /* Blanco Crudo — texto sobre fondos oscuros */
 
   /* ── Nuevos tokens de paleta ── */
   --color-bg-dark: #0D0B2E;
-  --color-audiovisual-brand: #1B1440;
-  --color-web-brand: #19D3FF;
-  --color-ai-brand: #1A74C0;
+  --color-audiovisual-brand: #19D3FF;
+  --color-web-brand: #1A74A0;
+  --color-ai-brand: #1B1440;
 
   /* ── Tipografía ── */
   --font-body: "Libre Franklin", sans-serif;
@@ -36,7 +38,7 @@
 
   body {
     /* Brand Fusion Flow — 0deg = abajo hacia arriba */
-    background-image: linear-gradient(0deg, #1A74C0 0%, #19D3FF 100%);
+    background-image: linear-gradient(135deg, #0D0B2E 0%, #1B1440 100%);
     color: #666;
     font-family: "Libre Franklin", sans-serif;
     font-size: 14px;

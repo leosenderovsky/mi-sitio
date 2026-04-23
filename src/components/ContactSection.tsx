@@ -5,11 +5,7 @@ export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section
-      id="contacto"
-      className="py-16"
-      style={{ background: "#1B1440" }}
-    >
+    <section id="contacto" className="py-16" style={{ background: "#1B1440" }}>
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-[4em] uppercase text-center text-white mb-8">
           Contactame
@@ -30,7 +26,7 @@ export function ContactSection() {
             action="https://api.web3forms.com/submit"
             method="POST"
             className="max-w-3xl mx-auto"
-            onSubmit={() => setSubmitted(false)}
+            onSubmit={() => setSubmitted(true)}
           >
             <input
               type="hidden"
@@ -94,10 +90,7 @@ export function ContactSection() {
               </div>
               {/* País */}
               <div>
-                <label
-                  htmlFor="pais"
-                  className="block text-sm text-white mb-1"
-                >
+                <label htmlFor="pais" className="block text-sm text-white mb-1">
                   País
                 </label>
                 <input
@@ -174,7 +167,7 @@ export function ContactSection() {
             <div className="text-center">
               <button
                 type="submit"
-                className="px-10 py-2 border border-white/40 rounded bg-[#1B1440] text-white hover:bg-[#1A74C0] hover:text-white hover:border-[#1A74C0] transition-all cursor-pointer"
+                className="px-10 py-2 border border-white/40 rounded bg-[#1B1440] text-white hover:bg-[#1A74A0] hover:text-white hover:border-[#1A74A0] transition-all cursor-pointer"
                 style={{
                   fontFamily: '"Yanone Kaffeesatz",sans-serif',
                   fontSize: "1.4em",

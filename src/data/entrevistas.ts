@@ -1,46 +1,49 @@
-import type { EntrevistaItem } from '../types';
+import type { EntrevistaItem } from "../types";
 
 export const entrevistas: EntrevistaItem[] = [
   {
     id: "entrevista-1",
-    title: "Cita a media tarde",
-    medium: "YouTube",
+    title: "Cita a media tarde, 2012",
+    medium: "100.3 FM Mitre (Bahía Blanca)",
     image: "assets/img/docencia/entrevistas/cita-a-media-tarde.jpg",
-    link: "https://www.youtube.com/watch?v=vKvHoXWIIZo"
+    link: "https://www.youtube.com/watch?v=vKvHoXWIIZo",
   },
   {
     id: "entrevista-2",
-    title: "La mujer judía en el cine",
-    medium: "YouTube",
-    image: "assets/img/docencia/entrevistas/la-mujer-judia-en-el-cine-shabuatov.jpg",
-    link: "https://www.youtube.com/watch?v=czBz_2_yYWg"
+    title: "La mujer judía en el cine - 'Shabuatov', 2011",
+    medium: "AM 1140, Radio La Luna",
+    image:
+      "assets/img/docencia/entrevistas/la-mujer-judia-en-el-cine-shabuatov.jpg",
+    link: "https://www.youtube.com/watch?v=czBz_2_yYWg",
   },
   {
     id: "entrevista-3",
-    title: "Cine en dictadura (Radio Nacional)",
-    medium: "YouTube",
-    image: "assets/img/docencia/entrevistas/cine-en-dictadura-radio-nacional.jpg",
-    link: "https://www.youtube.com/watch?v=G20DbKzEe54"
+    title: "Cine en dictadura - 'Manivela', 2015",
+    medium: "Radio Nacional",
+    image:
+      "assets/img/docencia/entrevistas/cine-en-dictadura-radio-nacional.jpg",
+    link: "https://www.youtube.com/watch?v=G20DbKzEe54",
   },
   {
     id: "entrevista-4",
-    title: "Cine en dictadura (FM de la calle)",
-    medium: "YouTube",
-    image: "assets/img/docencia/entrevistas/cine-en-dictadura-fm-de-la-calle.jpg",
-    link: "https://www.youtube.com/watch?v=afykA8cMtr8"
+    title: "Cine en dictadura - 'En eso estamos', 2015",
+    medium: "FM de la calle, Bahía Blanca",
+    image:
+      "assets/img/docencia/entrevistas/cine-en-dictadura-fm-de-la-calle.jpg",
+    link: "https://www.youtube.com/watch?v=afykA8cMtr8",
   },
   {
     id: "entrevista-5",
-    title: "Racismo en Hollywood",
-    medium: "YouTube",
+    title: "Racismo en Hollywood - 'Con Gladys Rodríguez', 2021",
+    medium: "TVV Venezuela",
     image: "assets/img/docencia/entrevistas/racismo-en-hollywood.jpg",
-    link: "https://www.youtube.com/watch?v=12HDUqpAFdw"
+    link: "https://www.youtube.com/watch?v=12HDUqpAFdw",
   },
   {
     id: "entrevista-6",
-    title: "Clásicos de ciencia ficción",
-    medium: "YouTube",
+    title: "Clásicos de ciencia ficción - 'Con Gladys Rodríguez', 2021",
+    medium: "TVV Venezuela",
     image: "assets/img/docencia/entrevistas/clasicos-de-ciencia-ficcion.jpg",
-    link: "https://www.youtube.com/watch?v=KQHizJvq98k"
-  }
+    link: "https://www.youtube.com/watch?v=KQHizJvq98k",
+  },
 ];

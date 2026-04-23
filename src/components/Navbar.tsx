@@ -25,6 +25,16 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e: globalThis.MouseEvent) => {
+      if (!(e.target as HTMLElement).closest("nav")) {
+        setOpenSubmenu(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
     setIsOpen(false);
@@ -114,7 +124,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-[#19D3FF] to-[#1B1440] ${isScrolled ? "shadow-lg py-2" : "py-4"}`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-lg py-2" : "py-4"}`}
+      style={{
+        background: "linear-gradient(to right, #19D3FF, #1A74A0, #1B1440)",
+      }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="z-50" onClick={() => window.scrollTo(0, 0)}>

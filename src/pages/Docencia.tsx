@@ -9,14 +9,9 @@ import { docenciaCiclos } from "../data/docencia-ciclos";
 import { entrevistas } from "../data/entrevistas";
 import { experienciaDocencia } from "../data/experiencia-docencia";
 import { educacionFUC } from "../data/educacion";
+import { VideoThumb } from "../components/PortfolioGrid";
 import { ContactSection } from "../components/ContactSection";
 import { SchemaCourse } from "../components/SchemaMarkup";
-// ...
-<SchemaCourse
-  name="Judaísmo en el cine"
-  description="Ciclos de charlas sobre la representación del judaísmo y la cultura judía en el cine argentino, israelí y mundial."
-  url="https://leosenderovsky.com.ar/audiovisual/docencia"
-/>;
 
 const SECTION_MAP = {
   experiencia: "resume2",
@@ -61,6 +56,11 @@ export function Docencia() {
           },
         ]}
       />
+      <SchemaCourse
+        name="Judaísmo en el cine"
+        description="Ciclos de charlas sobre la representación del judaísmo y la cultura judía en el cine argentino, israelí y mundial."
+        url="https://leosenderovsky.com.ar/audiovisual/docencia"
+      />
 
       <section
         id="encuentros-de-cine"
@@ -73,7 +73,7 @@ export function Docencia() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           {/* Encabezado */}
           <SectionHeader
@@ -147,7 +147,7 @@ export function Docencia() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           {/* Título temático */}
           <h3
@@ -178,7 +178,7 @@ export function Docencia() {
 
       <section
         id="resume2"
-        className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
+        className="py-20 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader
@@ -192,8 +192,8 @@ export function Docencia() {
               onClick={() => setActiveTab("experience")}
               className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${
                 activeTab === "experience"
-                  ? "bg-[#1B1440] text-white"
-                  : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"
+                  ? "bg-[#0D0B2E] text-white"
+                  : "border border-[#0D0B2E] text-[#0D0B2E] hover:bg-[#0D0B2E] hover:text-white transition-colors"
               }`}
             >
               Experiencia laboral
@@ -203,8 +203,8 @@ export function Docencia() {
               onClick={() => setActiveTab("education")}
               className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${
                 activeTab === "education"
-                  ? "bg-[#1B1440] text-white"
-                  : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"
+                  ? "bg-[#0D0B2E] text-white"
+                  : "border border-[#0D0B2E] text-[#0D0B2E] hover:bg-[#0D0B2E] hover:text-white transition-colors"
               }`}
             >
               Formación académica
@@ -247,32 +247,19 @@ export function Docencia() {
                 : null;
               const thumbUrl = videoId
                 ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-                : "/assets/img/video-placeholder.jpg";
+                : item.image;
 
               return (
-                <a
+                <VideoThumb
                   key={item.id}
-                  href={item.link}
-                  className="group relative overflow-hidden rounded-3xl shadow-xl bg-black aspect-video glightbox"
-                >
-                  <img
-                    src={thumbUrl}
-                    alt={item.title}
-                    className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <img
-                      src="/assets/img/hover.png"
-                      alt="Play"
-                      className="w-20 h-20 object-contain"
-                    />
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent">
-                    <h4 className="font-heading text-xl text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      {item.title}
-                    </h4>
-                  </div>
-                </a>
+                  item={{
+                    id: item.id,
+                    title: item.title,
+                    category: item.medium,
+                    image: thumbUrl,
+                    link: item.link,
+                  }}
+                />
               );
             })}
           </div>

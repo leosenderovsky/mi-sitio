@@ -18,7 +18,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-[#1B1440] to-[#19D3FF] py-12 border-t border-white/10">
+    <footer
+      className="py-12 border-t border-white/10"
+      style={{
+        background: "linear-gradient(to right, #1B1440, #1A74A0, #19D3FF)",
+      }}
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,14 +38,14 @@ export function Footer() {
                   href={link.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 rounded-full border border-site-blue flex items-center justify-center text-site-blue hover:bg-site-blue hover:border-site-blue hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full border border-[#1B1440] flex items-center justify-center text-[#1B1440] hover:bg-[#1B1440] hover:border-[#1B1440] hover:text-white transition-all duration-300"
                 >
                   <i className={`fa-brands ${link.icon}`}></i>
                 </a>
               </li>
             ))}
           </ul>
-          <p className="text-site-blue font-body">
+          <p className="text-[#1B1440] font-body">
             Copyright © {new Date().getFullYear()} Leo Aquiba Senderovsky
           </p>
         </motion.div>

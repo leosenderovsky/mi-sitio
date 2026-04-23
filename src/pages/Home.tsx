@@ -218,7 +218,7 @@ export function Home() {
                 frontTitle="AUDIOVISUAL"
                 frontIcon="fa-solid fa-film"
                 frontColor="#19D3FF"
-                backSubtitles={["EDICIÓN", "GUIÓN", "DOCENCIA"]}
+                backSubtitles={["EDICIÓN", "GUIÓN", "DOCENCIA", "CRÍTICA"]}
                 backImage="/assets/img/video-editor-fondo.jpg"
               />
             </motion.div>
@@ -232,7 +232,7 @@ export function Home() {
               <FlipCard
                 frontTitle="WEB"
                 frontIcon="fa-solid fa-code"
-                frontColor="#1A74C0"
+                frontColor="#1A74A0"
                 backSubtitles={["FRONT END DEVELOPER"]}
                 backImage="/assets/img/web-dev-fondo.jpg"
               />
@@ -259,7 +259,12 @@ export function Home() {
       {/* ══════════════════════════════════════
           MI BIO – Video + Ilustraciones
       ══════════════════════════════════════ */}
-      <div className="py-10 bg-gradient-to-r from-[#1B1440] to-[#19D3FF]">
+      <div
+        className="py-10"
+        style={{
+          background: "linear-gradient(to right, #1B1440, #1A74A0, #19D3FF)",
+        }}
+      >
         <div className="container mx-auto px-4">
           <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Mi bio
@@ -391,7 +396,7 @@ export function Home() {
                 <div className="flex gap-2">
                   <a
                     href="/audiovisual/cv/castellano"
-                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded"
+                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',
                       fontSize: "1.1em",
@@ -403,7 +408,7 @@ export function Home() {
                   </a>
                   <a
                     href="/audiovisual/cv/ingles"
-                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded"
+                    className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',
                       fontSize: "1.1em",
@@ -416,7 +421,7 @@ export function Home() {
                 </div>
                 <a
                   href="/web/cv"
-                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded w-full"
+                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded w-full"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',
                     fontSize: "1.1em",
@@ -428,7 +433,7 @@ export function Home() {
                 </a>
                 <a
                   href="#contacto"
-                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#1A74C0] hover:border-[#1A74C0] hover:text-white transition-all rounded w-full"
+                  className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded w-full"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',
                     fontSize: "1.1em",
@@ -448,12 +453,15 @@ export function Home() {
       {/* Barra social - Fuera de la sección about */}
       <section
         id="follow"
-        className="shadow-lg w-full py-8 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
+        className="shadow-lg w-full py-8"
+        style={{
+          background: "linear-gradient(to right, #19D3FF, #1A74A0, #1B1440)",
+        }}
       >
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <span
-              className="text-site-blue whitespace-nowrap"
+              className="text-[#1B1440] whitespace-nowrap"
               style={{
                 fontFamily: '"Yanone Kaffeesatz",sans-serif',
                 fontSize: "2em",
@@ -470,7 +478,7 @@ export function Home() {
                     href={s.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-12 h-12 rounded-full border border-site-blue flex items-center justify-center text-xl text-site-blue hover:bg-site-blue hover:border-site-blue hover:text-white transition-all duration-300"
+                    className="w-12 h-12 rounded-full border border-[#1B1440] flex items-center justify-center text-xl text-[#1B1440] hover:bg-[#1B1440] hover:border-[#1B1440] hover:text-white transition-all duration-300"
                     title={s.cls}
                   >
                     <i className={s.icon} />

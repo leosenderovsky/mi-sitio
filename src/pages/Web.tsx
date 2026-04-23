@@ -37,7 +37,7 @@ export function Web() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="DESARROLLO" subtitle="WEB" theme="dark" />
           <div className="max-w-3xl mx-auto mt-8 text-xl font-body leading-relaxed text-white/90">
@@ -78,7 +78,7 @@ export function Web() {
       <section
         id="timeline-web"
         className="py-20 text-white"
-        style={{ backgroundColor: "#0D0B2E" }}
+        style={{ backgroundColor: "#1A74A0" }}
       >
         <div className="container mx-auto px-4">
           <SectionHeader title="Mis proyectos" subtitle="Web" theme="dark" />

@@ -49,7 +49,7 @@ export function Critica() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="Crítica" subtitle="Audiovisual" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-center">
@@ -114,7 +114,7 @@ export function Critica() {
       {/* ── Experiencia (resume2 — datos reales de Cine.com) ── */}
       <section
         id="resume2"
-        className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
+        className="py-20 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader
@@ -128,8 +128,8 @@ export function Critica() {
               onClick={() => setActiveTab("experience")}
               className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${
                 activeTab === "experience"
-                  ? "bg-[#1B1440] text-white"
-                  : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"
+                  ? "bg-[#0D0B2E] text-white"
+                  : "border border-[#0D0B2E] text-[#0D0B2E] hover:bg-[#0D0B2E] hover:text-white transition-colors"
               }`}
             >
               Experiencia laboral
@@ -139,8 +139,8 @@ export function Critica() {
               onClick={() => setActiveTab("education")}
               className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${
                 activeTab === "education"
-                  ? "bg-[#1B1440] text-white"
-                  : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"
+                  ? "bg-[#0D0B2E] text-white"
+                  : "border border-[#0D0B2E] text-[#0D0B2E] hover:bg-[#0D0B2E] hover:text-white transition-colors"
               }`}
             >
               Formación académica

@@ -69,7 +69,7 @@ export function Edicion() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="EDICIÓN" subtitle="AUDIOVISUAL" theme="dark" />
           <div className="max-w-3xl mx-auto mt-8 text-xl text-site-muted font-body leading-relaxed">
@@ -96,7 +96,7 @@ export function Edicion() {
 
       <section
         id="resume"
-        className="py-20 bg-gradient-to-r from-[#1A74C0] to-[#19D3FF]"
+        className="py-20 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader
@@ -120,7 +120,7 @@ export function Edicion() {
             <button
               type="button"
               onClick={() => setActiveTab("education")}
-              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${activeTab === "education" ? "bg-[#1B1440] text-white" : "border border-[#1B1440] text-[#1B1440] hover:bg-[#1B1440] hover:text-white transition-colors"}`}
+              className={`rounded-full px-8 py-3 text-xl uppercase font-heading tracking-[2px] ${activeTab === "education" ? "bg-[#0D0B2E] text-white" : "border border-[#0D0B2E] text-[#0D0B2E] hover:bg-[#0D0B2E] hover:text-white transition-colors"}`}
             >
               Formación académica
             </button>
@@ -141,9 +141,13 @@ export function Edicion() {
         </div>
       </section>
 
-      <section id="portfolio-edicion" className="py-20 text-white bg-[#1B1440]">
+      <section id="portfolio-edicion" className="py-20 text-white bg-[#19d3ff]">
         <div className="container mx-auto px-4">
-          <SectionHeader title="Mi portfolio" subtitle="Edición" theme="dark" />
+          <SectionHeader
+            title="Mi portfolio"
+            subtitle="Edición"
+            theme="light"
+          />
           <div className="mt-12">
             <PortfolioGrid items={portfolioEdicion} initialVisible={9} />
           </div>
