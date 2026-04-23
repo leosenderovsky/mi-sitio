@@ -1,10 +1,7 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
-
-pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 interface PdfViewerProps {
   url: string;
@@ -15,6 +12,15 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [scale, setScale] = useState<number>(1.0);
+
+  // Dynamically load the PDF worker only when this component is mounted
+  useEffect(() => {
+    import('pdfjs-dist/build/pdf.worker.min.mjs?url')
+      .then((module) => {
+        pdfjs.GlobalWorkerOptions.workerSrc = module.default;
+      })
+      .catch((err) => console.error('Failed to load PDF worker:', err));
+  }, []);
 
   const onDocumentLoadSuccess = useCallback(
     ({ numPages }: { numPages: number }) => {

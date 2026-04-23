@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
@@ -23,6 +23,13 @@ export function Docencia() {
   const [activeTab, setActiveTab] = useState<"experience" | "education">(
     "experience",
   );
+
+  useEffect(() => {
+    const lightbox = window.GLightbox?.({
+      selector: ".glightbox",
+    });
+    return () => lightbox?.destroy();
+  }, []);
 
   const ciclosJudaismo = docenciaCiclos.filter((c) => c.grupo === "judaismo");
   const ciclosCineArg = docenciaCiclos.filter(

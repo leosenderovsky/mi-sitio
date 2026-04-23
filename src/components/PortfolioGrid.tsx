@@ -1,4 +1,4 @@
-﻿import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { PortfolioItem } from "../types";
 
@@ -14,17 +14,20 @@ const HOVER_IMAGES: Record<string, string> = {
 };
 
 export function VideoThumb({ item, square }: VideoThumbProps) {
+  const isWeb = item.format === "web";
   const hoverImage =
     HOVER_IMAGES[item.format ?? "16:9"] || HOVER_IMAGES["16:9"];
 
   return (
     <motion.a
       href={item.link}
+      target={isWeb ? "_blank" : undefined}
+      rel={isWeb ? "noopener noreferrer" : undefined}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="group block overflow-hidden rounded-3xl shadow-xl bg-white glightbox"
+      className={`group block overflow-hidden rounded-3xl shadow-xl bg-white ${!isWeb ? "glightbox" : ""}`}
     >
       <div
         className={`relative overflow-hidden ${square ? "aspect-square" : "aspect-video"} bg-black`}
@@ -35,13 +38,15 @@ export function VideoThumb({ item, square }: VideoThumbProps) {
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <img
-            src={hoverImage}
-            alt="Play"
-            className="w-20 h-20 object-contain"
-          />
-        </div>
+        {!isWeb && (
+          <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <img
+              src={hoverImage}
+              alt="Play"
+              className="w-20 h-20 object-contain"
+            />
+          </div>
+        )}
       </div>
       <div className="p-5 bg-[#1a74a0]">
         <div className="text-lg font-heading uppercase text-white mb-1">
@@ -77,13 +82,10 @@ export function PortfolioGrid({
 
   useEffect(() => {
     // Re-initialize GLightbox to catch new elements
-    if (typeof window !== "undefined" && "GLightbox" in window) {
-      // @ts-expect-error GLightbox is not in window types
-      const lightbox = window.GLightbox({
-        selector: ".glightbox",
-      });
-      return () => lightbox.destroy();
-    }
+    const lightbox = window.GLightbox?.({
+      selector: ".glightbox",
+    });
+    return () => lightbox?.destroy();
   }, [visibleItems]);
 
   return (

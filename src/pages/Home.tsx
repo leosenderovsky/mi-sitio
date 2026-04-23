@@ -24,11 +24,11 @@ const audiovisualCards = [
       { label: "Ver mi experiencia", href: "/audiovisual/edicion/experiencia" },
       {
         label: "Ver mi portfolio de videos",
-        href: "/audiovisual/edicion/portfolio/videos",
+        href: "/audiovisual/edicion/portfolio"
       },
       {
         label: "Ver portfolio de reels",
-        href: "/audiovisual/edicion/portfolio/reels",
+        href: "/audiovisual/edicion/portfolio/reels"
       },
     ],
   },
@@ -170,10 +170,7 @@ export function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && "GLightbox" in window) {
-      const typedWindow = window as Window & {
-        GLightbox?: (opts: { selector: string }) => { destroy(): void };
-      };
-      const lightbox = typedWindow.GLightbox?.({ selector: ".glightbox-home" });
+      const lightbox = window.GLightbox?.({ selector: ".glightbox-home" });
       return () => lightbox?.destroy();
     }
   }, []);

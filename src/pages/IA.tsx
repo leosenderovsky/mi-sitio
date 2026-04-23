@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
@@ -8,6 +9,13 @@ import { ContactSection } from "../components/ContactSection";
 
 export function IA() {
   useSectionScroll({ portfolio: "portfolio-ia" });
+
+  useEffect(() => {
+    const lightbox = window.GLightbox?.({
+      selector: ".glightbox",
+    });
+    return () => lightbox?.destroy();
+  }, []);
 
   return (
     <>

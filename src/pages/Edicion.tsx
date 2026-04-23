@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { TimelineSection } from "../components/TimelineSection";
 import { PortfolioGrid } from "../components/PortfolioGrid";
@@ -11,31 +11,18 @@ import { experienciaEdicion } from "../data/experiencia-edicion";
 import { educacionEdicion } from "../data/educacion";
 import { ContactSection } from "../components/ContactSection";
 
+const SECTION_MAP = {
+  experiencia: "resume",
+  portfolio: "portfolio-edicion",
+  "portfolio/videos": "portfolio-edicion",
+  "portfolio/reels": "portfolio-edicion-reels",
+};
+
 export function Edicion() {
   const [activeTab, setActiveTab] = useState<"experience" | "education">(
     "experience",
   );
-  const location = useLocation();
-
-  useEffect(() => {
-    const path = location.pathname;
-    let targetId: string | null = null;
-    if (path.endsWith("/experiencia")) targetId = "resume";
-    else if (path.endsWith("/portfolio/videos") || path.endsWith("/portfolio"))
-      targetId = "portfolio-edicion";
-    else if (path.endsWith("/portfolio/reels"))
-      targetId = "portfolio-edicion-reels";
-
-    if (targetId) {
-      setTimeout(() => {
-        document
-          .getElementById(targetId)
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [location.pathname]);
+  useSectionScroll(SECTION_MAP);
 
   return (
     <>

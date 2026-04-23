@@ -118,6 +118,11 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
     - Ajustes en el tamaño y estilo de los iconos de reproducción de video en los grids de portfolio.
     - Consistencia visual en los campos del formulario de contacto con un diseño más moderno y traslúcido.
 
+### Integración de Lightbox y Refinamiento de Portfolio (Abril 2026)
+- **Experiencia Multimedia**: Integración de `GLightbox` para una reproducción de video fluida y profesional. Las secciones de "Entrevistas" en Docencia y el spot principal en el Portfolio de IA ahora se reproducen en un overlay integrado sin salir del sitio.
+- **Diferenciación de Contenidos (IA)**: Implementación de lógica visual para distinguir entre proyectos de video y sitios web. Los proyectos web ahora abren en pestañas nuevas con micro-interacciones específicas, eliminando el icono de reproducción para mayor claridad semántica.
+- **Optimización de Tipado**: Creación de definiciones globales de TypeScript (`global.d.ts`) para gestionar librerías externas de terceros, eliminando advertencias de lint y mejorando la mantenibilidad del código.
+
 ## 📞 Contacto
 
 - **LinkedIn**: [Leo Senderovsky](https://www.linkedin.com/in/lsender/)

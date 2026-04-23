@@ -27,7 +27,8 @@ export function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (e: globalThis.MouseEvent) => {
-      if (!(e.target as HTMLElement).closest("nav")) {
+      const target = e.target as HTMLElement | null;
+      if (target && !target.closest("nav")) {
         setOpenSubmenu(null);
       }
     };
@@ -55,11 +56,12 @@ export function Navbar() {
           label: "EDICIÓN",
           path: "/audiovisual/edicion",
           submenu: [
-            { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia" },
-            { label: "PORTFOLIO", path: "/audiovisual/edicion/portfolio" },
+            { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia", hash: "#resume" },
+            { label: "PORTFOLIO VIDEOS", path: "/audiovisual/edicion/portfolio", hash: "#portfolio-edicion" },
             {
               label: "PORTFOLIO REELS",
-              path: "/audiovisual/edicion/portfolio/reels",
+              path: "/audiovisual/edicion",
+              hash: "#portfolio-edicion-reels",
             },
           ],
         },
@@ -169,24 +171,65 @@ export function Navbar() {
                             </Link>
                             <div className="absolute left-full top-0 mt-0 bg-site-blue shadow-lg rounded-md py-2 min-w-48 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
                               {subitem.submenu.map((subsubitem, subsubidx) => (
-                                <Link
-                                  key={subsubidx}
-                                  to={subsubitem.path!}
-                                  className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
-                                >
-                                  {subsubitem.label}
-                                </Link>
-                              ))}
+                                    subsubitem.hash ? (
+                                      <a
+                                        key={subsubidx}
+                                        href={subsubitem.hash}
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          setIsOpen(false);
+                                          // If we're already on the page, scroll; else navigate to path with hash
+                                          const target = document.querySelector(subsubitem.hash!);
+                                          if (target) {
+                                            target.scrollIntoView({ behavior: 'smooth' });
+                                          } else {
+                                            navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
+                                          }
+                                        }}
+                                        className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
+                                      >
+                                        {subsubitem.label}
+                                      </a>
+                                    ) : (
+                                      <Link
+                                        key={subsubidx}
+                                        to={subsubitem.path!}
+                                        className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
+                                      >
+                                        {subsubitem.label}
+                                      </Link>
+                                    )
+                                  ))}
                             </div>
                           </div>
                         ) : (
-                          <Link
-                            key={subidx}
-                            to={subitem.path!}
-                            className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
-                          >
-                            {subitem.label}
-                          </Link>
+                          subitem.hash ? (
+                            <a
+                              key={subidx}
+                              href={subitem.hash}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                const target = document.querySelector(subitem.hash!);
+                                if (target) {
+                                  target.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                  navigate({ pathname: subitem.path!, hash: subitem.hash });
+                                }
+                                setOpenSubmenu(null);
+                              }}
+                              className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
+                            >
+                              {subitem.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={subidx}
+                              to={subitem.path!}
+                              className="block px-4 py-2 text-white hover:bg-white/30 font-heading uppercase text-[20px]"
+                            >
+                              {subitem.label}
+                            </Link>
+                          )
                         ),
                       )}
                     </motion.div>
@@ -275,14 +318,34 @@ export function Navbar() {
                                 <div className="ml-4 space-y-1">
                                   {subitem.submenu.map(
                                     (subsubitem, subsubidx) => (
-                                      <Link
-                                        key={subsubidx}
-                                        to={subsubitem.path!}
-                                        onClick={() => setIsOpen(false)}
-                                        className="block font-heading text-white text-base uppercase tracking-wider"
-                                      >
-                                        {subsubitem.label}
-                                      </Link>
+                                      subsubitem.hash ? (
+                                        <a
+                                          key={subsubidx}
+                                          href={subsubitem.hash}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            setIsOpen(false);
+                                            const target = document.querySelector(subsubitem.hash!);
+                                            if (target) {
+                                              target.scrollIntoView({ behavior: 'smooth' });
+                                            } else {
+                                              navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
+                                            }
+                                          }}
+                                          className="block font-heading text-white text-base uppercase tracking-wider"
+                                        >
+                                          {subsubitem.label}
+                                        </a>
+                                      ) : (
+                                        <Link
+                                          key={subsubidx}
+                                          to={subsubitem.path!}
+                                          onClick={() => setIsOpen(false)}
+                                          className="block font-heading text-white text-base uppercase tracking-wider"
+                                        >
+                                          {subsubitem.label}
+                                        </Link>
+                                      )
                                     ),
                                   )}
                                 </div>
