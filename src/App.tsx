@@ -58,9 +58,7 @@ function App() {
                   <Route path="/audiovisual/cv" element={<Navigate to="/audiovisual/cv/castellano" replace />} />
                   <Route path="/web/cv" element={<CVWebEmbed />} />
                   <Route path="/audiovisual/edicion" element={<Edicion />} />
-                  <Route path="/audiovisual/edicion/portfolio/videos" element={<Edicion />} />
-                  <Route path="/audiovisual/edicion/portfolio/reels" element={<Edicion />} />
-                  <Route path="/audiovisual/edicion/:section" element={<Edicion />} />
+                  <Route path="/audiovisual/edicion/*" element={<Edicion />} />
                   <Route path="/audiovisual/guion" element={<Guion />} />
                   <Route path="/audiovisual/guion/:section" element={<Guion />} />
                   <Route path="/audiovisual/docencia" element={<Docencia />} />

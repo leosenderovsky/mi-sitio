@@ -188,7 +188,7 @@ export function Guion() {
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Guión" theme="light" />
           <div className="mt-12">
-            <PortfolioGrid items={portfolioGuion} initialVisible={9} />
+            <PortfolioGrid items={portfolioGuion} initialVisible={9} theme="light" />
           </div>
         </div>
       </section>

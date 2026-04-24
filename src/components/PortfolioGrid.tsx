@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+﻿import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { PortfolioItem } from "../types";
 
@@ -67,12 +67,14 @@ interface PortfolioGridProps {
   items: PortfolioItem[];
   initialVisible?: number;
   square?: boolean;
+  theme?: "light" | "dark";
 }
 
 export function PortfolioGrid({
   items,
   initialVisible = 9,
   square,
+  theme = "dark",
 }: PortfolioGridProps) {
   const [showAll, setShowAll] = useState(false);
   const visibleItems = useMemo(
@@ -88,6 +90,10 @@ export function PortfolioGrid({
     return () => lightbox?.destroy();
   }, [visibleItems]);
 
+  const buttonClasses = theme === "light" 
+    ? "bg-[#1B1440] text-white hover:bg-[#1a74a0] hover:text-white" 
+    : "bg-[#19d3ff] text-[#1B1440] hover:bg-[#1a74a0] hover:text-white";
+
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -100,7 +106,7 @@ export function PortfolioGrid({
           <button
             type="button"
             onClick={() => setShowAll(true)}
-            className="bg-[#19d3ff] text-[#1B1440] uppercase font-heading tracking-[2px] px-8 py-4 rounded-full hover:bg-[#1B1440] hover:text-white transition-colors"
+            className={`${buttonClasses} uppercase font-heading tracking-[2px] px-8 py-4 rounded-full transition-colors`}
           >
             Ver más
           </button>

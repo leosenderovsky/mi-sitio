@@ -5,10 +5,13 @@ export type SectionMap = Record<string, string>;
 
 export function useSectionScroll(sectionMap: SectionMap = {}) {
   const { pathname, hash } = useLocation();
-  const params = useParams<{ section?: string }>();
+  const params = useParams();
+  const section = params.section;
+  const splat = params['*'];
 
   useEffect(() => {
-    const target = params.section ? sectionMap[params.section] : hash;
+    const sectionParam = section || splat;
+    const target = sectionParam ? sectionMap[sectionParam] : hash;
     const anchor = target ? (target.startsWith('#') ? target : `#${target}`) : undefined;
 
     const scrollToTarget = () => {
@@ -24,5 +27,5 @@ export function useSectionScroll(sectionMap: SectionMap = {}) {
 
     const timer = window.setTimeout(scrollToTarget, 100);
     return () => window.clearTimeout(timer);
-  }, [pathname, hash, params.section, sectionMap]);
+  }, [pathname, hash, section, splat, sectionMap]);
 }

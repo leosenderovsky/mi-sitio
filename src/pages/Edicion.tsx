@@ -136,7 +136,7 @@ export function Edicion() {
             theme="light"
           />
           <div className="mt-12">
-            <PortfolioGrid items={portfolioEdicion} initialVisible={9} />
+            <PortfolioGrid items={portfolioEdicion} initialVisible={9} theme="light" />
           </div>
         </div>
       </section>

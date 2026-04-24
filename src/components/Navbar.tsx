@@ -57,13 +57,9 @@ export function Navbar() {
           label: "EDICIÓN",
           path: "/audiovisual/edicion",
           submenu: [
-            { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia", hash: "#resume" },
-            { label: "PORTFOLIO VIDEOS", path: "/audiovisual/edicion/portfolio", hash: "#portfolio-edicion" },
-            {
-              label: "PORTFOLIO REELS",
-              path: "/audiovisual/edicion",
-              hash: "#portfolio-edicion-reels",
-            },
+            { label: "EXPERIENCIA", path: "/audiovisual/edicion/experiencia" },
+            { label: "PORTFOLIO VIDEOS", path: "/audiovisual/edicion/portfolio/videos" },
+            { label: "PORTFOLIO REELS", path: "/audiovisual/edicion/portfolio/reels" },
           ],
         },
         {
