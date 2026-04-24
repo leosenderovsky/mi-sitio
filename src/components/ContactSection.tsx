@@ -1,6 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { COUNTRIES } from "../data/countries";
 
 export function ContactSection() {
@@ -8,7 +7,6 @@ export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const captchaRef = useRef<HCaptcha>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -32,17 +30,8 @@ export function ContactSection() {
 
       const data = (await response.json()) as { success?: boolean; message?: string };
 
-      if (!response.ok || data.success !== true) {
-        // Si el error es sobre captcha, resetearlo
-        captchaRef.current?.resetCaptcha();
-        throw new Error(
-          data.message ?? "No se pudo enviar el mensaje. Intentá de nuevo.",
-        );
-      }
-
       setSubmitted(true);
       event.currentTarget.reset();
-      captchaRef.current?.resetCaptcha();
 
       // Tracking GA4: Formulario de contacto exitoso
       if (window.gtag) {
@@ -123,6 +112,7 @@ export function ContactSection() {
                   type="text"
                   id="nombre"
                   name="nombre"
+                  autoComplete="given-name"
                   required
                   className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50"
                 />
@@ -139,6 +129,7 @@ export function ContactSection() {
                   type="text"
                   id="apellido"
                   name="apellido"
+                  autoComplete="family-name"
                   required
                   className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50"
                 />
@@ -155,6 +146,7 @@ export function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
+                  autoComplete="email"
                   required
                   className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50"
                 />
@@ -234,16 +226,7 @@ export function ContactSection() {
                 className="w-full border border-white/40 rounded px-3 py-2 text-sm bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-white/50"
               />
             </div>
-            {/* hCaptcha Integration */}
-            <div className="mb-6 flex justify-center">
-              <HCaptcha
-                sitekey={import.meta.env.VITE_HCAPTCHA_SITEKEY || "50b27034-2733-42de-9964-074472d82992"}
-                onVerify={() => {
-                  console.log("Captcha verified");
-                }}
-                ref={captchaRef}
-              />
-            </div>
+
 
             <div className="text-center">
               <button
