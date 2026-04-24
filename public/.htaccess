@@ -3,7 +3,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 Header always unset X-Frame-Options
-Header set Content-Security-Policy "upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; frame-src 'self' blob: data: https://*.youtube.com https://*.youtube-nocookie.com https://*.hcaptcha.com; worker-src 'self' blob: https:;"
+Header always unset Content-Security-Policy
+Header always set Content-Security-Policy "upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; frame-src 'self' blob: data: https:; worker-src 'self' blob: https:;"
+Header set Referrer-Policy "no-referrer-when-downgrade"
 
 # Rutas limpias: redirige todo a index.html si no es un archivo o carpeta real
 RewriteCond %{REQUEST_FILENAME} !-f
