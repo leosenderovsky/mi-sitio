@@ -3,9 +3,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 Header always unset X-Frame-Options
-Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:; frame-src 'self' blob: data:; upgrade-insecure-requests;"
+Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https://unpkg.com; frame-src 'self' blob: data:; worker-src 'self' blob: https://unpkg.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://unpkg.com; upgrade-insecure-requests;"
 
-# Rutas limpias: redirige /seccion -> index.html, el JS se encarga del scroll
+# Rutas limpias: redirige todo a index.html si no es un archivo o carpeta real
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [QR,L]
+RewriteRule ^ index.html [QSA,L]
