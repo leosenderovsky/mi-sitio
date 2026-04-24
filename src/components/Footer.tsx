@@ -21,7 +21,7 @@ export function Footer() {
     <footer
       className="py-12 border-t border-white/10"
       style={{
-        background: "linear-gradient(to right, #1B1440, #1A74A0, #19D3FF)",
+        background: "#19D3FF",
       }}
     >
       <div className="container mx-auto px-4">
