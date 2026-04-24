@@ -28,7 +28,7 @@ export function ContactSection() {
         },
       });
 
-      const data = (await response.json()) as { success?: boolean; message?: string };
+      await response.json();
 
       setSubmitted(true);
       event.currentTarget.reset();
