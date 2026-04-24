@@ -24,11 +24,11 @@ const audiovisualCards = [
       { label: "Ver mi experiencia", href: "/audiovisual/edicion/experiencia" },
       {
         label: "Ver mi portfolio de videos",
-        href: "/audiovisual/edicion/portfolio"
+        href: "/audiovisual/edicion/portfolio",
       },
       {
         label: "Ver portfolio de reels",
-        href: "/audiovisual/edicion/portfolio/reels"
+        href: "/audiovisual/edicion/portfolio/reels",
       },
     ],
   },
@@ -452,7 +452,7 @@ export function Home() {
         id="follow"
         className="shadow-lg w-full py-8"
         style={{
-          background: "linear-gradient(to right, #19D3FF, #1A74A0, #1B1440)",
+          background: "#19D3FF",
         }}
       >
         <div className="container mx-auto px-4">
@@ -468,7 +468,7 @@ export function Home() {
             >
               Seguime en
             </span>
-            <ul className="flex flex-wrap justify-center gap-4">
+            <ul className="flex flex-wrap justify-center gap-4 max-w-[300px] md:max-w-none mx-auto md:mx-0">
               {socialLinks.map((s) => (
                 <li key={s.cls}>
                   <a
@@ -476,7 +476,7 @@ export function Home() {
                     target="_blank"
                     rel="noreferrer"
                     className="w-12 h-12 rounded-full border border-[#1B1440] flex items-center justify-center text-xl text-[#1B1440] hover:bg-[#1B1440] hover:border-[#1B1440] hover:text-white transition-all duration-300"
-                    title={s.cls}
+                    title={s.label}
                   >
                     <i className={s.icon} />
                   </a>
