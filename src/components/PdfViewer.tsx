@@ -12,6 +12,24 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [scale, setScale] = useState<number>(1.0);
+  const [containerWidth, setContainerWidth] = useState<number | undefined>(
+    undefined,
+  );
+
+  // Track container width for responsiveness
+  useEffect(() => {
+    const container = document.getElementById("pdf-container");
+    if (!container) return;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+
+    resizeObserver.observe(container);
+    return () => resizeObserver.disconnect();
+  }, []);
 
   // Dynamically load the PDF worker only when this component is mounted
   useEffect(() => {
@@ -34,62 +52,73 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
   return (
     <div className="flex flex-col items-center w-full">
       {/* Barra de controles custom */}
-      <div className="flex items-center gap-4 mb-6 px-6 py-3 rounded-full bg-[#00052e]/80 backdrop-blur border border-white/10 text-white text-sm sticky top-20 z-10">
-        <button
-          onClick={goToPrevPage}
-          disabled={pageNumber <= 1}
-          className="disabled:opacity-30 hover:text-[#88f3ff] transition-colors cursor-pointer"
-        >
-          ← Anterior
-        </button>
-        <span className="text-white/50 tabular-nums">
-          {pageNumber} / {numPages}
-        </span>
-        <button
-          onClick={goToNextPage}
-          disabled={pageNumber >= numPages}
-          className="disabled:opacity-30 hover:text-[#88f3ff] transition-colors cursor-pointer"
-        >
-          Siguiente →
-        </button>
+      <div className="flex flex-wrap items-center justify-center gap-4 mb-6 px-4 py-3 rounded-2xl md:rounded-full bg-[#00052e]/80 backdrop-blur border border-white/10 text-white text-xs md:text-sm sticky top-20 z-10 w-full md:w-auto">
+        <div className="flex items-center gap-3">
+          <button
+            onClick={goToPrevPage}
+            disabled={pageNumber <= 1}
+            className="disabled:opacity-30 hover:text-[#88f3ff] transition-colors cursor-pointer"
+          >
+            ←
+          </button>
+          <span className="text-white/50 tabular-nums min-w-[40px] text-center">
+            {pageNumber} / {numPages}
+          </span>
+          <button
+            onClick={goToNextPage}
+            disabled={pageNumber >= numPages}
+            className="disabled:opacity-30 hover:text-[#88f3ff] transition-colors cursor-pointer"
+          >
+            →
+          </button>
+        </div>
+
+        <div className="hidden md:block w-px h-4 bg-white/20" />
+
+        <div className="flex items-center gap-3">
+          <button
+            onClick={zoomOut}
+            className="hover:text-[#88f3ff] transition-colors cursor-pointer text-lg leading-none"
+          >
+            −
+          </button>
+          <span className="text-white/50 tabular-nums w-10 text-center">
+            {Math.round(scale * 100)}%
+          </span>
+          <button
+            onClick={zoomIn}
+            className="hover:text-[#88f3ff] transition-colors cursor-pointer text-lg leading-none"
+          >
+            +
+          </button>
+        </div>
+
         <div className="w-px h-4 bg-white/20" />
-        <button
-          onClick={zoomOut}
-          className="hover:text-[#88f3ff] transition-colors cursor-pointer text-lg leading-none"
-        >
-          −
-        </button>
-        <span className="text-white/50 tabular-nums w-10 text-center">
-          {Math.round(scale * 100)}%
-        </span>
-        <button
-          onClick={zoomIn}
-          className="hover:text-[#88f3ff] transition-colors cursor-pointer text-lg leading-none"
-        >
-          +
-        </button>
-        <div className="w-px h-4 bg-white/20" />
+
         <a
           href={url}
           download={filename ?? "cv.pdf"}
-          className="hover:text-[#1A74A0] transition-colors"
+          className="hover:text-[#1A74A0] transition-colors font-medium"
         >
           ↓ Descargar
         </a>
       </div>
 
       {/* Render del PDF */}
-      <div className="rounded-xl overflow-hidden shadow-2xl shadow-black/60 ring-1 ring-white/10">
+      <div
+        id="pdf-container"
+        className="w-full rounded-xl overflow-hidden shadow-2xl shadow-black/60 ring-1 ring-white/10 bg-white/5"
+      >
         <Document
           file={url}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={
-            <div className="w-[700px] h-[900px] flex items-center justify-center bg-white/5 text-white/30 text-sm tracking-widest uppercase">
+            <div className="aspect-[1/1.4] w-full flex items-center justify-center text-white/30 text-sm tracking-widest uppercase">
               Cargando…
             </div>
           }
           error={
-            <div className="w-[700px] h-[200px] flex items-center justify-center bg-white/5 text-[#1A74A0] text-sm">
+            <div className="h-[200px] w-full flex items-center justify-center text-[#1A74A0] text-sm p-4 text-center">
               No se pudo cargar el documento.
             </div>
           }
@@ -97,6 +126,7 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
           <Page
             pageNumber={pageNumber}
             scale={scale}
+            width={containerWidth}
             renderTextLayer={true}
             renderAnnotationLayer={false}
           />
@@ -105,7 +135,7 @@ export default function PdfViewer({ url, filename }: PdfViewerProps) {
 
       {/* Paginación inferior (redundante para documentos largos) */}
       {numPages > 1 && (
-        <div className="flex gap-2 mt-6">
+        <div className="flex flex-wrap gap-2 mt-6 justify-center max-w-full">
           {Array.from({ length: numPages }, (_, i) => (
             <button
               key={i}
