@@ -94,6 +94,7 @@ export function Web() {
                       src={item.logo}
                       alt={item.title}
                       className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
                     />
                   ) : (
                     <div className="font-heading text-2xl text-white">

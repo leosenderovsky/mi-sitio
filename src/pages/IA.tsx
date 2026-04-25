@@ -176,6 +176,9 @@ export function IA() {
                 src="/assets/img/ia/logo-senderia-negativo-web.png"
                 alt="sender.ia"
                 className="max-w-sm lg:max-w-md w-full"
+                loading="lazy"
+                width="448"
+                height="288"
               />
             </div>
           </div>

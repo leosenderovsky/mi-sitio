@@ -105,6 +105,9 @@ export function Critica() {
                 src="/assets/img/critica/critic.png"
                 alt="Ilustración crítica de cine"
                 className="max-w-xs w-full"
+                loading="lazy"
+                width="320"
+                height="320"
               />
             </div>
           </div>

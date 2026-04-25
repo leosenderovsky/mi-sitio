@@ -134,6 +134,9 @@ export function Guion() {
                 src="/assets/img/guion/consultoria-web.jpg"
                 alt="Consultoría"
                 className="rounded-3xl shadow-xl w-full"
+                loading="lazy"
+                width="640"
+                height="400"
               />
             </div>
           </div>
