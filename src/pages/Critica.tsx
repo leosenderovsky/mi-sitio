@@ -43,7 +43,7 @@ export function Critica() {
         id="servicios"
         className="py-20 relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/img/critica/bg-critica.jpg')",
+          backgroundImage: "url('/assets/img/critica/bg-critica.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -102,7 +102,7 @@ export function Critica() {
             {/* Imagen critic.png */}
             <div className="lg:w-1/2 flex justify-center">
               <img
-                src="/assets/img/critica/critic.png"
+                src="/assets/img/critica/critic.webp"
                 alt="Ilustración crítica de cine"
                 className="max-w-xs w-full"
                 loading="lazy"

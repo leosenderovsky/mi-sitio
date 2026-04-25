@@ -14,7 +14,7 @@ interface PageSEOProps {
 
 const SITE_NAME = 'Leo Senderovsky';
 const BASE_URL = 'https://leosenderovsky.com.ar';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/assets/img/og-social-preview.jpg`; // 1200x630px
+const DEFAULT_OG_IMAGE = `${BASE_URL}/assets/img/og-social-preview.webp`; // 1200x630px
 const DEFAULT_IMAGE_WIDTH = 1200;
 const DEFAULT_IMAGE_HEIGHT = 630;
 

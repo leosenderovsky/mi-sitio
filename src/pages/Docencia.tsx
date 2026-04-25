@@ -74,7 +74,7 @@ export function Docencia() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage:
-            "url('/assets/img/docencia/bg-docencia-judaismocine.jpg')",
+            "url('/assets/img/docencia/bg-docencia-judaismocine.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -148,7 +148,7 @@ export function Docencia() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage:
-            "url('/assets/img/docencia/bg-docencia-cineargentino.png')",
+            "url('/assets/img/docencia/bg-docencia-cineargentino.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -238,7 +238,7 @@ export function Docencia() {
         className="py-20 text-white relative overflow-hidden"
         style={{
           backgroundImage:
-            "url('/assets/img/docencia/bg-docencia-charlas2.jpg')",
+            "url('/assets/img/docencia/bg-docencia-charlas2.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

@@ -13,7 +13,7 @@ export function SchemaGlobal() {
     url: "https://leosenderovsky.com.ar",
     image: {
       "@type": "ImageObject",
-      url: "https://leosenderovsky.com.ar/assets/img/about/about-1.jpg",
+      url: "https://leosenderovsky.com.ar/assets/img/about/about-1.webp",
       width: 400,
       height: 400,
     },

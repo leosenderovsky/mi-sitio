@@ -3,7 +3,7 @@ import type { EducationItem } from "../types";
 export const educacionEdicion: EducationItem[] = [
   {
     id: "edu-1",
-    logo: "/assets/img/logos/educacion/coderhouse.png",
+    logo: "/assets/img/logos/educacion/coderhouse.webp",
     title: "MOTION GRAPHICS",
     institution: "CODERHOUSE",
     period: "2022",
@@ -11,7 +11,7 @@ export const educacionEdicion: EducationItem[] = [
   },
   {
     id: "edu-2",
-    logo: "/assets/img/logos/educacion/FUC.png",
+    logo: "/assets/img/logos/educacion/FUC.webp",
     title: "DIRECTOR CINEMATOGRÁFICO y PROFESOR EN CINEMATOGRAFÍA",
     institution: "UNIVERSIDAD DEL CINE",
     period: "2003 - 2008",
@@ -21,14 +21,14 @@ export const educacionEdicion: EducationItem[] = [
 export const educacionGuion: EducationItem[] = [
   {
     id: "edu-1",
-    logo: "/assets/img/logos/educacion/Laboratorio-de-guion.png",
+    logo: "/assets/img/logos/educacion/Laboratorio-de-guion.webp",
     title: "SCRIPT DOCTOR",
     institution: "EL LABORATORIO DE GUIÓN",
     period: "2010",
   },
   {
     id: "edu-2",
-    logo: "/assets/img/logos/educacion/FUC.png",
+    logo: "/assets/img/logos/educacion/FUC.webp",
     title: "DIRECTOR CINEMATOGRÁFICO y PROFESOR EN CINEMATOGRAFÍA",
     institution: "UNIVERSIDAD DEL CINE",
     period: "2003 - 2008",
@@ -38,7 +38,7 @@ export const educacionGuion: EducationItem[] = [
 export const educacionWeb: EducationItem[] = [
   {
     id: "edu-w1",
-    logo: "/assets/img/logos/educacion/coderhouse.png",
+    logo: "/assets/img/logos/educacion/coderhouse.webp",
     title: "JAVASCRIPT",
     institution: "CODERHOUSE",
     period: "2021",
@@ -46,7 +46,7 @@ export const educacionWeb: EducationItem[] = [
   },
   {
     id: "edu-w2",
-    logo: "/assets/img/logos/educacion/coderhouse.png",
+    logo: "/assets/img/logos/educacion/coderhouse.webp",
     title: "DESARROLLO WEB",
     institution: "CODERHOUSE",
     period: "2021",
@@ -57,7 +57,7 @@ export const educacionWeb: EducationItem[] = [
 export const educacionFUC: EducationItem[] = [
   {
     id: "edu-fuc",
-    logo: "/assets/img/logos/educacion/FUC.png",
+    logo: "/assets/img/logos/educacion/FUC.webp",
     title: "DIRECTOR CINEMATOGRÁFICO y PROFESOR EN CINEMATOGRAFÍA",
     institution: "UNIVERSIDAD DEL CINE",
     period: "2003 - 2008",

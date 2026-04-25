@@ -131,7 +131,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="z-50" onClick={() => window.scrollTo(0, 0)}>
           <img
-            src="/assets/img/logo.png"
+            src="/assets/img/logo.webp"
             alt="Leo Senderovsky"
             className={`transition-all duration-300 object-contain ${isScrolled ? "h-12 max-h-[75px]" : "h-16 max-h-[75px]"}`}
           />

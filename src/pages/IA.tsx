@@ -38,7 +38,7 @@ export function IA() {
         id="servicios"
         className="py-20 text-white relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/img/ia/bg-ia.jpg')",
+          backgroundImage: "url('/assets/img/ia/bg-ia.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -173,7 +173,7 @@ export function IA() {
             {/* Logo sender.ia */}
             <div className="lg:w-1/2 flex justify-center items-start">
               <img
-                src="/assets/img/ia/logo-senderia-negativo-web.png"
+                src="/assets/img/ia/logo-senderia-negativo-web.webp"
                 alt="sender.ia"
                 className="max-w-sm lg:max-w-md w-full"
                 loading="lazy"

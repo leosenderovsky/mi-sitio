@@ -48,14 +48,14 @@ export function Edicion() {
 
       <section
         id="edicion"
-        className="py-20 text-white text-center relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/assets/img/edicion/bg-edicion.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+        className="py-20 text-white text-center relative overflow-hidden min-h-[400px] flex items-center"
       >
+        <img 
+          src="/assets/img/edicion/bg-edicion.webp" 
+          alt="" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="EDICIÓN" subtitle="AUDIOVISUAL" theme="dark" />

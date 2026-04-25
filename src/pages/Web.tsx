@@ -29,14 +29,14 @@ export function Web() {
 
       <section
         id="servicios"
-        className="py-20 text-white text-center relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/assets/img/web/bg-web.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+        className="py-20 text-white text-center relative overflow-hidden min-h-[400px] flex items-center"
       >
+        <img 
+          src="/assets/img/web/bg-web.webp" 
+          alt="" 
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="DESARROLLO" subtitle="WEB" theme="dark" />

@@ -13,6 +13,9 @@ export default defineConfig({
           if (id.includes('react-pdf') || id.includes('pdfjs-dist')) {
             return 'pdf-viewer';
           }
+          if (id.includes('framer-motion')) {
+            return 'vendor-motion';
+          }
         },
       },
     },

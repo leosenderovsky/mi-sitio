@@ -15,7 +15,7 @@ const audiovisualCards = [
   {
     id: "edicion",
     title: "Edición",
-    image: "/assets/img/dibujos/edicion.png",
+    image: "/assets/img/dibujos/edicion.webp",
     icon: "fa-solid fa-scissors",
     bgColor: "#19D3FF",
     description:
@@ -35,7 +35,7 @@ const audiovisualCards = [
   {
     id: "guion",
     title: "Guión",
-    image: "/assets/img/dibujos/guion.png",
+    image: "/assets/img/dibujos/guion.webp",
     icon: "fa-solid fa-pencil",
     bgColor: "#19D3FF",
     description:
@@ -52,7 +52,7 @@ const audiovisualCards = [
   {
     id: "docencia",
     title: "Docencia",
-    image: "/assets/img/dibujos/docencia-1.png",
+    image: "/assets/img/dibujos/docencia-1.webp",
     icon: "fa-solid fa-chalkboard-user",
     bgColor: "#19D3FF",
     description:
@@ -69,7 +69,7 @@ const audiovisualCards = [
   {
     id: "critica",
     title: "Crítica",
-    image: "/assets/img/dibujos/critica.jpg",
+    image: "/assets/img/dibujos/critica.webp",
     icon: "fa-solid fa-film",
     bgColor: "#19D3FF",
     description:
@@ -89,7 +89,7 @@ const audiovisualCards = [
 const webCard = {
   id: "web",
   title: "Desarrollo Web",
-  image: "/assets/img/dibujos/web.png",
+  image: "/assets/img/dibujos/web.webp",
   icon: "fa-solid fa-code",
   bgColor: "#19D3FF",
   description:
@@ -103,7 +103,7 @@ const webCard = {
 const iaCard = {
   id: "ia",
   title: "sender.ia",
-  image: "/assets/img/dibujos/ia.png",
+  image: "/assets/img/dibujos/ia.webp",
   icons: ["fa-solid fa-clapperboard", "fa-solid fa-laptop-code"],
   bgColor: "#19D3FF",
   description:
@@ -191,7 +191,7 @@ export function Home() {
       <div id="hero-area" className="hidden md:block relative overflow-hidden min-h-[600px] py-20 lg:pt-[80px] lg:pb-[120px] text-white">
         {/* Background Image Optimized for LCP */}
         <img
-          src="/assets/img/hero-area-office.jpg"
+          src="/assets/img/hero-area-office.webp"
           alt="Leo Senderovsky Workspace"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
@@ -212,7 +212,7 @@ export function Home() {
                 frontIcon="fa-solid fa-film"
                 frontColor="#19D3FF"
                 backSubtitles={["EDICIÓN", "GUIÓN", "DOCENCIA", "CRÍTICA"]}
-                backImage="/assets/img/video-editor-fondo.jpg"
+                backImage="/assets/img/video-editor-fondo.webp"
               />
             </motion.div>
 
@@ -226,7 +226,7 @@ export function Home() {
                 frontIcon="fa-solid fa-code"
                 frontColor="#1A74A0"
                 backSubtitles={["FRONT END DEVELOPER"]}
-                backImage="/assets/img/web-dev-fondo.jpg"
+                backImage="/assets/img/web-dev-fondo.webp"
               />
             </motion.div>
 
@@ -240,7 +240,7 @@ export function Home() {
                 frontIcon="fa-solid fa-brain"
                 frontColor="#1B1440"
                 backSubtitles={["AUDIOVISUAL", "WEB"]}
-                backImage="/assets/img/ia-fondo.jpg"
+                backImage="/assets/img/ia-fondo.webp"
               />
             </motion.div>
           </div>
@@ -270,7 +270,7 @@ export function Home() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/assets/img/dibujos/leo-chico-escribiendo.png"
+                src="/assets/img/dibujos/leo-chico-escribiendo.webp"
                 alt="Ilustración chico escribiendo"
                 className="w-full rounded-2xl"
                 loading="lazy"
@@ -280,33 +280,30 @@ export function Home() {
             </motion.div>
 
             {/* Video con overlay */}
-            <motion.div
-              className="w-full lg:w-1/2"
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="w-full lg:w-1/2 bg-site-dark/20 rounded-xl overflow-hidden aspect-video">
               <a
                 href="https://www.youtube.com/watch?v=r3JxSutQdv8"
-                className="block relative group rounded-xl overflow-hidden shadow-2xl glightbox-home"
+                className="block relative group glightbox-home"
               >
                 <img
-                  src="/assets/img/video-portada.jpg"
+                  src="/assets/img/video-portada.webp"
                   alt="Miniatura de video principal"
-                  className="w-full"
+                  className="w-full h-auto object-cover"
                   loading="eager"
                   fetchPriority="high"
                   width="800"
                   height="450"
+                  style={{ aspectRatio: '16/9' }}
                 />
                 <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <img
-                    src="/assets/img/hover.png"
+                    src="/assets/img/hover.webp"
                     alt="Reproducir video"
                     className="w-20 h-auto"
                   />
                 </div>
               </a>
-            </motion.div>
+            </div>
 
             {/* Ilustración derecha */}
             <motion.div
@@ -317,7 +314,7 @@ export function Home() {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/assets/img/dibujos/leo-grande-editando.png"
+                src="/assets/img/dibujos/leo-grande-editando.webp"
                 alt="Ilustración hombre editando"
                 className="w-full rounded-2xl"
                 loading="lazy"
@@ -341,7 +338,7 @@ export function Home() {
             {/* Foto */}
             <div className="lg:w-1/4">
               <motion.img
-                src="/assets/img/about/about-1.jpg"
+                src="/assets/img/about/about-1.webp"
                 alt="Foto de Leo Senderovsky"
                 className="w-full rounded shadow-lg border border-white"
                 initial={{ opacity: 0, x: -30 }}

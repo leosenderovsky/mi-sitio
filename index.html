@@ -24,7 +24,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Leo Senderovsky" />
     <meta property="og:locale" content="es_AR" />
-    <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.jpg" />
+    <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -42,19 +42,11 @@
     <link rel="dns-prefetch" href="https://api.web3forms.com" />
 
     <!-- Preloads críticos para Performance -->
-    <link rel="preload" href="/assets/img/video-portada.jpg" as="image" media="(max-width: 767px)" fetchpriority="high" />
-    <link rel="preload" href="/assets/img/hero-area-office.jpg" as="image" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="preload" href="/assets/img/video-portada.webp" as="image" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" href="/assets/img/hero-area-office.webp" as="image" media="(min-width: 768px)" fetchpriority="high" />
 
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
-
-    <!-- Estilos externos (No críticos diferidos) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/css/uicons-thin-straight.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/css/uicons-thin-rounded.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/fonts/lineicons.css" media="print" onload="this.media='all'" />
-    <link rel="stylesheet" href="/assets/fonts/flag-icons.min.css" media="print" onload="this.media='all'" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R825ZYTN5"></script>
@@ -71,5 +63,13 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Estilos externos (No críticos diferidos al final para liberar ancho de banda LCP) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/uicons-thin-straight.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/css/uicons-thin-rounded.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/fonts/lineicons.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/assets/fonts/flag-icons.min.css" media="print" onload="this.media='all'" />
   </body>
 </html>

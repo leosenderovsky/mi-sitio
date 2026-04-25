@@ -7,7 +7,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Spot BHD - 'Ser manager desde las gradas'",
     subtitle: "Up Films Band / Kuarzo Content, 2026",
     image:
-      "/assets/img/gallery/edicion-guion/bhd-ser-manager-desde-las-gradas.jpg",
+      "/assets/img/gallery/edicion-guion/bhd-ser-manager-desde-las-gradas.webp",
     link: "https://www.youtube.com/watch?v=24GZ7JGqpVk",
   },
   {
@@ -15,7 +15,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Spot BHD - 'Leer bien la seña'",
     subtitle: "Up Films Band / Kuarzo Content, 2026",
-    image: "/assets/img/gallery/edicion-guion/bhd-leer-bien-la-senia.jpg",
+    image: "/assets/img/gallery/edicion-guion/bhd-leer-bien-la-senia.webp",
     link: "https://www.youtube.com/watch?v=l3BHpk6XfZQ",
   },
   {
@@ -24,7 +24,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Spot BHD - 'Aprovechar el momento justo'",
     subtitle: "Up Films Band / Kuarzo Content, 2026",
     image:
-      "/assets/img/gallery/edicion-guion/bhd-aprovechar-el-momento-justo.jpg",
+      "/assets/img/gallery/edicion-guion/bhd-aprovechar-el-momento-justo.webp",
     link: "https://www.youtube.com/watch?v=oO7KgSxw2-U",
   },
   {
@@ -32,7 +32,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Documental 'Cromañón, la noche que Argentina no durmió",
     subtitle: "Infobae, 2024",
-    image: "/assets/img/gallery/edicion-guion/23-docu-cromanion-20-anios.jpg",
+    image: "/assets/img/gallery/edicion-guion/23-docu-cromanion-20-anios.webp",
     link: "https://www.youtube.com/watch?v=TPu7o3a2gq4",
   },
   {
@@ -40,7 +40,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Documental 'Alfonsín y el rezo laico que unió al país",
     subtitle: "Infobae, 2023",
-    image: "/assets/img/gallery/edicion-guion/21-docu-democracia-40.jpg",
+    image: "/assets/img/gallery/edicion-guion/21-docu-democracia-40.webp",
     link: "https://www.youtube.com/watch?v=hl7T-TadSIY",
   },
   {
@@ -48,7 +48,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Documental 'Malvinas: 40 años",
     subtitle: "Infobae, 2022",
-    image: "/assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.jpg",
+    image: "/assets/img/gallery/edicion-guion/14-docu-malvinas-40-anios.webp",
     link: "https://www.youtube.com/watch?v=n8e9SexkmHM",
   },
   {
@@ -56,7 +56,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Spot Celsur",
     subtitle: "Cactus Cine, 2021",
-    image: "/assets/img/gallery/edicion-guion/12-spot-celsur.jpg",
+    image: "/assets/img/gallery/edicion-guion/12-spot-celsur.webp",
     link: "https://www.youtube.com/watch?v=rfPm4TXPJZQ",
   },
   {
@@ -65,7 +65,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Spot ABB - Formula E en Ciudad de México",
     subtitle: "Lemos Films, 2022",
     image:
-      "/assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.jpg",
+      "/assets/img/gallery/edicion-guion/13-ABB-formula-E-ciudad-de-mexico-2022.webp",
     link: "https://www.youtube.com/watch?v=YxfettXQnCE",
   },
   {
@@ -74,7 +74,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Spot NBA G-League International Challenge Uruguay",
     subtitle: "NBA, 2019",
     image:
-      "/assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.jpg",
+      "/assets/img/gallery/edicion-guion/09-NBA-G-league-international-challenge-uruguay.webp",
     link: "https://www.youtube.com/watch?v=hFFZ68W0oZo",
   },
   {
@@ -83,7 +83,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Somos Futboleros - T2 Ep 12 - Argentinos Juniors",
     subtitle: "Cactus Cine, 2016",
     image:
-      "/assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.jpg",
+      "/assets/img/gallery/edicion-guion/05-somos-futboleros-t2-e12-argentinos-juniors.webp",
     link: "https://www.youtube.com/watch?v=YZqMXhn0HDQ",
   },
   {
@@ -91,7 +91,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Content YPF - Litio en la Argentina: producción de energía para el mundo",
     subtitle: "Infobae Inhouse, 2024",
-    image: "/assets/img/gallery/edicion-guion/inhouse-ypf-litio.jpg",
+    image: "/assets/img/gallery/edicion-guion/inhouse-ypf-litio.webp",
     link: "https://cdn.jwplayer.com/videos/aRBjquht-iJRzP7q2.mp4",
   },
   {
@@ -100,7 +100,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Documental '10 años del Papa Francisco'",
     subtitle: "Infobae, 2023",
     image:
-      "/assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.jpg",
+      "/assets/img/gallery/edicion-guion/18-docu-10-anios-papa-francisco.webp",
     link: "https://www.youtube.com/watch?v=0nr7hav0RsY",
   },
   {
@@ -108,7 +108,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Content Ford Bronco Wake Day Pinamar",
     subtitle: "Infobae Inhouse, 2025",
-    image: "/assets/img/gallery/edicion-guion/inhouse-ford-bronco.jpg",
+    image: "/assets/img/gallery/edicion-guion/inhouse-ford-bronco.webp",
     link: "https://cdn.jwplayer.com/videos/dxRCY88L-iJRzP7q2.mp4",
   },
   {
@@ -117,7 +117,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Documental 'Un año de la invasión rusa en Ucrania'",
     subtitle: "Infobae, 2023",
     image:
-      "/assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.jpg",
+      "/assets/img/gallery/edicion-guion/17-docu-un-anio-invasion-rusia-ucrania.webp",
     link: "https://www.youtube.com/watch?v=5Ere20quXsg",
   },
   {
@@ -125,7 +125,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Content Atomik - San Lorenzo",
     subtitle: "Infobae Inhouse, 2023",
-    image: "/assets/img/gallery/edicion-guion/inhouse-atomik-san-lorenzo.jpg",
+    image: "/assets/img/gallery/edicion-guion/inhouse-atomik-san-lorenzo.webp",
     link: "https://cdn.jwplayer.com/videos/mDDhWtiX-iJRzP7q2.mp4",
   },
   {
@@ -133,7 +133,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "NBA - Semana NBA 2021",
     subtitle: "NBA Latam, 2021",
-    image: "/assets/img/gallery/edicion-guion/11-semana-nba-2021.jpg",
+    image: "/assets/img/gallery/edicion-guion/11-semana-nba-2021.webp",
     link: "https://www.youtube.com/watch?v=D6oBShDUB5s",
   },
   {
@@ -141,13 +141,13 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Perdidos en Buenos Aires",
     subtitle: "LN+, 2017",
-    image: "/assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.jpg",
+    image: "/assets/img/gallery/edicion-guion/07-perdidos-en-buenos-aires.webp",
     link: "https://www.youtube.com/watch?v=5RVDJKTWefE&list=PLbNNvtK1u2VkQ7doksEugPMrjrSRmQ0fi",
   },
   {
     id: "ed-18",
     category: "edicion",
-    image: "/assets/img/gallery/edicion-guion/06-la-gran-batalla.jpg",
+    image: "/assets/img/gallery/edicion-guion/06-la-gran-batalla.webp",
     title: "La Gran Batalla",
     subtitle: "LN+, 2017",
     link: "https://www.youtube.com/watch?v=BTOxn0oal1U&list=PLbNNvtK1u2VkSRU9EdtYFodkyVVE8Z65P",
@@ -158,7 +158,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     title: "Institucional OK Industrial",
     subtitle: "Film&Co, 2015",
     image:
-      "/assets/img/gallery/edicion-guion/04-institucional-ok-industrial.jpg",
+      "/assets/img/gallery/edicion-guion/04-institucional-ok-industrial.webp",
     link: "https://www.youtube.com/watch?v=EuxH03plI3I",
   },
   {
@@ -166,7 +166,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Spot Eidico - Casas",
     subtitle: "Film&Co, 2015",
-    image: "/assets/img/gallery/edicion-guion/03-spot-eidico-casas.jpg",
+    image: "/assets/img/gallery/edicion-guion/03-spot-eidico-casas.webp",
     link: "https://www.youtube.com/watch?v=IWgamMyqtME",
   },
   {
@@ -174,7 +174,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Spot Eidico - Costa Esmeralda",
     subtitle: "Film&Co, 2015",
-    image: "/assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.jpg",
+    image: "/assets/img/gallery/edicion-guion/02-spot-costa-esmeralda.webp",
     link: "https://www.youtube.com/watch?v=ihncM5w_qno",
   },
   {
@@ -182,7 +182,7 @@ export const portfolioEdicion: PortfolioItem[] = [
     category: "edicion",
     title: "Spot Answer Seguros 'Abrime, Juan'",
     subtitle: "Film&Co, 2015",
-    image: "/assets/img/gallery/edicion-guion/01-spot-answer.jpg",
+    image: "/assets/img/gallery/edicion-guion/01-spot-answer.webp",
     link: "https://www.youtube.com/watch?v=Ju_RJjSX_Wc",
   },
 ];

@@ -1,4 +1,4 @@
-﻿import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { PortfolioItem } from "../types";
 
@@ -8,23 +8,26 @@ interface VideoThumbProps {
 }
 
 const HOVER_IMAGES: Record<string, string> = {
-  "16:9": "/assets/img/hover.png",
-  "1:1": "/assets/img/hover.png",
-  web: "/assets/img/hover.png",
+  "16:9": "/assets/img/hover.webp",
+  "1:1": "/assets/img/hover.webp",
+  web: "/assets/img/hover.webp",
 };
 
-export function VideoThumb({ item, square }: VideoThumbProps) {
+export function VideoThumb({ item, square, index = 0 }: VideoThumbProps & { index?: number }) {
   const isWeb = item.format === "web";
   const hoverImage =
     HOVER_IMAGES[item.format ?? "16:9"] || HOVER_IMAGES["16:9"];
+
+  // No animar los primeros 3 elementos para mejorar LCP/FCP si están arriba
+  const shouldAnimate = index >= 3;
 
   return (
     <motion.a
       href={item.link}
       target={isWeb ? "_blank" : undefined}
       rel={isWeb ? "noopener noreferrer" : undefined}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={shouldAnimate ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+      whileInView={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       className={`group block overflow-hidden rounded-3xl shadow-xl bg-white ${!isWeb ? "glightbox" : ""}`}
@@ -97,8 +100,8 @@ export function PortfolioGrid({
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visibleItems.map((item) => (
-          <VideoThumb key={item.id} item={item} square={square} />
+        {visibleItems.map((item, idx) => (
+          <VideoThumb key={item.id} item={item} square={square} index={idx} />
         ))}
       </div>
       {items.length > initialVisible && !showAll && (

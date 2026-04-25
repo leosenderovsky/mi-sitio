@@ -48,7 +48,7 @@ export function Guion() {
         id="guion"
         className="py-20 text-white text-center relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/img/guion/bg-guion.jpg')",
+          backgroundImage: "url('/assets/img/guion/bg-guion.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -83,7 +83,7 @@ export function Guion() {
         id="consultoria"
         className="py-20 text-white relative overflow-hidden"
         style={{
-          backgroundImage: "url('/assets/img/guion/bg-guion.jpg')",
+          backgroundImage: "url('/assets/img/guion/bg-guion.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
@@ -131,7 +131,7 @@ export function Guion() {
             </div>
             <div className="w-full lg:w-1/2 p-4">
               <img
-                src="/assets/img/guion/consultoria-web.jpg"
+                src="/assets/img/guion/consultoria-web.webp"
                 alt="Consultoría"
                 className="rounded-3xl shadow-xl w-full"
                 loading="lazy"
