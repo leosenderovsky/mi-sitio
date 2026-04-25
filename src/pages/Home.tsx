@@ -204,7 +204,6 @@ export function Home() {
           <div className="grid grid-cols-3 gap-4 md:gap-6">
             {/* Card 1 — Audiovisual */}
             <motion.div
-              initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -219,7 +218,6 @@ export function Home() {
 
             {/* Card 2 — Web */}
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -234,7 +232,6 @@ export function Home() {
 
             {/* Card 3 — IA */}
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
@@ -285,9 +282,7 @@ export function Home() {
             {/* Video con overlay */}
             <motion.div
               className="w-full lg:w-1/2"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
               <a

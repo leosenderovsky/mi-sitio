@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import { SchemaGlobal } from './components/SchemaMarkup';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
+import { Home } from './pages/Home';
 const Edicion = lazy(() => import('./pages/Edicion').then(module => ({ default: module.Edicion })));
 const Guion = lazy(() => import('./pages/Guion').then(module => ({ default: module.Guion })));
 const Docencia = lazy(() => import('./pages/Docencia').then(module => ({ default: module.Docencia })));
