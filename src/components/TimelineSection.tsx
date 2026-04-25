@@ -45,6 +45,7 @@ export function TimelineSection({
                           src={exp.logo}
                           alt={exp.title}
                           className="h-10 object-contain"
+                          loading="lazy"
                         />
                       </div>
                     )}
@@ -100,6 +101,7 @@ export function TimelineSection({
                           src={edu.logo}
                           alt={edu.institution}
                           className="h-10 object-contain"
+                          loading="lazy"
                         />
                       </div>
                     )}

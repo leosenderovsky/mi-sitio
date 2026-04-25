@@ -188,20 +188,17 @@ export function Home() {
       {/* ══════════════════════════════════════
           HERO – Flip Cards (igual al legacy)
       ══════════════════════════════════════ */}
-      <div
-        id="hero-area"
-        className="hidden md:block"
-        style={{
-          background:
-            "url(/assets/img/hero-area-office.jpg) center center no-repeat",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          position: "relative",
-          color: "#fff",
-          overflow: "hidden",
-          padding: "80px 0 120px",
-        }}
-      >
+      <div id="hero-area" className="hidden md:block relative overflow-hidden min-h-[600px] py-20 lg:pt-[80px] lg:pb-[120px] text-white">
+        {/* Background Image Optimized for LCP */}
+        <img
+          src="/assets/img/hero-area-office.jpg"
+          alt="Leo Senderovsky Workspace"
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+          width="1920"
+          height="600"
+        />
         <div className="absolute inset-0 bg-black opacity-80"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-3 gap-4 md:gap-6">
@@ -279,6 +276,9 @@ export function Home() {
                 src="/assets/img/dibujos/leo-chico-escribiendo.png"
                 alt="Ilustración chico escribiendo"
                 className="w-full rounded-2xl"
+                loading="lazy"
+                width="400"
+                height="400"
               />
             </motion.div>
 
@@ -298,6 +298,10 @@ export function Home() {
                   src="/assets/img/video-portada.jpg"
                   alt="Miniatura de video principal"
                   className="w-full"
+                  loading="eager"
+                  fetchPriority="high"
+                  width="800"
+                  height="450"
                 />
                 <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <img
@@ -321,6 +325,9 @@ export function Home() {
                 src="/assets/img/dibujos/leo-grande-editando.png"
                 alt="Ilustración hombre editando"
                 className="w-full rounded-2xl"
+                loading="lazy"
+                width="400"
+                height="400"
               />
             </motion.div>
           </div>
@@ -345,6 +352,9 @@ export function Home() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
+                loading="lazy"
+                width="350"
+                height="450"
               />
             </div>
 

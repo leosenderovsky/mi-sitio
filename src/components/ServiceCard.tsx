@@ -47,6 +47,7 @@ export function ServiceCard({
             src={image}
             alt={title}
             className="w-full h-full object-contain"
+            loading="lazy"
           />
         </div>
       )}
