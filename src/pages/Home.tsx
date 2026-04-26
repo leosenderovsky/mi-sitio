@@ -40,7 +40,7 @@ const audiovisualCards = [
     icon: faScissors,
     bgColor: "#19D3FF",
     description:
-      "Editor de video senior con más de 15 años de experiencia. Documentales, spots publicitarios y contenido para medios como Infobae.",
+      "Editor de video senior con más de 15 años de experiencia. Documentales, institucionales, spots publicitarios, reels y contenido para medios de comunicación.",
     ctas: [
       { label: "Ver mi experiencia", href: "/audiovisual/edicion/experiencia" },
       {
