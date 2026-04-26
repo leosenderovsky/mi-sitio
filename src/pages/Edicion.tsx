@@ -50,9 +50,9 @@ export function Edicion() {
         id="edicion"
         className="py-20 text-white text-center relative overflow-hidden min-h-[400px] flex items-center"
       >
-        <img 
-          src="/assets/img/edicion/bg-edicion.webp" 
-          alt="" 
+        <img
+          src="/assets/img/edicion/bg-edicion.webp"
+          alt="Fondo — edición de video"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
         />
