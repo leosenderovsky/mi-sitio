@@ -39,6 +39,8 @@ export function VideoThumb({ item, square, index = 0 }: VideoThumbProps & { inde
           src={item.image}
           alt={item.title}
           loading="lazy"
+          width="400"
+          height={square ? "400" : "225"}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {!isWeb && (

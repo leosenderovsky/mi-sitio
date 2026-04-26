@@ -46,6 +46,8 @@ export function ServiceCard({
           <img
             src={image}
             alt={title}
+            width="400"
+            height="225"
             className="w-full h-full object-contain"
             loading="lazy"
           />
