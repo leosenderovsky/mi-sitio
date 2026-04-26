@@ -6,6 +6,8 @@ import { SectionHeader } from "../components/SectionHeader";
 import { portfolioIA } from "../data/portfolio-ia";
 import { VideoThumb } from "../components/PortfolioGrid";
 import { ContactSection } from "../components/ContactSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClapperboard, faDesktop, faLaptopCode, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export function IA() {
   useSectionScroll({ portfolio: "portfolio-ia" });
@@ -84,7 +86,7 @@ export function IA() {
                       textTransform: "uppercase",
                     }}
                   >
-                    <i className="fa-solid fa-clapperboard mr-2" /> Audiovisual
+                    <FontAwesomeIcon icon={faClapperboard} className="mr-2" /> Audiovisual
                   </p>
                   <p className="mt-2 text-white/90">
                     ¿Necesitás producción de video de alta calidad sin los
@@ -104,7 +106,7 @@ export function IA() {
                       textTransform: "uppercase",
                     }}
                   >
-                    <i className="fa-solid fa-desktop mr-2" /> Web
+                    <FontAwesomeIcon icon={faDesktop} className="mr-2" /> Web
                   </p>
                   <p className="mt-2 text-white/90">
                     ¿Querés un sitio web o una landing de alto impacto,
@@ -123,7 +125,7 @@ export function IA() {
                       textTransform: "uppercase",
                     }}
                   >
-                    <i className="fa-solid fa-laptop-code mr-2" /> Apps
+                    <FontAwesomeIcon icon={faLaptopCode} className="mr-2" /> Apps
                   </p>
                   <p className="mt-2 text-white/90">
                     ¿Tenés una idea de herramienta digital y no sabés por dónde
@@ -154,7 +156,7 @@ export function IA() {
                   }}
                 >
                   Mirá mis trabajos{" "}
-                  <i className="fa-solid fa-arrow-down text-sm" />
+                  <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
                 </a>
                 <a
                   href="#contacto"
@@ -165,7 +167,7 @@ export function IA() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Contactame <i className="fa-solid fa-arrow-down text-sm" />
+                  Contactame <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
                 </a>
               </div>
             </div>

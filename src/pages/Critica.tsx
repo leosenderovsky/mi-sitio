@@ -7,6 +7,8 @@ import { TimelineSection } from "../components/TimelineSection";
 import { experienciaCritica } from "../data/experiencia-critica";
 import { educacionFUC } from "../data/educacion";
 import { ContactSection } from "../components/ContactSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const SECTION_MAP = { experiencia: "resume2" };
 
@@ -88,13 +90,13 @@ export function Critica() {
                   className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1B1440] transition-all rounded-full font-heading text-xl uppercase"
                 >
                   Visitá mi blog{" "}
-                  <i className="fa-solid fa-arrow-right text-sm" />
+                  <FontAwesomeIcon icon={faArrowRight} className="text-sm" />
                 </a>
                 <a
                   href="#contacto"
                   className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1B1440] transition-all rounded-full font-heading text-xl uppercase"
                 >
-                  Contactame <i className="fa-solid fa-arrow-down text-sm" />
+                  Contactame <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
                 </a>
               </div>
             </div>

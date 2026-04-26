@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFileLines } from '@fortawesome/free-regular-svg-icons';
 import type { DocenciaCiclo } from '../data/docencia-ciclos';
 
 interface DocenciaCardProps {
@@ -58,8 +61,9 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
 
         {/* Indicador de estado (chevron) */}
         <div className="flex justify-center mt-4">
-          <i
-            className={`fa-solid fa-chevron-down text-white/60 text-sm transition-transform duration-300 ${
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            className={`text-white/60 text-sm transition-transform duration-300 ${
               isOpen ? 'rotate-180' : ''
             }`}
           />
@@ -107,9 +111,9 @@ export function DocenciaCard({ ciclo, isOpen, onToggle }: DocenciaCardProps) {
                     letterSpacing: '0.05em',
                   }}
                 >
-                  <i className="fa-regular fa-file-lines text-sm" />
+                  <FontAwesomeIcon icon={faFileLines} className="text-sm" />
                   {doc.title}
-                  <i className="fa-solid fa-arrow-right text-xs ml-auto" />
+                  <FontAwesomeIcon icon={faArrowRight} className="text-xs ml-auto" />
                 </Link>
               ))}
             </div>

@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface Cta {
   label: string;
@@ -12,8 +15,8 @@ interface ServiceCardProps {
   title: string;
   description: string;
   image?: string;
-  icon?: string; // Clase FA, ej: "fa-solid fa-scissors"
-  icons?: string[]; // Array de clases FA para múltiples íconos
+  icon?: IconDefinition;
+  icons?: IconDefinition[];
   bgColor?: string; // Color de fondo hex, ej: "#3844BE"
   ctas: Cta[];
 }
@@ -59,11 +62,11 @@ export function ServiceCard({
         <div
           className={`flex justify-center pt-8 ${isDark ? "text-[#1B1440]" : "text-site-dark"}`}
         >
-          {icon && <i className={`${icon} text-4xl`} />}
+          {icon && <FontAwesomeIcon icon={icon} className="text-4xl" />}
           {icons && (
             <div className="flex gap-4">
               {icons.map((ic, idx) => (
-                <i key={idx} className={`${ic} text-4xl`} />
+                <FontAwesomeIcon key={idx} icon={ic} className="text-4xl" />
               ))}
             </div>
           )}
@@ -110,11 +113,11 @@ export function ServiceCard({
                 rel="noreferrer"
                 className={btnClass}
               >
-                {cta.label} <i className="fa-solid fa-arrow-right text-xs" />
+                {cta.label} <FontAwesomeIcon icon={faArrowRight} className="text-xs ml-1" />
               </a>
             ) : (
               <Link key={index} to={cta.href} className={btnClass}>
-                {cta.label} <i className="fa-solid fa-arrow-right text-xs" />
+                {cta.label} <FontAwesomeIcon icon={faArrowRight} className="text-xs ml-1" />
               </Link>
             );
           })}

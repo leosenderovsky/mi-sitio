@@ -1,4 +1,6 @@
 import type { ExperienceItem, EducationItem } from "../types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase, faGraduationCap, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface TimelineSectionProps {
   experiences: ExperienceItem[];
@@ -28,7 +30,7 @@ export function TimelineSection({
             <h3
               className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
             >
-              <i className="fa-solid fa-briefcase mr-4"></i> Experiencia Laboral
+              <FontAwesomeIcon icon={faBriefcase} className="mr-4" /> Experiencia Laboral
             </h3>
             <div
               className={`relative border-l-2 ${lineColor} ml-4 pl-8 space-y-12`}
@@ -68,7 +70,7 @@ export function TimelineSection({
                         className="font-heading uppercase inline-block mt-4 text-site-blue font-bold hover:underline"
                       >
                         Ver sitio{" "}
-                        <i className="fa-solid fa-arrow-right ml-1"></i>
+                        <FontAwesomeIcon icon={faArrowRight} className="ml-1" />
                       </a>
                     )}
                   </div>
@@ -84,7 +86,7 @@ export function TimelineSection({
             <h3
               className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
             >
-              <i className="fa-solid fa-graduation-cap mr-4"></i> Formación
+              <FontAwesomeIcon icon={faGraduationCap} className="mr-4" /> Formación
             </h3>
             <div
               className={`relative border-l-2 ${lineColor} ml-4 pl-8 space-y-12`}
@@ -122,7 +124,7 @@ export function TimelineSection({
                         className="font-heading uppercase inline-block mt-4 text-site-blue font-bold hover:underline"
                       >
                         Ver certificado{" "}
-                        <i className="fa-solid fa-arrow-right ml-1"></i>
+                        <FontAwesomeIcon icon={faArrowRight} className="ml-1" />
                       </a>
                     )}
                   </div>

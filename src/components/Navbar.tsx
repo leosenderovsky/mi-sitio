@@ -1,6 +1,8 @@
 import { useState, useEffect, type MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 interface MenuItem {
   label: string;
@@ -149,7 +151,7 @@ export function Navbar() {
                   className="font-heading uppercase text-lg tracking-wider hover:text-white transition-colors"
                   style={{ color: "#FFFFFF" }}
                 >
-                  {item.label} <i className="fa-solid fa-chevron-down ml-1"></i>
+                  {item.label} <FontAwesomeIcon icon={faChevronDown} className="ml-1" />
                 </button>
                 <AnimatePresence>
                   {openSubmenu === item.label && (
@@ -277,7 +279,7 @@ export function Navbar() {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          <i className={`fa-solid ${isOpen ? "fa-times" : "fa-bars"}`} aria-hidden="true"></i>
+          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} aria-hidden="true" />
         </button>
 
         {/* Mobile Menu */}
@@ -302,7 +304,7 @@ export function Navbar() {
                       className="font-heading text-white text-xl uppercase tracking-wider flex items-center justify-center w-full"
                     >
                       {item.label}{" "}
-                      <i className={`fa-solid fa-chevron-down ml-2 transition-transform duration-300 ${openSubmenu === item.label ? "rotate-180" : ""}`}></i>
+                      <FontAwesomeIcon icon={faChevronDown} className={`ml-2 transition-transform duration-300 ${openSubmenu === item.label ? "rotate-180" : ""}`} />
                     </button>
                     <AnimatePresence>
                       {openSubmenu === item.label && (
@@ -321,7 +323,7 @@ export function Navbar() {
                                   className="font-heading text-white text-lg uppercase tracking-wider flex items-center justify-center w-full py-1"
                                 >
                                   {subitem.label}
-                                  <i className={`fa-solid fa-chevron-down ml-2 text-sm transition-transform duration-300 ${openMobileSubSubmenu === subitem.label ? "rotate-180" : ""}`}></i>
+                                  <FontAwesomeIcon icon={faChevronDown} className={`ml-2 text-sm transition-transform duration-300 ${openMobileSubSubmenu === subitem.label ? "rotate-180" : ""}`} />
                                 </button>
                                 <AnimatePresence>
                                   {openMobileSubSubmenu === subitem.label && (

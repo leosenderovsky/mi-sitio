@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 interface FlipCardProps {
   /** Texto grande del frente (ej: "AUDIOVISUAL") */
   frontTitle: string;
-  /** Clase del ícono FA para el frente (ej: "fa-solid fa-film") */
-  frontIcon: string;
+  /** Objeto IconDefinition de react-fontawesome para el frente */
+  frontIcon: IconDefinition;
   /** Color de fondo del frente en HEX (ej: "#3844BE") */
   frontColor: string;
   /** Subtítulos que aparecen en el reverso */
@@ -34,7 +36,7 @@ export function FlipCard({ frontTitle, frontIcon, frontColor, backSubtitles, bac
           className="absolute inset-0 [backface-visibility:hidden] rounded-lg border-2 border-white flex flex-col items-center justify-center text-white gap-2"
           style={{ backgroundColor: frontColor }}
         >
-          <i className={`${frontIcon} text-5xl md:text-6xl`} />
+          <FontAwesomeIcon icon={frontIcon} className="text-5xl md:text-6xl" />
           <div
             className="text-white text-center uppercase leading-tight"
             style={{

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { COUNTRIES } from "../data/countries";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export function ContactSection() {
   const navigate = useNavigate();
@@ -249,7 +251,7 @@ export function ContactSection() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
           <div className="flex flex-col items-center gap-2">
             <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
-              <i className="fa-solid fa-phone text-white text-xl" />
+              <FontAwesomeIcon icon={faPhone} className="text-white text-xl" />
             </div>
             <a
               href="https://wa.me/5491130452585"
@@ -270,7 +272,7 @@ export function ContactSection() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
-              <i className="fa-solid fa-envelope text-white text-xl" />
+              <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl" />
             </div>
             <a
               href="mailto:l.a.senderovsky@gmail.com"
@@ -289,7 +291,7 @@ export function ContactSection() {
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="w-12 h-12 rounded-full bg-white/20 border border-white/40 flex items-center justify-center">
-              <i className="fa-solid fa-location-dot text-white text-xl" />
+              <FontAwesomeIcon icon={faLocationDot} className="text-white text-xl" />
             </div>
             <p className="text-white text-sm">Buenos Aires, Argentina</p>
           </div>

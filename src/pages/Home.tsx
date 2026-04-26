@@ -6,6 +6,27 @@ import { useSectionScroll } from "../hooks/useSectionScroll";
 import { FlipCard } from "../components/FlipCard";
 import { ServiceCard } from "../components/ServiceCard";
 import { ContactSection } from "../components/ContactSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faScissors,
+  faPencil,
+  faChalkboardUser,
+  faFilm,
+  faCode,
+  faClapperboard,
+  faLaptopCode,
+  faArrowDown,
+  faBrain
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedinIn,
+  faYoutube,
+  faBehance,
+  faFacebookF,
+  faXTwitter,
+  faInstagram,
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 /* ─────────────────────────────────────────
    DATA
@@ -16,7 +37,7 @@ const audiovisualCards = [
     id: "edicion",
     title: "Edición",
     image: "/assets/img/dibujos/edicion.webp",
-    icon: "fa-solid fa-scissors",
+    icon: faScissors,
     bgColor: "#19D3FF",
     description:
       "Editor de video senior con más de 15 años de experiencia. Documentales, spots publicitarios y contenido para medios como Infobae y LN+.",
@@ -36,7 +57,7 @@ const audiovisualCards = [
     id: "guion",
     title: "Guión",
     image: "/assets/img/dibujos/guion.webp",
-    icon: "fa-solid fa-pencil",
+    icon: faPencil,
     bgColor: "#19D3FF",
     description:
       "Guionista y consultor de guión freelance. Script doctoring, asesoría y redacción de guiones para cine, TV y publicidad.",
@@ -53,7 +74,7 @@ const audiovisualCards = [
     id: "docencia",
     title: "Docencia",
     image: "/assets/img/dibujos/docencia-1.webp",
-    icon: "fa-solid fa-chalkboard-user",
+    icon: faChalkboardUser,
     bgColor: "#19D3FF",
     description:
       "Charlas y ciclos de cine para instituciones y grupos privados.",
@@ -70,7 +91,7 @@ const audiovisualCards = [
     id: "critica",
     title: "Crítica",
     image: "/assets/img/dibujos/critica.webp",
-    icon: "fa-solid fa-film",
+    icon: faFilm,
     bgColor: "#19D3FF",
     description:
       "Colaboraciones en sitios web, radio y medios gráficos. Archivo completo en mi blog.",
@@ -90,7 +111,7 @@ const webCard = {
   id: "web",
   title: "Desarrollo Web",
   image: "/assets/img/dibujos/web.webp",
-  icon: "fa-solid fa-code",
+  icon: faCode,
   bgColor: "#19D3FF",
   description:
     "Sitios y aplicaciones web a medida. Frontend developer con foco en proyectos personales y de pequeñas empresas.",
@@ -104,7 +125,7 @@ const iaCard = {
   id: "ia",
   title: "sender.ia",
   image: "/assets/img/dibujos/ia.webp",
-  icons: ["fa-solid fa-clapperboard", "fa-solid fa-laptop-code"],
+  icons: [faClapperboard, faLaptopCode],
   bgColor: "#19D3FF",
   description:
     "Todo lo que hacía por separado —audiovisual y web— ahora potenciado con inteligencia artificial.",
@@ -118,43 +139,43 @@ const socialLinks = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/lsender/",
-    icon: "fa-brands fa-linkedin-in",
+    icon: faLinkedinIn,
     cls: "linkedin",
   },
   {
     label: "YouTube",
     href: "https://www.youtube.com/c/LeoAquibaSenderovsky",
-    icon: "fa-brands fa-youtube",
+    icon: faYoutube,
     cls: "youtube",
   },
   {
     label: "Behance",
     href: "https://www.behance.net/leosenderovsky",
-    icon: "fa-brands fa-behance",
+    icon: faBehance,
     cls: "behance",
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/Leo.Aquiba.Senderovsky",
-    icon: "fa-brands fa-facebook-f",
+    icon: faFacebookF,
     cls: "facebook",
   },
   {
     label: "Twitter/X",
     href: "https://twitter.com/leosenderovsky",
-    icon: "fa-brands fa-x-twitter",
+    icon: faXTwitter,
     cls: "twitter",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/leo.senderovsky/",
-    icon: "fa-brands fa-instagram",
+    icon: faInstagram,
     cls: "instagram",
   },
   {
     label: "GitHub",
     href: "https://github.com/leosenderovsky",
-    icon: "fa-brands fa-github",
+    icon: faGithub,
     cls: "github",
   },
 ];
@@ -209,7 +230,7 @@ export function Home() {
             >
               <FlipCard
                 frontTitle="AUDIOVISUAL"
-                frontIcon="fa-solid fa-film"
+                frontIcon={faFilm}
                 frontColor="#19D3FF"
                 backSubtitles={["EDICIÓN", "GUIÓN", "DOCENCIA", "CRÍTICA"]}
                 backImage="/assets/img/video-editor-fondo.webp"
@@ -223,7 +244,7 @@ export function Home() {
             >
               <FlipCard
                 frontTitle="WEB"
-                frontIcon="fa-solid fa-code"
+                frontIcon={faCode}
                 frontColor="#1A74A0"
                 backSubtitles={["FRONT END DEVELOPER"]}
                 backImage="/assets/img/web-dev-fondo.webp"
@@ -237,7 +258,7 @@ export function Home() {
             >
               <FlipCard
                 frontTitle="IA"
-                frontIcon="fa-solid fa-brain"
+                frontIcon={faBrain}
                 frontColor="#1B1440"
                 backSubtitles={["AUDIOVISUAL", "WEB"]}
                 backImage="/assets/img/ia-fondo.webp"
@@ -443,7 +464,7 @@ export function Home() {
                   }}
                 >
                   Contactame{" "}
-                  <i className="fa-solid fa-arrow-down text-sm ml-1" />
+                  <FontAwesomeIcon icon={faArrowDown} className="text-sm ml-1" />
                 </a>
               </div>
             </div>
@@ -482,7 +503,7 @@ export function Home() {
                     className="w-12 h-12 rounded-full border border-[#1B1440] flex items-center justify-center text-xl text-[#1B1440] hover:bg-[#1B1440] hover:border-[#1B1440] hover:text-white transition-all duration-300"
                     title={s.label}
                   >
-                    <i className={s.icon} />
+                    <FontAwesomeIcon icon={s.icon} />
                   </a>
                 </li>
               ))}
