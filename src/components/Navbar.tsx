@@ -273,14 +273,18 @@ export function Navbar() {
         <button
           className="lg:hidden text-white text-3xl z-50"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          <i className={`fa-solid ${isOpen ? "fa-times" : "fa-bars"}`}></i>
+          <i className={`fa-solid ${isOpen ? "fa-times" : "fa-bars"}`} aria-hidden="true"></i>
         </button>
 
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
