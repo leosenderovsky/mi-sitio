@@ -46,6 +46,8 @@ export function VideoThumb({ item, square, index = 0 }: VideoThumbProps & { inde
             <img
               src={hoverImage}
               alt="Play"
+              width="80"
+              height="80"
               className="w-20 h-20 object-contain"
             />
           </div>

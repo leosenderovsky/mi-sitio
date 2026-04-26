@@ -299,6 +299,8 @@ export function Home() {
                   <img
                     src="/assets/img/hover.webp"
                     alt="Reproducir video"
+                    width="80"
+                    height="80"
                     className="w-20 h-auto"
                   />
                 </div>

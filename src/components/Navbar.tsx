@@ -133,6 +133,8 @@ export function Navbar() {
           <img
             src="/assets/img/logo.webp"
             alt="Leo Senderovsky"
+            width="200"
+            height="56"
             className={`transition-all duration-300 object-contain ${isScrolled ? "h-12 max-h-[75px]" : "h-16 max-h-[75px]"}`}
           />
         </Link>
