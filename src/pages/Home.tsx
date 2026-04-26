@@ -16,7 +16,7 @@ import {
   faClapperboard,
   faLaptopCode,
   faArrowDown,
-  faBrain
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedinIn,
@@ -25,7 +25,7 @@ import {
   faFacebookF,
   faXTwitter,
   faInstagram,
-  faGithub
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 /* ─────────────────────────────────────────
@@ -40,7 +40,7 @@ const audiovisualCards = [
     icon: faScissors,
     bgColor: "#19D3FF",
     description:
-      "Editor de video senior con más de 15 años de experiencia. Documentales, spots publicitarios y contenido para medios como Infobae y LN+.",
+      "Editor de video senior con más de 15 años de experiencia. Documentales, spots publicitarios y contenido para medios como Infobae.",
     ctas: [
       { label: "Ver mi experiencia", href: "/audiovisual/edicion/experiencia" },
       {
@@ -209,7 +209,10 @@ export function Home() {
       {/* ══════════════════════════════════════
           HERO – Flip Cards (igual al legacy)
       ══════════════════════════════════════ */}
-      <div id="hero-area" className="hidden md:block relative overflow-hidden min-h-[600px] py-20 lg:pt-[80px] lg:pb-[120px] text-white">
+      <div
+        id="hero-area"
+        className="hidden md:block relative overflow-hidden min-h-[600px] py-20 lg:pt-[80px] lg:pb-[120px] text-white"
+      >
         {/* Background Image Optimized for LCP */}
         <img
           src="/assets/img/hero-area-office.webp"
@@ -314,7 +317,7 @@ export function Home() {
                   fetchPriority="high"
                   width="800"
                   height="450"
-                  style={{ aspectRatio: '16/9' }}
+                  style={{ aspectRatio: "16/9" }}
                 />
                 <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <img
@@ -464,7 +467,10 @@ export function Home() {
                   }}
                 >
                   Contactame{" "}
-                  <FontAwesomeIcon icon={faArrowDown} className="text-sm ml-1" />
+                  <FontAwesomeIcon
+                    icon={faArrowDown}
+                    className="text-sm ml-1"
+                  />
                 </a>
               </div>
             </div>
