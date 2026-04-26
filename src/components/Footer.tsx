@@ -43,7 +43,7 @@ export function Footer() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <ul className="flex justify-center space-x-4 mb-8">
+          <ul className="flex flex-wrap justify-center gap-4 max-w-[240px] sm:max-w-none mx-auto mb-8">
             {socialLinks.map((link, idx) => (
               <li key={idx}>
                 <a

@@ -413,7 +413,7 @@ export function Home() {
               </motion.div>
             </div>
 
-            <div className="lg:w-1/4 flex flex-col items-center lg:items-end gap-3">
+            <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-end gap-3">
               <div className="flex flex-col gap-3 max-w-[280px] w-full mx-auto lg:mx-0">
                 <div className="flex gap-2">
                   <a
