@@ -137,7 +137,7 @@ export function Navbar() {
             alt="Leo Senderovsky"
             width="200"
             height="56"
-            className={`transition-all duration-300 object-contain ${isScrolled ? "h-12 max-h-[75px]" : "h-16 max-h-[75px]"}`}
+            className={`transition-all duration-300 object-contain object-left ${isScrolled ? "h-12 max-h-[75px]" : "h-16 max-h-[75px]"}`}
           />
         </Link>
 
@@ -290,18 +290,18 @@ export function Navbar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-site-blue shadow-xl py-6 flex flex-col items-center space-y-4 lg:hidden"
+              className="absolute top-full left-0 w-full bg-site-blue shadow-xl py-6 flex flex-col items-start space-y-4 lg:hidden px-6"
             >
               {menuItems.map((item, idx) =>
                 item.submenu ? (
-                  <div key={idx} className="w-full text-center">
+                  <div key={idx} className="w-full">
                     <button
                       onClick={() => {
                         setOpenSubmenu(openSubmenu === item.label ? null : item.label);
                         setOpenMobileSubSubmenu(null);
                       }}
                       aria-expanded={openSubmenu === item.label}
-                      className="font-heading text-white text-xl uppercase tracking-wider flex items-center justify-center w-full"
+                      className="font-heading text-white text-xl uppercase tracking-wider flex items-center justify-start w-full"
                     >
                       {item.label}{" "}
                       <FontAwesomeIcon icon={faChevronDown} className={`ml-2 transition-transform duration-300 ${openSubmenu === item.label ? "rotate-180" : ""}`} />
@@ -320,7 +320,7 @@ export function Navbar() {
                                 <button
                                   onClick={() => setOpenMobileSubSubmenu(openMobileSubSubmenu === subitem.label ? null : subitem.label)}
                                   aria-expanded={openMobileSubSubmenu === subitem.label}
-                                  className="font-heading text-white text-lg uppercase tracking-wider flex items-center justify-center w-full py-1"
+                                  className="font-heading text-white text-lg uppercase tracking-wider flex items-center justify-start w-full py-1 pl-4"
                                 >
                                   {subitem.label}
                                   <FontAwesomeIcon icon={faChevronDown} className={`ml-2 text-sm transition-transform duration-300 ${openMobileSubSubmenu === subitem.label ? "rotate-180" : ""}`} />
@@ -351,7 +351,7 @@ export function Navbar() {
                                                   navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
                                                 }
                                               }}
-                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white"
+                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white pl-8"
                                             >
                                               {subsubitem.label}
                                             </a>
@@ -364,7 +364,7 @@ export function Navbar() {
                                                 setOpenSubmenu(null);
                                                 setOpenMobileSubSubmenu(null);
                                               }}
-                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white"
+                                              className="block font-heading text-white/80 text-base uppercase tracking-wider py-1 hover:text-white pl-8"
                                             >
                                               {subsubitem.label}
                                             </Link>
@@ -384,7 +384,7 @@ export function Navbar() {
                                   setOpenSubmenu(null);
                                   setOpenMobileSubSubmenu(null);
                                 }}
-                                className="block font-heading text-white text-lg uppercase tracking-wider py-1"
+                                className="block font-heading text-white text-lg uppercase tracking-wider py-1 pl-4"
                               >
                                 {subitem.label}
                               </Link>
