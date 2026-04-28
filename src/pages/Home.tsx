@@ -211,7 +211,7 @@ export function Home() {
       ══════════════════════════════════════ */}
       <div
         id="hero-area"
-        className="hidden md:block relative overflow-hidden min-h-[600px] py-20 lg:pt-[80px] lg:pb-[120px] text-white"
+        className="hidden md:flex md:items-center relative overflow-hidden md:min-h-[300px] lg:min-h-[600px] py-8 lg:py-0 lg:pt-[80px] lg:pb-[120px] text-white"
       >
         {/* Background Image Optimized for LCP */}
         <img
@@ -362,7 +362,7 @@ export function Home() {
           </h2>
           <div className="flex flex-col lg:flex-row gap-10 items-start">
             {/* Foto */}
-            <div className="lg:w-1/4">
+            <div className="w-1/2 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
               <motion.img
                 src="/assets/img/about/about-1.webp"
                 alt="Foto de Leo Senderovsky"

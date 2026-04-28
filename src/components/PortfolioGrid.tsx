@@ -30,7 +30,7 @@ export function VideoThumb({ item, square, index = 0 }: VideoThumbProps & { inde
       whileInView={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className={`group block overflow-hidden rounded-3xl shadow-xl bg-white ${!isWeb ? "glightbox" : ""}`}
+      className={`group flex flex-col h-full overflow-hidden rounded-3xl shadow-xl bg-white ${!isWeb ? "glightbox" : ""}`}
     >
       <div
         className={`relative overflow-hidden ${square ? "aspect-square" : "aspect-video"} bg-black`}
@@ -55,7 +55,7 @@ export function VideoThumb({ item, square, index = 0 }: VideoThumbProps & { inde
           </div>
         )}
       </div>
-      <div className="p-5 bg-[#1a74a0]">
+      <div className="p-5 bg-[#1a74a0] flex-1">
         <div className="text-lg font-heading uppercase text-white mb-1">
           {item.title}
         </div>
