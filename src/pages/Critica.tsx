@@ -6,9 +6,6 @@ import { SectionHeader } from "../components/SectionHeader";
 import { TimelineSection } from "../components/TimelineSection";
 import { experienciaCritica } from "../data/experiencia-critica";
 import { educacionFUC } from "../data/educacion";
-import { ContactSection } from "../components/ContactSection";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const SECTION_MAP = { experiencia: "resume2" };
 
@@ -56,48 +53,67 @@ export function Critica() {
           <SectionHeader title="Crítica" subtitle="Audiovisual" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-center">
             {/* Texto literal del legacy */}
-            <div
-              className="lg:w-1/2 space-y-4 text-white"
-              style={{
-                fontFamily: '"Libre Franklin",sans-serif',
-                fontSize: "14px",
-                lineHeight: "25px",
-              }}
-            >
-              <p>
-                En los inicios de mi vida profesional, me enfoqué en una de mis
-                pasiones: La crítica y el análisis de cine.
+            <div className="space-y-4 text-center text-white leading-relaxed">
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                La crítica fue mi primer trabajo profesional en el mundo del
+                cine.
               </p>
-              <p>
-                Colaboré como columnista y corresponsal de cine en programas de
-                radio y medios gráficos y, durante tres años y medio, trabajé
-                para Cine.com, un desaparecido sitio online de España.
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Durante varios años colaboré como columnista y
+                corresponsal de cine en programas de radio y medios gráficos, y
+                entre 2007 y 2010 trabajé como crítico de cine para Cine.com, un
+                portal español de cine con cobertura internacional.
               </p>
-              <p>
-                Actualmente, podés encontrar en mi blog mi archivo de críticas y
-                otros artículos de cine.
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Hoy ese archivo vive en mi blog, junto con artículos y textos de
+                cine que sigo publicando.
               </p>
-              <p>
-                Vas a poder leer las críticas que publiqué para Cine.com entre
-                2007 y 2010, para otros medios y artículos exclusivamente
-                publicados en mi blog.
-              </p>
-              <div className="flex flex-wrap gap-3 pt-4">
-                <a
-                  href="https://blog.leosenderovsky.com.ar/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1B1440] transition-all rounded-full font-heading text-xl uppercase"
-                >
-                  Visitá mi blog{" "}
-                  <FontAwesomeIcon icon={faArrowRight} className="text-sm" />
-                </a>
-                <a
-                  href="#contacto"
-                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1B1440] transition-all rounded-full font-heading text-xl uppercase"
-                >
-                  Contactame <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
-                </a>
+              <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
+                <button className="mb-4">
+                  <a
+                    href="https://blog.leosenderovsky.com.ar/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                  >
+                    Visitá mi blog
+                  </a>
+                </button>
+                <button className="mb-4">
+                  <a
+                    href="#contacto"
+                    className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                  >
+                    Contactame
+                  </a>
+                </button>
               </div>
             </div>
 
@@ -106,7 +122,11 @@ export function Critica() {
               <img
                 src="/assets/img/critica/critic.webp"
                 alt="Ilustración crítica de cine"
-                className="max-w-xs w-full"
+                className="max-w-xs"
+                style={{
+                  width: "50%",
+                  margin: "0 auto",
+                }}
                 loading="lazy"
                 width="320"
                 height="320"
@@ -166,7 +186,6 @@ export function Critica() {
           )}
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }

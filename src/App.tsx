@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { HelmetProvider } from 'react-helmet-async';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { NewsletterBar } from './components/NewsletterBar';
+import { ContactSection } from './components/ContactSection';
 import { SchemaGlobal } from './components/SchemaMarkup';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -14,6 +16,8 @@ const Critica = lazy(() => import('./pages/Critica').then(module => ({ default: 
 const Web = lazy(() => import('./pages/Web').then(module => ({ default: module.Web })));
 const IA = lazy(() => import('./pages/IA').then(module => ({ default: module.IA })));
 const Gracias = lazy(() => import('./pages/Gracias').then(module => ({ default: module.Gracias })));
+const NewsletterCheckEmail = lazy(() => import('./pages/NewsletterCheckEmail').then(module => ({ default: module.NewsletterCheckEmail })));
+const NewsletterConfirmado = lazy(() => import('./pages/NewsletterConfirmado').then(module => ({ default: module.NewsletterConfirmado })));
 const NotFound = lazy(() => import('./pages/NotFound').then(module => ({ default: module.NotFound })));
 const CVAudiovisual = lazy(() => import('./pages/SobreMi/CVAudiovisual').then(module => ({ default: module.default })));
 const CVWeb = lazy(() => import('./pages/SobreMi/CVWeb').then(module => ({ default: module.default })));
@@ -21,6 +25,32 @@ const CVCastellano = lazy(() => import('./pages/audiovisual/CVCastellano').then(
 const CVIngles = lazy(() => import('./pages/audiovisual/CVIngles').then(module => ({ default: module.default })));
 const CVWebEmbed = lazy(() => import('./pages/SobreMi/CVWebEmbed').then(module => ({ default: module.default })));
 const DocenciaDocEmbed = lazy(() => import('./pages/audiovisual/DocenciaDocEmbed').then(module => ({ default: module.default })));
+
+// Rutas donde NO mostrar newsletter + contacto
+const EXCLUDE_CONTACT_ROUTES = [
+  '/gracias',
+  '/newsletter/check-email',
+  '/newsletter/confirmado',
+  '/sobre-mi/cv-audiovisual',
+  '/sobre-mi/cv-web',
+  '/audiovisual/cv',
+  '/web/cv',
+  '/audiovisual/docencia/leer',
+];
+
+function LayoutSections() {
+  const location = useLocation();
+  const isExcluded = EXCLUDE_CONTACT_ROUTES.some(path =>
+    location.pathname.startsWith(path)
+  );
+  if (isExcluded) return null;
+  return (
+    <>
+      <NewsletterBar />
+      <ContactSection />
+    </>
+  );
+}
 
 // Componente para trackear cambios de ruta en GA4
 function Analytics() {
@@ -51,6 +81,8 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/gracias" element={<Gracias />} />
+                  <Route path="/newsletter/check-email" element={<NewsletterCheckEmail />} />
+                  <Route path="/newsletter/confirmado" element={<NewsletterConfirmado />} />
                   <Route path="/sobre-mi/cv-audiovisual" element={<CVAudiovisual />} />
                   <Route path="/sobre-mi/cv-web" element={<CVWeb />} />
                   <Route path="/audiovisual/cv/castellano" element={<CVCastellano />} />
@@ -73,6 +105,7 @@ function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
+              <LayoutSections />
             </main>
             <Footer />
           </div>

@@ -3,7 +3,6 @@ import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { experienciaWeb } from "../data/experiencia-web";
-import { ContactSection } from "../components/ContactSection";
 
 export function Web() {
   useSectionScroll({ experiencia: "timeline-web" });
@@ -14,7 +13,7 @@ export function Web() {
         title="Desarrollo Web Frontend"
         description="Desarrollo de sitios web y aplicaciones a medida por Leo Senderovsky. Frontend developer con React, HTML y CSS. Portfolio de proyectos web para pymes y proyectos personales."
         path="/web"
-        keywords="desarrollador web Buenos Aires, frontend developer Argentina, desarrollo web React, sitios web a medida"
+        keywords="desarrollo web frontend Buenos Aires, sitios web React, frontend developer Argentina, diseño web a medida"
       />
       <SchemaBreadcrumb
         items={[
@@ -40,36 +39,80 @@ export function Web() {
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="DESARROLLO" subtitle="WEB" theme="dark" />
-          <div className="max-w-3xl mx-auto mt-8 text-xl font-body leading-relaxed text-white/90">
-            <p className="mb-4">
-              Desde mis primeros trabajos, en empresas de desarrollo web, me
-              tocó conjugar el audiovisual con los recursos del mundo de la
-              programación.
+          <div className="space-y-4 text-center text-white leading-relaxed">
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Vengo del audiovisual, pero el desarrollo web estuvo cerca desde
+              mis primeros trabajos.
             </p>
-            <p className="mb-4">
-              Allí empecé a conocer algunas herramientas de desarrollo y de seo
-              que me permitieron encarar, los años siguientes, varios proyectos
-              web en plataformas como Joomla y Wordpress y, más recientemente,
-              hice cursos de desarrollo frontend para poder llevar estos
-              conocimientos a otro nivel.
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Años trabajando en producción digital me llevaron a entender que
+              una buena presencia online requiere el mismo criterio que un buen
+              video: Estructura clara, jerarquía visual y comunicar de manera
+              efectiva.
             </p>
-            <p className="mb-8">
-              Quiero seguir explorando el mundo del desarrollo web, realizando
-              sitios personalizados para particulares y empresas. ¿Me acompañás?
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Desarrolllo sitios web a medida con React, HTML y CSS — desde
+              portfolios y landings hasta sitios institucionales. Trabajo de
+              manera freelance desde Buenos Aires, para clientes de Argentina y
+              Latinoamérica.
+            </p>
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Si tenés un proyecto web en mente —sitio personal, institucional,
+              portfolio, landing— hablemos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#timeline-web"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#0D0B2E] transition-colors font-heading text-xl uppercase"
-              >
-                Mis proyectos
-              </a>
-              <a
-                href="#contacto"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-site-teal transition-colors font-heading text-xl uppercase"
-              >
-                Contactame
-              </a>
+              <button className="mb-4">
+                <a
+                  href="#resume2"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Mis proyectos
+                </a>
+              </button>
+              <button className="mb-4">
+                <a
+                  href="#contacto"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Contactame
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -128,7 +171,6 @@ export function Web() {
           </div>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }

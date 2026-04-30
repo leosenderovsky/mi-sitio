@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface PageSEOProps {
   title: string;
@@ -7,13 +7,13 @@ interface PageSEOProps {
   image?: string;
   imageWidth?: number;
   imageHeight?: number;
-  type?: 'website' | 'article' | 'profile';
+  type?: "website" | "article" | "profile";
   noindex?: boolean;
   keywords?: string;
 }
 
-const SITE_NAME = 'Leo Senderovsky';
-const BASE_URL = 'https://leosenderovsky.com.ar';
+const SITE_NAME = "Leo Senderovsky";
+const BASE_URL = "https://leosenderovsky.com.ar";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/assets/img/og-social-preview.webp`; // 1200x630px
 const DEFAULT_IMAGE_WIDTH = 1200;
 const DEFAULT_IMAGE_HEIGHT = 630;
@@ -21,11 +21,11 @@ const DEFAULT_IMAGE_HEIGHT = 630;
 export function PageSEO({
   title,
   description,
-  path = '/',
+  path = "/",
   image = DEFAULT_OG_IMAGE,
   imageWidth = DEFAULT_IMAGE_WIDTH,
   imageHeight = DEFAULT_IMAGE_HEIGHT,
-  type = 'website',
+  type = "website",
   noindex = false,
   keywords,
 }: PageSEOProps) {
@@ -39,7 +39,15 @@ export function PageSEO({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical} />
-      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+      <meta name="language" content="es" />
+      <meta
+        name="robots"
+        content={
+          noindex
+            ? "noindex, nofollow"
+            : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        }
+      />
 
       {/* ── Autor y geo ── */}
       <meta name="author" content="Leo Aquiba Senderovsky" />

@@ -1,6 +1,10 @@
 import type { ExperienceItem, EducationItem } from "../types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faGraduationCap, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBriefcase,
+  faGraduationCap,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface TimelineSectionProps {
   experiences: ExperienceItem[];
@@ -30,7 +34,8 @@ export function TimelineSection({
             <h3
               className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
             >
-              <FontAwesomeIcon icon={faBriefcase} className="mr-4" /> Experiencia Laboral
+              <FontAwesomeIcon icon={faBriefcase} className="mr-4" />{" "}
+              Experiencia Laboral
             </h3>
             <div
               className={`relative border-l-2 ${lineColor} ml-4 pl-8 space-y-12`}
@@ -86,7 +91,8 @@ export function TimelineSection({
             <h3
               className={`text-3xl font-heading uppercase mb-8 flex items-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
             >
-              <FontAwesomeIcon icon={faGraduationCap} className="mr-4" /> Formación
+              <FontAwesomeIcon icon={faGraduationCap} className="mr-4" />{" "}
+              Formación
             </h3>
             <div
               className={`relative border-l-2 ${lineColor} ml-4 pl-8 space-y-12`}

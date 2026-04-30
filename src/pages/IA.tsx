@@ -5,9 +5,13 @@ import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { portfolioIA } from "../data/portfolio-ia";
 import { VideoThumb } from "../components/PortfolioGrid";
-import { ContactSection } from "../components/ContactSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClapperboard, faDesktop, faLaptopCode, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClapperboard,
+  faDesktop,
+  faLaptopCode,
+  faArrowDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 export function IA() {
   useSectionScroll({ portfolio: "portfolio-ia" });
@@ -51,28 +55,53 @@ export function IA() {
           <SectionHeader title="IA" subtitle="Audiovisual + Web" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-start lg:items-center">
             {/* Texto + subsecciones */}
-            <div
-              className="lg:w-1/2 text-white space-y-5"
-              style={{
-                fontFamily: '"Libre Franklin",sans-serif',
-                fontSize: "14px",
-                lineHeight: "25px",
-              }}
-            >
-              <p>
+            <div className="space-y-4 text-center text-white leading-relaxed">
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
                 Todo lo que hacía por separado —audiovisual, web, contenido—
                 ahora lo hago{" "}
-                <strong>potenciado con inteligencia artificial</strong>.
+                <span style={{ fontWeight: "bold" }}>
+                  potenciado con inteligencia artificial
+                </span>
+                .
               </p>
-              <p>
-                <strong>sender.ia</strong> es la marca bajo la que agrupo mis
-                servicios y proyectos de IA: producción de video generado con
-                IA, desarrollo de sitios y aplicaciones web construidas con IA,
-                y herramientas digitales que automatizan procesos creativos y de
-                comunicación.
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                <span style={{ fontWeight: "bold" }}>sender.ia</span> es la
+                marca bajo la que agrupo mis servicios y proyectos de IA:
+                producción de video generado con IA, desarrollo de sitios y
+                aplicaciones web construidas con IA, y herramientas digitales
+                que automatizan procesos creativos y de comunicación.
               </p>
-              <p>
-                <strong>No es el futuro. Es lo que ya estoy haciendo.</strong>
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                <span style={{ fontWeight: "bold" }}>
+                  No es el futuro. Es lo que ya estoy haciendo.
+                </span>
               </p>
 
               {/* Logo sender.ia (Mobile) */}
@@ -102,7 +131,7 @@ export function IA() {
           </div>
 
           {/* Sección Inferior (Columna Central) */}
-          <div 
+          <div
             className="mt-12 text-white space-y-8 max-w-4xl mx-auto"
             style={{
               fontFamily: '"Libre Franklin",sans-serif',
@@ -114,27 +143,60 @@ export function IA() {
             <div className="bg-white/10 rounded-xl p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:text-center">
               <div>
                 <p
-                  className="text-white font-bold text-lg"
+                  className="text-white text-center font-bold text-lg"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',
                     fontSize: "1.5em",
                     textTransform: "uppercase",
                   }}
                 >
-                  <FontAwesomeIcon icon={faClapperboard} className="mr-2" /> Audiovisual
+                  <FontAwesomeIcon icon={faClapperboard} className="mr-2" />{" "}
+                  Audiovisual
                 </p>
-                <p className="mt-2 text-white/90">
-                  ¿Necesitás producción de video de alta calidad sin los
-                  tiempos y los costos de una producción tradicional? Utilizo
-                  herramientas de IA generativa —imagen, voz, movimiento— para
-                  producir piezas audiovisuales que comunican con impacto.
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
+                  ¿Necesitás producción de video de alta calidad sin los tiempos
+                  y los costos de una producción tradicional?
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
+                  Utilizo herramientas de IA generativa —imagen, voz,
+                  movimiento— para producir piezas audiovisuales que comunican
+                  con impacto.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
                   Todo el criterio narrativo y editorial de siempre, con las
                   posibilidades que abre la IA.
                 </p>
               </div>
               <div>
                 <p
-                  className="text-white font-bold text-lg"
+                  className="text-white text-center font-bold text-lg"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',
                     fontSize: "1.5em",
@@ -143,17 +205,49 @@ export function IA() {
                 >
                   <FontAwesomeIcon icon={faDesktop} className="mr-2" /> Web
                 </p>
-                <p className="mt-2 text-white/90">
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
                   ¿Querés un sitio web o una landing de alto impacto,
-                  desarrollado a medida y en tiempo récord? Construyo sitios y
-                  experiencias web combinando desarrollo frontend con flujos
-                  de trabajo asistidos por IA. Resultados profesionales, con
-                  la solidez técnica que le exijo a cualquier proyecto.
+                  desarrollado a medida y en tiempo récord?
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
+                  Construyo sitios y experiencias web combinando desarrollo
+                  frontend con flujos de trabajo asistidos por IA.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
+                  Resultados profesionales, con la solidez técnica que le exijo
+                  a cualquier proyecto.
                 </p>
               </div>
               <div>
                 <p
-                  className="text-white font-bold text-lg"
+                  className="text-white text-center font-bold text-lg"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',
                     fontSize: "1.5em",
@@ -162,22 +256,62 @@ export function IA() {
                 >
                   <FontAwesomeIcon icon={faLaptopCode} className="mr-2" /> Apps
                 </p>
-                <p className="mt-2 text-white/90">
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
                   ¿Tenés una idea de herramienta digital y no sabés por dónde
-                  empezar? Desarrollo aplicaciones web funcionales
-                  —herramientas, generadores, trackers, automatizaciones—
-                  utilizando IA como motor de desarrollo. Desde la idea hasta
-                  el deploy.
+                  empezar?
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 10px",
+                  }}
+                >
+                  Desarrollo aplicaciones web funcionales —herramientas,
+                  generadores, trackers, automatizaciones— utilizando IA como
+                  motor de desarrollo.
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 10px",
+                    }}
+                  ></p>
+                  Desde la idea hasta el deploy.
                 </p>
               </div>
             </div>
 
-            <p className="lg:text-center lg:px-10 text-white/90">
-              <strong>sender.ia</strong> condensa todo lo que hice hasta acá:
-              el ojo audiovisual, la solidez en el desarrollo web y la
-              capacidad de incorporar lo nuevo sin perder lo mejor de lo
-              anterior. Si tenés un proyecto que necesite comunicar con
-              fuerza, ya sea en video, en la web o en una app, hablemos.
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              <span style={{ fontWeight: "bold" }}>sender.ia</span> condensa
+              todo lo que hice hasta acá: el ojo audiovisual, la solidez en el
+              desarrollo web y la capacidad de incorporar lo nuevo sin perder lo
+              mejor de lo anterior. Si tenés un proyecto que necesite comunicar
+              con fuerza, ya sea en video, en la web o en una app, hablemos.
             </p>
 
             <div className="flex flex-wrap lg:justify-center gap-4 pt-4">
@@ -202,7 +336,8 @@ export function IA() {
                   textTransform: "uppercase",
                 }}
               >
-                Contactame <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
+                Contactame{" "}
+                <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
               </a>
             </div>
           </div>
@@ -230,7 +365,6 @@ export function IA() {
           </div>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }

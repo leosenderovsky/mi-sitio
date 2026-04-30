@@ -8,7 +8,6 @@ import { TimelineSection } from "../components/TimelineSection";
 import { portfolioGuion } from "../data/portfolio-guion";
 import { educacionGuion } from "../data/educacion";
 import { experienciaGuion } from "../data/experiencia-guion";
-import { ContactSection } from "../components/ContactSection";
 
 const SECTION_MAP = {
   experiencia: "resume",
@@ -57,16 +56,43 @@ export function Guion() {
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="GUIÓN" subtitle="AUDIOVISUAL" theme="dark" />
-          <div className="max-w-3xl mx-auto mt-8 text-xl text-white font-body leading-relaxed">
-            <p className="mb-8">
-              ¿Estás buscando un guionista para tus proyectos?
+          <div className="space-y-4 text-center text-white leading-relaxed">
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Escribo guiones desde hace más de veinte años. En los últimos años
+              me he dedicado a la escritura de guiones de spots publicitarios,
+              piezas documentales, videos y discursos corporativos e
+              institucionales.
+            </p>
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Además de escribir guiones, trabajo como script doctor, brindando
+              consultoría y asesoría narrativa para proyectos de terceros.
+              Trabajo de manera freelance desde Buenos Aires para producciones
+              de Argentina y el exterior.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#portfolio-guion"
                 className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
-                Mis trabajos
+                Mi portfolio
               </a>
               <a
                 href="#contacto"
@@ -96,40 +122,53 @@ export function Guion() {
             subtitle="Guión"
             theme="dark"
           />
-          <div className="flex flex-wrap items-center mt-12 gap-y-8">
-            <div className="w-full lg:w-1/2 p-4 text-white text-lg space-y-4">
-              <p>
-                ¿Tenés una idea o una historia, pero no sabés cómo desarrollarla
-                o cómo llevarla a un lenguaje cinematográfico o televisivo?
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
+            <div className="space-y-4 text-center text-white leading-relaxed">
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                La consultoría de guión está dedicada a proyectos que ya existen
+                pero necesitan trabajo: una idea que no termina de tomar forma,
+                un guión trabado en el desarrollo, una historia que funciona
+                pero no encuentra su estructura o un guión terminado que
+                necesita una revisión exhaustiva.
               </p>
-              <p>¿Escribiste un guión y necesitás reencauzarlo o corregirlo?</p>
-              <p>
-                ¿Te trabaste en el medio de la escritura y no encontrás la forma
-                de continuar?
+              <p
+                style={{
+                  textAlign: "justify",
+                  fontFamily: '"Libre Franklin", sans-serif',
+                  fontSize: "1.1em",
+                  fontWeight: 300,
+                  width: "80%",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Trabajo como script doctor — acompaño el proceso de escritura
+                con foco en la narrativa y en lo que el proyecto necesita
+                comunicar. Para más información sobre este servicio de asesoría
+                de guión, podés visitar ConsultoriadeGuion.com.ar.
               </p>
-              <p>
-                ¿Necesitás un profesional para que te acompañe en el proceso de
-                escritura?
-              </p>
-              <p>
-                ¿Precisás un guión para un video institucional o publicitario?
-              </p>
-              <p>
-                Te presento mis servicios de script doctoring, asesoría en guión
-                y redacción de guiones, adaptados a cada necesidad.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-4">
-                <a
-                  href="http://www.consultoriadeguion.com.ar/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
-                >
-                  Visitá mi sitio web de consultoría
-                </a>
+              <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
+                <button className="mb-4">
+                  <a
+                    href="http://www.consultoriadeguion.com.ar/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
+                  >
+                    Visitá mi sitio web de consultoría
+                  </a>
+                </button>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 p-4">
+            <div className="lg:w-1/2 flex justify-center">
               <img
                 src="/assets/img/guion/consultoria-web.webp"
                 alt="Consultoría"
@@ -191,11 +230,14 @@ export function Guion() {
         <div className="container mx-auto px-4">
           <SectionHeader title="Mi portfolio" subtitle="Guión" theme="light" />
           <div className="mt-12">
-            <PortfolioGrid items={portfolioGuion} initialVisible={9} theme="light" />
+            <PortfolioGrid
+              items={portfolioGuion}
+              initialVisible={9}
+              theme="light"
+            />
           </div>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }

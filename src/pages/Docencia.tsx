@@ -10,12 +10,11 @@ import { entrevistas } from "../data/entrevistas";
 import { experienciaDocencia } from "../data/experiencia-docencia";
 import { educacionFUC } from "../data/educacion";
 import { VideoThumb } from "../components/PortfolioGrid";
-import { ContactSection } from "../components/ContactSection";
 import { SchemaCourse } from "../components/SchemaMarkup";
 
 const SECTION_MAP = {
   experiencia: "resume2",
-  entrevistas: "docencia-section-3",
+  entrevistas: "entrevistas",
 };
 
 export function Docencia() {
@@ -70,6 +69,88 @@ export function Docencia() {
       />
 
       <section
+        id="docencia-intro"
+        className="py-20 text-white relative overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('/assets/img/docencia/bg-docencia-charlas2.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
+        <div className="relative z-10 container mx-auto px-4">
+          <SectionHeader
+            title="Mis encuentros de cine"
+            subtitle="Docencia"
+            theme="dark"
+          />
+          <div className="space-y-4 text-center text-white leading-relaxed">
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Desde 2011 doy charlas, ciclos y encuentros de cine debate para
+              instituciones y grupos privados en Argentina y Latinoamérica,
+              tanto de manera presencial, como virtual.
+              <br />
+              Mis dos grandes líneas de trabajo son el judaísmo en el cine y la
+              televisión, y la historia del cine argentino — aunque a veces los
+              caminos se cruzan.
+            </p>
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Si formás parte de una institución, si tenés un grupo con ganas de
+              adentrarse en estas temáticas, o si simplemente te interesa
+              participar de este tipo de encuentros en Buenos Aires o de manera
+              virtual, escribime y lo charlamos.
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
+            <button className="mb-4">
+              <a
+                href="#resume2"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Mi experiencia
+              </a>
+            </button>
+            <button className="mb-4">
+              <a
+                href="#entrevistas"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Entrevistas
+              </a>
+            </button>
+            <button className="mb-4">
+              <a
+                href="#contacto"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Contactame
+              </a>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
         id="encuentros-de-cine"
         className="py-20 text-white relative overflow-hidden"
         style={{
@@ -80,41 +161,19 @@ export function Docencia() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
+        <div className="absolute inset-0 bg-[#1a74a0] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
-          {/* Encabezado */}
-          <SectionHeader
-            title="Mis encuentros de cine"
-            subtitle="Docencia"
-            theme="dark"
-          />
           <h3
-            className="text-center text-white mb-4"
+            className="text-center text-[#1B1440] mb-10"
             style={{
               fontFamily: '"Yanone Kaffeesatz",sans-serif',
-              fontSize: "3.5em",
-              fontWeight: 300,
+              fontSize: "3em",
+              fontWeight: 700,
               letterSpacing: 1,
             }}
           >
             JUDAÍSMO EN CINE Y TV
           </h3>
-
-          {/* Intro */}
-          <p
-            className="text-center text-white mb-10"
-            style={{
-              fontFamily: '"Yanone Kaffeesatz",sans-serif',
-              fontSize: "1.5em",
-              fontWeight: 300,
-              width: "80%",
-              margin: "0 auto 40px",
-            }}
-          >
-            Desde 2011, doy charlas y encuentros de cine para instituciones y
-            grupos privados, sobre distintas temáticas ligadas al judaísmo en el
-            cine y la TV.
-          </p>
 
           {/* Grid de 7 cards — Judaísmo */}
           {/* Fila 1: ciclos 1-3 (con múltiples documentos) */}
@@ -154,15 +213,15 @@ export function Docencia() {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
+        <div className="absolute inset-0 bg-[#1a74a0] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           {/* Título temático */}
           <h3
-            className="text-center text-white mb-10"
+            className="text-center text-[#1B1440] mb-10"
             style={{
               fontFamily: '"Yanone Kaffeesatz",sans-serif',
-              fontSize: "3.5em",
-              fontWeight: 300,
+              fontSize: "3em",
+              fontWeight: 700,
               letterSpacing: 1,
             }}
           >
@@ -234,19 +293,16 @@ export function Docencia() {
       </section>
 
       <section
-        id="docencia-section-3"
+        id="entrevistas"
         className="py-20 text-white relative overflow-hidden"
-        style={{
-          backgroundImage:
-            "url('/assets/img/docencia/bg-docencia-charlas2.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
       >
-        <div className="absolute inset-0 bg-[#0D0B2E] opacity-80" />
+        <div className="absolute inset-0 bg-[#19d3ff] opacity-80" />
         <div className="relative z-10 container mx-auto px-4">
-          <SectionHeader title="Entrevistas" subtitle="Docencia" theme="dark" />
+          <SectionHeader
+            title="Entrevistas"
+            subtitle="Docencia"
+            theme="light"
+          />
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {entrevistas.map((item) => {
               const videoId = item.link.includes("youtube.com/watch?v=")
@@ -276,7 +332,6 @@ export function Docencia() {
           </div>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }

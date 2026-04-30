@@ -5,7 +5,6 @@ import { SchemaProfessionalServices } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { FlipCard } from "../components/FlipCard";
 import { ServiceCard } from "../components/ServiceCard";
-import { ContactSection } from "../components/ContactSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faScissors,
@@ -360,9 +359,9 @@ export function Home() {
           <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
             Acerca de mí
           </h2>
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
+          <div className="flex flex-col lg:flex-row gap-10 items-center">
             {/* Foto */}
-            <div className="w-1/2 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
+            <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
               <motion.img
                 src="/assets/img/about/about-1.webp"
                 alt="Foto de Leo Senderovsky"
@@ -382,16 +381,33 @@ export function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="space-y-4 text-white text-sm leading-relaxed"
-                style={{ fontFamily: '"Libre Franklin", sans-serif' }}
+                className="space-y-4 text-center text-white leading-relaxed"
               >
-                <p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
                   Me llamo Leo Aquiba Senderovsky (Aquiba es mi segundo nombre).
                   Soy argentino (nacido en Bahía Blanca, vivo en Buenos Aires),
                   soy judío, pisciano, estoy casado con Giselle y tenemos dos
                   príncipes llamados Ezequiel y Uriel.
                 </p>
-                <p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
                   En los papeles soy director cinematográfico y profesor en
                   cinematografia (Universidad del Cine 2003-2008). En la
                   práctica cotidiana soy editor de video, guionista y consultor
@@ -399,20 +415,93 @@ export function Home() {
                   años, enfoqué mi capacitación en desarrollo web y,
                   previamente, desarrollé varios sitios.
                 </p>
-                <p>Me encanta escribir y hablar de cine y tv.</p>
-                <p>Me apasiona contar historias.</p>
-                <p>Me entusiasma desarrollar sitios web.</p>
-                <p>Me fascina potenciar proyectos con la ayuda de la IA.</p>
-                <p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  Me encanta escribir y hablar de cine y tv.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  Me apasiona contar historias.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  Me entusiasma desarrollar sitios web.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  Me fascina potenciar proyectos con la ayuda de la IA.
+                </p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
                   Me motiva incorporar herramientas nuevas para comunicar ideas
                   de la mejor manera posible, ya sea en soporte audiovisual como
                   en la web.
                 </p>
-                <p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
                   Ahora que sabés quién soy, te invito a conocer un poco más de
                   los servicios que brindo.
                 </p>
-                <p>Gracias por entrar y estoy para lo que necesites.</p>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontSize: "1.1em",
+                    fontWeight: 300,
+                    width: "80%",
+                    margin: "0 auto 20px",
+                  }}
+                >
+                  Gracias por entrar y estoy para lo que necesites.
+                </p>
               </motion.div>
             </div>
 
@@ -552,11 +641,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      {/* ══════════════════════════════════════
-          CONTACTO
-      ══════════════════════════════════════ */}
-      <ContactSection />
     </>
   );
 }

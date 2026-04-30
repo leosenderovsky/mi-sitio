@@ -9,7 +9,6 @@ import { portfolioEdicion } from "../data/portfolio-edicion";
 import { portfolioReels } from "../data/portfolio-reels";
 import { experienciaEdicion } from "../data/experiencia-edicion";
 import { educacionEdicion } from "../data/educacion";
-import { ContactSection } from "../components/ContactSection";
 
 const SECTION_MAP = {
   experiencia: "resume",
@@ -28,7 +27,7 @@ export function Edicion() {
     <>
       <PageSEO
         title="Edición de Video"
-        description="Portfolio de edición de video de Leo Senderovsky. Editor audiovisual senior con más de 15 años de experiencia en documentales, spots publicitarios y contenido para medios como Infobae, LN+ y NBA. Buenos Aires, Argentina."
+        description="Portfolio de edición de video de Leo Senderovsky. Editor audiovisual con casi veinte años de experiencia en documentales, spots y contenido para medios como Infobae, LN+ y NBA. Buenos Aires, Argentina."
         path="/audiovisual/edicion"
         keywords="editor de video Buenos Aires, edicion audiovisual, edicion de documentales, postproduccion Argentina, editor freelance"
       />
@@ -59,23 +58,78 @@ export function Edicion() {
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
           <SectionHeader title="EDICIÓN" subtitle="AUDIOVISUAL" theme="dark" />
-          <div className="max-w-3xl mx-auto mt-8 text-xl text-site-muted font-body leading-relaxed">
-            <p className="mb-8">
-              ¿Estás buscando un editor para tus proyectos?
+          <div className="space-y-4 text-center text-white leading-relaxed">
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Llevo casi veinte años editando para TV, cine y digital.
+              <br />
+              En ese tiempo trabajé para diversas productoras, para medios como
+              Infobae (donde trabajo actualmente) o LN+, y para marcas como NBA
+              Latam, entre otros.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#resume"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-              >
-                Mi experiencia
-              </a>
-              <a
-                href="#portfolio-edicion"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-              >
-                Mi portfolio
-              </a>
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 20px",
+              }}
+            >
+              Manejo tanto la narrativa —documentales, programas— como la
+              producción de piezas para redes, spots y promos. <br />Y cuando el
+              proyecto lo requiere, también coordino: organizo flujos, defino
+              tiempos de entrega y acompaño equipos desde el primer corte hasta
+              la salida al aire.
+            </p>
+            <p
+              style={{
+                textAlign: "justify",
+                fontFamily: '"Libre Franklin", sans-serif',
+                fontSize: "1.1em",
+                fontWeight: 300,
+                width: "80%",
+                margin: "0 auto 40px",
+              }}
+            >
+              Si buscás un editor de video en Buenos Aires que entienda la
+              edición como construcción narrativa, o que pueda gestionar la
+              postpro completa de tu proyecto, escribime.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
+              <button className="mb-4">
+                <a
+                  href="#resume"
+                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Mi experiencia
+                </a>
+              </button>
+              <button className="mb-4">
+                <a
+                  href="#portfolio-edicion"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Mi portfolio
+                </a>
+              </button>
+              <button className="mb-4">
+                <a
+                  href="#contacto"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Contactame
+                </a>
+              </button>
             </div>
           </div>
         </div>
@@ -136,7 +190,11 @@ export function Edicion() {
             theme="light"
           />
           <div className="mt-12">
-            <PortfolioGrid items={portfolioEdicion} initialVisible={9} theme="light" />
+            <PortfolioGrid
+              items={portfolioEdicion}
+              initialVisible={9}
+              theme="light"
+            />
           </div>
         </div>
       </section>
@@ -157,7 +215,6 @@ export function Edicion() {
           </div>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }
