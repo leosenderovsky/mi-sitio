@@ -2,6 +2,14 @@ import type { PortfolioItem } from "../types";
 
 export const portfolioReels: PortfolioItem[] = [
   {
+    id: "reel-18",
+    category: "edicion",
+    title: "El Encargado - Temporada 4",
+    subtitle: "The Content Land para Disney+, 2026",
+    image: "/assets/img/gallery/edicion-guion/reels/el-encargado.webp",
+    link: "https://streamable.com/e/3z8wrt?",
+  },
+  {
     id: "reel-1",
     category: "edicion",
     title: "Pais Divino - ¿Cómo somos en Argentina?",
