@@ -7,7 +7,7 @@ export const portfolioReels: PortfolioItem[] = [
     title: "El Encargado - Temporada 4",
     subtitle: "The Content Land para Disney+, 2026",
     image: "/assets/img/gallery/edicion-guion/reels/el-encargado.webp",
-    link: "https://streamable.com/e/3z8wrt?",
+    link: "https://www.youtube.com/watch?v=ryWXxOF6SNw",
   },
   {
     id: "reel-1",
