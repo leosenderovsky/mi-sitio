@@ -60,15 +60,25 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" />
     </noscript>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R825ZYTN5"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      // GA4 carga solo con consentimiento explícito
+      window.__enableGA = function() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5R825ZYTN5';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-5R825ZYTN5');
+      };
+      // Si ya había consentimiento previo, cargar GA inmediatamente
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+        window.__enableGA();
       }
-      gtag("js", new Date());
-      gtag("config", "G-5R825ZYTN5");
     </script>
   </head>
   <body>

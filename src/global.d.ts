@@ -5,6 +5,9 @@ declare global {
     GLightbox?: (options?: Record<string, unknown>) => {
       destroy: () => void;
     };
-    gtag?: (command: string, ...args: unknown[]) => void;
+    __enableGA?: () => void;
+    __gaLoaded?: boolean;
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }

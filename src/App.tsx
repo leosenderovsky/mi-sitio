@@ -7,6 +7,9 @@ import { NewsletterBar } from './components/NewsletterBar';
 import { ContactSection } from './components/ContactSection';
 import { SchemaGlobal } from './components/SchemaMarkup';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { CookieBanner } from './components/CookieBanner';
+import { AnimatePresence } from 'framer-motion';
+import { useCookieConsent } from './hooks/useCookieConsent';
 
 import { Home } from './pages/Home';
 const Edicion = lazy(() => import('./pages/Edicion').then(module => ({ default: module.Edicion })));
@@ -25,6 +28,7 @@ const CVCastellano = lazy(() => import('./pages/audiovisual/CVCastellano').then(
 const CVIngles = lazy(() => import('./pages/audiovisual/CVIngles').then(module => ({ default: module.default })));
 const CVWebEmbed = lazy(() => import('./pages/SobreMi/CVWebEmbed').then(module => ({ default: module.default })));
 const DocenciaDocEmbed = lazy(() => import('./pages/audiovisual/DocenciaDocEmbed').then(module => ({ default: module.default })));
+const PoliticaDeCookies = lazy(() => import('./pages/PoliticaDeCookies').then(module => ({ default: module.PoliticaDeCookies })));
 
 // Rutas donde NO mostrar newsletter + contacto
 const EXCLUDE_CONTACT_ROUTES = [
@@ -68,11 +72,13 @@ function Analytics() {
 }
 
 function App() {
+  const { consent, accept, reject } = useCookieConsent();
+
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <SchemaGlobal />
-        <Router>
+        <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <Analytics />
           <div className="flex flex-col min-h-screen bg-site-dark overflow-x-hidden">
             <Navbar />
@@ -102,6 +108,7 @@ function App() {
                   <Route path="/web/:section" element={<Web />} />
                   <Route path="/ia" element={<IA />} />
                   <Route path="/ia/:section" element={<IA />} />
+                  <Route path="/politica-de-cookies" element={<PoliticaDeCookies />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
@@ -109,6 +116,11 @@ function App() {
             </main>
             <Footer />
           </div>
+          <AnimatePresence mode="wait">
+            {consent === null && (
+              <CookieBanner onAccept={accept} onReject={reject} />
+            )}
+          </AnimatePresence>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
