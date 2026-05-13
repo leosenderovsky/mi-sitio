@@ -19,11 +19,11 @@ export function CookieBanner({ onAccept, onReject }: CookieBannerProps) {
     >
       <div className="w-full max-w-lg bg-[#0D0B2E]/95 backdrop-blur-sm border-t-2 border-[--color-secondary] shadow-2xl rounded-t-xl p-5 md:p-6 pointer-events-auto">
         <div className="flex flex-col gap-4">
-          <h2 className="text-2xl font-heading text-[--color-secondary] uppercase tracking-wider m-0">
+          <h2 className="text-2xl font-heading text-white uppercase tracking-wider m-0">
             Cookies & Privacidad
           </h2>
           
-          <p className="font-body text-[--color-text-light] text-sm leading-relaxed">
+          <p className="font-body text-white text-sm leading-relaxed">
             Utilizo Google Analytics 4 para entender cómo interactuás con el sitio y mejorar tu experiencia. 
             También uso Google Fonts, que puede transferir datos a servidores de Google. 
             Al aceptar, permitís el uso de estas tecnologías.
