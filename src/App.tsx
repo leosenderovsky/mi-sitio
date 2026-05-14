@@ -40,6 +40,7 @@ const EXCLUDE_CONTACT_ROUTES = [
   '/audiovisual/cv',
   '/web/cv',
   '/audiovisual/docencia/leer',
+  '/politica-de-cookies',
 ];
 
 function LayoutSections() {
@@ -118,7 +119,7 @@ function App() {
           </div>
           <AnimatePresence mode="wait">
             {consent === null && (
-              <CookieBanner onAccept={accept} onReject={reject} />
+              <CookieBanner key="cookie-banner" onAccept={accept} onReject={reject} />
             )}
           </AnimatePresence>
         </Router>

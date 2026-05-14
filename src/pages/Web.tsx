@@ -96,7 +96,7 @@ export function Web() {
               Si tenés un proyecto web en mente —sitio personal, institucional,
               portfolio, landing— hablemos.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="mb-4">
                 <a
                   href="#resume2"
