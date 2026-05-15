@@ -4,8 +4,10 @@ import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { experienciaWeb } from "../data/experiencia-web";
 
+const SECTION_MAP = { experiencia: "timeline-web" };
+
 export function Web() {
-  useSectionScroll({ experiencia: "timeline-web" });
+  useSectionScroll(SECTION_MAP);
 
   return (
     <>
@@ -102,22 +104,18 @@ export function Web() {
               portfolio, landing— hablemos.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="mb-4">
-                <a
-                  href="#resume2"
-                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                >
-                  Mis proyectos
-                </a>
-              </button>
-              <button className="mb-4">
-                <a
-                  href="#contacto"
-                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                >
-                  Contactame
-                </a>
-              </button>
+              <a
+                href="#resume2"
+                className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Mis proyectos
+              </a>
+              <a
+                href="#contacto"
+                className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Contactame
+              </a>
             </div>
           </div>
         </div>

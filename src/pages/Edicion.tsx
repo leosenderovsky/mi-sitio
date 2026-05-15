@@ -111,30 +111,24 @@ export function Edicion() {
               postpro completa de tu proyecto, escribime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
-              <button className="mb-4">
-                <a
-                  href="#resume"
-                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                >
-                  Mi experiencia
-                </a>
-              </button>
-              <button className="mb-4">
-                <a
-                  href="#portfolio-edicion"
-                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                >
-                  Mi portfolio
-                </a>
-              </button>
-              <button className="mb-4">
-                <a
-                  href="#contacto"
-                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                >
-                  Contactame
-                </a>
-              </button>
+              <a
+                href="#resume"
+                className="mb-4 border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Mi experiencia
+              </a>
+              <a
+                href="#portfolio-edicion"
+                className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Mi portfolio
+              </a>
+              <a
+                href="#contacto"
+                className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+              >
+                Contactame
+              </a>
             </div>
           </div>
         </div>

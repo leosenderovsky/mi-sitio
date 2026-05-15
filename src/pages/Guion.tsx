@@ -157,16 +157,14 @@ export function Guion() {
                 de guión, podés visitar ConsultoriadeGuion.com.ar.
               </p>
               <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
-                <button className="mb-4">
-                  <a
-                    href="http://www.consultoriadeguion.com.ar/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
-                  >
-                    Visitá mi sitio web de consultoría
-                  </a>
-                </button>
+                <a
+                  href="http://www.consultoriadeguion.com.ar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-4 border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
+                >
+                  Visitá mi sitio web de consultoría
+                </a>
               </div>
             </div>
             <div className="lg:w-1/2 flex justify-center">

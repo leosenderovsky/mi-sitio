@@ -96,24 +96,20 @@ export function Critica() {
                 cine que sigo publicando.
               </p>
               <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
-                <button className="mb-4">
-                  <a
-                    href="https://blog.leosenderovsky.com.ar/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                  >
-                    Visitá mi blog
-                  </a>
-                </button>
-                <button className="mb-4">
-                  <a
-                    href="#contacto"
-                    className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-                  >
-                    Contactame
-                  </a>
-                </button>
+                <a
+                  href="https://blog.leosenderovsky.com.ar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Visitá mi blog
+                </a>
+                <a
+                  href="#contacto"
+                  className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                >
+                  Contactame
+                </a>
               </div>
             </div>
 

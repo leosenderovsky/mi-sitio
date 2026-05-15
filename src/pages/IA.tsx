@@ -14,8 +14,10 @@ import {
   faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
+const SECTION_MAP = { portfolio: "portfolio-ia" };
+
 export function IA() {
-  useSectionScroll({ portfolio: "portfolio-ia" });
+  useSectionScroll(SECTION_MAP);
 
   useEffect(() => {
     const lightbox = window.GLightbox?.({
@@ -305,34 +307,30 @@ export function IA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
-              <button className="mb-4">
-                <a
-                  href="#portfolio-ia"
-                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
-                  style={{
-                    fontFamily: '"Yanone Kaffeesatz",sans-serif',
-                    fontSize: "1.3em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Mirá mis trabajos{" "}
-                  <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
-                </a>
-              </button>
-              <button className="mb-4">
-                <a
-                  href="#contacto"
-                  className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
-                  style={{
-                    fontFamily: '"Yanone Kaffeesatz",sans-serif',
-                    fontSize: "1.3em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Contactame{" "}
-                  <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
-                </a>
-              </button>
+              <a
+                href="#portfolio-ia"
+                className="mb-4 inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
+                style={{
+                  fontFamily: '"Yanone Kaffeesatz",sans-serif',
+                  fontSize: "1.3em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Mirá mis trabajos{" "}
+                <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
+              </a>
+              <a
+                href="#contacto"
+                className="mb-4 inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
+                style={{
+                  fontFamily: '"Yanone Kaffeesatz",sans-serif',
+                  fontSize: "1.3em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Contactame{" "}
+                <FontAwesomeIcon icon={faArrowDown} className="text-sm" />
+              </a>
             </div>
           </div>
         </div>

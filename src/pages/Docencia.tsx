@@ -122,30 +122,24 @@ export function Docencia() {
             </p>
           </div>
           <div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center text-center mt-10">
-            <button className="mb-4">
-              <a
-                href="#resume2"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-              >
-                Mi experiencia
-              </a>
-            </button>
-            <button className="mb-4">
-              <a
-                href="#entrevistas"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-              >
-                Entrevistas
-              </a>
-            </button>
-            <button className="mb-4">
-              <a
-                href="#contacto"
-                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
-              >
-                Contactame
-              </a>
-            </button>
+            <a
+              href="#resume2"
+              className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+            >
+              Mi experiencia
+            </a>
+            <a
+              href="#entrevistas"
+              className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+            >
+              Entrevistas
+            </a>
+            <a
+              href="#contacto"
+              className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+            >
+              Contactame
+            </a>
           </div>
         </div>
       </section>
