@@ -51,6 +51,11 @@ export function Edicion() {
       >
         <img
           src="/assets/img/edicion/bg-edicion.webp"
+          srcSet="/assets/img/edicion/bg-edicion-480w.webp 480w,
+                  /assets/img/edicion/bg-edicion-768w.webp 768w,
+                  /assets/img/edicion/bg-edicion-1280w.webp 1280w,
+                  /assets/img/edicion/bg-edicion-1920w.webp 1920w"
+          sizes="100vw"
           alt="Fondo — edición de video"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"

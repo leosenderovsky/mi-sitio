@@ -32,6 +32,22 @@ export function ServiceCard({
 }: ServiceCardProps) {
   const isDark = !!bgColor;
 
+  // Helper interno para imágenes responsive
+  const buildSrcSet = (src: string): string | undefined => {
+    const RESPONSIVE = [
+      "/assets/img/dibujos/edicion.webp",
+      "/assets/img/dibujos/critica.webp",
+      "/assets/img/dibujos/ia.webp",
+      "/assets/img/dibujos/web.webp",
+      "/assets/img/dibujos/guion.webp",
+      "/assets/img/dibujos/docencia-1.webp",
+    ];
+    if (!RESPONSIVE.includes(src)) return undefined;
+
+    const base = src.replace(".webp", "");
+    return `${base}-400w.webp 400w, ${base}-700w.webp 700w, ${base}-1024w.webp 1024w, ${src} 1376w`;
+  };
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -48,6 +64,8 @@ export function ServiceCard({
         <div className="overflow-hidden aspect-video">
           <img
             src={image}
+            srcSet={buildSrcSet(image)}
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
             alt={title}
             width="400"
             height="225"

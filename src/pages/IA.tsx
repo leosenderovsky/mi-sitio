@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
@@ -40,15 +41,15 @@ export function IA() {
       />
 
       {/* Intro Section */}
-      <section
+      <ResponsiveBackground
         id="servicios"
-        className="py-20 text-white relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/assets/img/ia/bg-ia.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+        src="/assets/img/ia/bg-ia.webp"
+        srcSet="/assets/img/ia/bg-ia-480w.webp 480w,
+                /assets/img/ia/bg-ia-768w.webp 768w,
+                /assets/img/ia/bg-ia-1280w.webp 1280w,
+                /assets/img/ia/bg-ia-1920w.webp 1920w"
+        sizes="100vw"
+        className="py-20 text-white"
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
@@ -281,18 +282,7 @@ export function IA() {
                 >
                   Desarrollo aplicaciones web funcionales —herramientas,
                   generadores, trackers, automatizaciones— utilizando IA como
-                  motor de desarrollo.
-                  <p
-                    style={{
-                      textAlign: "justify",
-                      fontFamily: '"Libre Franklin", sans-serif',
-                      fontSize: "1.1em",
-                      fontWeight: 300,
-                      width: "80%",
-                      margin: "0 auto 10px",
-                    }}
-                  ></p>
-                  Desde la idea hasta el deploy.
+                  motor de desarrollo. Desde la idea hasta el deploy.
                 </p>
               </div>
             </div>
@@ -304,7 +294,7 @@ export function IA() {
                 fontSize: "1.1em",
                 fontWeight: 300,
                 width: "80%",
-                margin: "0 auto 20px",
+                margin: "20px auto 20px",
               }}
             >
               <span style={{ fontWeight: "bold" }}>sender.ia</span> condensa
@@ -346,7 +336,7 @@ export function IA() {
             </div>
           </div>
         </div>
-      </section>
+      </ResponsiveBackground>
 
       {/* Portfolio IA */}
       <section

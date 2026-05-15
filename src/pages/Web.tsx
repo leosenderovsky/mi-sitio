@@ -32,6 +32,11 @@ export function Web() {
       >
         <img
           src="/assets/img/web/bg-web.webp"
+          srcSet="/assets/img/web/bg-web-480w.webp 480w,
+                  /assets/img/web/bg-web-768w.webp 768w,
+                  /assets/img/web/bg-web-1280w.webp 1280w,
+                  /assets/img/web/bg-web-1920w.webp 1920w"
+          sizes="100vw"
           alt="Fondo — proyectos web"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"

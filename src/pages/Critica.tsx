@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
@@ -38,15 +39,14 @@ export function Critica() {
       />
 
       {/* ── Intro ── */}
-      <section
-        id="servicios"
-        className="py-20 relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/assets/img/critica/bg-critica.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+      <ResponsiveBackground
+        src="/assets/img/critica/bg-critica.webp"
+        srcSet="/assets/img/critica/bg-critica-480w.webp 480w,
+                /assets/img/critica/bg-critica-768w.webp 768w,
+                /assets/img/critica/bg-critica-1280w.webp 1280w,
+                /assets/img/critica/bg-critica-1920w.webp 1920w"
+        sizes="100vw"
+        className="py-20"
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
@@ -134,7 +134,7 @@ export function Critica() {
             </div>
           </div>
         </div>
-      </section>
+      </ResponsiveBackground>
 
       {/* ── Experiencia (resume2 — datos reales de Cine.com) ── */}
       <section

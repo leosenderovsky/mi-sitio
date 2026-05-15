@@ -42,8 +42,20 @@
     <link rel="dns-prefetch" href="https://api.web3forms.com" />
 
     <!-- Preloads críticos para Performance -->
-    <link rel="preload" href="/assets/img/video-portada.webp" as="image" media="(max-width: 767px)" fetchpriority="high" />
-    <link rel="preload" href="/assets/img/hero-area-office.webp" as="image" media="(min-width: 768px)" fetchpriority="high" />
+    <!-- Hero home - responsive preload -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/hero-area-office.webp"
+      imagesrcset="
+        /assets/img/hero-area-office-640w.webp 640w,
+        /assets/img/hero-area-office-960w.webp 960w,
+        /assets/img/hero-area-office-1280w.webp 1280w,
+        /assets/img/hero-area-office-1920w.webp 1920w,
+        /assets/img/hero-area-office.webp 4000w"
+      imagesizes="(max-width: 768px) 100vw, 50vw"
+      fetchpriority="high"
+    />
     <link rel="preload" href="/assets/img/video-editor-fondo.webp" as="image" fetchpriority="high" />
     <link rel="preload" href="/assets/img/web-dev-fondo.webp" as="image" fetchpriority="high" />
     <link rel="preload" href="/assets/img/ia-fondo.webp" as="image" fetchpriority="high" />

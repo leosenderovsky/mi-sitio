@@ -215,6 +215,12 @@ export function Home() {
         {/* Background Image Optimized for LCP */}
         <img
           src="/assets/img/hero-area-office.webp"
+          srcSet="/assets/img/hero-area-office-640w.webp 640w,
+                  /assets/img/hero-area-office-960w.webp 960w,
+                  /assets/img/hero-area-office-1280w.webp 1280w,
+                  /assets/img/hero-area-office-1920w.webp 1920w,
+                  /assets/img/hero-area-office.webp 4000w"
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt="Leo Senderovsky Workspace"
           className="absolute inset-0 w-full h-full object-cover"
           fetchPriority="high"
@@ -294,6 +300,11 @@ export function Home() {
             >
               <img
                 src="/assets/img/dibujos/leo-chico-escribiendo.webp"
+                srcSet="/assets/img/dibujos/leo-chico-escribiendo-300w.webp 300w,
+                        /assets/img/dibujos/leo-chico-escribiendo-512w.webp 512w,
+                        /assets/img/dibujos/leo-chico-escribiendo-768w.webp 768w,
+                        /assets/img/dibujos/leo-chico-escribiendo.webp 1024w"
+                sizes="(max-width: 768px) 90vw, 40vw"
                 alt="Ilustración chico escribiendo"
                 className="w-full rounded-2xl"
                 loading="lazy"

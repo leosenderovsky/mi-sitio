@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaBreadcrumb } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
@@ -43,15 +44,15 @@ export function Guion() {
         ]}
       />
 
-      <section
+      <ResponsiveBackground
         id="guion"
-        className="py-20 text-white text-center relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/assets/img/guion/bg-guion.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-        }}
+        src="/assets/img/guion/bg-guion.webp"
+        srcSet="/assets/img/guion/bg-guion-480w.webp 480w,
+                /assets/img/guion/bg-guion-768w.webp 768w,
+                /assets/img/guion/bg-guion-1280w.webp 1280w,
+                /assets/img/guion/bg-guion-1920w.webp 1920w"
+        sizes="100vw"
+        className="py-20 text-white text-center"
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
@@ -103,7 +104,7 @@ export function Guion() {
             </div>
           </div>
         </div>
-      </section>
+      </ResponsiveBackground>
 
       <section
         id="consultoria"
