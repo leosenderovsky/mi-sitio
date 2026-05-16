@@ -161,7 +161,7 @@ export function Guion() {
                   href="http://www.consultoriadeguion.com.ar/"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-4 border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
+                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
                 >
                   Visitá mi sitio web de consultoría
                 </a>

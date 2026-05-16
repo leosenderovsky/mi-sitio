@@ -100,13 +100,13 @@ export function Critica() {
                   href="https://blog.leosenderovsky.com.ar/"
                   target="_blank"
                   rel="noreferrer"
-                  className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
                 >
                   Visitá mi blog
                 </a>
                 <a
                   href="#contacto"
-                  className="mb-4 border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
                 >
                   Contactame
                 </a>

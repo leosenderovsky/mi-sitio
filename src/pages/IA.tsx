@@ -309,7 +309,7 @@ export function IA() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
               <a
                 href="#portfolio-ia"
-                className="mb-4 inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
+                className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
                 style={{
                   fontFamily: '"Yanone Kaffeesatz",sans-serif',
                   fontSize: "1.3em",
@@ -321,7 +321,7 @@ export function IA() {
               </a>
               <a
                 href="#contacto"
-                className="mb-4 inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
+                className="inline-flex items-center gap-2 px-8 py-3 border border-white text-white hover:bg-white hover:text-[#1A74A0] transition-all rounded-full font-heading text-xl uppercase"
                 style={{
                   fontFamily: '"Yanone Kaffeesatz",sans-serif',
                   fontSize: "1.3em",

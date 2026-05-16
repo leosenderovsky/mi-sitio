@@ -1,6 +1,6 @@
 import { useState, useEffect, type MouseEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,6 +19,7 @@ export function Navbar() {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [openMobileSubSubmenu, setOpenMobileSubSubmenu] = useState<string | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +46,14 @@ export function Navbar() {
 
     const targetElement = document.querySelector(hash);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 96;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     } else {
       navigate({ pathname: "/", hash });
     }
@@ -179,10 +187,12 @@ export function Navbar() {
                                         onClick={(e) => {
                                           e.preventDefault();
                                           setIsOpen(false);
-                                          // If we're already on the page, scroll; else navigate to path with hash
                                           const target = document.querySelector(subsubitem.hash!);
                                           if (target) {
-                                            target.scrollIntoView({ behavior: 'smooth' });
+                                            const headerOffset = 96;
+                                            const elementPosition = target.getBoundingClientRect().top;
+                                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                                           } else {
                                             navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
                                           }
@@ -212,7 +222,10 @@ export function Navbar() {
                                 e.preventDefault();
                                 const target = document.querySelector(subitem.hash!);
                                 if (target) {
-                                  target.scrollIntoView({ behavior: 'smooth' });
+                                  const headerOffset = 96;
+                                  const elementPosition = target.getBoundingClientRect().top;
+                                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                                 } else {
                                   navigate({ pathname: subitem.path!, hash: subitem.hash });
                                 }
@@ -346,7 +359,10 @@ export function Navbar() {
                                                 setOpenMobileSubSubmenu(null);
                                                 const target = document.querySelector(subsubitem.hash!);
                                                 if (target) {
-                                                  target.scrollIntoView({ behavior: 'smooth' });
+                                                  const headerOffset = 96;
+                                                  const elementPosition = target.getBoundingClientRect().top;
+                                                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                                                 } else {
                                                   navigate({ pathname: subsubitem.path!, hash: subsubitem.hash });
                                                 }
@@ -380,6 +396,9 @@ export function Navbar() {
                                 key={subidx}
                                 to={subitem.path!}
                                 onClick={() => {
+                                  if (location.pathname === subitem.path!) {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                  }
                                   setIsOpen(false);
                                   setOpenSubmenu(null);
                                   setOpenMobileSubSubmenu(null);
@@ -399,6 +418,9 @@ export function Navbar() {
                     key={idx}
                     to={item.path}
                     onClick={() => {
+                      if (location.pathname === item.path) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
                       setIsOpen(false);
                       setOpenSubmenu(null);
                       setOpenMobileSubSubmenu(null);
