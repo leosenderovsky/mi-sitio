@@ -33,19 +33,24 @@ export function ServiceCard({
   const isDark = !!bgColor;
 
   // Helper interno para imágenes responsive
-  const buildSrcSet = (src: string): string | undefined => {
-    const RESPONSIVE = [
-      "/assets/img/dibujos/edicion.webp",
-      "/assets/img/dibujos/critica.webp",
-      "/assets/img/dibujos/ia.webp",
-      "/assets/img/dibujos/web.webp",
-      "/assets/img/dibujos/guion.webp",
-      "/assets/img/dibujos/docencia-1.webp",
-    ];
-    if (!RESPONSIVE.includes(src)) return undefined;
+  const buildSrcSet = (
+    src: string,
+    format: "webp" | "avif" = "webp",
+  ): string | undefined => {
+    const RESPONSIVE: Record<string, number[]> = {
+      "/assets/img/dibujos/edicion.webp": [320, 400, 700, 1024, 1376],
+      "/assets/img/dibujos/critica.webp": [320, 400, 700, 1024, 1376],
+      "/assets/img/dibujos/ia.webp": [320, 400, 700, 1024, 1376],
+      "/assets/img/dibujos/web.webp": [320, 400, 700, 1024, 1376],
+      "/assets/img/dibujos/guion.webp": [320, 400, 700, 1024, 1376],
+      "/assets/img/dibujos/docencia-1.webp": [320, 400, 700, 1024],
+    };
+    const widths = RESPONSIVE[src];
+    if (!widths) return undefined;
 
     const base = src.replace(".webp", "");
-    return `${base}-400w.webp 400w, ${base}-700w.webp 700w, ${base}-1024w.webp 1024w, ${src} 1376w`;
+    const ext = format === "avif" ? "avif" : "webp";
+    return widths.map((width) => `${base}-${width}w.${ext} ${width}w`).join(", ");
   };
 
   return (
@@ -62,16 +67,23 @@ export function ServiceCard({
       {/* Imagen de la tarjeta */}
       {image && (
         <div className="overflow-hidden aspect-video">
-          <img
-            src={image}
-            srcSet={buildSrcSet(image)}
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-            alt={title}
-            width="400"
-            height="225"
-            className="w-full h-full object-contain"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              type="image/avif"
+              srcSet={buildSrcSet(image, "avif")}
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+            />
+            <img
+              src={image}
+              srcSet={buildSrcSet(image)}
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+              alt={title}
+              width="400"
+              height="225"
+              className="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </picture>
         </div>
       )}
 

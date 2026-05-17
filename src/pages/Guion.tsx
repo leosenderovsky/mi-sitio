@@ -91,7 +91,7 @@ export function Guion() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#portfolio-guion"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Mi portfolio
               </a>
@@ -161,7 +161,7 @@ export function Guion() {
                   href="http://www.consultoriadeguion.com.ar/"
                   target="_blank"
                   rel="noreferrer"
-                  className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
+                  className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase text-center"
                 >
                   Visitá mi sitio web de consultoría
                 </a>

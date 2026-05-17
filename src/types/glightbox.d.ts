@@ -5,7 +5,7 @@
 
 export interface GLightboxOptions {
   selector?: string;
-  elements?: HTMLElement[];
+  elements?: Array<HTMLElement | Record<string, unknown>>;
   descPosition?: 'bottom' | 'top';
   width?: string;
   height?: string;

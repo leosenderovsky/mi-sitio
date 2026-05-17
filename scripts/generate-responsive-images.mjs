@@ -5,7 +5,7 @@ import { join, dirname, basename, extname } from 'path';
 
 /**
  * Imágenes a procesar con sus anchos objetivo.
- * Las variantes se guardan como: nombre-{ancho}w.webp en la misma carpeta.
+ * Las variantes se guardan como: nombre-{ancho}w.webp/avif en la misma carpeta.
  */
 const TARGETS = [
   {
@@ -34,27 +34,33 @@ const TARGETS = [
   },
   {
     src: 'public/assets/img/dibujos/edicion.webp',
-    widths: [400, 700, 1024, 1376],
+    widths: [320, 400, 700, 1024, 1376],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/critica.webp',
-    widths: [400, 700, 1024, 1376],
+    widths: [320, 400, 700, 1024, 1376],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/ia.webp',
-    widths: [400, 700, 1024, 1376],
+    widths: [320, 400, 700, 1024, 1376],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/web.webp',
-    widths: [400, 700, 1024, 1376],
+    widths: [320, 400, 700, 1024, 1376],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/guion.webp',
-    widths: [400, 700, 1024, 1376],
+    widths: [320, 400, 700, 1024, 1376],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/docencia-1.webp',
-    widths: [400, 700, 1024],
+    widths: [320, 400, 700, 1024],
+    avif: true,
   },
   {
     src: 'public/assets/img/dibujos/leo-chico-escribiendo.webp',
@@ -62,19 +68,28 @@ const TARGETS = [
   },
 ];
 
-for (const { src, widths } of TARGETS) {
+for (const { src, widths, avif = false } of TARGETS) {
   const dir = dirname(src);
   const ext = extname(src);
   const name = basename(src, ext);
 
   for (const w of widths) {
     const dest = join(dir, `${name}-${w}w${ext}`);
+    const avifDest = join(dir, `${name}-${w}w.avif`);
     try {
       await sharp(src)
         .resize({ width: w, withoutEnlargement: true })
         .webp({ quality: 82 })
         .toFile(dest);
       console.log(`✓ ${dest}`);
+
+      if (avif) {
+        await sharp(src)
+          .resize({ width: w, withoutEnlargement: true })
+          .avif({ quality: 55 })
+          .toFile(avifDest);
+        console.log(`✓ ${avifDest}`);
+      }
     } catch (e) {
       console.error(`✗ ${dest}:`, e.message);
     }

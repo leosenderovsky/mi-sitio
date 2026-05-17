@@ -113,7 +113,7 @@ export function Edicion() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-center mt-10">
               <a
                 href="#resume"
-                className="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
+                className="border border-white/60 text-white px-8 py-3 rounded-full hover:bg-white hover:text-[#1B1440] transition-colors font-heading text-xl uppercase"
               >
                 Mi experiencia
               </a>

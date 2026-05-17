@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { PageSEO } from "../components/PageSEO";
 import { SchemaProfessionalServices } from "../components/SchemaMarkup";
@@ -26,6 +26,8 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { createGlightbox } from "../utils/loadGlightbox";
+import type { GLightboxInstance } from "../types/glightbox";
 
 /* ─────────────────────────────────────────
    DATA
@@ -187,13 +189,19 @@ const socialLinks = [
 
 export function Home() {
   useSectionScroll();
+  const homeLightbox = useRef<GLightboxInstance | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && "GLightbox" in window) {
-      const lightbox = window.GLightbox?.({ selector: ".glightbox-home" });
-      return () => lightbox?.destroy();
-    }
+    return () => homeLightbox.current?.destroy();
   }, []);
+
+  const openHomeVideo = async (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    homeLightbox.current ??= await createGlightbox({
+      selector: ".glightbox-home",
+    });
+    homeLightbox.current?.open();
+  };
 
   return (
     <>
@@ -318,6 +326,7 @@ export function Home() {
               <a
                 href="https://www.youtube.com/watch?v=r3JxSutQdv8"
                 className="block relative group glightbox-home"
+                onClick={openHomeVideo}
               >
                 <img
                   src="/assets/img/video-portada.webp"
@@ -529,7 +538,15 @@ export function Home() {
                       minHeight: "54px",
                     }}
                   >
-                    CV Audiovisual <span className="fi fi-es shadow-sm" />
+                    CV Audiovisual{" "}
+                    <img
+                      src="/assets/flags/4x3/es.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="20"
+                      height="15"
+                      className="h-[15px] w-5 shadow-sm"
+                    />
                   </a>
                   <a
                     href="/audiovisual/cv/ingles"
@@ -541,7 +558,15 @@ export function Home() {
                       minHeight: "54px",
                     }}
                   >
-                    CV Audiovisual <span className="fi fi-gb shadow-sm" />
+                    CV Audiovisual{" "}
+                    <img
+                      src="/assets/flags/4x3/gb.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="20"
+                      height="15"
+                      className="h-[15px] w-5 shadow-sm"
+                    />
                   </a>
                 </div>
                 <a
@@ -554,7 +579,15 @@ export function Home() {
                     minHeight: "54px",
                   }}
                 >
-                  CV Web <span className="fi fi-gb shadow-sm ml-1" />
+                  CV Web{" "}
+                  <img
+                    src="/assets/flags/4x3/gb.svg"
+                    alt=""
+                    aria-hidden="true"
+                    width="20"
+                    height="15"
+                    className="ml-1 h-[15px] w-5 shadow-sm"
+                  />
                 </a>
                 <a
                   href="#contacto"
