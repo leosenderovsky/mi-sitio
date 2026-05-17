@@ -10,7 +10,6 @@ import {
   faClapperboard,
   faDesktop,
   faLaptopCode,
-  faArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 const SECTION_MAP = { portfolio: "portfolio-ia" };
