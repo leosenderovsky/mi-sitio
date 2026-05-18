@@ -340,7 +340,7 @@ export function Home() {
                 />
                 <div className="absolute inset-0 bg-site-teal/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <img
-                    src="/assets/img/hover.webp"
+                    src="/assets/img/hover-opt.webp"
                     alt="Reproducir video"
                     width="80"
                     height="80"
@@ -383,7 +383,7 @@ export function Home() {
             {/* Foto */}
             <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
               <motion.img
-                src="/assets/img/about/about-1.webp"
+                src="/assets/img/about/about-1-opt.webp"
                 alt="Foto de Leo Senderovsky"
                 className="w-full rounded shadow-lg border border-white"
                 initial={{ opacity: 0, x: -30 }}
@@ -530,6 +530,7 @@ export function Home() {
                 <div className="flex gap-2">
                   <a
                     href="/audiovisual/cv/castellano"
+                    aria-label="CV Audiovisual en Castellano"
                     className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',
@@ -550,6 +551,7 @@ export function Home() {
                   </a>
                   <a
                     href="/audiovisual/cv/ingles"
+                    aria-label="CV Audiovisual en Inglés"
                     className="flex-1 flex items-center justify-center gap-2 text-center px-4 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded"
                     style={{
                       fontFamily: '"Yanone Kaffeesatz",sans-serif',
@@ -571,6 +573,7 @@ export function Home() {
                 </div>
                 <a
                   href="/web/cv"
+                  aria-label="CV Web en Inglés"
                   className="flex items-center justify-center gap-2 text-center px-5 py-3 border border-white text-white hover:bg-[#1A74A0] hover:border-[#1A74A0] hover:text-white transition-all rounded w-full"
                   style={{
                     fontFamily: '"Yanone Kaffeesatz",sans-serif',

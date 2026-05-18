@@ -9,6 +9,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 Header always unset X-Frame-Options
 Header always unset Content-Security-Policy
 Header always set Content-Security-Policy "upgrade-insecure-requests; default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https:; frame-src 'self' blob: data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' https:; worker-src 'self' blob: https:; style-src 'self' 'unsafe-inline' https:;"
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
 Header set Referrer-Policy "no-referrer-when-downgrade"
 
 # Fallback SPA: redirige cualquier ruta no-archivo y no-carpeta a index.html
