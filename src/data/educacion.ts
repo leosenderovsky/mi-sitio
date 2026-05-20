@@ -7,6 +7,7 @@ export const educacionEdicion: EducationItem[] = [
     title: "MOTION GRAPHICS",
     institution: "CODERHOUSE",
     period: "2022",
+    diplomaUrl: "/assets/img/certificados/certificado-motion-graphics-coderhouse.webp",
     link: "https://pub.coderhouse.com/legacy-certificates/62c3a8a88702bc0024208aa0?lang=es",
   },
   {

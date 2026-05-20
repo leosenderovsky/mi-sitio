@@ -66,6 +66,11 @@ const TARGETS = [
     src: 'public/assets/img/dibujos/leo-chico-escribiendo.webp',
     widths: [300, 512, 768, 1024],
   },
+  {
+    src: 'public/assets/img/certificados/certificado-motion-graphics-coderhouse.webp',
+    widths: [480, 768, 1024],
+    avif: true,
+  },
 ];
 
 for (const { src, widths, avif = false } of TARGETS) {
@@ -86,10 +91,12 @@ for (const { src, widths, avif = false } of TARGETS) {
       if (avif) {
         await sharp(src)
           .resize({ width: w, withoutEnlargement: true })
-          .avif({ quality: 55 })
+          .avif({ quality: 70 })
           .toFile(avifDest);
         console.log(`✓ ${avifDest}`);
       }
+      // Preserve aspect ratio and don't upscale on non-responsified versions
+      // The original file acts as the base fallback
     } catch (e) {
       console.error(`✗ ${dest}:`, e.message);
     }
