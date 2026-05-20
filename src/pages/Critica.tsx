@@ -19,7 +19,7 @@ export function Critica() {
   return (
     <>
       <PageSEO
-        title="Crítica de Cine"
+        title="Crítica de Cine — Análisis y Reseñas Cinematográficas"
         description="Críticas cinematográficas y colaboraciones en medios por Leo Senderovsky. Análisis de cine argentino, cine mundial. Colaboraciones en radio, medios gráficos y online."
         path="/audiovisual/critica"
         keywords="critica de cine, resenas de peliculas, Leo Senderovsky critica, analisis cinematografico Argentina"

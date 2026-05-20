@@ -9,7 +9,7 @@ export default function CVWeb() {
   return (
     <>
       <PageSEO
-        title="CV Desarrollo Web | Leo Aquiba Senderovsky — Frontend Developer"
+        title="CV Desarrollo Web — Frontend Developer"
         description="Currículum web de Leo Senderovsky: formación, proyectos y experiencia en desarrollo frontend."
         path="/sobre-mi/cv-web"
       />

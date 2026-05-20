@@ -20,7 +20,7 @@ export function IA() {
   return (
     <>
       <PageSEO
-        title="sender.ia — IA Aplicada al Audiovisual"
+        title="IA para Video, Sitios Web y Apps — sender.ia"
         description="sender.ia: proyectos de inteligencia artificial aplicados al audiovisual y web por Leo Senderovsky. Herramientas IA para producción de contenido, automatización y edición de video."
         path="/ia"
         keywords="inteligencia artificial audiovisual, IA para video, sender.ia, automatizacion con IA, herramientas IA contenido"

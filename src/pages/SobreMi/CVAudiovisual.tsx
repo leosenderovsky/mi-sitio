@@ -11,7 +11,7 @@ export default function CVAudiovisual() {
   return (
     <>
       <PageSEO
-        title="CV Audiovisual | Leo Aquiba Senderovsky — Editor y Guionista"
+        title="CV Audiovisual — Editor de Video y Guionista"
         description="Currículum audiovisual de Leo Senderovsky: educación, experiencia y proyectos en edición y guión."
         path="/sobre-mi/cv-audiovisual"
       />

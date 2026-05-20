@@ -5,9 +5,10 @@ export default function CVWebEmbed() {
   return (
     <>
       <PageSEO
-        title="CV Desarrollo Web | Leo Aquiba Senderovsky"
+        title="CV Desarrollo Web"
         description="CV Desarrollo Web de Leo Senderovsky - Frontend Developer."
         path="/web/cv"
+        noindex={true}
       />
 
       <main className="min-h-screen bg-[#00052e] pt-24 pb-20 flex flex-col items-center">

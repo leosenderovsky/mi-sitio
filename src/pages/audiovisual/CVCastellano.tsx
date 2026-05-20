@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import PdfViewer from "../../components/PdfViewer";
+import { PageSEO } from "../../components/PageSEO";
 
 export default function CVCastellano() {
   return (
     <main className="min-h-screen bg-[#00052e] pt-24 pb-20 flex flex-col items-center">
+      <PageSEO
+        title="CV Audiovisual"
+        description="CV Audiovisual de Leo Senderovsky - Editor de video, guionista y docente."
+        path="/audiovisual/cv/castellano"
+        noindex={true}
+      />
       <div className="w-full max-w-4xl px-4">
         <div className="flex items-center gap-4 mb-10">
           <Link

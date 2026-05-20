@@ -1,13 +1,15 @@
-import { Helmet } from 'react-helmet-async';
+import { PageSEO } from "../components/PageSEO";
 import { motion } from 'framer-motion';
 
 export function PoliticaDeCookies() {
   return (
     <>
-      <Helmet>
-        <title>Política de Cookies | Leo Senderovsky</title>
-        <meta name="description" content="Información detallada sobre el uso de cookies en leosenderovsky.com.ar" />
-      </Helmet>
+      <PageSEO
+        title="Política de Cookies"
+        description="Información detallada sobre el uso de cookies en leosenderovsky.com.ar"
+        path="/politica-de-cookies"
+        noindex={true}
+      />
 
       <section className="min-h-screen pt-32 pb-20 px-6 md:px-12 bg-site-dark">
         <div className="max-w-4xl mx-auto">

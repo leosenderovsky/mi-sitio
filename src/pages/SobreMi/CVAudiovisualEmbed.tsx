@@ -4,9 +4,10 @@ export default function CVAudiovisualEmbed() {
   return (
     <>
       <PageSEO
-        title="CV Audiovisual | Leo Aquiba Senderovsky"
+        title="CV Audiovisual"
         description="CV Audiovisual de Leo Senderovsky - Editor de video, guionista y docente."
-        path="/audiovisual/cv"
+        path="/audiovisual/cv/castellano"
+        noindex={true}
       />
 
       <main className="bg-white py-8">

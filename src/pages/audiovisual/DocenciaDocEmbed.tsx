@@ -15,7 +15,7 @@ export default function DocenciaDocEmbed() {
   return (
     <>
       <PageSEO
-        title={`${displayTitle} | Docencia | Leo Senderovsky`}
+        title={`${displayTitle} — Docencia de Cine`}
         description={`Documento de docencia: ${displayTitle}`}
         path={`/audiovisual/docencia/leer/${filename}`}
       />

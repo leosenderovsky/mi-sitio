@@ -25,7 +25,7 @@ export function Guion() {
   return (
     <>
       <PageSEO
-        title="Guión y Consultoría de Guión"
+        title="Guión Cinematográfico y Script Doctoring"
         description="Servicios de guión cinematográfico y consultoría narrativa (script doctoring) por Leo Senderovsky. Asesoría de guiones para cine, televisión y publicidad. Freelance, Buenos Aires, Argentina."
         path="/audiovisual/guion"
         keywords="guionista freelance Argentina, consultor de guion, script doctor Buenos Aires, asesor de guion, guion cinematografico, script doctoring"
