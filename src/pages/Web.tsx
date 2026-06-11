@@ -15,6 +15,9 @@ export function Web() {
         title="Desarrollo Web Frontend"
         description="Desarrollo de sitios web y aplicaciones a medida por Leo Senderovsky. Frontend developer con React, HTML y CSS. Portfolio de proyectos web para pymes y proyectos personales."
         path="/web"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/web-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="desarrollo web frontend Buenos Aires, sitios web React, frontend developer Argentina, diseño web a medida"
       />
       <SchemaBreadcrumb

@@ -23,6 +23,9 @@ export function IA() {
         title="IA para Video, Sitios Web y Apps — sender.ia"
         description="sender.ia: proyectos de inteligencia artificial aplicados al audiovisual y web por Leo Senderovsky. Herramientas IA para producción de contenido, automatización y edición de video."
         path="/ia"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/ia-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="inteligencia artificial audiovisual, IA para video, sender.ia, automatizacion con IA, herramientas IA contenido"
       />
       <SchemaBreadcrumb

@@ -28,6 +28,9 @@ export function Guion() {
         title="Guión Cinematográfico y Script Doctoring"
         description="Servicios de guión cinematográfico y consultoría narrativa (script doctoring) por Leo Senderovsky. Asesoría de guiones para cine, televisión y publicidad. Freelance, Buenos Aires, Argentina."
         path="/audiovisual/guion"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/guion-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="guionista freelance Argentina, consultor de guion, script doctor Buenos Aires, asesor de guion, guion cinematografico, script doctoring"
       />
       <SchemaBreadcrumb

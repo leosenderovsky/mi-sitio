@@ -40,6 +40,9 @@ export function Docencia() {
         title="Docencia de Cine — Charlas y Ciclos"
         description="Charlas y ciclos de cine por Leo Senderovsky. Docencia en cine argentino, cine judío, cine en dictadura, humor judío en el cine. Para instituciones y grupos privados en Buenos Aires."
         path="/audiovisual/docencia"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/docencia-1-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="docente de cine Buenos Aires, charlas de cine, ciclos de cine, cine judio Argentina, cine argentino dictadura, humor judio cine"
       />
       <SchemaBreadcrumb

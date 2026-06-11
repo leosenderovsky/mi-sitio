@@ -29,6 +29,9 @@ export function Edicion() {
         title="Edición de Video"
         description="Portfolio de edición de video de Leo Senderovsky. Editor audiovisual con casi veinte años de experiencia en documentales, spots y contenido para medios como Infobae, LN+ y NBA. Buenos Aires, Argentina."
         path="/audiovisual/edicion"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/edicion-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="editor de video Buenos Aires, edicion audiovisual, edicion de documentales, postproduccion Argentina, editor freelance"
       />
       <SchemaBreadcrumb

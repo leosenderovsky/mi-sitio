@@ -22,6 +22,9 @@ export function Critica() {
         title="Crítica de Cine — Análisis y Reseñas Cinematográficas"
         description="Críticas cinematográficas y colaboraciones en medios por Leo Senderovsky. Análisis de cine argentino, cine mundial. Colaboraciones en radio, medios gráficos y online."
         path="/audiovisual/critica"
+        image="https://leosenderovsky.com.ar/assets/img/dibujos/critica-1024w.webp"
+        imageWidth={1024}
+        imageHeight={572}
         keywords="critica de cine, resenas de peliculas, Leo Senderovsky critica, analisis cinematografico Argentina"
       />
       <SchemaBreadcrumb
