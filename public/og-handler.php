@@ -54,8 +54,17 @@ $data = [
   'img_w'       => 1200, 'img_h' => 630,
 ];
 
-if (array_key_exists($path, $pages)) {
-  $data = $pages[$path];
+// Prefix matching: buscar la sección cuya clave sea prefijo del path.
+// Ordenar por longitud descendente para que claves más específicas tengan prioridad.
+$keys = array_keys($pages);
+usort($keys, fn($a, $b) => strlen($b) - strlen($a));
+
+foreach ($keys as $key) {
+  // Match exacto O path que empieza con "clave/"
+  if ($path === $key || str_starts_with($path, $key . '/')) {
+    $data = $pages[$key];
+    break;
+  }
 }
 
 $title       = htmlspecialchars($data['title'],       ENT_QUOTES, 'UTF-8');
