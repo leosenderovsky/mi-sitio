@@ -65,6 +65,9 @@ export function Edicion() {
         />
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
+          <h1 className="sr-only">
+            Edición de Video Profesional — Leo Senderovsky, editor audiovisual en Buenos Aires
+          </h1>
           <SectionHeader title="EDICIÓN" subtitle="AUDIOVISUAL" theme="dark" />
           <div className="space-y-4 text-center text-white leading-relaxed">
             <p

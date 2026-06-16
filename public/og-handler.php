@@ -81,6 +81,11 @@ header('Content-Type: text/html; charset=UTF-8');
   <meta name="description" content="<?= $description ?>">
   <link rel="canonical" href="<?= $canonical ?>">
 
+  <!-- Schema Person estático para sub-páginas (crawlers sin JS) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","@id":"https://leosenderovsky.com.ar/#person","name":"Leo Aquiba Senderovsky","url":"https://leosenderovsky.com.ar","jobTitle":["Editor de Video Senior","Guionista","Consultor de Guión","Docente de Cine","Desarrollador Web Frontend"],"address":{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"}}
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
   <meta property="og:site_name"    content="<?= htmlspecialchars($site, ENT_QUOTES, 'UTF-8') ?>">

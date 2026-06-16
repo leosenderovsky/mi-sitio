@@ -15,7 +15,7 @@ export function SectionHeader({
 
   return (
     <div className="mb-12">
-      <motion.h3
+      <motion.p
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -23,8 +23,8 @@ export function SectionHeader({
         className={`text-[1.3em] md:text-[1.4em] tracking-[3px] uppercase mb-2 text-center ${isDark ? "text-[#d9faff]" : "text-[#1B1440]"}`}
       >
         {subtitle}
-      </motion.h3>
-      <motion.h1
+      </motion.p>
+      <motion.h2
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -32,7 +32,7 @@ export function SectionHeader({
         className={`text-[3.5em] md:text-[4em] font-heading uppercase leading-none text-center ${isDark ? "text-white" : "text-[#1B1440]"}`}
       >
         {title}
-      </motion.h1>
+      </motion.h2>
     </div>
   );
 }

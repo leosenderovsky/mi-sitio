@@ -92,6 +92,64 @@
         window.__enableGA();
       }
     </script>
+
+    <!-- Canonical estático para crawlers (home page) -->
+    <link rel="canonical" href="https://leosenderovsky.com.ar/" />
+
+    <!-- Schema.org estático: Person + WebSite (crawlers sin JS) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://leosenderovsky.com.ar/#person",
+          "name": "Leo Aquiba Senderovsky",
+          "alternateName": "Leo Senderovsky",
+          "url": "https://leosenderovsky.com.ar",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://leosenderovsky.com.ar/assets/img/about/about-1.webp",
+            "width": 400,
+            "height": 400
+          },
+          "description": "Editor de video senior, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Con más de 15 años de trayectoria. Basado en Buenos Aires, Argentina.",
+          "jobTitle": [
+            "Editor de Video Senior",
+            "Guionista",
+            "Consultor de Guión",
+            "Docente de Cine",
+            "Desarrollador Web Frontend",
+            "Especialista en Inteligencia Artificial Aplicada al Audiovisual"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressCountry": "AR"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/lsender/",
+            "https://www.youtube.com/c/LeoAquibaSenderovsky",
+            "https://www.behance.net/leosenderovsky",
+            "https://twitter.com/leosenderovsky",
+            "https://www.instagram.com/leo.senderovsky/",
+            "https://github.com/leosenderovsky"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://leosenderovsky.com.ar/#website",
+          "url": "https://leosenderovsky.com.ar",
+          "name": "Leo Senderovsky — Portfolio",
+          "description": "Sitio personal y portfolio de Leo Aquiba Senderovsky: editor de video, guionista, docente de cine, desarrollador web Frontend y especialista en IA.",
+          "inLanguage": "es-AR",
+          "publisher": {
+            "@id": "https://leosenderovsky.com.ar/#person"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

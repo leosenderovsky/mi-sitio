@@ -9,14 +9,28 @@ export const experienciaEdicion: ExperienceItem[] = [
     description: "Editor de video senior, a cargo de piezas documentales, videos de In.house para clientes y formatos web para el sitio de noticias Infobae y sus redes sociales."
   },
   {
+    id: "exp-2",
+    logo: "/assets/img/logos/experiencia/the-content-land.webp",
+    title: "The Content Land",
+    period: "Abril 2026",
+    description: "Editor de reel de acción de marketing para el estreno de la cuarta temporada de El Encargado (Disney+)."
+  },
+  {
     id: "exp-3",
+    logo: "/assets/img/logos/experiencia/kuarzo-content.webp",
+    title: "Kuarzo Content",
+    period: "Enero 2026",
+    description: "Editor offline de tres spots publicitarios para BHD."
+  },
+  {
+    id: "exp-4",
     logo: "/assets/img/logos/experiencia/cactus-egoland.webp",
     title: "CACTUS CINE / EGOLAND",
     period: "2017 - 2023",
     description: "Editor freelance de videos publicitarios y corporativos para diversas empresas, como FV, Sura y Celsur, y proyectos internos de las productoras."
   },
   {
-    id: "exp-4",
+    id: "exp-5",
     logo: "/assets/img/logos/experiencia/frame-lnmas.webp",
     title: "LN+ / FRAME",
     period: "Septiembre 2016 – Febrero 2022",

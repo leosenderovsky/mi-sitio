@@ -49,6 +49,9 @@ export function IA() {
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
+          <h1 className="sr-only">
+            sender.ia — Inteligencia Artificial Aplicada al Audiovisual, por Leo Senderovsky
+          </h1>
           <SectionHeader title="IA" subtitle="Audiovisual + Web" theme="dark" />
           <div className="flex flex-col lg:flex-row gap-10 items-start lg:items-center">
             {/* Texto + subsecciones */}

@@ -59,6 +59,9 @@ export function Guion() {
       >
         <div className="absolute inset-0 bg-[#0D0B2E] opacity-90" />
         <div className="relative z-10 container mx-auto px-4">
+          <h1 className="sr-only">
+            Guión y Consultoría de Guión — Leo Senderovsky, script doctor en Buenos Aires
+          </h1>
           <SectionHeader title="GUIÓN" subtitle="AUDIOVISUAL" theme="dark" />
           <div className="space-y-4 text-center text-white leading-relaxed">
             <p

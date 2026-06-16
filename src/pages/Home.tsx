@@ -213,9 +213,67 @@ export function Home() {
       />
       <SchemaProfessionalServices />
 
+      {/* Schema FAQPage inline */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "¿Qué servicios de edición de video ofrecés?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ofrezco edición de video profesional para documentales, spots publicitarios, institucionales, reels para redes sociales y contenido para medios de comunicación. Trabajé con Infobae, LN+, NBA LATAM y Twitch LATAM, entre otros.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿En qué consiste la consultoría de guión?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "La consultoría de guión (script doctoring) es un servicio de asesoría narrativa donde analizo y ayudo a mejorar guiones de cine, TV y publicidad.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Qué temas abarcás en tus charlas y ciclos de cine?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Desde 2011 dicto charlas y ciclos sobre historia del cine argentino, judaísmo en el cine y la TV, y cine durante la dictadura.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Trabajás con IA en proyectos audiovisuales?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sí, bajo el nombre sender.ia desarrollo proyectos de inteligencia artificial aplicada al audiovisual y la web.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "¿Cómo puedo contactarte para un presupuesto?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Podés usar el formulario de contacto al final de esta página, escribirme por LinkedIn o por correo electrónico.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ══════════════════════════════════════
           HERO – Flip Cards (igual al legacy)
       ══════════════════════════════════════ */}
+      {/* H1 semántico de página — visible en mobile hero, oculto en desktop donde el FlipCard actúa como hero visual */}
+      <h1 className="sr-only">
+        Leo Senderovsky — Editor de video, docente de cine y consultor de guión
+        en Buenos Aires
+      </h1>
       <div
         id="hero-area"
         className="hidden md:flex md:items-center relative overflow-hidden md:min-h-[300px] lg:min-h-[600px] py-8 lg:py-0 lg:pt-[80px] lg:pb-[120px] text-white"
@@ -655,6 +713,292 @@ export function Home() {
       </section>
 
       {/* ══════════════════════════════════════
+          DESCRIPCIÓN PROFESIONAL — rich text para AEO/SEO
+          (Visible y accesible, estilo discreto)
+      ══════════════════════════════════════ */}
+      <section
+        id="descripcion-profesional"
+        className="py-12"
+        style={{ background: "#0D0B2E" }}
+        aria-label="Descripción profesional de Leo Senderovsky"
+      >
+        <div className="container mx-auto px-4">
+          <div
+            className="text-white leading-relaxed space-y-5"
+            style={{
+              fontFamily: '"Libre Franklin", sans-serif',
+              fontSize: "1em",
+              fontWeight: 300,
+              color: "rgba(255,255,255,0.8)",
+            }}
+          >
+            <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
+              Servicios profesionales
+            </h2>
+            <div className="flex flex-col lg:flex-row gap-10 items-center">
+              {/* Foto */}
+              <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
+                <motion.img
+                  src="/assets/img/dibujos/audiovisual.webp"
+                  alt="audiovisual"
+                  className="w-full rounded shadow-lg border border-white"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  loading="lazy"
+                  width="350"
+                  height="450"
+                />
+              </div>
+              <div className="lg:w-1/2">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="space-y-4 text-center text-white leading-relaxed"
+                >
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    Con base en Buenos Aires, ofrezco servicios en{" "}
+                    <a
+                      href="/audiovisual/edicion"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      edición de video y post-producción
+                    </a>
+                    ,{" "}
+                    <a
+                      href="/audiovisual/guion"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      guión y consultoría narrativa
+                    </a>
+                    ,{" "}
+                    <a
+                      href="/audiovisual/docencia"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      docencia de cine
+                    </a>
+                    ,{" "}
+                    <a href="/web" className="text-[#19D3FF] hover:underline">
+                      desarrollo web frontend
+                    </a>{" "}
+                    e{" "}
+                    <a href="/ia" className="text-[#19D3FF] hover:underline">
+                      inteligencia artificial aplicada al audiovisual y la web
+                    </a>
+                    .
+                  </p>
+
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    Como editor de video senior, con casi veinte años de
+                    trayectoria, trabajé con clientes y medios de referencia
+                    como{" "}
+                    <a
+                      href="https://www.infobae.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      Infobae
+                    </a>
+                    ,{" "}
+                    <a
+                      href="https://www.lanacion.com.ar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      La Nación
+                    </a>
+                    , LN+, NBA LATAM, Twitch LATAM, Fórmula E, entre otros, y
+                    para productoras como{" "}
+                    <a
+                      href="https://www.frame.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      Frame
+                    </a>
+                    ,{" "}
+                    <a
+                      href="https://cactuscine.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      Cactus Cine
+                    </a>{" "}
+                    y{" "}
+                    <a
+                      href="https://www.kuarzocontent.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      Kuarzo Content
+                    </a>
+                    . Mi trabajo abarca documentales, institucionales, spots
+                    publicitarios, contenido para redes sociales y coberturas en
+                    vivo.
+                  </p>
+
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    En el área de guión, me desempeño como guionista y script
+                    doctor freelance. Ofrezco servicios de consultoría
+                    narrativa, asesoría de estructura dramática y redacción de
+                    guiones para cine, televisión y publicidad. Si tenés un
+                    proyecto en desarrollo, podés conocer{" "}
+                    <a
+                      href="https://consultoriadeguion.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      mis servicios de consultoría de guión
+                    </a>
+                    .
+                  </p>
+
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    En docencia, dicto charlas y ciclos de cine desde 2011, con
+                    especialización en{" "}
+                    <a
+                      href="/audiovisual/docencia"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      cine judío y cine argentino
+                    </a>
+                    , entre otros temas. Me formé como director y docente en la{" "}
+                    <a
+                      href="https://www.ucine.edu.ar"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      Universidad del Cine
+                    </a>
+                    .
+                  </p>
+
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    En el campo del desarrollo web, construyo sitios y
+                    aplicaciones a medida con tecnologías modernas de frontend.
+                    También trabajo en proyectos de{" "}
+                    <a href="/ia" className="text-[#19D3FF] hover:underline">
+                      IA aplicada al contenido audiovisual y web
+                    </a>
+                    , bajo el nombre sender.ia.
+                  </p>
+
+                  <p
+                    style={{
+                      textAlign: "justify",
+                      fontFamily: '"Libre Franklin", sans-serif',
+                      fontSize: "1.1em",
+                      fontWeight: 300,
+                      width: "80%",
+                      margin: "0 auto 20px",
+                    }}
+                  >
+                    Podés ver mi trayectoria en{" "}
+                    <a
+                      href="/audiovisual/edicion/experiencia"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      mi CV de edición
+                    </a>
+                    ,{" "}
+                    <a
+                      href="/web/experiencia"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      mis sitios web desarrollados
+                    </a>{" "}
+                    y{" "}
+                    <a
+                      href="/ia/portfolio"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      mis proyectos generados con IA
+                    </a>
+                    . Para consultas y presupuestos,{" "}
+                    <a
+                      href="#contacto"
+                      className="text-[#19D3FF] hover:underline"
+                    >
+                      contactame acá
+                    </a>
+                    .
+                  </p>
+                </motion.div>
+              </div>
+              {/* Foto */}
+              <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
+                <motion.img
+                  src="/assets/img/dibujos/web-ia.webp"
+                  alt="web-ia"
+                  className="w-full rounded shadow-lg border border-white"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  loading="lazy"
+                  width="350"
+                  height="450"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
           SERVICIOS AUDIOVISUAL
       ══════════════════════════════════════ */}
       <section
@@ -685,6 +1029,73 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <ServiceCard {...webCard} />
             <ServiceCard {...iaCard} />
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          FAQ — AEO bonus + Schema FAQPage
+      ══════════════════════════════════════ */}
+      <section
+        id="preguntas-frecuentes"
+        className="py-12"
+        style={{ background: "#0a0920" }}
+        aria-label="Preguntas frecuentes"
+      >
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
+            Preguntas frecuentes
+          </h2>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "¿Qué servicios de edición de video ofrecés?",
+                a: "Ofrezco edición de video profesional para documentales, spots publicitarios, institucionales, reels para redes sociales y contenido para medios de comunicación. Trabajé con Infobae, LN+, NBA LATAM y Twitch LATAM, entre otros.",
+              },
+              {
+                q: "¿En qué consiste la consultoría de guión?",
+                a: "La consultoría de guión (script doctoring) es un servicio de asesoría narrativa donde analizo y ayudo a mejorar guiones de cine, TV y publicidad. Trabajo en estructura dramática, personajes, diálogos y coherencia narrativa.",
+              },
+              {
+                q: "¿Qué temas abarcás en tus charlas y ciclos de cine?",
+                a: "Desde 2011 dicto charlas y ciclos sobre historia del cine argentino, judaísmo en el cine y la TV, y cine durante la dictadura. Están orientadas a instituciones educativas, comunidades y grupos privados.",
+              },
+              {
+                q: "¿Trabajás con IA en proyectos audiovisuales y web?",
+                a: "Sí, bajo el nombre sender.ia desarrollo proyectos audiovisuales y web potenciados con IA, como videos, sitios web y web-apps.",
+              },
+              {
+                q: "¿Cómo puedo contactarte para un presupuesto?",
+                a: "Podés usar el formulario de contacto al final de esta página, escribirme por LinkedIn o por correo electrónico. Respondo consultas en un plazo de 24 a 48 horas hábiles.",
+              },
+            ].map(({ q, a }) => (
+              <details
+                key={q}
+                className="border border-white/20 rounded p-5 group"
+                style={{ background: "rgba(255,255,255,0.04)" }}
+              >
+                <summary
+                  className="cursor-pointer text-white font-heading text-xl uppercase tracking-wide list-none flex justify-between items-center"
+                  style={{ fontFamily: '"Yanone Kaffeesatz", sans-serif' }}
+                >
+                  <h3 className="inline m-0 text-xl">{q}</h3>
+                  <span className="text-[#19D3FF] ml-4 text-2xl group-open:rotate-45 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <p
+                  className="mt-4 text-white/80 leading-relaxed"
+                  style={{
+                    fontFamily: '"Libre Franklin", sans-serif',
+                    fontWeight: 300,
+                    fontSize: "1em",
+                  }}
+                >
+                  {a}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
