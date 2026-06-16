@@ -95,6 +95,38 @@ El sitio está configurado para desplegarse en Netlify con las siguientes caract
 
 ## 🆕 Actualizaciones Recientes
 
+### SEO global, nuevas secciones en Home y experiencias de edición (Junio 2026)
+- **Schema.org estático (JSON-LD)**: Se agregó en `index.html` un bloque `@graph` con los tipos `Person` y `WebSite` accesible para crawlers sin JavaScript, incluyendo `jobTitle`, `address`, `sameAs` y canonical estático.
+- **Schema Person en sub-páginas**: `og-handler.php` inyecta ahora un JSON-LD `Person` minificado en todas las sub-páginas para bots que no ejecutan JS.
+- **Jerarquía de encabezados corregida**: `SectionHeader` pasó de `h3→p` y `h1→h2` para no romper el outline semántico dentro de las secciones internas.
+- **`h1` semántico por ruta**: Las páginas `Critica`, `Docencia`, `Edicion`, `Guion`, `IA` y `Web` incorporan un `<h1 className="sr-only">` con la keyword principal de cada ruta (visible solo para crawlers y lectores de pantalla).
+- **Nueva sección "Web e IA" en Home**: Bloque con texto descriptivo sobre los servicios de desarrollo web e IA, imagen ilustrativa `web-ia.webp` y animaciones Framer Motion (`whileInView`).
+- **Nueva sección FAQ / AEO en Home**: 5 preguntas frecuentes implementadas con `<details>/<summary>` y `<h3>` para Answer Engine Optimization, con diseño acordeón y animación de ícono `+`.
+- **Nuevas experiencias en CV de edición**:
+  - *The Content Land* — Edición de reel de acción para el estreno de *El Encargado T4* (Disney+, abril 2026).
+  - *Kuarzo Content* — Edición offline de tres spots publicitarios para BHD (enero 2026).
+- **Nuevos assets**: `dibujos/audiovisual.webp`, `dibujos/web-ia.webp`, `logos/experiencia/kuarzo-content.webp`, `logos/experiencia/the-content-land.webp`.
+
+### SEO para redes sociales y OG dinámico (Mayo–Junio 2026)
+- **`og-handler.php` mejorado**: Reescritura del handler PHP para generar meta OG/Twitter Card dinámicas por ruta, con soporte para WhatsApp y Telegram (previews correctos al compartir links).
+- **Títulos de página optimizados** (`PageSEO`): Revisión y unificación de los títulos en todas las rutas para mejorar CTR en resultados de búsqueda.
+- **Actualización de subrutas en OG handler**: Mapeado de sub-rutas (`/audiovisual/edicion`, `/audiovisual/docencia`, etc.) para servir meta tags correctas por sección.
+
+### CertificateModal — Visor de certificados (Mayo 2026)
+- **Componente `CertificateModal`**: Modal responsivo para visualizar imágenes de certificados en overlay, con cierre por clic exterior o tecla Escape. Integrado en las secciones de formación de las páginas de CV.
+
+### Performance Mobile y accesibilidad (Mayo 2026)
+- **Compresión Brotli + Gzip**: Configuración de `vite-plugin-compression` para generar archivos `.br` y `.gz` en el build de producción. Chunks separados: `vendor-motion`, `pdf-viewer`.
+- **Lazy-load del entry point**: El bundle de la app se carga de forma diferida para reducir el tiempo hasta el primer render en mobile.
+- **`.htaccess`**: Configuración para redirección HTTPS, routing SPA (`mod_rewrite`), compresión Gzip en servidor Apache, y headers de caché optimizados para assets estáticos.
+- **Optimización de accesibilidad mobile** (`chore: optimizacion de performance mobile`): Ajustes de contraste, tamaño de tap targets y jerarquías visuales para dispositivos de gama media-baja.
+- **Corrección de scroll anclado**: Fix en la navegación de anclas responsiva (`Fix responsive anchor scrolling`) para que el smooth-scroll funcione correctamente en mobile con el Navbar fijo.
+
+### Cookie Consent y Analytics condicional (Mayo 2026)
+- **`CookieBanner`**: Componente de banner de cookies con opciones de aceptar/rechazar, lazy-loaded para no bloquear el render inicial.
+- **Google Analytics condicional**: El script de GA solo se activa si el usuario acepta cookies, cumpliendo GDPR/LOPD. La lógica de consentimiento se centraliza en el hook `useCookieConsent`.
+- **`sitemap.xml`**: Generación y publicación del sitemap para mejorar la indexación en buscadores.
+
 ### Refactorización de la sección Docencia (Abril 2026)
 - **UI/UX Refactor**: Se actualizaron las `DocenciaCard` para alinearlas con la estética premium de `ServiceCard`.
 - **Nuevas Animaciones**: Implementación de Framer Motion para entradas suaves (`fade-in` + `slide-up`) y animaciones de acordeón para el despliegue de contenido.
