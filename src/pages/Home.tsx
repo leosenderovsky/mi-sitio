@@ -733,24 +733,27 @@ export function Home() {
             }}
           >
             <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
-              Mis servicios</h2>
+              Mis servicios
+            </h2>
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               {/* Foto */}
               <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
                 <motion.div
-              className="w-full rounded shadow-lg border border-white"
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <img
-                src="/assets/img/dibujos/audiovisual.webp"
-                alt="audiovisual"
-                loading="lazy"
-                width="350"
-                height="450"
-              /></motion.div>
+                  className="w-full rounded shadow-lg border border-white"
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <img
+                    src="/assets/img/dibujos/audiovisual.webp"
+                    alt="audiovisual"
+                    loading="lazy"
+                    width="350"
+                    height="450"
+                    className="w-full h-auto block"
+                  />
+                </motion.div>
               </div>
               <div className="lg:w-1/2">
                 <motion.div
@@ -984,20 +987,21 @@ export function Home() {
               {/* Foto */}
               <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
                 <motion.div
-              className="w-full rounded shadow-lg border border-white"
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <img
-                src="/assets/img/dibujos/web-ia.webp"
-                alt="Web-IA"
-                loading="lazy"
-                width="350"
-                height="450"
-              />
-            </motion.div>
+                  className="w-full rounded shadow-lg border border-white"
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <img
+                    src="/assets/img/dibujos/web-ia.webp"
+                    alt="Web-IA"
+                    loading="lazy"
+                    width="350"
+                    height="450"
+                    className="w-full h-auto block"
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
