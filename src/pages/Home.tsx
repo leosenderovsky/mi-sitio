@@ -41,7 +41,7 @@ const audiovisualCards = [
     icon: faScissors,
     bgColor: "#19D3FF",
     description:
-      "Editor de video senior con más de 15 años de experiencia. Documentales, institucionales, spots publicitarios, reels y contenido para medios de comunicación.",
+      "Editor de video senior con casi veinte años de experiencia. Documentales, institucionales, spots publicitarios, reels y contenido para medios de comunicación.",
     ctas: [
       { label: "Ver mi experiencia", href: "/audiovisual/edicion/experiencia" },
       {
@@ -733,22 +733,24 @@ export function Home() {
             }}
           >
             <h2 className="font-heading text-5xl md:text-7xl lg:text-[4em] uppercase text-center text-white mb-8 px-4">
-              Servicios profesionales
-            </h2>
+              Mis servicios</h2>
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               {/* Foto */}
               <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
-                <motion.img
-                  src="/assets/img/dibujos/audiovisual.webp"
-                  alt="audiovisual"
-                  className="w-full rounded shadow-lg border border-white"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  loading="lazy"
-                  width="350"
-                  height="450"
-                />
+                <motion.div
+              className="w-full rounded shadow-lg border border-white"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src="/assets/img/dibujos/audiovisual.webp"
+                alt="audiovisual"
+                loading="lazy"
+                width="350"
+                height="450"
+              /></motion.div>
               </div>
               <div className="lg:w-1/2">
                 <motion.div
@@ -934,7 +936,7 @@ export function Home() {
                     <a href="/ia" className="text-[#19D3FF] hover:underline">
                       IA aplicada al contenido audiovisual y web
                     </a>
-                    , bajo el nombre sender.ia.
+                    .
                   </p>
 
                   <p
@@ -981,17 +983,21 @@ export function Home() {
               </div>
               {/* Foto */}
               <div className="w-2/3 mx-auto md:w-1/3 md:mx-auto lg:w-1/4 lg:mx-0">
-                <motion.img
-                  src="/assets/img/dibujos/web-ia.webp"
-                  alt="web-ia"
-                  className="w-full rounded shadow-lg border border-white"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  loading="lazy"
-                  width="350"
-                  height="450"
-                />
+                <motion.div
+              className="w-full rounded shadow-lg border border-white"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src="/assets/img/dibujos/web-ia.webp"
+                alt="Web-IA"
+                loading="lazy"
+                width="350"
+                height="450"
+              />
+            </motion.div>
               </div>
             </div>
           </div>
