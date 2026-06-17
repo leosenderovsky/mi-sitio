@@ -1051,7 +1051,7 @@ export function Home() {
             {[
               {
                 q: "¿Qué servicios de edición de video ofrecés?",
-                a: "Ofrezco edición de video profesional para documentales, spots publicitarios, institucionales, reels para redes sociales y contenido para medios de comunicación. Trabajé con Infobae, LN+, NBA LATAM y Twitch LATAM, entre otros.",
+                a: "Ofrezco edición de video profesional para documentales, spots publicitarios, institucionales, reels para redes sociales y contenido para medios de comunicación.",
               },
               {
                 q: "¿En qué consiste la consultoría de guión?",
@@ -1059,7 +1059,7 @@ export function Home() {
               },
               {
                 q: "¿Qué temas abarcás en tus charlas y ciclos de cine?",
-                a: "Desde 2011 dicto charlas y ciclos sobre historia del cine argentino, judaísmo en el cine y la TV, y cine durante la dictadura. Están orientadas a instituciones educativas, comunidades y grupos privados.",
+                a: "Desde 2011 dicto charlas y ciclos sobre historia del cine argentino y judaísmo en el cine y la TV, entre otros temas. Están orientadas a instituciones sociales y educativas, comunidades y grupos privados.",
               },
               {
                 q: "¿Trabajás con IA en proyectos audiovisuales y web?",
@@ -1067,7 +1067,7 @@ export function Home() {
               },
               {
                 q: "¿Cómo puedo contactarte para un presupuesto?",
-                a: "Podés usar el formulario de contacto al final de esta página, escribirme por LinkedIn o por correo electrónico. Respondo consultas en un plazo de 24 a 48 horas hábiles.",
+                a: "Podés usar el formulario de contacto al final de esta página, mandarme un email, o contactarme por Whatsapp, y voy a responder tu consulta a la brevedad.",
               },
             ].map(({ q, a }) => (
               <details
