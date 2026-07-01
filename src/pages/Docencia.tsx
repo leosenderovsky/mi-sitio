@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaFAQPage, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { TimelineSection } from "../components/TimelineSection";
@@ -55,6 +55,28 @@ export function Docencia() {
           {
             name: "Docencia de Cine",
             url: "https://leosenderovsky.com.ar/audiovisual/docencia",
+          },
+        ]}
+      />
+      <SchemaWebPage
+        name="Docencia de Cine — Charlas y Ciclos | Leo Senderovsky"
+        description="Charlas y ciclos de cine por Leo Senderovsky desde 2011. Judaísmo en el cine, cine argentino en dictadura, humor judío. Para instituciones y grupos en Buenos Aires."
+        url="https://leosenderovsky.com.ar/audiovisual/docencia"
+        speakableSelectors={["h1", "h2", ".section-intro"]}
+      />
+      <SchemaFAQPage
+        items={[
+          {
+            question: "¿Qué temas abarcás en tus charlas de cine?",
+            answer: "Desde 2011 dicto charlas sobre historia del cine argentino, judaísmo en el cine y la TV, cine israelí, humor judío en el cine, La Shoá en el cine y cine durante la última dictadura argentina.",
+          },
+          {
+            question: "¿Para qué tipo de instituciones dictás charlas de cine?",
+            answer: "Dicté charlas para instituciones educativas judías, grupos culturales privados, centros comunitarios y espacios académicos en Buenos Aires y Gran Buenos Aires.",
+          },
+          {
+            question: "¿Las charlas son presenciales o se pueden hacer de manera virtual?",
+            answer: "Podés contratarlas en formato presencial en el área de Buenos Aires o de manera virtual para cualquier punto del país y el mundo.",
           },
         ]}
       />

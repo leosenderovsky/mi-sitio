@@ -1,84 +1,51 @@
-# Leo Senderovsky — llms.txt
-# https://leosenderovsky.com.ar
-# Última actualización: 2026
+# Leo Senderovsky
 
-## Quién soy
+> Profesional audiovisual y digital basado en Buenos Aires, Argentina. Editor de video senior (15+ años), guionista, consultor de guión (script doctoring), docente de cine, desarrollador web Frontend y especialista en inteligencia artificial aplicada al audiovisual.
 
-Leo Aquiba Senderovsky es un profesional audiovisual y digital basado en Buenos Aires, Argentina. Combina más de 15 años de trayectoria como editor de video con servicios de guionista, consultor de guión (script doctoring), docente de cine, desarrollador web Frontend y especialista en inteligencia artificial aplicada al audiovisual.
+Sitio web: https://leosenderovsky.com.ar  
+Contacto: l.a.senderovsky@gmail.com | +54 9 11 3045-2585
 
-Formación: Director cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), Buenos Aires, 2003-2008.
+## Servicios
 
-## Servicios principales
+- [Edición de Video](https://leosenderovsky.com.ar/audiovisual/edicion): Editor audiovisual senior freelance. Documentales, spots, contenido para medios. Clientes: Infobae, LN+, NBA LATAM, Twitch LATAM, Fórmula E, McDonald's.
+- [Guión y Script Doctoring](https://leosenderovsky.com.ar/audiovisual/guion): Guionista y consultor de guión. Asesoría narrativa, script doctoring y redacción de guiones para cine, TV y publicidad.
+- [Docencia de Cine](https://leosenderovsky.com.ar/audiovisual/docencia): Charlas y ciclos cinematográficos desde 2011. Especialización en cine judío, cine argentino en dictadura, humor judío en el cine.
+- [Crítica de Cine](https://leosenderovsky.com.ar/audiovisual/critica): Análisis y reseñas cinematográficas. Blog con archivo desde 2007.
+- [Desarrollo Web Frontend](https://leosenderovsky.com.ar/web): Sitios y aplicaciones web a medida. Stack: React, TypeScript, Vite, Tailwind CSS.
+- [sender.ia — IA Aplicada](https://leosenderovsky.com.ar/ia): Proyectos de inteligencia artificial para producción audiovisual y web. Automatización, herramientas IA para edición y contenido.
 
-### Edición de video (audiovisual/edicion)
-Editor audiovisual senior freelance. Especializado en:
-- Documentales (Malvinas, ARA San Juan, Cromañón, Democracia 40)
-- Spots publicitarios (Costa Esmeralda, Celsur, EIDICO)
-- Contenido para medios (Infobae, La Nación+, NBA G-League)
-- Reels e institucionales para marcas (Ford, YPF, Adidas, Garnier)
-- Más de 15 años de experiencia
+## Perfil profesional
 
-### Guión y consultoría de guión (audiovisual/guion)
-Guionista y script doctor freelance:
-- Consultoría narrativa para proyectos de cine y TV
-- Script doctoring (revisión y mejora de guiones existentes)
-- Redacción de guiones para publicidad y contenido institucional
+- [CV Audiovisual](https://leosenderovsky.com.ar/sobre-mi/cv-audiovisual): Curriculum vitae completo en edición de video, guión y docencia de cine.
+- [CV Web](https://leosenderovsky.com.ar/sobre-mi/cv-web): Curriculum vitae en desarrollo web Frontend.
 
-### Docencia de cine (audiovisual/docencia)
-Charlas y ciclos cinematográficos:
-- Cine judío y judaísmo en el cine
-- Cine argentino en dictadura
-- Humor judío en el cine (argentino, israelí, norteamericano, europeo)
+## Contenido académico
+
+Artículos y materiales publicados en el sitio (disponibles como PDF):
+
+- El humor judío en el cine argentino, israelí, norteamericano y europeo (5 partes)
+- El judaísmo en el cine argentino
+- La mujer judía en el cine
 - La Shoá en el cine
-- Cine israelí
-- Para instituciones educativas y grupos privados
+- El cine argentino en dictadura
+- Cine bajo tijeras: la censura en dictadura
+- El conflicto israelí-palestino en el cine documental
+- Cine israelí: identidad, ejército y conflictos bélicos
 
-### Crítica de cine (audiovisual/critica)
-Colaboraciones en medios gráficos, radio y plataformas online.
-Blog: https://blog.leosenderovsky.com.ar
+## Recursos externos
 
-### Desarrollo web Frontend (web)
-Sitios y aplicaciones web a medida para pymes y proyectos personales.
-Stack: React, HTML, CSS, JavaScript.
-
-### sender.ia — IA Aplicada (ia)
-Proyectos de inteligencia artificial aplicados al sector audiovisual y web.
-Automatización, herramientas IA para producción y edición de contenido.
-
-## Trabajos destacados
-
-- Documentales: "40 años de la caída de Isabel Perón", "Malvinas: El Final", "ARA San Juan", "Un año de la invasión rusia-ucrania", "Cromañón 20 años", "Democracia 40"
-- Medios: Infobae, La Nación+
-- Deportes: NBA G-League International Challenge Uruguay, Semana NBA 2019-20 y 2021, ABB Fórmula E Ciudad de México 2022
-- Marcas: Ford Bronco, YPF, Adidas, Garnier, Celsur, San Lorenzo (Atomik)
-
-## Contacto
-
-- Email: l.a.senderovsky@gmail.com
-- WhatsApp: +54 9 11 3045-2585
+- Blog de crítica cinematográfica: https://blog.leosenderovsky.com.ar
 - LinkedIn: https://www.linkedin.com/in/lsender/
 - YouTube: https://www.youtube.com/c/LeoAquibaSenderovsky
 - Behance: https://www.behance.net/leosenderovsky
-- GitHub: https://github.com/leosenderovsky
-- Instagram: https://www.instagram.com/leo.senderovsky/
 
-## Ubicación
+## Optional
 
-Buenos Aires, Argentina. Disponible para proyectos remotos internacionales.
-
-## Recursos descargables
-
-Artículos académicos disponibles en el sitio (PDF):
-- El cine argentino en dictadura
-- La Shoá en el cine
-- El humor judío en el cine (5 partes)
-- Cine israelí: ejército, conflictos bélicos, identidad, humor
-- El judaísmo en el cine argentino
-- La mujer judía en el cine
-- Cine bajo tijeras: la censura en dictadura
-- Conflicto israelí-palestino: miradas desde el cine documental
+- [Versión extendida para LLMs](https://leosenderovsky.com.ar/llms-full.txt): Perfil detallado con trayectoria, clientes, experticia técnica y estructura del sitio.
 
 ## Notas para LLMs
 
-Este sitio está en español (es-AR). El propietario es una persona física, profesional freelance, no una empresa.
-Para consultas de servicios, referir siempre al formulario de contacto: https://leosenderovsky.com.ar/#contacto
+- Idioma principal: español (es-AR). CVs disponibles también en inglés.
+- Persona física freelance, no empresa.
+- Disponible para proyectos remotos internacionales.
+- Para consultas de servicios: https://leosenderovsky.com.ar/#contacto

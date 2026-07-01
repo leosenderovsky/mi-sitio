@@ -20,13 +20,17 @@
     <meta name="geo.placename" content="Buenos Aires, Argentina" />
     <meta name="ICBM" content="-34.6037, -58.3816" />
 
-    <!-- OG fallback -->
+    <!-- OG fallback estático (react-helmet-async sobreescribe en runtime con JS) -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leosenderovsky.com.ar/" />
     <meta property="og:site_name" content="Leo Senderovsky" />
     <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
+    <meta property="og:description" content="Leo Aquiba Senderovsky: editor de video senior con 15+ años, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina." />
     <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
 
     <!-- Twitter fallback -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -96,7 +100,7 @@
     <!-- Canonical estático para crawlers (home page) -->
     <link rel="canonical" href="https://leosenderovsky.com.ar/" />
 
-    <!-- Schema.org estático: Person + WebSite (crawlers sin JS) -->
+    <!-- Schema.org estático: Person + WebSite + ProfessionalService (crawlers sin JS) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -113,7 +117,7 @@
             "width": 400,
             "height": 400
           },
-          "description": "Editor de video senior, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Con más de 15 años de trayectoria. Basado en Buenos Aires, Argentina.",
+          "description": "Editor de video senior, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Más de 15 años de trayectoria. Basado en Buenos Aires, Argentina.",
           "jobTitle": [
             "Editor de Video Senior",
             "Guionista",
@@ -122,15 +126,49 @@
             "Desarrollador Web Frontend",
             "Especialista en Inteligencia Artificial Aplicada al Audiovisual"
           ],
+          "email": "l.a.senderovsky@gmail.com",
+          "telephone": "+5491130452585",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Buenos Aires",
             "addressCountry": "AR"
           },
+          "nationality": {
+            "@type": "Country",
+            "name": "Argentina"
+          },
+          "knowsAbout": [
+            "Edición de Video",
+            "Post-producción audiovisual",
+            "Guión cinematográfico",
+            "Script doctoring",
+            "Docencia de cine",
+            "Crítica cinematográfica",
+            "Cine judío",
+            "Cine argentino en dictadura",
+            "Historia del cine argentino",
+            "Desarrollo web Frontend",
+            "React",
+            "TypeScript",
+            "Inteligencia Artificial aplicada al video",
+            "sender.ia"
+          ],
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Universidad del Cine",
+            "alternateName": "FUC",
+            "url": "https://www.ucine.edu.ar",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressCountry": "AR"
+            }
+          },
           "sameAs": [
             "https://www.linkedin.com/in/lsender/",
             "https://www.youtube.com/c/LeoAquibaSenderovsky",
             "https://www.behance.net/leosenderovsky",
+            "https://www.facebook.com/Leo.Aquiba.Senderovsky",
             "https://twitter.com/leosenderovsky",
             "https://www.instagram.com/leo.senderovsky/",
             "https://github.com/leosenderovsky"
@@ -143,8 +181,80 @@
           "name": "Leo Senderovsky — Portfolio",
           "description": "Sitio personal y portfolio de Leo Aquiba Senderovsky: editor de video, guionista, docente de cine, desarrollador web Frontend y especialista en IA.",
           "inLanguage": "es-AR",
+          "dateModified": "2026-06-29",
           "publisher": {
             "@id": "https://leosenderovsky.com.ar/#person"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://leosenderovsky.com.ar/#service",
+          "name": "Leo Senderovsky — Servicios Audiovisuales y Digitales",
+          "url": "https://leosenderovsky.com.ar",
+          "description": "Editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina.",
+          "provider": {
+            "@id": "https://leosenderovsky.com.ar/#person"
+          },
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Argentina"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Buenos Aires"
+            }
+          ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.6037,
+            "longitude": -58.3816
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Leo Senderovsky",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Edición de Video",
+                  "url": "https://leosenderovsky.com.ar/audiovisual/edicion"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Guión y Script Doctoring",
+                  "url": "https://leosenderovsky.com.ar/audiovisual/guion"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Docencia de Cine",
+                  "url": "https://leosenderovsky.com.ar/audiovisual/docencia"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Desarrollo Web Frontend",
+                  "url": "https://leosenderovsky.com.ar/web"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "sender.ia — IA Aplicada al Audiovisual",
+                  "url": "https://leosenderovsky.com.ar/ia"
+                }
+              }
+            ]
           }
         }
       ]

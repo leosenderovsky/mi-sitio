@@ -5,14 +5,10 @@
 [PERSONA]
 Nombre completo: Leo Aquiba Senderovsky
 Apodo profesional: Leo Senderovsky
-Segundo nombre: Aquiba
 Nacionalidad: Argentina
 Ciudad: Buenos Aires, Argentina
-Origen: Bahía Blanca, Buenos Aires, Argentina
-Estado civil: Casado con Giselle
-Hijos: Ezequiel y Uriel
-Pertenencia comunitaria: Judío
-Signo: Piscis
+Formación: Director Cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), Buenos Aires, 2003–2008
+Idiomas: Español (nativo), Inglés (profesional)
 
 [FORMACIÓN ACADÉMICA]
 - Título: Director Cinematográfico y Profesor en Cinematografía

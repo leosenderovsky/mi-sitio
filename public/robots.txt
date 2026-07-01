@@ -12,6 +12,9 @@ User-agent: GPTBot
 Allow: /
 Disallow: /gracias
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
@@ -27,6 +30,12 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Amazonbot
 Allow: /
 
@@ -34,6 +43,18 @@ User-agent: cohere-ai
 Allow: /
 
 User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: DataForSeoBot
 Allow: /
 
 User-agent: Googlebot

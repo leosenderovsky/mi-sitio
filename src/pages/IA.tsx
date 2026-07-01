@@ -1,6 +1,6 @@
 import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaFAQPage, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { portfolioIA } from "../data/portfolio-ia";
@@ -33,6 +33,28 @@ export function IA() {
           { name: "Inicio", url: "https://leosenderovsky.com.ar/" },
           { name: "Tecnología & IA", url: "https://leosenderovsky.com.ar/ia" },
           { name: "sender.ia", url: "https://leosenderovsky.com.ar/ia" },
+        ]}
+      />
+      <SchemaWebPage
+        name="IA para Video, Sitios Web y Apps — sender.ia | Leo Senderovsky"
+        description="sender.ia: proyectos de inteligencia artificial aplicados al audiovisual y la web. Automatización, herramientas IA para producción y edición de video. Leo Senderovsky."
+        url="https://leosenderovsky.com.ar/ia"
+        speakableSelectors={["h1", "h2", ".section-intro"]}
+      />
+      <SchemaFAQPage
+        items={[
+          {
+            question: "¿Qué es sender.ia?",
+            answer: "sender.ia es mi marca de proyectos de inteligencia artificial aplicada al audiovisual y la web. Incluye automatización de procesos de producción, herramientas IA para edición de video, generación de contenido y desarrollo de aplicaciones con modelos de lenguaje.",
+          },
+          {
+            question: "¿Qué tipo de proyectos de IA desarrollás para video?",
+            answer: "Trabajo en automatización de workflows de edición, generación de subtítulos y transcripciones con IA, uso de herramientas de IA generativa para producción de contenido y creación de herramientas a medida para equipos de producción audiovisual.",
+          },
+          {
+            question: "¿Podés integrar IA en el proceso de producción de mi empresa?",
+            answer: "Sí. Ofrezco consultoría para integrar herramientas de IA en flujos de trabajo de producción audiovisual y web. Analizamos el proceso actual y proponemos soluciones concretas con retorno medible.",
+          },
         ]}
       />
 

@@ -75,6 +75,16 @@ export function SchemaGlobal() {
       "https://www.instagram.com/leo.senderovsky/",
       "https://github.com/leosenderovsky",
     ],
+    subjectOf: {
+      "@type": "Blog",
+      "@id": "https://blog.leosenderovsky.com.ar/#blog",
+      name: "Blog de Leo Aquiba Senderovsky",
+      url: "https://blog.leosenderovsky.com.ar",
+      description:
+        "Archivo de críticas cinematográficas, artículos académicos sobre cine judío, cine argentino e historia del cine.",
+      inLanguage: "es-AR",
+      author: { "@id": "https://leosenderovsky.com.ar/#person" },
+    },
     affiliation: [
       {
         "@type": "Organization",
@@ -297,6 +307,82 @@ export function SchemaCourse({
     provider: { "@id": "https://leosenderovsky.com.ar/#person" },
     inLanguage: "es",
     availableLanguage: "es",
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+}
+
+// ── SCHEMA WEBPAGE ────────────────────────────────────────
+// Usarlo en CADA página de servicio junto con SchemaBreadcrumb
+// Proporciona contexto de página individual para AI Overviews y crawlers
+
+interface SchemaWebPageProps {
+  name: string;
+  description: string;
+  url: string;
+  dateModified?: string;
+  speakableSelectors?: string[];
+}
+
+export function SchemaWebPage({
+  name,
+  description,
+  url,
+  dateModified = "2026-06-29",
+  speakableSelectors,
+}: SchemaWebPageProps) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    name: name,
+    description: description,
+    url: url,
+    dateModified: dateModified,
+    inLanguage: "es-AR",
+    isPartOf: { "@id": "https://leosenderovsky.com.ar/#website" },
+    author: { "@id": "https://leosenderovsky.com.ar/#person" },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+  };
+
+  if (speakableSelectors && speakableSelectors.length > 0) {
+    schema["speakable"] = {
+      "@type": "SpeakableSpecification",
+      cssSelector: speakableSelectors,
+    };
+  }
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
+}
+
+// ── SCHEMA FAQPAGE POR SERVICIO ──────────────────────────
+// Pasar array de { question, answer }
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export function SchemaFAQPage({ items }: { items: FAQItem[] }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 
   return (

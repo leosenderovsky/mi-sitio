@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaFAQPage, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { TimelineSection } from "../components/TimelineSection";
@@ -44,6 +44,32 @@ export function Edicion() {
           {
             name: "Edición de Video",
             url: "https://leosenderovsky.com.ar/audiovisual/edicion",
+          },
+        ]}
+      />
+      <SchemaWebPage
+        name="Edición de Video — Portfolio | Leo Senderovsky"
+        description="Portfolio de edición de video de Leo Senderovsky. Editor audiovisual senior con casi veinte años de experiencia en documentales, spots y contenido para Infobae, LN+ y NBA LATAM."
+        url="https://leosenderovsky.com.ar/audiovisual/edicion"
+        speakableSelectors={["h1", "h2", ".section-intro", "#sobre-la-edicion"]}
+      />
+      <SchemaFAQPage
+        items={[
+          {
+            question: "¿Qué tipo de videos editás?",
+            answer: "Edito documentales, spots publicitarios, contenido institucional, reels para redes sociales y programas de televisión. Trabajé con Infobae, LN+, NBA LATAM, Twitch LATAM y Fórmula E, entre otros.",
+          },
+          {
+            question: "¿Cuántos años de experiencia tenés como editor de video?",
+            answer: "Tengo casi veinte años de experiencia como editor audiovisual. Empecé en productoras de contenido digital y pasé por medios como LN+, donde me desempeñé como editor y coordinador operativo de posproducción.",
+          },
+          {
+            question: "¿Trabajás con documentales?",
+            answer: "Sí. Edité documentales sobre temas como Malvinas, el ARA San Juan, Cromañón, la invasión rusa en Ucrania y Democracia 40, entre otros. Es uno de mis formatos favoritos.",
+          },
+          {
+            question: "¿Cómo puedo pedirte un presupuesto de edición?",
+            answer: "Podés contactarme por el formulario en leosenderovsky.com.ar/#contacto, por WhatsApp al +54 9 11 3045-2585 o por LinkedIn.",
           },
         ]}
       />

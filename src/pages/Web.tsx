@@ -1,5 +1,5 @@
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaFAQPage, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { experienciaWeb } from "../data/experiencia-web";
@@ -27,6 +27,28 @@ export function Web() {
           {
             name: "Desarrollo Web Frontend",
             url: "https://leosenderovsky.com.ar/web",
+          },
+        ]}
+      />
+      <SchemaWebPage
+        name="Desarrollo Web Frontend | Leo Senderovsky"
+        description="Desarrollo de sitios y aplicaciones web a medida por Leo Senderovsky. Frontend con React, TypeScript, Tailwind CSS, Vite. Proyectos para pymes y emprendimientos."
+        url="https://leosenderovsky.com.ar/web"
+        speakableSelectors={["h1", "h2", ".section-intro"]}
+      />
+      <SchemaFAQPage
+        items={[
+          {
+            question: "¿Qué tecnologías usás para el desarrollo web?",
+            answer: "Trabajo principalmente con React, TypeScript, Vite y Tailwind CSS para el frontend. También tengo experiencia con HTML, CSS y JavaScript vanilla, y en integraciones con APIs REST.",
+          },
+          {
+            question: "¿Desarrollás sitios para pequeñas empresas?",
+            answer: "Sí. Me especializo en sitios web para pymes, emprendimientos y profesionales independientes que necesitan una presencia online sólida sin los costos de una agencia.",
+          },
+          {
+            question: "¿Incluís SEO en los proyectos web?",
+            answer: "Sí. Todos mis proyectos incluyen optimización técnica de SEO: estructura semántica, meta tags, Schema.org, rendimiento y accesibilidad. También puedo implementar AEO para visibilidad en herramientas de IA.",
           },
         ]}
       />

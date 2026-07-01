@@ -44,6 +44,48 @@ $pages = [
     'image'       => '/assets/img/dibujos/ia-1024w.webp',
     'img_w'       => 1024, 'img_h' => 572,
   ],
+  'sobre-mi/cv-audiovisual' => [
+    'title'       => 'CV Audiovisual | Leo Senderovsky',
+    'description' => 'Curriculum vitae completo de Leo Senderovsky: editor de video, guionista y consultor de guión. Más de 15 años de experiencia en medios, productoras y marcas argentinas e internacionales.',
+    'image'       => '/assets/img/og-social-preview.webp',
+    'img_w'       => 1200, 'img_h' => 630,
+  ],
+  'sobre-mi/cv-web' => [
+    'title'       => 'CV Desarrollo Web | Leo Senderovsky',
+    'description' => 'Curriculum vitae en desarrollo web Frontend de Leo Senderovsky. React, TypeScript, Tailwind CSS, Vite. Proyectos para pymes y emprendimientos.',
+    'image'       => '/assets/img/og-social-preview.webp',
+    'img_w'       => 1200, 'img_h' => 630,
+  ],
+  'audiovisual/guion/consultoria' => [
+    'title'       => 'Consultoría de Guión — Script Doctoring | Leo Senderovsky',
+    'description' => 'Script doctoring y asesoría narrativa para cine, TV y publicidad. Leo Senderovsky analiza y mejora guiones en todas sus etapas. Freelance, Buenos Aires.',
+    'image'       => '/assets/img/dibujos/guion-1024w.webp',
+    'img_w'       => 1024, 'img_h' => 572,
+  ],
+  'audiovisual/guion/portfolio' => [
+    'title'       => 'Portfolio de Guión | Leo Senderovsky',
+    'description' => 'Proyectos de guión y consultoría narrativa de Leo Senderovsky: cortos, institucionales, publicitarios y asesoría en desarrollo de guiones.',
+    'image'       => '/assets/img/dibujos/guion-1024w.webp',
+    'img_w'       => 1024, 'img_h' => 572,
+  ],
+  'audiovisual/docencia/entrevistas' => [
+    'title'       => 'Entrevistas — Docencia de Cine | Leo Senderovsky',
+    'description' => 'Entrevistas y apariciones de Leo Senderovsky como docente y crítico de cine en medios gráficos, radio y plataformas online.',
+    'image'       => '/assets/img/dibujos/docencia-1-1024w.webp',
+    'img_w'       => 1024, 'img_h' => 572,
+  ],
+  'ia/portfolio' => [
+    'title'       => 'Portfolio sender.ia — IA Aplicada al Audiovisual | Leo Senderovsky',
+    'description' => 'Proyectos realizados con inteligencia artificial para producción de video, automatización de contenido y desarrollo web. sender.ia por Leo Senderovsky.',
+    'image'       => '/assets/img/dibujos/ia-1024w.webp',
+    'img_w'       => 1024, 'img_h' => 572,
+  ],
+  'web/experiencia' => [
+    'title'       => 'Experiencia en Desarrollo Web | Leo Senderovsky',
+    'description' => 'Trayectoria en desarrollo web Frontend de Leo Senderovsky: proyectos, tecnologías y clientes. React, TypeScript, Tailwind CSS, Vite.',
+    'image'       => '/assets/img/dibujos/web-1024w.webp',
+    'img_w'       => 1024, 'img_h' => 572,
+  ],
 ];
 
 // Default: home o ruta desconocida

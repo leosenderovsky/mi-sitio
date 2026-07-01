@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaFAQPage, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { PortfolioGrid } from "../components/PortfolioGrid";
@@ -43,6 +43,28 @@ export function Guion() {
           {
             name: "Guión y Consultoría",
             url: "https://leosenderovsky.com.ar/audiovisual/guion",
+          },
+        ]}
+      />
+      <SchemaWebPage
+        name="Guión Cinematográfico y Script Doctoring | Leo Senderovsky"
+        description="Servicios de guión cinematográfico y script doctoring por Leo Senderovsky. Asesoría narrativa para cine, TV y publicidad. Freelance, Buenos Aires."
+        url="https://leosenderovsky.com.ar/audiovisual/guion"
+        speakableSelectors={["h1", "h2", ".section-intro"]}
+      />
+      <SchemaFAQPage
+        items={[
+          {
+            question: "¿Qué es el script doctoring?",
+            answer: "El script doctoring es un servicio de consultoría narrativa donde un profesional analiza un guión existente y propone mejoras estructurales, de personajes, diálogos o coherencia interna. No se trata de reescribir el guión, sino de potenciarlo.",
+          },
+          {
+            question: "¿Trabajás con guiones de ficción y también de publicidad?",
+            answer: "Sí. Tengo experiencia en guiones para cortometrajes, largometrajes, series y también para publicidad y contenido institucional. Cada formato tiene sus particularidades narrativas y técnicas.",
+          },
+          {
+            question: "¿Puedo contratarte si estoy en el interior del país o en otro país?",
+            answer: "Sí, trabajamos de manera remota sin inconvenientes. Tengo experiencia colaborando con proyectos de distintas provincias argentinas y del exterior.",
           },
         ]}
       />
