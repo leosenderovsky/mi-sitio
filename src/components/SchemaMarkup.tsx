@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 // Usarlo en App.tsx o en el layout raíz
 
 export function SchemaGlobal() {
+  const dateModified = "2026-06-18";
+
   const person = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -19,6 +21,7 @@ export function SchemaGlobal() {
     },
     description:
       "Editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Basado en Buenos Aires, Argentina.",
+    dateModified,
     jobTitle: [
       "Editor de Video",
       "Guionista",
@@ -90,15 +93,47 @@ export function SchemaGlobal() {
     description:
       "Sitio personal y portfolio de Leo Aquiba Senderovsky: editor de video, guionista, docente de cine, desarrollador web y especialista en IA.",
     inLanguage: "es-AR",
+    dateModified,
     publisher: {
       "@id": "https://leosenderovsky.com.ar/#person",
     },
   };
 
+  const professionalService = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://leosenderovsky.com.ar/#professional-service",
+    name: "Servicios profesionales de Leo Senderovsky",
+    url: "https://leosenderovsky.com.ar",
+    image: "https://leosenderovsky.com.ar/assets/img/og-social-preview.webp",
+    description:
+      "Servicios freelance de ediciÃ³n de video, guiÃ³n, consultorÃ­a narrativa, docencia de cine, desarrollo web Frontend e inteligencia artificial aplicada al audiovisual.",
+    founder: { "@id": "https://leosenderovsky.com.ar/#person" },
+    areaServed: [
+      { "@type": "Country", name: "Argentina" },
+      { "@type": "Place", name: "Remoto internacional" },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Buenos Aires",
+      addressCountry: "AR",
+    },
+    email: "l.a.senderovsky@gmail.com",
+    telephone: "+5491130452585",
+    priceRange: "$$",
+    knowsAbout: person.knowsAbout,
+    sameAs: person.sameAs,
+    dateModified,
+  };
+
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(person)}</script>
-      <script type="application/ld+json">{JSON.stringify(website)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [person, website, professionalService],
+        })}
+      </script>
     </Helmet>
   );
 }

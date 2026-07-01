@@ -3,6 +3,17 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import cssInjectedByJs from 'vite-plugin-css-injected-by-js'
 import compression from 'vite-plugin-compression'
+import prerender from '@prerenderer/rollup-plugin'
+
+const prerenderRoutes = [
+  '/',
+  '/audiovisual/edicion',
+  '/audiovisual/guion',
+  '/audiovisual/docencia',
+  '/audiovisual/critica',
+  '/web',
+  '/ia',
+]
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -18,6 +29,26 @@ export default defineConfig({
       algorithm: 'brotliCompress',
       ext: '.br',
       threshold: 1024,
+    }),
+    prerender({
+      routes: prerenderRoutes,
+      renderer: '@prerenderer/renderer-puppeteer',
+      rendererOptions: {
+        renderAfterTime: 2500,
+        timeout: 30000,
+        headless: true,
+        skipThirdPartyRequests: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      },
+      postProcess(renderedRoute) {
+        if (renderedRoute.route === '/') {
+          renderedRoute.outputPath = 'index.html'
+        }
+
+        renderedRoute.html = renderedRoute.html
+          .replace(/http:\/\/localhost:\d+/g, 'https://leosenderovsky.com.ar')
+          .replace(/http:\/\/127\.0\.0\.1:\d+/g, 'https://leosenderovsky.com.ar')
+      },
     }),
     compression({
       algorithm: 'gzip',
