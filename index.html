@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!-- SEO base (react-helmet-async lo sobreescribe por página) -->
-    <title>Leo Aquiba Senderovsky | Editor de Video | Consultor de Guión | Docente de Cine | Desarrollador Web | IA</title>
+    <title>Editor, docente de cine y consultor de guión | Leo Senderovsky</title>
     <meta name="description" content="Leo Aquiba Senderovsky: editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina." />
     <meta name="author" content="Leo Aquiba Senderovsky" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -265,9 +265,9 @@
           "url": "https://leosenderovsky.com.ar",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://leosenderovsky.com.ar/assets/img/og-social-preview.webp",
-            "width": 1200,
-            "height": 630
+            "url": "https://leosenderovsky.com.ar/apple-touch-icon.png",
+            "width": 180,
+            "height": 180
           },
           "description": "Editor de video senior, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Buenos Aires, Argentina.",
           "founder": {
@@ -286,20 +286,6 @@
       ]
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-
-    <!-- ═══════════════════════════════════════════════════════════════
-         BLOQUE ESTÁTICO PARA CRAWLERS SIN JS (AEO / GEO / Framer scanner)
-         React oculta este bloque al montar. El contenido es idéntico
-         al que muestra la SPA — no es cloaking.
-    ═══════════════════════════════════════════════════════════════ -->
-    <div id="seo-static-content">
-      <main>
-        <h1>Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires</h1>
-    }
-    </script>
 
     <!-- Schema.org estático: FAQPage + WebPage (para scanners AEO sin JS) -->
     <script type="application/ld+json">
@@ -313,7 +299,7 @@
           "name": "Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires",
           "description": "Portfolio y servicios de Leo Aquiba Senderovsky: editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina.",
           "inLanguage": "es-AR",
-          "dateModified": "2026-07-01",
+          "dateModified": "2026-07-02",
           "isPartOf": { "@id": "https://leosenderovsky.com.ar/#website" },
           "author": { "@id": "https://leosenderovsky.com.ar/#person" },
           "about": { "@id": "https://leosenderovsky.com.ar/#person" }
@@ -367,7 +353,44 @@
       ]
     }
     </script>
+
+    <!-- Schema.org estático: Organization standalone (algunos scanners AEO no recorren @graph anidado) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://leosenderovsky.com.ar/#organization",
+      "name": "Leo Senderovsky — Servicios Audiovisuales y Digitales",
+      "alternateName": "sender.ia",
+      "legalName": "Leo Aquiba Senderovsky",
+      "url": "https://leosenderovsky.com.ar",
+      "logo": "https://leosenderovsky.com.ar/apple-touch-icon.png",
+      "image": "https://leosenderovsky.com.ar/apple-touch-icon.png",
+      "description": "Editor de video senior, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA aplicada al audiovisual. Buenos Aires, Argentina.",
+      "founder": {
+        "@id": "https://leosenderovsky.com.ar/#person"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/lsender/",
+        "https://www.youtube.com/c/LeoAquibaSenderovsky",
+        "https://www.behance.net/leosenderovsky"
+      ]
+    }
+    </script>
   </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         BLOQUE ESTÁTICO PARA CRAWLERS SIN JS (AEO / GEO / Framer scanner)
+         React oculta este bloque al montar. El contenido es idéntico
+         al que muestra la SPA — no es cloaking.
+    ═══════════════════════════════════════════════════════════════ -->
+    <div id="seo-static-content">
+      <main>
+        <h1>Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires</h1>
+
+        <p>
           Llevo casi veinte años editando para televisión, cine y plataformas digitales.
           En ese tiempo trabajé para productoras, medios como
           <a href="https://www.infobae.com" rel="noopener noreferrer">Infobae</a>
