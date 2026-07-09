@@ -1,0 +1,12 @@
+{
+  "name": "Leo Senderovsky — Editor, Script Doctor y Docente de Cine",
+  "short_name": "Leo Senderovsky",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0B2E",
+  "theme_color": "#3844BE",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

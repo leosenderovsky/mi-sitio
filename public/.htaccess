@@ -13,6 +13,7 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 Header always set X-Content-Type-Options "nosniff"
 Header always set X-Frame-Options "SAMEORIGIN"
 Header set Referrer-Policy "no-referrer-when-downgrade"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
 
 # OG handler — crawlers de redes sociales no ejecutan JS;
 # los enviamos al PHP que sirve los meta tags por ruta.

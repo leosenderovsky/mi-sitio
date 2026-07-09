@@ -207,7 +207,7 @@ export function Home() {
     <>
       <PageSEO
         title="Editor, docente de cine y consultor de guión"
-        description="Leo Aquiba Senderovsky: editor de video senior con 15+ años de experiencia, guionista y consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina."
+        description="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)."
         path="/"
         keywords="editor de video Buenos Aires, editor audiovisual Argentina, consultor de guion, script doctor, docente de cine, critica de cine, desarrollador web Frontend, inteligencia artificial audiovisual, sender.ia"
       />

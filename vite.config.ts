@@ -6,7 +6,6 @@ import compression from 'vite-plugin-compression'
 import prerender from '@prerenderer/rollup-plugin'
 
 const prerenderRoutes = [
-  '/',
   '/audiovisual/edicion',
   '/audiovisual/guion',
   '/audiovisual/docencia',
@@ -14,6 +13,33 @@ const prerenderRoutes = [
   '/web',
   '/ia',
 ]
+
+// Prerender es best-effort: si Puppeteer no puede lanzar Chromium
+// (falta el binario, sandboxing, CI sin navegador), no debe romper
+// el build completo; el index.html estático ya cubre el SEO crítico.
+const prerenderPlugin = (() => {
+  try {
+    return prerender({
+      routes: prerenderRoutes,
+      renderer: '@prerenderer/renderer-puppeteer',
+      rendererOptions: {
+        renderAfterTime: 2500,
+        timeout: 30000,
+        headless: true,
+        skipThirdPartyRequests: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      },
+      postProcess(renderedRoute) {
+        renderedRoute.html = renderedRoute.html
+          .replace(/http:\/\/localhost:\d+/g, 'https://leosenderovsky.com.ar')
+          .replace(/http:\/\/127\.0\.0\.1:\d+/g, 'https://leosenderovsky.com.ar')
+      },
+    })
+  } catch (err) {
+    console.warn('[prerender] deshabilitado por error de configuración:', err)
+    return null
+  }
+})()
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -30,26 +56,7 @@ export default defineConfig({
       ext: '.br',
       threshold: 1024,
     }),
-    prerender({
-      routes: prerenderRoutes,
-      renderer: '@prerenderer/renderer-puppeteer',
-      rendererOptions: {
-        renderAfterTime: 2500,
-        timeout: 30000,
-        headless: true,
-        skipThirdPartyRequests: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      },
-      postProcess(renderedRoute) {
-        if (renderedRoute.route === '/') {
-          renderedRoute.outputPath = 'index.html'
-        }
-
-        renderedRoute.html = renderedRoute.html
-          .replace(/http:\/\/localhost:\d+/g, 'https://leosenderovsky.com.ar')
-          .replace(/http:\/\/127\.0\.0\.1:\d+/g, 'https://leosenderovsky.com.ar')
-      },
-    }),
+    ...(prerenderPlugin ? [prerenderPlugin] : []),
     compression({
       algorithm: 'gzip',
       ext: '.gz',

@@ -11,8 +11,9 @@
 
     <!-- SEO base (react-helmet-async lo sobreescribe por página) -->
     <title>Editor, docente de cine y consultor de guión | Leo Senderovsky</title>
-    <meta name="description" content="Leo Aquiba Senderovsky: editor de video senior, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina." />
+    <meta name="description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
     <meta name="author" content="Leo Aquiba Senderovsky" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Geo -->
@@ -26,7 +27,7 @@
     <meta property="og:site_name" content="Leo Senderovsky" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
-    <meta property="og:description" content="Leo Aquiba Senderovsky: editor de video senior con 15+ años, guionista, consultor de guión, docente de cine, desarrollador web Frontend y especialista en IA. Buenos Aires, Argentina." />
+    <meta property="og:description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
     <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -35,6 +36,11 @@
     <!-- Twitter fallback -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@leosenderovsky" />
+    <meta name="twitter:creator" content="@leosenderovsky" />
+    <meta name="twitter:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
+    <meta name="twitter:description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
+    <meta name="twitter:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
+    <meta name="twitter:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
 
     <!-- Theme color -->
     <meta name="theme-color" content="#3844BE" />
@@ -377,6 +383,20 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://leosenderovsky.com.ar/"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
@@ -387,7 +407,17 @@
          al que muestra la SPA — no es cloaking.
     ═══════════════════════════════════════════════════════════════ -->
     <div id="seo-static-content">
-      <main>
+      <nav aria-label="Navegación principal">
+        <a href="#main-content">Saltar al contenido principal</a>
+        <ul>
+          <li><a href="/audiovisual/edicion">Edición de Video</a></li>
+          <li><a href="/audiovisual/guion">Guión y Script Doctoring</a></li>
+          <li><a href="/audiovisual/docencia">Docencia de Cine</a></li>
+          <li><a href="/web">Desarrollo Web</a></li>
+          <li><a href="/ia">sender.ia</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
         <h1>Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires</h1>
 
         <p>
@@ -414,6 +444,15 @@
           y mi trabajo audiovisual en
           <a href="https://www.youtube.com/c/LeoAquibaSenderovsky" rel="noopener noreferrer">YouTube</a>.
         </p>
+
+        <dl>
+          <dt>Experiencia</dt>
+          <dd>15+ años como editor de video profesional</dd>
+          <dt>Ubicación</dt>
+          <dd>Buenos Aires, Argentina</dd>
+          <dt>Formación</dt>
+          <dd>Director Cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), 2003–2008</dd>
+        </dl>
 
         <h2>Servicios</h2>
 
@@ -482,6 +521,18 @@
           y en <a href="/sobre-mi/cv-web">CV Web</a>.
         </p>
 
+        <table>
+          <caption>Áreas de servicio de Leo Senderovsky</caption>
+          <thead>
+            <tr><th>Área</th><th>Enfoque</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Audiovisual</td><td>Edición, guión, docencia, crítica de cine</td></tr>
+            <tr><td>Web</td><td>Desarrollo Frontend con React y TypeScript</td></tr>
+            <tr><td>IA (sender.ia)</td><td>Automatización aplicada a producción audiovisual y web</td></tr>
+          </tbody>
+        </table>
+
         <h2>Preguntas frecuentes</h2>
 
         <h3>¿Qué tipo de videos editás?</h3>
@@ -519,7 +570,21 @@
           por WhatsApp al +54 9 11 3045-2585 o conectarte en
           <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>.
         </p>
+
+        <p>
+          <strong>En resumen:</strong> Leo Senderovsky combina edición de video senior,
+          guión, docencia de cine y desarrollo web con IA aplicada (sender.ia),
+          con base en Buenos Aires desde hace más de 15 años.
+        </p>
       </main>
+
+      <footer>
+        <p>
+          Última actualización: <time datetime="2026-07-09">9 de julio de 2026</time>.
+          Contacto: <a href="mailto:l.a.senderovsky@gmail.com">l.a.senderovsky@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+      </footer>
     </div>
 
     <script>
