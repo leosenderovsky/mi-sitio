@@ -1,4 +1,5 @@
 Options -MultiViews
+DirectorySlash Off
 RewriteEngine On
 
 # Redirigir HTTP → HTTPS
@@ -8,7 +9,8 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 # Normalizar barra final en rutas prerenderizadas (evita duplicados
 # /web/ vs /web que Google indexa como URLs distintas y que pueden
 # servir snapshots de structured data inconsistentes)
-RewriteRule ^(audiovisual/edicion|audiovisual/guion|audiovisual/docencia|audiovisual/critica|web|ia)/$ /$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(audiovisual/edicion|audiovisual/guion|audiovisual/docencia|audiovisual/critica|web|ia)/$ /$1 [R=301,L,NE]
 
 # Headers de seguridad
 Header always unset X-Frame-Options
