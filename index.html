@@ -104,7 +104,7 @@
     </script>
 
     <!-- Canonical estático para crawlers (home page) -->
-    <link rel="canonical" href="https://leosenderovsky.com.ar/" />
+    <link id="static-seo-canonical" rel="canonical" href="https://leosenderovsky.com.ar/" />
 
     <!-- Schema.org estático: Person + WebSite + ProfessionalService (crawlers sin JS) -->
     <script type="application/ld+json">
@@ -294,7 +294,7 @@
     </script>
 
     <!-- Schema.org estático: FAQPage + WebPage (para scanners AEO sin JS) -->
-    <script type="application/ld+json">
+    <script id="static-seo-webpage-faq" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -383,7 +383,7 @@
       ]
     }
     </script>
-    <script type="application/ld+json">
+    <script id="static-seo-breadcrumb" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -588,21 +588,44 @@
     </div>
 
     <script>
-      // Ocultar bloque estático en cuanto React monte — invisible para usuarios JS
+      // Ocultar/retirar bloque estático en cuanto React monte.
+      // En "/" el bloque estático sigue siendo la única fuente de
+      // WebPage/FAQPage/BreadcrumbList, así que solo se oculta visualmente.
+      // En subrutas, React inyecta su propio BreadcrumbList/WebPage/FAQPage/
+      // canonical vía react-helmet — el estático se ELIMINA del DOM (no solo
+      // display:none) para evitar JSON-LD y <link rel="canonical"> duplicados
+      // que rompen el parseo de itemListElement en Search Console.
       (function() {
-        function hideSeoContent() {
+        var isHome = window.location.pathname === '/';
+
+        function cleanupStaticSeo() {
           var el = document.getElementById('seo-static-content');
           if (el) {
-            el.style.display = 'none';
+            if (isHome) {
+              el.style.display = 'none';
+            } else {
+              el.remove();
+            }
+          }
+          if (!isHome) {
+            [
+              'static-seo-canonical',
+              'static-seo-webpage-faq',
+              'static-seo-breadcrumb',
+            ].forEach(function (id) {
+              var node = document.getElementById(id);
+              if (node) node.remove();
+            });
           }
         }
+
         if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
-          hideSeoContent();
+          cleanupStaticSeo();
         } else {
-          var observer = new MutationObserver(function(mutations) {
+          var observer = new MutationObserver(function (mutations) {
             var root = document.getElementById('root');
             if (root && root.children.length > 0) {
-              hideSeoContent();
+              cleanupStaticSeo();
               observer.disconnect();
             }
           });

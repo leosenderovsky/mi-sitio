@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ResponsiveBackground from "../components/ResponsiveBackground";
 import { PageSEO } from "../components/PageSEO";
-import { SchemaBreadcrumb } from "../components/SchemaMarkup";
+import { SchemaBreadcrumb, SchemaWebPage } from "../components/SchemaMarkup";
 import { useSectionScroll } from "../hooks/useSectionScroll";
 import { SectionHeader } from "../components/SectionHeader";
 import { TimelineSection } from "../components/TimelineSection";
@@ -39,6 +39,12 @@ export function Critica() {
             url: "https://leosenderovsky.com.ar/audiovisual/critica",
           },
         ]}
+      />
+      <SchemaWebPage
+        name="Crítica de Cine — Análisis y Reseñas Cinematográficas | Leo Senderovsky"
+        description="Críticas cinematográficas y colaboraciones en medios por Leo Senderovsky. Análisis de cine argentino y cine mundial. Colaboraciones en radio, medios gráficos y online desde 2007."
+        url="https://leosenderovsky.com.ar/audiovisual/critica"
+        speakableSelectors={["h1", "h2", ".section-intro"]}
       />
 
       {/* ── Intro ── */}
