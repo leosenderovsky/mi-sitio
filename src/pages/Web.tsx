@@ -55,7 +55,7 @@ export function Web() {
 
       <section
         id="servicios"
-        className="py-20 text-white text-center relative overflow-hidden min-h-[400px] flex items-center"
+        className="py-20 text-white text-center relative overflow-hidden min-h-100 flex items-center"
       >
         <img
           src="/assets/img/web/bg-web.webp"

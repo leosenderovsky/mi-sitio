@@ -76,7 +76,7 @@ export function Edicion() {
 
       <section
         id="edicion"
-        className="py-20 text-white text-center relative overflow-hidden min-h-[400px] flex items-center"
+        className="py-20 text-white text-center relative overflow-hidden min-h-100 flex items-center"
       >
         <img
           src="/assets/img/edicion/bg-edicion.webp"
@@ -168,7 +168,7 @@ export function Edicion() {
 
       <section
         id="resume"
-        className="py-20 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
+        className="py-20 bg-linear-to-r from-[#19D3FF] to-[#1B1440]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader

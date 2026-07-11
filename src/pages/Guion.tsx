@@ -211,7 +211,7 @@ export function Guion() {
 
       <section
         id="resume"
-        className="py-20 bg-gradient-to-r from-[#19D3FF] to-[#1B1440]"
+        className="py-20 bg-linear-to-r from-[#19D3FF] to-[#1B1440]"
       >
         <div className="container mx-auto px-4">
           <SectionHeader

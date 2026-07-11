@@ -276,7 +276,7 @@ export function Home() {
       </h1>
       <div
         id="hero-area"
-        className="hidden md:flex md:items-center relative overflow-hidden md:min-h-[300px] lg:min-h-[600px] py-8 lg:py-0 lg:pt-[80px] lg:pb-[120px] text-white"
+        className="hidden md:flex md:items-center relative overflow-hidden md:min-h-75 lg:min-h-150 py-8 lg:py-0 lg:pt-20 lg:pb-30 text-white"
       >
         {/* Background Image Optimized for LCP */}
         <img
@@ -584,7 +584,7 @@ export function Home() {
             </div>
 
             <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-end gap-3">
-              <div className="flex flex-col gap-3 max-w-[280px] w-full mx-auto lg:mx-0">
+              <div className="flex flex-col gap-3 max-w-70 w-full mx-auto lg:mx-0">
                 <div className="flex gap-2">
                   <a
                     href="/audiovisual/cv/castellano"
@@ -604,7 +604,7 @@ export function Home() {
                       aria-hidden="true"
                       width="20"
                       height="15"
-                      className="h-[15px] w-5 shadow-sm"
+                      className="h-3.75 w-5 shadow-sm"
                     />
                   </a>
                   <a
@@ -625,7 +625,7 @@ export function Home() {
                       aria-hidden="true"
                       width="20"
                       height="15"
-                      className="h-[15px] w-5 shadow-sm"
+                      className="h-3.75 w-5 shadow-sm"
                     />
                   </a>
                 </div>
@@ -647,7 +647,7 @@ export function Home() {
                     aria-hidden="true"
                     width="20"
                     height="15"
-                    className="ml-1 h-[15px] w-5 shadow-sm"
+                    className="ml-1 h-3.75 w-5 shadow-sm"
                   />
                 </a>
                 <a
@@ -693,7 +693,7 @@ export function Home() {
             >
               Seguime en
             </span>
-            <ul className="flex flex-wrap justify-center gap-4 max-w-[300px] md:max-w-none mx-auto md:mx-0">
+            <ul className="flex flex-wrap justify-center gap-4 max-w-75 md:max-w-none mx-auto md:mx-0">
               {socialLinks.map((s) => (
                 <li key={s.cls}>
                   <a
