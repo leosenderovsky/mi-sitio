@@ -234,9 +234,16 @@ interface BreadcrumbItem {
 }
 
 export function SchemaBreadcrumb({ items }: { items: BreadcrumbItem[] }) {
+  // El @id debe coincidir EXACTAMENTE con la referencia
+  // breadcrumb: { "@id": `${url}#breadcrumb` } que arma SchemaWebPage,
+  // o Google no puede resolver el nodo y reporta itemListElement faltante.
+  // Se deriva del último item (la página actual), que en todas las
+  // páginas coincide con la url pasada a SchemaWebPage.
+  const pageUrl = items[items.length - 1]?.url;
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    ...(pageUrl ? { "@id": `${pageUrl}#breadcrumb` } : {}),
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
