@@ -15,6 +15,14 @@ export const portfolioIA: PortfolioIAItem[] = [
   },
   {
     id: "ia-2", 
+    category: "audiovisual", 
+    title: "Demo reel publicidad IA 2026", 
+    image: "/assets/img/ia/demo-reel-publicidad-ia.webp", 
+    link: "https://www.youtube.com/watch?v=ue0ViTsq9vw", 
+    description: "Reel de marcas y productos creados integramente con IA, desde los logos hasta sus respectivas publicidades"
+  },
+  {
+    id: "ia-3", 
     category: "sitio web", 
     title: "Sitio web \"Franco Colapinto F1 Live Tracker\"", 
     image: "/assets/img/ia/franco-colapinto-f1-live-tracker.netlify.app.webp", 
@@ -23,7 +31,7 @@ export const portfolioIA: PortfolioIAItem[] = [
     format: "web"
   },
   {
-    id: "ia-3", 
+    id: "ia-4", 
     category: "web app", 
     title: "App web \"Social Screenshot Generator\"", 
     image: "/assets/img/ia/social-screenshot-generator.netlify.app.webp", 
@@ -32,7 +40,7 @@ export const portfolioIA: PortfolioIAItem[] = [
     format: "web"
   },
   {
-    id: "ia-4", 
+    id: "ia-5", 
     category: "web app", 
     title: "App web \"PDF to Image Generator\"", 
     image: "/assets/img/ia/pdf-to-image-generator.netlify.app.webp", 
