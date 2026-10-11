@@ -78,7 +78,7 @@ export function MainApp() {
     <ErrorBoundary>
       <HelmetProvider>
         <SchemaGlobal />
-        <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <Router>
           <Analytics />
           <div className="flex flex-col min-h-screen bg-site-dark overflow-x-hidden">
             <Navbar />
