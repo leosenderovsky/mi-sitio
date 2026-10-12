@@ -8,19 +8,20 @@ export const portfolioIA: PortfolioIAItem[] = [
   {
     id: "ia-1", 
     category: "audiovisual", 
+    title: "Demo reel publicidad IA 2026", 
+    image: "/assets/img/ia/demo-reel-publicidad-ia.webp", 
+    link: "https://www.youtube.com/watch?v=ue0ViTsq9vw", 
+    description: "Reel de marcas y productos creados integramente con IA, desde sus logos hasta sus publicidades"
+  },
+  {
+    id: "ia-2", 
+    category: "audiovisual", 
     title: "Spot \"Golden ticket Insurance\"", 
     image: "/assets/img/ia/spot-golden-ticket.webp", 
     link: "https://www.youtube.com/watch?v=kFCZL7Kq9O8", 
     description: "Realizado integramente con herramientas IA"
   },
-  {
-    id: "ia-2", 
-    category: "audiovisual", 
-    title: "Demo reel publicidad IA 2026", 
-    image: "/assets/img/ia/demo-reel-publicidad-ia.webp", 
-    link: "https://www.youtube.com/watch?v=ue0ViTsq9vw", 
-    description: "Reel de marcas y productos creados integramente con IA, desde los logos hasta sus respectivas publicidades"
-  },
+
   {
     id: "ia-3", 
     category: "sitio web", 
