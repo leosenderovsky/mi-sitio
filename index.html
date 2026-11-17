@@ -1,113 +1,121 @@
 <!doctype html>
 <html lang="es-AR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) + Consent Mode v2 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5R825ZYTN5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    try {
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+        window.__gaLoaded = true;
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    } catch (e) { }
+    gtag('js', new Date());
+    gtag('config', 'G-5R825ZYTN5');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- SEO base (react-helmet-async lo sobreescribe por página) -->
-    <title>Editor, docente de cine y consultor de guión | Leo Senderovsky</title>
-    <meta name="description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
-    <meta name="author" content="Leo Aquiba Senderovsky" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Geo -->
-    <meta name="geo.region" content="AR-C" />
-    <meta name="geo.placename" content="Buenos Aires, Argentina" />
-    <meta name="ICBM" content="-34.6037, -58.3816" />
+  <!-- SEO base (react-helmet-async lo sobreescribe por página) -->
+  <title>Editor, docente de cine y consultor de guión | Leo Senderovsky</title>
+  <meta name="description"
+    content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
+  <meta name="author" content="Leo Aquiba Senderovsky" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- OG fallback estático (react-helmet-async sobreescribe en runtime con JS) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://leosenderovsky.com.ar/" />
-    <meta property="og:site_name" content="Leo Senderovsky" />
-    <meta property="og:locale" content="es_AR" />
-    <meta property="og:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
-    <meta property="og:description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
-    <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
+  <!-- Geo -->
+  <meta name="geo.region" content="AR-C" />
+  <meta name="geo.placename" content="Buenos Aires, Argentina" />
+  <meta name="ICBM" content="-34.6037, -58.3816" />
 
-    <!-- Twitter fallback -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@leosenderovsky" />
-    <meta name="twitter:creator" content="@leosenderovsky" />
-    <meta name="twitter:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
-    <meta name="twitter:description" content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
-    <meta name="twitter:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
-    <meta name="twitter:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
+  <!-- OG fallback estático (react-helmet-async sobreescribe en runtime con JS) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://leosenderovsky.com.ar/" />
+  <meta property="og:site_name" content="Leo Senderovsky" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
+  <meta property="og:description"
+    content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
+  <meta property="og:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
 
-    <!-- Theme color -->
-    <meta name="theme-color" content="#3844BE" />
+  <!-- Twitter fallback -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@leosenderovsky" />
+  <meta name="twitter:creator" content="@leosenderovsky" />
+  <meta name="twitter:title" content="Editor de Video, Docente de Cine y Consultor de Guión | Leo Senderovsky" />
+  <meta name="twitter:description"
+    content="Leo Senderovsky: editor de video senior, guionista, consultor de guión y docente de cine en Buenos Aires. Desarrollo web y soluciones de IA (sender.ia)." />
+  <meta name="twitter:image" content="https://leosenderovsky.com.ar/assets/img/og-social-preview.webp" />
+  <meta name="twitter:image:alt" content="Leo Senderovsky — Editor de Video y Consultor de Guión" />
 
-    <!-- Preconexiones -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://api.web3forms.com" />
+  <!-- Theme color -->
+  <meta name="theme-color" content="#3844BE" />
 
-    <!-- Preloads críticos para Performance -->
-    <!-- Hero home - responsive preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/img/hero-area-office.webp"
-      imagesrcset="
+  <!-- Preconexiones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://api.web3forms.com" />
+
+  <!-- Preloads críticos para Performance -->
+  <!-- Hero home - responsive preload -->
+  <link rel="preload" as="image" href="/assets/img/hero-area-office.webp" imagesrcset="
         /assets/img/hero-area-office-640w.webp 640w,
         /assets/img/hero-area-office-960w.webp 960w,
         /assets/img/hero-area-office-1280w.webp 1280w,
         /assets/img/hero-area-office-1920w.webp 1920w,
-        /assets/img/hero-area-office.webp 4000w"
-      imagesizes="(max-width: 768px) 100vw, 50vw"
-      fetchpriority="high"
-      media="(min-width: 768px)"
-    />
-    <link rel="preload" href="/assets/img/video-portada.webp" as="image" fetchpriority="high" media="(max-width: 767px)" />
-    <link rel="preload" href="/assets/img/video-editor-fondo.webp" as="image" fetchpriority="high" media="(min-width: 768px)" />
-    <link rel="preload" href="/assets/img/web-dev-fondo.webp" as="image" fetchpriority="high" media="(min-width: 768px)" />
-    <link rel="preload" href="/assets/img/ia-fondo.webp" as="image" fetchpriority="high" media="(min-width: 768px)" />
+        /assets/img/hero-area-office.webp 4000w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high"
+    media="(min-width: 768px)" />
+  <link rel="preload" href="/assets/img/video-portada.webp" as="image" fetchpriority="high"
+    media="(max-width: 767px)" />
+  <link rel="preload" href="/assets/img/video-editor-fondo.webp" as="image" fetchpriority="high"
+    media="(min-width: 768px)" />
+  <link rel="preload" href="/assets/img/web-dev-fondo.webp" as="image" fetchpriority="high"
+    media="(min-width: 768px)" />
+  <link rel="preload" href="/assets/img/ia-fondo.webp" as="image" fetchpriority="high" media="(min-width: 768px)" />
 
-    <!-- Fuentes (no bloqueantes) -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" />
-    </noscript>
+  <!-- Fuentes (no bloqueantes) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&family=Shadows+Into+Light&display=swap" />
+  </noscript>
 
-    <script>
-      // GA4 carga solo con consentimiento explícito
-      window.__enableGA = function() {
-        if (window.__gaLoaded) return;
-        window.__gaLoaded = true;
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5R825ZYTN5';
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-5R825ZYTN5');
-      };
-      // Si ya había consentimiento previo, cargar GA inmediatamente
-      if (localStorage.getItem('cookie_consent') === 'accepted') {
-        window.__enableGA();
-      }
-    </script>
+  <script>
+    // El tag de GA4 ya está cargado arriba en modo "denied";
+    // al aceptar cookies solo se concede el consentimiento.
+    window.__enableGA = function () {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    };
+  </script>
 
-    <!-- Canonical estático para crawlers (home page) -->
-    <link id="static-seo-canonical" rel="canonical" href="https://leosenderovsky.com.ar/" />
+  <!-- Canonical estático para crawlers (home page) -->
+  <link id="static-seo-canonical" rel="canonical" href="https://leosenderovsky.com.ar/" />
 
-    <!-- Schema.org estático: Person + WebSite + ProfessionalService (crawlers sin JS) -->
-    <script type="application/ld+json">
+  <!-- Schema.org estático: Person + WebSite + ProfessionalService (crawlers sin JS) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -293,8 +301,8 @@
     }
     </script>
 
-    <!-- Schema.org estático: FAQPage + WebPage (para scanners AEO sin JS) -->
-    <script id="static-seo-webpage-faq" type="application/ld+json">
+  <!-- Schema.org estático: FAQPage + WebPage (para scanners AEO sin JS) -->
+  <script id="static-seo-webpage-faq" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -360,8 +368,8 @@
     }
     </script>
 
-    <!-- Schema.org estático: Organization standalone (algunos scanners AEO no recorren @graph anidado) -->
-    <script type="application/ld+json">
+  <!-- Schema.org estático: Organization standalone (algunos scanners AEO no recorren @graph anidado) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -383,7 +391,7 @@
       ]
     }
     </script>
-    <script id="static-seo-breadcrumb" type="application/ld+json">
+  <script id="static-seo-breadcrumb" type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -398,245 +406,260 @@
       ]
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
+</head>
 
-    <!-- ═══════════════════════════════════════════════════════════════
+<body>
+  <div id="root"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
          BLOQUE ESTÁTICO PARA CRAWLERS SIN JS (AEO / GEO / Framer scanner)
          React oculta este bloque al montar. El contenido es idéntico
          al que muestra la SPA — no es cloaking.
     ═══════════════════════════════════════════════════════════════ -->
-    <div id="seo-static-content">
-      <nav aria-label="Navegación principal">
-        <a href="#main-content">Saltar al contenido principal</a>
-        <ul>
-          <li><a href="/audiovisual/edicion">Edición de Video</a></li>
-          <li><a href="/audiovisual/guion">Guión y Script Doctoring</a></li>
-          <li><a href="/audiovisual/docencia">Docencia de Cine</a></li>
-          <li><a href="/web">Desarrollo Web</a></li>
-          <li><a href="/ia">sender.ia</a></li>
-        </ul>
-      </nav>
-      <main id="main-content">
-        <h1>Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires</h1>
+  <div id="seo-static-content">
+    <nav aria-label="Navegación principal">
+      <a href="#main-content">Saltar al contenido principal</a>
+      <ul>
+        <li><a href="/audiovisual/edicion">Edición de Video</a></li>
+        <li><a href="/audiovisual/guion">Guión y Script Doctoring</a></li>
+        <li><a href="/audiovisual/docencia">Docencia de Cine</a></li>
+        <li><a href="/web">Desarrollo Web</a></li>
+        <li><a href="/ia">sender.ia</a></li>
+      </ul>
+    </nav>
+    <main id="main-content">
+      <h1>Leo Senderovsky — Editor de Video, Docente de Cine y Consultor de Guión en Buenos Aires</h1>
 
-        <p>
-          Llevo casi veinte años editando para televisión, cine y plataformas digitales.
-          En ese tiempo trabajé para productoras, medios como
-          <a href="https://www.infobae.com" rel="noopener noreferrer">Infobae</a>
-          y <a href="https://www.lanacion.com.ar" rel="noopener noreferrer">LN+</a>,
-          y para marcas como NBA LATAM, Twitch LATAM, Fórmula E y McDonald's.
-        </p>
+      <p>
+        Llevo casi veinte años editando para televisión, cine y plataformas digitales.
+        En ese tiempo trabajé para productoras, medios como
+        <a href="https://www.infobae.com" rel="noopener noreferrer">Infobae</a>
+        y <a href="https://www.lanacion.com.ar" rel="noopener noreferrer">LN+</a>,
+        y para marcas como NBA LATAM, Twitch LATAM, Fórmula E y McDonald's.
+      </p>
 
-        <p>
-          Además de editar, soy guionista y consultor de guión (script doctoring),
-          docente de cine con más de doce años de trayectoria en charlas y ciclos sobre
-          cine judío e historia del cine argentino, desarrollador web Frontend con foco en React y TypeScript,
-          y creador de <strong>sender.ia</strong>, mi línea de proyectos de inteligencia artificial aplicada al video y la web.
-        </p>
+      <p>
+        Además de editar, soy guionista y consultor de guión (script doctoring),
+        docente de cine con más de doce años de trayectoria en charlas y ciclos sobre
+        cine judío e historia del cine argentino, desarrollador web Frontend con foco en React y TypeScript,
+        y creador de <strong>sender.ia</strong>, mi línea de proyectos de inteligencia artificial aplicada al video y la
+        web.
+      </p>
 
-        <p>
-          Me formé como Director Cinematográfico y Profesor en Cinematografía en la
-          <a href="https://www.ucine.edu.ar" rel="noopener noreferrer">Universidad del Cine (FUC)</a>,
-          Buenos Aires, entre 2003 y 2008.
-          Podés ver mi perfil profesional completo en
-          <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>
-          y mi trabajo audiovisual en
-          <a href="https://www.youtube.com/c/LeoAquibaSenderovsky" rel="noopener noreferrer">YouTube</a>.
-        </p>
+      <p>
+        Me formé como Director Cinematográfico y Profesor en Cinematografía en la
+        <a href="https://www.ucine.edu.ar" rel="noopener noreferrer">Universidad del Cine (FUC)</a>,
+        Buenos Aires, entre 2003 y 2008.
+        Podés ver mi perfil profesional completo en
+        <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>
+        y mi trabajo audiovisual en
+        <a href="https://www.youtube.com/c/LeoAquibaSenderovsky" rel="noopener noreferrer">YouTube</a>.
+      </p>
 
-        <dl>
-          <dt>Experiencia</dt>
-          <dd>15+ años como editor de video profesional</dd>
-          <dt>Ubicación</dt>
-          <dd>Buenos Aires, Argentina</dd>
-          <dt>Formación</dt>
-          <dd>Director Cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), 2003–2008</dd>
-        </dl>
+      <dl>
+        <dt>Experiencia</dt>
+        <dd>15+ años como editor de video profesional</dd>
+        <dt>Ubicación</dt>
+        <dd>Buenos Aires, Argentina</dd>
+        <dt>Formación</dt>
+        <dd>Director Cinematográfico y Profesor en Cinematografía, Universidad del Cine (FUC), 2003–2008</dd>
+      </dl>
 
-        <h2>Servicios</h2>
+      <h2>Servicios</h2>
 
-        <p>
-          Trabajo de manera freelance en seis áreas principales.
-          Para cada proyecto busco la combinación justa de narrativa, técnica y criterio editorial.
-        </p>
+      <p>
+        Trabajo de manera freelance en seis áreas principales.
+        Para cada proyecto busco la combinación justa de narrativa, técnica y criterio editorial.
+      </p>
 
-        <ul>
-          <li>
-            <a href="/audiovisual/edicion"><strong>Edición de Video:</strong></a>
-            documentales, spots, contenido institucional y para redes sociales.
-            Manejo tanto la narrativa como la producción de piezas para TV y plataformas digitales.
-          </li>
-          <li>
-            <a href="/audiovisual/guion"><strong>Guión y Script Doctoring:</strong></a>
-            escritura de guiones y asesoría narrativa para cine, TV y publicidad.
-            El script doctoring es una consultoría para mejorar guiones en todas sus etapas.
-          </li>
-          <li>
-            <a href="/audiovisual/docencia"><strong>Docencia de Cine:</strong></a>
-            charlas y ciclos cinematográficos desde 2011.
-            Especialización en cine judío, cine israelí, humor judío y cine argentino en dictadura.
-          </li>
-          <li>
-            <a href="/audiovisual/critica"><strong>Crítica de Cine:</strong></a>
-            análisis y reseñas cinematográficas publicadas en el
-            <a href="https://blog.leosenderovsky.com.ar" rel="noopener noreferrer">blog</a>
-            desde 2007.
-          </li>
-          <li>
-            <a href="/web"><strong>Desarrollo Web Frontend:</strong></a>
-            sitios y aplicaciones web a medida con React, TypeScript, Vite y Tailwind CSS.
-            Proyectos para pymes, emprendimientos y profesionales independientes.
-          </li>
-          <li>
-            <a href="/ia"><strong>sender.ia — IA Aplicada:</strong></a>
-            automatización de procesos de producción, herramientas IA para edición de video
-            y desarrollo de aplicaciones con modelos de lenguaje.
-          </li>
-        </ul>
+      <ul>
+        <li>
+          <a href="/audiovisual/edicion"><strong>Edición de Video:</strong></a>
+          documentales, spots, contenido institucional y para redes sociales.
+          Manejo tanto la narrativa como la producción de piezas para TV y plataformas digitales.
+        </li>
+        <li>
+          <a href="/audiovisual/guion"><strong>Guión y Script Doctoring:</strong></a>
+          escritura de guiones y asesoría narrativa para cine, TV y publicidad.
+          El script doctoring es una consultoría para mejorar guiones en todas sus etapas.
+        </li>
+        <li>
+          <a href="/audiovisual/docencia"><strong>Docencia de Cine:</strong></a>
+          charlas y ciclos cinematográficos desde 2011.
+          Especialización en cine judío, cine israelí, humor judío y cine argentino en dictadura.
+        </li>
+        <li>
+          <a href="/audiovisual/critica"><strong>Crítica de Cine:</strong></a>
+          análisis y reseñas cinematográficas publicadas en el
+          <a href="https://blog.leosenderovsky.com.ar" rel="noopener noreferrer">blog</a>
+          desde 2007.
+        </li>
+        <li>
+          <a href="/web"><strong>Desarrollo Web Frontend:</strong></a>
+          sitios y aplicaciones web a medida con React, TypeScript, Vite y Tailwind CSS.
+          Proyectos para pymes, emprendimientos y profesionales independientes.
+        </li>
+        <li>
+          <a href="/ia"><strong>sender.ia — IA Aplicada:</strong></a>
+          automatización de procesos de producción, herramientas IA para edición de video
+          y desarrollo de aplicaciones con modelos de lenguaje.
+        </li>
+      </ul>
 
-        <h2>Trayectoria y clientes</h2>
+      <h2>Trayectoria y clientes</h2>
 
-        <p>
-          Como editor de video trabajé con equipos de
-          <a href="https://www.infobae.com" rel="noopener noreferrer">Infobae</a>,
-          <a href="https://www.lanacion.com.ar" rel="noopener noreferrer">LN+</a>,
-          NBA LATAM, Twitch LATAM, La Nación, McDonald's Argentina, Fórmula E, Gobierno de Buenos Aires,
-          Cactus Cine y Kuarzo Content, entre otros.
-          En LN+ me desempeñé como editor y coordinador operativo de posproducción.
-        </p>
+      <p>
+        Como editor de video trabajé con equipos de
+        <a href="https://www.infobae.com" rel="noopener noreferrer">Infobae</a>,
+        <a href="https://www.lanacion.com.ar" rel="noopener noreferrer">LN+</a>,
+        NBA LATAM, Twitch LATAM, La Nación, McDonald's Argentina, Fórmula E, Gobierno de Buenos Aires,
+        Cactus Cine y Kuarzo Content, entre otros.
+        En LN+ me desempeñé como editor y coordinador operativo de posproducción.
+      </p>
 
-        <p>
-          En docencia, dicto charlas para instituciones educativas judías, centros comunitarios y
-          grupos culturales en Buenos Aires y Gran Buenos Aires.
-          Los ciclos abordan temas como La Shoá en el cine, el conflicto israelí-palestino en el documental,
-          el cine argentino bajo la censura de la dictadura y la identidad judía en la pantalla grande.
-        </p>
+      <p>
+        En docencia, dicto charlas para instituciones educativas judías, centros comunitarios y
+        grupos culturales en Buenos Aires y Gran Buenos Aires.
+        Los ciclos abordan temas como La Shoá en el cine, el conflicto israelí-palestino en el documental,
+        el cine argentino bajo la censura de la dictadura y la identidad judía en la pantalla grande.
+      </p>
 
-        <p>
-          En desarrollo web, construí sitios y herramientas para clientes en Argentina y el exterior,
-          con foco en rendimiento, accesibilidad y posicionamiento orgánico.
-          Podés ver mi portfolio y CV completo en
-          <a href="/sobre-mi/cv-audiovisual">CV Audiovisual</a>
-          y en <a href="/sobre-mi/cv-web">CV Web</a>.
-        </p>
+      <p>
+        En desarrollo web, construí sitios y herramientas para clientes en Argentina y el exterior,
+        con foco en rendimiento, accesibilidad y posicionamiento orgánico.
+        Podés ver mi portfolio y CV completo en
+        <a href="/sobre-mi/cv-audiovisual">CV Audiovisual</a>
+        y en <a href="/sobre-mi/cv-web">CV Web</a>.
+      </p>
 
-        <table>
-          <caption>Áreas de servicio de Leo Senderovsky</caption>
-          <thead>
-            <tr><th>Área</th><th>Enfoque</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Audiovisual</td><td>Edición, guión, docencia, crítica de cine</td></tr>
-            <tr><td>Web</td><td>Desarrollo Frontend con React y TypeScript</td></tr>
-            <tr><td>IA (sender.ia)</td><td>Automatización aplicada a producción audiovisual y web</td></tr>
-          </tbody>
-        </table>
+      <table>
+        <caption>Áreas de servicio de Leo Senderovsky</caption>
+        <thead>
+          <tr>
+            <th>Área</th>
+            <th>Enfoque</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Audiovisual</td>
+            <td>Edición, guión, docencia, crítica de cine</td>
+          </tr>
+          <tr>
+            <td>Web</td>
+            <td>Desarrollo Frontend con React y TypeScript</td>
+          </tr>
+          <tr>
+            <td>IA (sender.ia)</td>
+            <td>Automatización aplicada a producción audiovisual y web</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <h2>Preguntas frecuentes</h2>
+      <h2>Preguntas frecuentes</h2>
 
-        <h3>¿Qué tipo de videos editás?</h3>
-        <p>
-          Edito documentales, spots publicitarios, contenido institucional, reels para redes sociales
-          y programas de televisión. Trabajé con Infobae, LN+, NBA LATAM, Twitch LATAM y Fórmula E,
-          entre otros.
-        </p>
+      <h3>¿Qué tipo de videos editás?</h3>
+      <p>
+        Edito documentales, spots publicitarios, contenido institucional, reels para redes sociales
+        y programas de televisión. Trabajé con Infobae, LN+, NBA LATAM, Twitch LATAM y Fórmula E,
+        entre otros.
+      </p>
 
-        <h3>¿Qué es el script doctoring?</h3>
-        <p>
-          Es una consultoría narrativa donde analizo un guión existente y propongo mejoras
-          estructurales, de personajes, diálogos o coherencia interna.
-          No se trata de reescribir el guión, sino de potenciarlo.
-        </p>
+      <h3>¿Qué es el script doctoring?</h3>
+      <p>
+        Es una consultoría narrativa donde analizo un guión existente y propongo mejoras
+        estructurales, de personajes, diálogos o coherencia interna.
+        No se trata de reescribir el guión, sino de potenciarlo.
+      </p>
 
-        <h3>¿Qué temas abarcás en tus charlas de cine?</h3>
-        <p>
-          Desde 2011 dicto charlas sobre cine judío, cine israelí, humor judío en el cine,
-          La Shoá en el cine, el conflicto israelí-palestino en el documental,
-          el cine argentino en dictadura y la historia del cine nacional.
-        </p>
+      <h3>¿Qué temas abarcás en tus charlas de cine?</h3>
+      <p>
+        Desde 2011 dicto charlas sobre cine judío, cine israelí, humor judío en el cine,
+        La Shoá en el cine, el conflicto israelí-palestino en el documental,
+        el cine argentino en dictadura y la historia del cine nacional.
+      </p>
 
-        <h3>¿Trabajás con IA en proyectos audiovisuales?</h3>
-        <p>
-          Sí. A través de sender.ia desarrollo herramientas de IA para automatización de producción,
-          edición asistida por IA y generación de contenido. También ofrezco consultoría para
-          integrar inteligencia artificial en flujos de trabajo de equipos audiovisuales.
-        </p>
+      <h3>¿Trabajás con IA en proyectos audiovisuales?</h3>
+      <p>
+        Sí. A través de sender.ia desarrollo herramientas de IA para automatización de producción,
+        edición asistida por IA y generación de contenido. También ofrezco consultoría para
+        integrar inteligencia artificial en flujos de trabajo de equipos audiovisuales.
+      </p>
 
-        <h3>¿Cómo puedo contratarte?</h3>
-        <p>
-          Podés escribirme desde el
-          <a href="/#contacto">formulario de contacto</a>,
-          por WhatsApp al +54 9 11 3045-2585 o conectarte en
-          <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>.
-        </p>
+      <h3>¿Cómo puedo contratarte?</h3>
+      <p>
+        Podés escribirme desde el
+        <a href="/#contacto">formulario de contacto</a>,
+        por WhatsApp al +54 9 11 3045-2585 o conectarte en
+        <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>.
+      </p>
 
-        <p>
-          <strong>En resumen:</strong> Leo Senderovsky combina edición de video senior,
-          guión, docencia de cine y desarrollo web con IA aplicada (sender.ia),
-          con base en Buenos Aires desde hace más de 15 años.
-        </p>
-      </main>
+      <p>
+        <strong>En resumen:</strong> Leo Senderovsky combina edición de video senior,
+        guión, docencia de cine y desarrollo web con IA aplicada (sender.ia),
+        con base en Buenos Aires desde hace más de 15 años.
+      </p>
+    </main>
 
-      <footer>
-        <p>
-          Última actualización: <time datetime="2026-07-09">9 de julio de 2026</time>.
-          Contacto: <a href="mailto:l.a.senderovsky@gmail.com">l.a.senderovsky@gmail.com</a> ·
-          <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-      </footer>
-    </div>
+    <footer>
+      <p>
+        Última actualización: <time datetime="2026-07-09">9 de julio de 2026</time>.
+        Contacto: <a href="mailto:l.a.senderovsky@gmail.com">l.a.senderovsky@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/lsender/" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </footer>
+  </div>
 
-    <script>
-      // Ocultar/retirar bloque estático en cuanto React monte.
-      // En "/" el bloque estático sigue siendo la única fuente de
-      // WebPage/FAQPage/BreadcrumbList, así que solo se oculta visualmente.
-      // En subrutas, React inyecta su propio BreadcrumbList/WebPage/FAQPage/
-      // canonical vía react-helmet — el estático se ELIMINA del DOM (no solo
-      // display:none) para evitar JSON-LD y <link rel="canonical"> duplicados
-      // que rompen el parseo de itemListElement en Search Console.
-      (function() {
-        var isHome = window.location.pathname === '/';
+  <script>
+    // Ocultar/retirar bloque estático en cuanto React monte.
+    // En "/" el bloque estático sigue siendo la única fuente de
+    // WebPage/FAQPage/BreadcrumbList, así que solo se oculta visualmente.
+    // En subrutas, React inyecta su propio BreadcrumbList/WebPage/FAQPage/
+    // canonical vía react-helmet — el estático se ELIMINA del DOM (no solo
+    // display:none) para evitar JSON-LD y <link rel="canonical"> duplicados
+    // que rompen el parseo de itemListElement en Search Console.
+    (function () {
+      var isHome = window.location.pathname === '/';
 
-        function cleanupStaticSeo() {
-          var el = document.getElementById('seo-static-content');
-          if (el) {
-            if (isHome) {
-              el.style.display = 'none';
-            } else {
-              el.remove();
-            }
-          }
-          if (!isHome) {
-            [
-              'static-seo-canonical',
-              'static-seo-webpage-faq',
-              'static-seo-breadcrumb',
-            ].forEach(function (id) {
-              var node = document.getElementById(id);
-              if (node) node.remove();
-            });
+      function cleanupStaticSeo() {
+        var el = document.getElementById('seo-static-content');
+        if (el) {
+          if (isHome) {
+            el.style.display = 'none';
+          } else {
+            el.remove();
           }
         }
-
-        if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
-          cleanupStaticSeo();
-        } else {
-          var observer = new MutationObserver(function (mutations) {
-            var root = document.getElementById('root');
-            if (root && root.children.length > 0) {
-              cleanupStaticSeo();
-              observer.disconnect();
-            }
+        if (!isHome) {
+          [
+            'static-seo-canonical',
+            'static-seo-webpage-faq',
+            'static-seo-breadcrumb',
+          ].forEach(function (id) {
+            var node = document.getElementById(id);
+            if (node) node.remove();
           });
-          var root = document.getElementById('root');
-          if (root) {
-            observer.observe(root, { childList: true });
-          }
         }
-      })();
-    </script>
-    <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
-  </body>
+      }
+
+      if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
+        cleanupStaticSeo();
+      } else {
+        var observer = new MutationObserver(function (mutations) {
+          var root = document.getElementById('root');
+          if (root && root.children.length > 0) {
+            cleanupStaticSeo();
+            observer.disconnect();
+          }
+        });
+        var root = document.getElementById('root');
+        if (root) {
+          observer.observe(root, { childList: true });
+        }
+      }
+    })();
+  </script>
+  <script type="module" src="/src/main.tsx" fetchpriority="high"></script>
+</body>
+
 </html>
